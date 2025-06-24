@@ -28,7 +28,7 @@ export async function registerRoutes(app: Express): Promise<Server> {
   app.get("/api/playbook-feed", async (req, res) => {
     try {
       const parser = new Parser();
-      const feed = await parser.parseURL('https://feeds.simplecast.com/54nAGcIl');
+      const feed = await parser.parseURL('https://shivacharanmandhapuram.substack.com/feed');
       
       const posts = feed.items?.slice(0, 6).map(item => ({
         title: item.title || '',
@@ -40,7 +40,8 @@ export async function registerRoutes(app: Express): Promise<Server> {
       res.json(posts);
     } catch (error) {
       console.error('Playbook RSS feed error:', error);
-      res.status(500).json({ error: 'Failed to fetch playbook RSS feed' });
+      // Fallback to show error but still return empty array to prevent UI crash
+      res.status(200).json([]);
     }
   });
 
