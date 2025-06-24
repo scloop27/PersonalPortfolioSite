@@ -1,4 +1,4 @@
-import { Play, Mail, User, Circle } from "lucide-react";
+import { Play, Mail } from "lucide-react";
 
 export default function About() {
   return (
@@ -7,28 +7,30 @@ export default function About() {
       <section className="mt-20 mb-32">
         <div className="max-w-2xl">
           <h1 className="text-5xl md:text-6xl font-normal leading-tight text-charcoal">
-            Hi, I'm Advait — a 21 year old founder. I am passionate about building technology that makes a meaningful impact on people's lives.
+            Hi, I'm Advait — a 21 year old founder. I am passionate<br />
+            about building technology that makes a meaningful<br />
+            impact on people's lives.
           </h1>
         </div>
       </section>
 
-      {/* Projects Section */}
+      {/* Projects Section - NO HEADING */}
       <section className="mb-32">
         {/* Project 1: Friday - Text Left, Image Right */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 mb-32 items-center">
-          <div className="lg:pr-8">
-            <h2 className="text-2xl font-semibold mb-4 text-charcoal">Friday</h2>
-            <p className="text-medium-gray leading-relaxed mb-4">
-              Automate your email, backed by AI automation
+          <div className="lg:pr-8 order-2 lg:order-1">
+            <h2 className="text-2xl font-bold mb-4 text-charcoal">Friday</h2>
+            <p className="text-medium-gray leading-relaxed mb-6 font-light">
+              AI assistant for email. Backed by Y Combinator.
             </p>
-            <a href="#" className="text-charcoal underline hover:no-underline transition-all duration-200">
+            <button className="bg-gray-200 hover:bg-gray-300 text-gray-700 px-6 py-2 rounded-full text-sm transition-colors duration-200">
               View
-            </a>
+            </button>
           </div>
-          <div className="order-first lg:order-last">
+          <div className="order-1 lg:order-2">
             <div className="bg-gradient-to-br from-gray-900 to-purple-900 rounded-xl overflow-hidden shadow-lg aspect-video flex items-center justify-center relative">
               <div className="text-center text-white px-8">
-                <h3 className="text-3xl font-medium mb-2">Never check your email again</h3>
+                <h3 className="text-3xl font-medium mb-2">Never check your<br />email again</h3>
                 <div className="w-16 h-16 bg-purple-600 rounded-full mx-auto mt-8 flex items-center justify-center">
                   <Mail className="w-8 h-8 text-white" />
                 </div>
@@ -39,7 +41,7 @@ export default function About() {
 
         {/* Project 2: YouLearn - Image Left, Text Right */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 mb-32 items-center">
-          <div>
+          <div className="order-1">
             <div className="bg-gray-900 rounded-xl overflow-hidden shadow-lg aspect-video">
               <div className="h-full p-6">
                 <div className="flex items-center justify-between mb-6">
@@ -60,29 +62,29 @@ export default function About() {
               </div>
             </div>
           </div>
-          <div className="lg:pl-8">
-            <h2 className="text-2xl font-semibold mb-4 text-charcoal">YouLearn</h2>
-            <p className="text-medium-gray leading-relaxed mb-4">
-              AI-driven flashcards - like cards
+          <div className="lg:pl-8 order-2">
+            <h2 className="text-2xl font-bold mb-4 text-charcoal">YouLearn</h2>
+            <p className="text-medium-gray leading-relaxed mb-6 font-light">
+              AI tutor for students. 1M+ users.
             </p>
-            <a href="#" className="text-charcoal underline hover:no-underline transition-all duration-200">
+            <button className="bg-gray-200 hover:bg-gray-300 text-gray-700 px-6 py-2 rounded-full text-sm transition-colors duration-200">
               View
-            </a>
+            </button>
           </div>
         </div>
 
         {/* Project 3: Iris - Text Left, Image Right */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 mb-32 items-center">
-          <div className="lg:pr-8">
-            <h2 className="text-2xl font-semibold mb-4 text-charcoal">Iris</h2>
-            <p className="text-medium-gray leading-relaxed mb-4">
-              Generative AI gives you infinite memory
+          <div className="lg:pr-8 order-2 lg:order-1">
+            <h2 className="text-2xl font-bold mb-4 text-charcoal">Iris</h2>
+            <p className="text-medium-gray leading-relaxed mb-6 font-light">
+              AI wearable that gives you infinite memory.
             </p>
-            <a href="#" className="text-charcoal underline hover:no-underline transition-all duration-200">
+            <button className="bg-gray-200 hover:bg-gray-300 text-gray-700 px-6 py-2 rounded-full text-sm transition-colors duration-200">
               View
-            </a>
+            </button>
           </div>
-          <div className="order-first lg:order-last">
+          <div className="order-1 lg:order-2">
             <div className="flex items-center justify-center space-x-8">
               <div className="w-48 h-48 bg-gray-100 rounded-full border border-gray-200 flex items-center justify-center shadow-lg">
                 <div className="w-4 h-4 bg-charcoal rounded-full"></div>
@@ -110,7 +112,7 @@ export default function About() {
 
         {/* Project 4: Commencement Speech - Image Left, Text Right */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 mb-32 items-center">
-          <div>
+          <div className="order-1">
             <div className="bg-gray-900 rounded-xl overflow-hidden shadow-lg aspect-video relative">
               <div className="absolute inset-0 flex items-center justify-center">
                 <div className="w-16 h-16 bg-white bg-opacity-20 rounded-full flex items-center justify-center backdrop-blur-sm">
@@ -135,14 +137,14 @@ export default function About() {
               </div>
             </div>
           </div>
-          <div className="lg:pl-8">
-            <h2 className="text-2xl font-semibold mb-4 text-charcoal">Commencement Speech</h2>
-            <p className="text-medium-gray leading-relaxed mb-4">
-              Spoke about chasing rejection to feel ADHD students of the National Academy as the youngest at Thacher School
+          <div className="lg:pl-8 order-2">
+            <h2 className="text-2xl font-bold mb-4 text-charcoal">Commencement Speech</h2>
+            <p className="text-medium-gray leading-relaxed mb-6 font-light">
+              Spoke about chasing rejection to over 10,000 students at my graduation.
             </p>
-            <a href="#" className="text-charcoal underline hover:no-underline transition-all duration-200">
+            <button className="bg-gray-200 hover:bg-gray-300 text-gray-700 px-6 py-2 rounded-full text-sm transition-colors duration-200">
               View
-            </a>
+            </button>
           </div>
         </div>
       </section>
