@@ -6,7 +6,9 @@
       "use": "@vercel/static-build",
       "config": {
         "outputDirectory": "dist/public"
-      }
+      },
+      "installCommand": "npm install",
+      "buildCommand": "npm run build:client"
     },
     {
       "src": "dist/server/index.js",
