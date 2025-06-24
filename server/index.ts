@@ -18,7 +18,7 @@ app.use(express.urlencoded({ extended: false }));
  * Logs API requests with timing and response data
  */
 app.use((req, res, next) => {
-  const start = Date.Now();
+  const start = Date.now();
   const path = req.path;
   let capturedJsonResponse: Record<string, any> | undefined = undefined;
 
@@ -29,7 +29,7 @@ app.use((req, res, next) => {
   };
 
   res.on("finish", () => {
-    const duration = Date.Now() - start;
+    const duration = Date.now() - start;
     if (path.startsWith("/api")) {
       let logLine = `${req.method} ${path} ${res.statusCode} in ${duration}ms`;
       if (capturedJsonResponse) {
