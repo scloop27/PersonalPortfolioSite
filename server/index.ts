@@ -18,7 +18,7 @@ app.use(express.urlencoded({ extended: false }));
  * Logs API requests with timing and response data
  */
 app.use((req, res, next) => {
-  const start = Date.now(); // <-- CHANGED from Date.Now() to Date.now()
+  const start = Date.now();
   const path = req.path;
   let capturedJsonResponse: Record<string, any> | undefined = undefined;
 
