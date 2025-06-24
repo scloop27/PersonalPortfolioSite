@@ -38,7 +38,7 @@ This is a modern portfolio website for Advait Paliwal, a 21-year-old founder and
 ### UI Components
 - **Design System**: Clean, minimal portfolio design
 - **Color Scheme**: Charcoal, medium gray, and pure white
-- **Typography**: Inter font family
+- **Typography**: SF Pro Display font family
 - **Components**: Fully accessible Radix UI components styled with Tailwind
 
 ### Navigation Structure
@@ -100,6 +100,7 @@ This is a modern portfolio website for Advait Paliwal, a 21-year-old founder and
 - June 24, 2025: Converted Playbook to clean blog listing page matching user design requirements
 - June 24, 2025: Implemented infinite scroll functionality for blog posts with pagination support
 - June 24, 2025: Removed Thoughts section and optimized responsive design for all form factors
+- June 24, 2025: Updated font family to SF Pro Display across the entire site
 
 ## User Preferences
 

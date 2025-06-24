@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
+/* SF Pro Display is a system font, no need for external import */
 
 @tailwind base;
 @tailwind components;
@@ -57,7 +57,7 @@
 
   body {
     @apply antialiased bg-background text-foreground;
-    font-family: 'Inter', system-ui, sans-serif;
+    font-family: 'SF Pro Display', -apple-system, system-ui, sans-serif;
   }
 }
 

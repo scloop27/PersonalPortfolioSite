@@ -42,7 +42,7 @@ export default function About() {
               transition={{ duration: 0.8 }}
               className="text-black font-normal leading-tight tracking-tight"
               style={{
-                fontFamily: "Inter",
+                fontFamily: "'SF Pro Display', -apple-system, system-ui, sans-serif",
                 fontSize: "clamp(2rem, 4vw, 55.75px)",
                 lineHeight: "clamp(2.5rem, 5vw, 77px)",
                 letterSpacing: "clamp(-0.5px, -0.1vw, -1.28px)",
@@ -77,7 +77,7 @@ export default function About() {
                     <h2
                       className="text-black font-normal flex items-center"
                       style={{
-                        fontFamily: "Inter",
+                        fontFamily: "'SF Pro Display', -apple-system, system-ui, sans-serif",
                         fontSize: "clamp(18px, 2vw, 26.6016px)",
                         lineHeight: "45px",
                       }}
@@ -91,7 +91,7 @@ export default function About() {
                     <p
                       className="text-[#707070] font-normal flex items-center"
                       style={{
-                        fontFamily: "Inter",
+                        fontFamily: "'SF Pro Display', -apple-system, system-ui, sans-serif",
                         fontSize: "clamp(14px, 1.5vw, 17.3438px)",
                         lineHeight: "30px",
                       }}
@@ -109,7 +109,7 @@ export default function About() {
                       <span
                         className="text-black font-normal flex items-center justify-center"
                         style={{
-                          fontFamily: "Inter",
+                          fontFamily: "'SF Pro Display', -apple-system, system-ui, sans-serif",
                           fontSize: "clamp(14px, 1vw, 16.0312px)",
                           lineHeight: "27px",
                         }}

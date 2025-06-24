@@ -73,7 +73,7 @@ export default function Experience() {
                     <p
                       className="text-[#6B7280] font-normal flex items-center"
                       style={{
-                        fontFamily: "Inter",
+                        fontFamily: "'SF Pro Display', -apple-system, system-ui, sans-serif",
                         fontSize: "clamp(10px, 1vw, 12.25px)",
                         lineHeight: "21px",
                       }}
@@ -87,7 +87,7 @@ export default function Experience() {
                     <h2
                       className="text-black font-normal flex items-center"
                       style={{
-                        fontFamily: "Inter",
+                        fontFamily: "'SF Pro Display', -apple-system, system-ui, sans-serif",
                         fontSize: "clamp(18px, 2vw, 26.6016px)",
                         lineHeight: "45px",
                       }}
@@ -101,7 +101,7 @@ export default function Experience() {
                     <p
                       className="text-[#707070] font-normal flex items-center"
                       style={{
-                        fontFamily: "Inter",
+                        fontFamily: "'SF Pro Display', -apple-system, system-ui, sans-serif",
                         fontSize: "clamp(14px, 1.5vw, 17.3438px)",
                         lineHeight: "30px",
                       }}
@@ -129,7 +129,7 @@ export default function Experience() {
                       <span
                         className="text-black font-normal flex items-center justify-center"
                         style={{
-                          fontFamily: "Inter",
+                          fontFamily: "'SF Pro Display', -apple-system, system-ui, sans-serif",
                           fontSize: "clamp(14px, 1vw, 16.0312px)",
                           lineHeight: "27px",
                         }}
