@@ -74,9 +74,7 @@ export default function About() {
                 className="flex flex-col lg:flex-row justify-between items-start w-full py-20 gap-8 lg:gap-48"
               >
                 {/* Text Content */}
-                <div className={`flex flex-col items-start gap-2 w-full lg:w-[480.94px] ${
-                  index % 2 === 0 ? 'order-2 lg:order-1' : 'order-2'
-                }`}>
+                <div className="flex flex-col items-start gap-2 w-full lg:w-[480.94px] order-2 lg:order-1">
                   {/* Title */}
                   <div className="w-full h-[45px] flex items-center">
                     <h2
@@ -127,9 +125,7 @@ export default function About() {
 
                 {/* Image Container */}
                 <div
-                  className={`flex flex-col items-start w-full lg:w-[687.06px] lg:h-[393.47px] ${
-                    index % 2 === 0 ? 'order-1 lg:order-2' : 'order-1'
-                  }`}
+                  className="flex flex-col items-start w-full lg:w-[687.06px] lg:h-[393.47px] order-1 lg:order-2"
                   style={{ paddingBottom: "7px" }}
                 >
                   {index === 0 ? (
