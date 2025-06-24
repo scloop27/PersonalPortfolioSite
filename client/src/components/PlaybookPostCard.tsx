@@ -29,14 +29,14 @@ export default function PlaybookPostCard({
       initial={{ opacity: 0, y: 20 }}
       whileInView={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.6, delay: index * 0.1 }}
-      className="mb-12 sm:mb-16"
+      className="border-b border-gray-200 pb-12 sm:pb-16 mb-12 sm:mb-16 last:border-b-0 last:pb-0 last:mb-0"
     >
       <div className="flex flex-col lg:flex-row lg:items-start lg:justify-between gap-6 lg:gap-8">
         <div className="flex-1">
-          <h2 className="text-xl sm:text-2xl font-bold mb-2 text-gray-900 leading-tight">
+          <h2 className="text-xl sm:text-2xl font-bold mb-3 text-gray-900 leading-tight">
             {title}
           </h2>
-          <p className="text-gray-600 leading-relaxed mb-4 text-sm sm:text-base">
+          <p className="text-gray-600 leading-relaxed mb-6 text-sm sm:text-base">
             {contentSnippet}
           </p>
           <a

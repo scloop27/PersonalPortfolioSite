@@ -150,8 +150,8 @@ export default function Playbook() {
           </div>
         )}
 
-        {/* Posts - Single column layout matching the design */}
-        <div className="space-y-0">
+        {/* Posts - Single column layout with proper spacing */}
+        <div className="divide-y-0">
           {postsToDisplay.map((post, index) => (
             <PlaybookPostCard
               key={`${post.link}-${index}`}
