@@ -5,26 +5,26 @@
       "src": "package.json",
       "use": "@vercel/static-build",
       "config": {
-        "outputDirectory": "dist/public"
+        "outputDirectory": "dist/public" // Frontend static files go here
       }
     },
     {
-      "src": "server/index.ts",
+      "src": "dist/server/index.js", // <-- IMPORTANT: Point to the COMPILED server entry file (now correctly dist/server)
       "use": "@vercel/node"
     }
   ],
   "routes": [
     {
       "src": "/api/(.*)",
-      "dest": "/dist/server/index.js"
+      "dest": "/dist/server/index.js" // <-- IMPORTANT: Route API to the compiled serverless function
     },
     {
       "src": "/(.*\\.(js|css|png|jpg|jpeg|gif|svg|ico|woff|woff2|ttf|eot))",
-      "dest": "/$1"
+      "dest": "/public/$1" // <-- Serve static assets from the public folder
     },
     {
       "src": "/(.*)",
-      "dest": "/index.html"
+      "dest": "/public/index.html" // <-- Catch-all routes to client's index.html
     }
   ]
 }

@@ -1,0 +1,20 @@
+// tsconfig.server.json
+{
+  "compilerOptions": {
+    "target": "ES2022",
+    "module": "CommonJS", // Crucial for Node.js compatibility
+    "outDir": "dist/server", // This should match the esbuild output directory
+    "noEmit": false,
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
+    "strict": true,
+    "forceConsistentCasingInFileNames": true,
+    "skipLibCheck": true,
+    "declaration": true,
+    "declarationMap": true,
+    "sourceMap": true,
+    "resolveJsonModule": true
+  },
+  "include": ["server/**/*.ts"],
+  "exclude": ["node_modules", "dist"]
+}
