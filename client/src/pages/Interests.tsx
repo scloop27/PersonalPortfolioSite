@@ -1,3 +1,11 @@
+/**
+ * Interests page component - Personal and technical interests showcase
+ * Currently displays placeholder content with plans for future expansion
+ * Features:
+ * - Responsive layout matching site design
+ * - Placeholder for future content expansion
+ * - Consistent typography and spacing
+ */
 export default function Interests() {
   return (
     <div className="max-w-6xl mx-auto px-4 sm:px-6">

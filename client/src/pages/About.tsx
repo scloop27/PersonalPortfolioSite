@@ -1,6 +1,15 @@
 import { motion } from "framer-motion";
 
+/**
+ * About page component - Homepage with hero section and project showcase
+ * Features:
+ * - Responsive hero section with dynamic typography
+ * - Project grid with hover effects and animations
+ * - Mobile-optimized layout and spacing
+ * - SF Pro Display typography for native feel
+ */
 export default function About() {
+  // Static project data - could be moved to API in future
   const projects = [
     {
       title: "Friday",

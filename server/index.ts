@@ -2,10 +2,20 @@ import express, { type Request, Response, NextFunction } from "express";
 import { registerRoutes } from "./routes";
 import { setupVite, serveStatic, log } from "./vite";
 
+/**
+ * Portfolio Website Server
+ * Express.js server with Vite integration for development
+ * Handles API routes, static file serving, and request logging
+ */
+
 const app = express();
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 
+/**
+ * Request logging middleware
+ * Logs API requests with timing and response data
+ */
 app.use((req, res, next) => {
   const start = Date.now();
   const path = req.path;

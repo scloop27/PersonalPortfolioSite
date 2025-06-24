@@ -1,6 +1,15 @@
 import { motion } from "framer-motion";
 
+/**
+ * Experience page component - Professional timeline with visual elements
+ * Features:
+ * - Timeline layout with alternating content and images
+ * - Responsive design for mobile and desktop
+ * - Framer Motion animations on scroll
+ * - Visual separators between experience sections
+ */
 export default function Experience() {
+  // Static experience data - could be moved to CMS or API in future
   const experiences = [
     {
       year: "Present",

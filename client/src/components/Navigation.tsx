@@ -1,8 +1,21 @@
 import { Link, useLocation } from "wouter";
 
+/**
+ * Main navigation component for the portfolio website
+ * Features:
+ * - Responsive design with mobile-friendly spacing
+ * - Active route highlighting with underline
+ * - Clean typography with SF Pro Display font
+ * - Sticky positioning for persistent navigation
+ */
 export default function Navbar() {
   const [location] = useLocation();
 
+  /**
+   * Determines if a navigation link should be highlighted as active
+   * @param path - The path to check against current location
+   * @returns boolean indicating if the path is active
+   */
   const isActive = (path: string) => {
     if (path === "/" && location === "/") return true;
     if (path !== "/" && location.startsWith(path)) return true;

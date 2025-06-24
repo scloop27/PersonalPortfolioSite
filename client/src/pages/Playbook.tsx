@@ -4,20 +4,35 @@ import { useEffect } from "react";
 import { RefreshCw } from "lucide-react";
 import PlaybookPostCard from "@/components/PlaybookPostCard";
 
+/**
+ * Interface for individual blog post data from RSS feed
+ */
 interface PlaybookPost {
-  title: string;
-  contentSnippet: string;
-  link: string;
-  pubDate: string;
+  title: string;          // Post title from RSS
+  contentSnippet: string; // Post excerpt/summary
+  link: string;           // URL to full post
+  pubDate: string;        // Publication date
 }
 
+/**
+ * Interface for paginated API response from /api/playbook-feed
+ */
 interface PlaybookFeedResponse {
-  posts: PlaybookPost[];
-  hasMore: boolean;
-  currentPage: number;
-  totalPosts: number;
+  posts: PlaybookPost[];  // Array of posts for current page
+  hasMore: boolean;       // Whether more pages are available
+  currentPage: number;    // Current page number
+  totalPosts: number;     // Total number of posts available
 }
 
+/**
+ * Playbook page component - displays blog posts from Substack RSS feed
+ * Features:
+ * - Infinite scroll pagination
+ * - Manual refresh capability
+ * - Responsive design for all devices
+ * - Fallback content when RSS feed fails
+ * - Loading states and error handling
+ */
 export default function Playbook() {
   const queryClient = useQueryClient();
   
@@ -43,7 +58,11 @@ export default function Playbook() {
     staleTime: 30 * 1000, // 30 seconds for faster updates
   });
 
-  // Infinite scroll effect
+  /**
+   * Infinite scroll implementation
+   * Automatically fetches next page when user scrolls near bottom
+   * Triggers 1000px before reaching the actual bottom for smooth UX
+   */
   useEffect(() => {
     const handleScroll = () => {
       if (
@@ -111,6 +130,11 @@ export default function Playbook() {
 
   const postsToDisplay = allPosts.length > 0 ? allPosts : fallbackPosts;
 
+  /**
+   * Manual refresh function for fetching latest posts
+   * Invalidates cache and refetches data from RSS feed
+   * Useful when new posts are published on Substack
+   */
   const handleRefresh = async () => {
     await queryClient.invalidateQueries({ queryKey: ["/api/playbook-feed"] });
     refetch();

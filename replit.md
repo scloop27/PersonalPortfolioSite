@@ -101,7 +101,13 @@ This is a modern portfolio website for Advait Paliwal, a 21-year-old founder and
 - June 24, 2025: Implemented infinite scroll functionality for blog posts with pagination support
 - June 24, 2025: Removed Thoughts section and optimized responsive design for all form factors
 - June 24, 2025: Updated font family to SF Pro Display across the entire site
+- June 24, 2025: Added comprehensive code documentation and technical guides
+- June 24, 2025: Refined codebase with detailed comments and structure documentation
 
 ## User Preferences
 
-Preferred communication style: Simple, everyday language.
+- **Communication Style**: Simple, everyday language
+- **Code Quality**: Comprehensive documentation and comments preferred
+- **Typography**: SF Pro Display font family for native Apple experience
+- **Design Approach**: Clean, minimal, responsive-first design
+- **Development**: TypeScript-first with proper error handling

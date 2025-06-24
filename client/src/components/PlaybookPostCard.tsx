@@ -1,13 +1,25 @@
 import { motion } from "framer-motion";
 
+/**
+ * Props interface for the PlaybookPostCard component
+ */
 interface PlaybookPostCardProps {
-  title: string;
-  contentSnippet: string;
-  link: string;
-  pubDate: string;
-  index: number;
+  title: string;        // Blog post title
+  contentSnippet: string; // Excerpt or summary of the post
+  link: string;         // URL to the full blog post
+  pubDate: string;      // Publication date in ISO format
+  index: number;        // Used for staggered animations
 }
 
+/**
+ * Individual blog post card component for the Playbook page
+ * Features:
+ * - Responsive layout (mobile stacks, desktop side-by-side)
+ * - Framer Motion animations with staggered reveals
+ * - Visual separators between posts
+ * - Quote box with content preview
+ * - External link handling with proper security attributes
+ */
 export default function PlaybookPostCard({ 
   title, 
   contentSnippet, 
@@ -15,6 +27,11 @@ export default function PlaybookPostCard({
   pubDate, 
   index 
 }: PlaybookPostCardProps) {
+  /**
+   * Formats ISO date string to human-readable format
+   * @param dateString - ISO date string
+   * @returns Formatted date string (e.g., "December 15, 2024")
+   */
   const formatDate = (dateString: string) => {
     const date = new Date(dateString);
     return date.toLocaleDateString('en-US', { 
