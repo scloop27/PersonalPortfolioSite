@@ -51,7 +51,7 @@ export default function Experience() {
   return (
     <div className="flex flex-col items-center w-full bg-white overflow-y-scroll min-h-screen">
       {/* Main Container */}
-      <main className="flex flex-col items-center w-full pt-24">
+      <main className="flex flex-col items-center w-full pt-20 sm:pt-24">
         {/* Experience Sections */}
         {experiences.map((experience, index) => (
           <div key={index} className="flex flex-col items-center w-full">
@@ -59,12 +59,12 @@ export default function Experience() {
             <div className="w-full h-px border-t border-[#E5E7EB]"></div>
 
             {/* Experience Container */}
-            <div className="flex flex-col items-center px-10 w-full max-w-[1440px]">
+            <div className="flex flex-col items-center px-4 sm:px-6 lg:px-10 w-full max-w-[1440px]">
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
-                className="flex flex-col lg:flex-row justify-between items-start w-full py-20 gap-8 lg:gap-48"
+                className="flex flex-col lg:flex-row justify-between items-start w-full py-12 sm:py-16 lg:py-20 gap-6 sm:gap-8 lg:gap-48"
               >
                 {/* Text Content */}
                 <div className="flex flex-col items-start gap-2 w-full lg:w-[480.94px]">

@@ -32,10 +32,10 @@ export default function About() {
   return (
     <div className="flex flex-col items-center w-full bg-white overflow-y-scroll min-h-screen">
       {/* Main Container */}
-      <main className="flex flex-col items-center w-full pt-24">
+      <main className="flex flex-col items-center w-full pt-20 sm:pt-24">
         {/* Hero Section */}
         <section className="flex flex-row justify-center items-center w-full min-h-screen">
-          <div className="flex flex-col items-start px-10 w-full max-w-[1440px]">
+          <div className="flex flex-col items-start px-4 sm:px-6 lg:px-10 w-full max-w-[1440px]">
             <motion.h1
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}

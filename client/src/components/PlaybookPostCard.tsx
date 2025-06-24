@@ -29,28 +29,28 @@ export default function PlaybookPostCard({
       initial={{ opacity: 0, y: 20 }}
       whileInView={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.6, delay: index * 0.1 }}
-      className="mb-16"
+      className="mb-12 sm:mb-16"
     >
-      <div className="flex items-start justify-between gap-8">
+      <div className="flex flex-col lg:flex-row lg:items-start lg:justify-between gap-6 lg:gap-8">
         <div className="flex-1">
-          <h2 className="text-2xl font-bold mb-2 text-gray-900 leading-tight">
+          <h2 className="text-xl sm:text-2xl font-bold mb-2 text-gray-900 leading-tight">
             {title}
           </h2>
-          <p className="text-gray-600 leading-relaxed mb-4">
+          <p className="text-gray-600 leading-relaxed mb-4 text-sm sm:text-base">
             {contentSnippet}
           </p>
           <a
             href={link}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center px-4 py-2 bg-gray-100 text-gray-800 font-medium rounded-full hover:bg-gray-200 transition-colors text-sm"
+            className="inline-flex items-center px-3 sm:px-4 py-2 bg-gray-100 text-gray-800 font-medium rounded-full hover:bg-gray-200 transition-colors text-xs sm:text-sm"
           >
             Read
           </a>
         </div>
         
-        <div className="bg-gray-100 rounded-lg p-8 max-w-sm">
-          <blockquote className="text-gray-700 italic leading-relaxed">
+        <div className="bg-gray-100 rounded-lg p-4 sm:p-6 lg:p-8 lg:max-w-sm">
+          <blockquote className="text-gray-700 italic leading-relaxed text-sm sm:text-base">
             "{contentSnippet.substring(0, 150)}..."
           </blockquote>
         </div>

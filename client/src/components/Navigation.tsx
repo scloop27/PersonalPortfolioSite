@@ -11,8 +11,8 @@ export default function Navbar() {
 
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 bg-white border-b border-gray-100">
-      <div className="max-w-[1440px] mx-auto px-10 py-6">
-        <div className="flex justify-center space-x-12">
+      <div className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-10 py-4 sm:py-6">
+        <div className="flex justify-center space-x-6 sm:space-x-8 lg:space-x-12">
           <Link
             href="/"
             className={`text-sm font-normal text-gray-900 hover:text-gray-600 transition-colors ${
@@ -36,14 +36,6 @@ export default function Navbar() {
             }`}
           >
             Interests
-          </Link>
-          <Link
-            href="/thoughts"
-            className={`text-sm font-normal text-gray-900 hover:text-gray-600 transition-colors ${
-              isActive("/thoughts") ? "underline" : ""
-            }`}
-          >
-            Thoughts
           </Link>
           <Link
             href="/playbook"

@@ -117,17 +117,18 @@ export default function Playbook() {
   };
 
   return (
-    <div className="pt-24 pb-16 bg-white min-h-screen">
-      <div className="max-w-4xl mx-auto px-6">
+    <div className="pt-20 sm:pt-24 pb-16 bg-white min-h-screen">
+      <div className="max-w-4xl mx-auto px-4 sm:px-6">
         {/* Refresh Button */}
         <div className="flex justify-end mb-6">
           <button
             onClick={handleRefresh}
             disabled={isRefetching}
-            className="inline-flex items-center gap-2 px-4 py-2 bg-gray-100 text-gray-800 font-medium rounded-full hover:bg-gray-200 transition-colors text-sm disabled:opacity-50"
+            className="inline-flex items-center gap-2 px-3 sm:px-4 py-2 bg-gray-100 text-gray-800 font-medium rounded-full hover:bg-gray-200 transition-colors text-xs sm:text-sm disabled:opacity-50"
           >
-            <RefreshCw className={`w-4 h-4 ${isRefetching ? 'animate-spin' : ''}`} />
-            {isRefetching ? 'Refreshing...' : 'Refresh Posts'}
+            <RefreshCw className={`w-3 sm:w-4 h-3 sm:h-4 ${isRefetching ? 'animate-spin' : ''}`} />
+            <span className="hidden sm:inline">{isRefetching ? 'Refreshing...' : 'Refresh Posts'}</span>
+            <span className="sm:hidden">↻</span>
           </button>
         </div>
 

@@ -8,7 +8,6 @@ import Navigation from "@/components/Navigation";
 import About from "@/pages/About";
 import Experience from "@/pages/Experience";
 import Interests from "@/pages/Interests";
-import Thoughts from "@/pages/Thoughts";
 import Playbook from "@/pages/Playbook";
 
 function Router() {
@@ -19,7 +18,6 @@ function Router() {
         <Route path="/" component={About} />
         <Route path="/experience" component={Experience} />
         <Route path="/interests" component={Interests} />
-        <Route path="/thoughts" component={Thoughts} />
         <Route path="/playbook" component={Playbook} />
       </Switch>
     </div>
