@@ -1,0 +1,56 @@
+Projects Section:
+
+CRITICAL: This section begins immediately after the intro section's whitespace. There is NO heading like "My Work" or "Projects".
+
+The section is a list of four projects. Each project is a self-contained row with a two-column layout on desktop.
+
+Layout Pattern: The layout of the columns must alternate for each project row.
+
+Row 1 (Friday): Text on the left, Image on the right.
+
+Row 2 (YouLearn): Image on the left, Text on the right.
+
+Row 3 (Iris): Text on the left, Image on the right.
+
+Row 4 (Commencement Speech): Image on the left, Text on the right.
+
+Content for each project row:
+
+Text Column:
+
+Title: Bold project name (e.g., "Friday").
+
+Description: A short, one or two-line description below the title in a lighter font weight.
+
+"View" Button: A small, light gray, pill-shaped button with the text "View" inside.
+
+Image Column: A placeholder for the project's visual (product UI, photo, or video thumbnail).
+
+Specific Project Content (from image):
+
+Project 1: Title: Friday, Description: AI assistant for email. Backed by Y Combinator.
+
+Project 2: Title: YouLearn, Description: AI tutor for students. 1M+ users.
+
+Project 3: Title: Iris, Description: AI wearable that gives you infinite memory.
+
+Project 4: Title: Commencement Speech, Description: Spoke about chasing rejection to over 10,000 students at my graduation.
+
+5. Footer Section:
+
+This section appears at the very bottom of the page. It has a two-column layout.
+
+Left Column: The name "Advait Paliwal" with "Advait" on the first line and "Paliwal" on the second.
+
+Right Column: A two-column grid of social media links. The links are: X, LinkedIn, GitHub, Instagram, Google Scholar, Substack.
+
+Final Instructions for the Agent:
+
+The final code must be a runnable Next.js project.
+
+The implementation must be fully responsive. On mobile, the two-column project rows should stack vertically (image first, then text content).
+
+The code should be clean, well-commented, and use reusable components (e.g., a ProjectRow component).
+
+Related
+What is the exact prompt used for the Repilit agent on this page
