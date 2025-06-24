@@ -24,24 +24,42 @@ export async function registerRoutes(app: Express): Promise<Server> {
     }
   });
 
-  // RSS feed for Playbook page (Substack)
+  // RSS feed for Playbook page (Substack) with pagination
   app.get("/api/playbook-feed", async (req, res) => {
     try {
+      const page = parseInt(req.query.page as string) || 1;
+      const limit = parseInt(req.query.limit as string) || 6;
+      const offset = (page - 1) * limit;
+
       const parser = new Parser();
       const feed = await parser.parseURL('https://shivacharanmandhapuram.substack.com/feed');
       
-      const posts = feed.items?.slice(0, 6).map(item => ({
+      const allPosts = feed.items?.map(item => ({
         title: item.title || '',
         contentSnippet: item.contentSnippet || item.content?.substring(0, 200) + '...' || '',
         pubDate: item.pubDate || '',
         link: item.link || ''
       })) || [];
 
-      res.json(posts);
+      // Simulate pagination by slicing the posts
+      const paginatedPosts = allPosts.slice(offset, offset + limit);
+      const hasMore = offset + limit < allPosts.length;
+
+      res.json({
+        posts: paginatedPosts,
+        hasMore,
+        currentPage: page,
+        totalPosts: allPosts.length
+      });
     } catch (error) {
       console.error('Playbook RSS feed error:', error);
       // Fallback to show error but still return empty array to prevent UI crash
-      res.status(200).json([]);
+      res.status(200).json({
+        posts: [],
+        hasMore: false,
+        currentPage: 1,
+        totalPosts: 0
+      });
     }
   });
 

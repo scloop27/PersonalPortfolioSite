@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
-import { useQuery } from "@tanstack/react-query";
+import { useInfiniteQuery } from "@tanstack/react-query";
+import { useEffect } from "react";
 import PlaybookPostCard from "@/components/PlaybookPostCard";
 
 interface PlaybookPost {
@@ -9,15 +10,53 @@ interface PlaybookPost {
   pubDate: string;
 }
 
+interface PlaybookFeedResponse {
+  posts: PlaybookPost[];
+  hasMore: boolean;
+  currentPage: number;
+  totalPosts: number;
+}
+
 export default function Playbook() {
   const {
-    data: posts,
+    data,
+    fetchNextPage,
+    hasNextPage,
+    isFetchingNextPage,
     isLoading,
     error,
-  } = useQuery<PlaybookPost[]>({
+  } = useInfiniteQuery<PlaybookFeedResponse>({
     queryKey: ["/api/playbook-feed"],
+    queryFn: async ({ pageParam = 1 }) => {
+      const response = await fetch(`/api/playbook-feed?page=${pageParam}&limit=6`);
+      return response.json();
+    },
+    getNextPageParam: (lastPage) => {
+      return lastPage.hasMore ? lastPage.currentPage + 1 : undefined;
+    },
+    initialPageParam: 1,
     staleTime: 5 * 60 * 1000, // 5 minutes
   });
+
+  // Infinite scroll effect
+  useEffect(() => {
+    const handleScroll = () => {
+      if (
+        window.innerHeight + document.documentElement.scrollTop >=
+        document.documentElement.offsetHeight - 1000 && // Load when 1000px from bottom
+        hasNextPage &&
+        !isFetchingNextPage
+      ) {
+        fetchNextPage();
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, [fetchNextPage, hasNextPage, isFetchingNextPage]);
+
+  // Flatten all pages into a single array of posts
+  const allPosts = data?.pages?.flatMap(page => page.posts) || [];
 
   // Fallback posts if RSS feed fails
   const fallbackPosts = [
@@ -65,7 +104,7 @@ export default function Playbook() {
     },
   ];
 
-  const postsToDisplay = posts && posts.length > 0 ? posts : fallbackPosts;
+  const postsToDisplay = allPosts.length > 0 ? allPosts : fallbackPosts;
 
   return (
     <div className="pt-24 pb-16 bg-white min-h-screen">
@@ -92,7 +131,7 @@ export default function Playbook() {
         <div className="space-y-0">
           {postsToDisplay.map((post, index) => (
             <PlaybookPostCard
-              key={index}
+              key={`${post.link}-${index}`}
               title={post.title}
               contentSnippet={post.contentSnippet}
               link={post.link}
@@ -101,6 +140,24 @@ export default function Playbook() {
             />
           ))}
         </div>
+
+        {/* Loading indicator for infinite scroll */}
+        {isFetchingNextPage && (
+          <div className="text-center py-8">
+            <div className="inline-flex items-center px-4 py-2 text-gray-600 bg-gray-100 rounded-full">
+              Loading more posts...
+            </div>
+          </div>
+        )}
+
+        {/* End of posts indicator */}
+        {!hasNextPage && allPosts.length > 0 && (
+          <div className="text-center py-8">
+            <div className="inline-flex items-center px-4 py-2 text-gray-500 bg-gray-50 rounded-full text-sm">
+              You've reached the end
+            </div>
+          </div>
+        )}
       </div>
     </div>
   );
