@@ -1,7 +1,7 @@
 // server/index.ts
 import express, { type Request, Response, NextFunction } from "express";
-import { registerRoutes } from "./routes.js"; // <-- CHANGED: Added .js extension
-import { setupVite, serveStatic, log } from "./vite";
+import { registerRoutes } from "./routes.js";
+// Removed: import { setupVite, serveStatic, log } from "./vite.js";
 import cors from "cors";
 
 /**
@@ -14,10 +14,12 @@ const app = express();
 
 // Add CORS middleware
 // For production, you might want to restrict 'origin' to your Vercel frontend URL
-app.use(cors({
-  origin: true, // Allows all origins, useful for debugging. Restrict in production.
-  credentials: true // If your frontend sends cookies/auth headers
-}));
+app.use(
+  cors({
+    origin: true, // Allows all origins, useful for debugging. Restrict in production.
+    credentials: true, // If your frontend sends cookies/auth headers
+  }),
+);
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
@@ -49,36 +51,54 @@ app.use((req, res, next) => {
         logLine = logLine.slice(0, 79) + "…";
       }
 
-      log(logLine);
+      console.log(logLine); // Changed from log() to console.log() since log from vite.js is removed
     }
   });
 
   next();
 });
 
-(async () => {
-  const server = await registerRoutes(app);
+// Moved Vite setup to an async function that's only called in dev,
+// and removed serveStatic from here.
+async function setupAndStartServer() {
+  // Register all your API routes
+  await registerRoutes(app);
 
+  // Error handling middleware
   app.use((err: any, _req: Request, res: Response, _next: NextFunction) => {
     const status = err.status || err.statusCode || 500;
     const message = err.message || "Internal Server Error";
-
     res.status(status).json({ message });
-    throw err;
+    throw err; // Re-throw to ensure Vercel catches the error
   });
 
-  if (app.get("env") === "development") {
-    await setupVite(app, server);
-  } else {
-    serveStatic(app);
+  // Conditional Vite setup for development only
+  if (process.env.NODE_ENV === "development") {
+    // Use process.env.NODE_ENV
+    const { setupVite } = await import("./vite.js"); // Dynamically import vite setup for dev
+    const http = await import("http"); // Import http for creating server
+    const server = http.createServer(app);
+    await setupVite(app, server); // Pass both app and http server to vite setup
+    const port = 5000;
+    server.listen(
+      {
+        port,
+        host: "0.0.0.0",
+        reusePort: true,
+      },
+      () => {
+        console.log(`Development server serving on port ${port}`);
+      },
+    );
   }
+}
 
-  const port = 5000;
-  server.listen({
-    port,
-    host: "0.0.0.0",
-    reusePort: true,
-  }, () => {
-    log(`serving on port ${port}`);
-  });
-})();
+// Call the setup function immediately if not in a serverless environment
+// For Vercel, we export 'app' directly. app.listen() is for local development.
+if (process.env.NODE_ENV === "development" || !process.env.VERCEL) {
+  setupAndStartServer();
+}
+
+// For Vercel production deployment, export the app directly
+// Vercel will handle listening on a port internally
+export default app; // <-- REQUIRED for Vercel serverless functions
