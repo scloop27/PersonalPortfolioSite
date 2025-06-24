@@ -6,30 +6,32 @@
 
 :root {
   --background: hsl(0, 0%, 100%);
-  --foreground: hsl(0, 0%, 6.7%);
-  --muted: hsl(0, 0%, 96.1%);
-  --muted-foreground: hsl(0, 0%, 40%);
+  --foreground: hsl(0, 0%, 0%);
+  --muted: hsl(210, 40%, 96%);
+  --muted-foreground: hsl(0, 0%, 44%);
   --popover: hsl(0, 0%, 100%);
-  --popover-foreground: hsl(0, 0%, 6.7%);
+  --popover-foreground: hsl(0, 0%, 0%);
   --card: hsl(0, 0%, 100%);
-  --card-foreground: hsl(0, 0%, 6.7%);
-  --border: hsl(0, 0%, 89.8%);
-  --input: hsl(0, 0%, 89.8%);
-  --primary: hsl(0, 0%, 6.7%);
-  --primary-foreground: hsl(0, 0%, 98%);
-  --secondary: hsl(0, 0%, 96.1%);
-  --secondary-foreground: hsl(0, 0%, 9%);
-  --accent: hsl(0, 0%, 96.1%);
-  --accent-foreground: hsl(0, 0%, 9%);
+  --card-foreground: hsl(0, 0%, 0%);
+  --border: hsl(214, 13%, 90%);
+  --input: hsl(214, 13%, 90%);
+  --primary: hsl(0, 0%, 0%);
+  --primary-foreground: hsl(0, 0%, 100%);
+  --secondary: hsl(210, 15%, 96%);
+  --secondary-foreground: hsl(0, 0%, 0%);
+  --accent: hsl(210, 15%, 96%);
+  --accent-foreground: hsl(0, 0%, 0%);
   --destructive: hsl(0, 84.2%, 60.2%);
   --destructive-foreground: hsl(0, 0%, 98%);
-  --ring: hsl(0, 0%, 6.7%);
+  --ring: hsl(0, 0%, 0%);
   --radius: 0.5rem;
   
-  /* Custom portfolio colors */
-  --charcoal: hsl(0, 0%, 6.7%);
-  --medium-gray: hsl(0, 0%, 40%);
-  --pure-white: hsl(0, 0%, 100%);
+  /* Custom portfolio colors matching exact specs */
+  --charcoal: #000000;
+  --medium-gray: #707070;
+  --pure-white: #FFFFFF;
+  --light-gray: #F5F5F5;
+  --border-gray: #E5E7EB;
 }
 
 .dark {
@@ -83,7 +85,60 @@
     background-color: var(--pure-white);
   }
   
+  .bg-light-gray {
+    background-color: var(--light-gray);
+  }
+  
   .border-charcoal {
     border-color: var(--charcoal);
+  }
+  
+  .border-gray {
+    border-color: var(--border-gray);
+  }
+  
+  /* Exact typography from CSS specs */
+  .hero-text {
+    font-size: 55.75px;
+    line-height: 77px;
+    letter-spacing: -1.28px;
+    font-weight: 400;
+  }
+  
+  .project-title {
+    font-size: 26.6016px;
+    line-height: 45px;
+    font-weight: 400;
+  }
+  
+  .project-description {
+    font-size: 17.3438px;
+    line-height: 30px;
+    font-weight: 400;
+  }
+  
+  .button-text {
+    font-size: 16.0312px;
+    line-height: 27px;
+    font-weight: 400;
+  }
+
+  /* Responsive typography */
+  @media (max-width: 768px) {
+    .hero-text {
+      font-size: 32px;
+      line-height: 44px;
+      letter-spacing: -0.8px;
+    }
+    
+    .project-title {
+      font-size: 20px;
+      line-height: 32px;
+    }
+    
+    .project-description {
+      font-size: 16px;
+      line-height: 24px;
+    }
   }
 }
