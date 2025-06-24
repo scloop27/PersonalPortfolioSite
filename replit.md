@@ -95,7 +95,9 @@ This is a modern portfolio website for Advait Paliwal, a 21-year-old founder and
 
 ## Changelog
 
-- June 24, 2025. Initial setup
+- June 24, 2025: Initial setup
+- June 24, 2025: Added Founder's Playbook page with RSS feed integration
+- June 24, 2025: Converted Playbook to clean blog listing page matching user design requirements
 
 ## User Preferences
 

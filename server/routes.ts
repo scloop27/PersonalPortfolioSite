@@ -8,8 +8,7 @@ export async function registerRoutes(app: Express): Promise<Server> {
   app.get("/api/substack-feed", async (req, res) => {
     try {
       const parser = new Parser();
-      // Using a sample RSS feed - replace with actual Substack URL
-      const feed = await parser.parseURL('https://feeds.feedburner.com/oreilly/radar');
+      const feed = await parser.parseURL('https://feeds.simplecast.com/54nAGcIl');
       
       const posts = feed.items?.slice(0, 10).map(item => ({
         title: item.title || '',
@@ -25,12 +24,11 @@ export async function registerRoutes(app: Express): Promise<Server> {
     }
   });
 
-  // RSS feed for Founder's Playbook
+  // RSS feed for Playbook page (Substack)
   app.get("/api/playbook-feed", async (req, res) => {
     try {
       const parser = new Parser();
-      // Using a sample RSS feed - replace with actual playbook RSS URL
-      const feed = await parser.parseURL('https://feeds.feedburner.com/oreilly/radar');
+      const feed = await parser.parseURL('https://feeds.simplecast.com/54nAGcIl');
       
       const posts = feed.items?.slice(0, 6).map(item => ({
         title: item.title || '',
