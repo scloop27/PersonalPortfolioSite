@@ -2,23 +2,26 @@
   "version": 2,
   "builds": [
     {
-      "src": "dist/server/index.js",
-      "use": "@vercel/node"
+      "src": "package.json", // Vercel will look for the 'build' script in this package.json
+      "use": "@vercel/static-build", // Use the static-build builder
+      "config": {
+        "outputDirectory": "dist/public" // This tells @vercel/static-build where your static files are after 'npm run build'
+      }
     },
     {
-      "src": "dist/public/**",
-      "use": "@vercel/static"
+      "src": "server/index.ts", // Your Express server entry point
+      "use": "@vercel/node" // This creates a serverless function from your Express app
     }
   ],
   "routes": [
     {
-      "src": "/api/(.*)",
-      "dest": "dist/server/index.js"
+      "src": "/api/(.*)", // Route all /api requests
+      "dest": "server/index.ts" // To your serverless function (Vercel will build this)
     },
     {
-      "src": "/(.*)",
-      "dest": "dist/public/index.html"
+      "src": "/(.*)", // Route all other requests (your React app's static files)
+      "dest": "/index.html" // To the main index.html in the static build output
     }
-  ],
-  "outputDirectory": "dist"
+  ]
+  // Removed outputDirectory at the root, as it's now handled by static-build config
 }
