@@ -2,8 +2,8 @@
 {
   "compilerOptions": {
     "target": "ES2022",
-    "module": "CommonJS", // Crucial for Node.js compatibility
-    "outDir": "dist/server", // This should match the esbuild output directory
+    "module": "CommonJS",
+    "outDir": "dist/server",
     "noEmit": false,
     "esModuleInterop": true,
     "allowSyntheticDefaultImports": true,
