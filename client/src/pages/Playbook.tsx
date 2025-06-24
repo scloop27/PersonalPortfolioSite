@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
-import { useInfiniteQuery } from "@tanstack/react-query";
+import { useInfiniteQuery, useQueryClient } from "@tanstack/react-query";
 import { useEffect } from "react";
+import { RefreshCw } from "lucide-react";
 import PlaybookPostCard from "@/components/PlaybookPostCard";
 
 interface PlaybookPost {
@@ -18,6 +19,8 @@ interface PlaybookFeedResponse {
 }
 
 export default function Playbook() {
+  const queryClient = useQueryClient();
+  
   const {
     data,
     fetchNextPage,
@@ -25,6 +28,8 @@ export default function Playbook() {
     isFetchingNextPage,
     isLoading,
     error,
+    refetch,
+    isRefetching,
   } = useInfiniteQuery<PlaybookFeedResponse>({
     queryKey: ["/api/playbook-feed"],
     queryFn: async ({ pageParam = 1 }) => {
@@ -35,7 +40,7 @@ export default function Playbook() {
       return lastPage.hasMore ? lastPage.currentPage + 1 : undefined;
     },
     initialPageParam: 1,
-    staleTime: 5 * 60 * 1000, // 5 minutes
+    staleTime: 30 * 1000, // 30 seconds for faster updates
   });
 
   // Infinite scroll effect
@@ -106,9 +111,26 @@ export default function Playbook() {
 
   const postsToDisplay = allPosts.length > 0 ? allPosts : fallbackPosts;
 
+  const handleRefresh = async () => {
+    await queryClient.invalidateQueries({ queryKey: ["/api/playbook-feed"] });
+    refetch();
+  };
+
   return (
     <div className="pt-24 pb-16 bg-white min-h-screen">
       <div className="max-w-4xl mx-auto px-6">
+        {/* Refresh Button */}
+        <div className="flex justify-end mb-6">
+          <button
+            onClick={handleRefresh}
+            disabled={isRefetching}
+            className="inline-flex items-center gap-2 px-4 py-2 bg-gray-100 text-gray-800 font-medium rounded-full hover:bg-gray-200 transition-colors text-sm disabled:opacity-50"
+          >
+            <RefreshCw className={`w-4 h-4 ${isRefetching ? 'animate-spin' : ''}`} />
+            {isRefetching ? 'Refreshing...' : 'Refresh Posts'}
+          </button>
+        </div>
+
         {/* Loading State */}
         {isLoading && (
           <div className="text-center mb-12">

@@ -32,7 +32,9 @@ export async function registerRoutes(app: Express): Promise<Server> {
       const offset = (page - 1) * limit;
 
       const parser = new Parser();
-      const feed = await parser.parseURL('https://shivacharanmandhapuram.substack.com/feed');
+      // Add cache-busting timestamp to URL
+      const feedUrl = `https://shivacharanmandhapuram.substack.com/feed?t=${Date.now()}`;
+      const feed = await parser.parseURL(feedUrl);
       
       const allPosts = feed.items?.map(item => ({
         title: item.title || '',
@@ -44,6 +46,13 @@ export async function registerRoutes(app: Express): Promise<Server> {
       // Simulate pagination by slicing the posts
       const paginatedPosts = allPosts.slice(offset, offset + limit);
       const hasMore = offset + limit < allPosts.length;
+
+      // Set cache headers to reduce caching
+      res.set({
+        'Cache-Control': 'no-cache, no-store, must-revalidate',
+        'Pragma': 'no-cache',
+        'Expires': '0'
+      });
 
       res.json({
         posts: paginatedPosts,
