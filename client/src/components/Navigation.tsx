@@ -43,7 +43,7 @@ export default function Navbar() {
               isActive("/thoughts") ? "underline" : ""
             }`}
           >
-            Thoughts
+            Playbook⚡️
           </Link>
         </div>
       </div>

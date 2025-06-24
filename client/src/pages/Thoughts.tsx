@@ -4,7 +4,7 @@ export default function Thoughts() {
       <section className="mt-20 mb-32">
         <div className="max-w-4xl">
           <h1 className="text-4xl md:text-5xl font-normal leading-tight text-charcoal mb-16">
-            Thoughts
+            Playbook⚡️
           </h1>
           <div className="space-y-12">
             <article className="border-b border-gray-200 pb-12">
