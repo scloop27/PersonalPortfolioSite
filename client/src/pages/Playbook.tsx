@@ -1,145 +1,165 @@
 import { motion } from "framer-motion";
+import { useQuery } from "@tanstack/react-query";
+import PlaybookPostCard from "@/components/PlaybookPostCard";
+
+interface PlaybookPost {
+  title: string;
+  contentSnippet: string;
+  link: string;
+  pubDate: string;
+}
 
 export default function Playbook() {
+  const {
+    data: posts,
+    isLoading,
+    error,
+  } = useQuery<PlaybookPost[]>({
+    queryKey: ["/api/playbook-feed"],
+    staleTime: 5 * 60 * 1000, // 5 minutes
+  });
+
+  // Fallback posts if RSS feed fails
+  const fallbackPosts = [
+    {
+      title: "The Art of Product-Market Fit",
+      contentSnippet:
+        "Finding product-market fit isn't just about building features—it's about understanding the emotional connection between your solution and your users' deepest needs. Here's how we discovered it through community feedback...",
+      link: "#",
+      pubDate: "2024-12-15",
+    },
+    {
+      title: "Building Communities That Scale",
+      contentSnippet:
+        "Growing Noobslearning to 5,000+ members taught us that community isn't just about numbers—it's about creating genuine value and fostering meaningful connections. Here are the key principles...",
+      link: "#",
+      pubDate: "2024-12-10",
+    },
+    {
+      title: "Navigating Y Combinator: Lessons Learned",
+      contentSnippet:
+        "Y Combinator taught us that successful startups aren't just about great ideas—they're about execution, timing, and relentless focus on customer needs. Here's what we learned...",
+      link: "#",
+      pubDate: "2024-12-05",
+    },
+    {
+      title: "The Psychology of User Engagement",
+      contentSnippet:
+        "Understanding why users engage with your product goes beyond features and functionality. It's about creating experiences that resonate on a deeper level...",
+      link: "#",
+      pubDate: "2024-11-28",
+    },
+    {
+      title: "Remote-First Culture Design",
+      contentSnippet:
+        "Building a strong remote culture requires intentional design and clear communication protocols. Here's how we scaled our team across multiple time zones...",
+      link: "#",
+      pubDate: "2024-11-20",
+    },
+    {
+      title: "Technical Storytelling for Founders",
+      contentSnippet:
+        "Complex technology needs simple stories. Whether pitching to investors or explaining to users, storytelling determines success. Here's our framework...",
+      link: "#",
+      pubDate: "2024-11-15",
+    },
+  ];
+
+  const postsToDisplay = posts && posts.length > 0 ? posts : fallbackPosts;
+
   return (
-    <div className="pt-24 pb-16">
-      <div className="max-w-4xl mx-auto px-6">
+    <div className="pt-24 pb-16 bg-gray-50 min-h-screen">
+      <div className="max-w-6xl mx-auto px-6">
         {/* Page Title & Thesis Statement */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
-          className="mb-12"
+          className="mb-12 text-center"
         >
-          <h1 className="text-5xl md:text-6xl font-bold mb-6 text-center">
+          <h1 className="text-5xl md:text-6xl font-bold mb-6 text-gray-900">
             Founder's Playbook
           </h1>
           
-          <h2 className="text-2xl md:text-3xl text-gray-600 mb-6 text-center">
+          <h2 className="text-2xl md:text-3xl text-gray-600 mb-6">
             Building a company is more than code. It's about navigating change.
           </h2>
           
-          <p className="text-lg text-gray-700 leading-relaxed text-center max-w-3xl mx-auto mb-8">
+          <p className="text-lg text-gray-700 leading-relaxed max-w-3xl mx-auto mb-8">
             My journey has been defined by key strategic decisions that have shaped our resilience, culture, and path to growth. This playbook highlights some of those moments.
           </p>
           
-          <hr className="border-gray-300" />
+          <hr className="border-gray-300 max-w-xs mx-auto" />
         </motion.div>
 
-        {/* Key Play 01 */}
+        {/* Quote Box */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
-          className="py-12"
+          className="bg-gray-100 rounded-lg p-8 mb-12 text-center max-w-4xl mx-auto"
         >
-          <h3 className="text-gray-400 font-semibold text-sm uppercase tracking-wide">
-            Key Play 01
-          </h3>
-          
-          <h2 className="text-2xl font-bold mt-2 mb-8">
-            Building Community Before Product
-          </h2>
-          
-          <div className="grid md:grid-cols-2 gap-8 items-start">
-            <div className="space-y-4">
-              <p className="text-gray-700 leading-relaxed">
-                <strong>The Challenge:</strong> Starting Noobsverse with no audience, no product, and limited resources. Traditional wisdom says build first, then find customers.
-              </p>
-              
-              <p className="text-gray-700 leading-relaxed">
-                <strong>The Decision:</strong> We chose to build our community first through Noobslearning, creating value through educational content and workshops before launching any product.
-              </p>
-              
-              <p className="text-gray-700 leading-relaxed">
-                <strong>The Outcome:</strong> Grew to 5,000+ engaged members who became our first customers, advisors, and advocates. Product-market fit became clearer through constant community feedback.
-              </p>
-            </div>
-            
-            <div className="border border-gray-200 rounded-lg p-6 bg-gray-50 text-center">
-              <div className="text-4xl font-bold text-gray-800 mb-2">5,000+</div>
-              <div className="text-gray-600 mb-4">Community Members</div>
-              <div className="text-sm text-gray-500">Built before product launch</div>
+          <blockquote className="text-xl md:text-2xl font-medium text-gray-800 italic mb-4">
+            "Every great company is built on a series of small decisions that compound over time. The key is recognizing which moments matter most."
+          </blockquote>
+          <cite className="text-gray-600 font-medium">— Advait Paliwal</cite>
+        </motion.div>
+
+        {/* Loading State */}
+        {isLoading && (
+          <div className="text-center mb-12">
+            <div className="inline-flex items-center px-4 py-2 text-gray-600 bg-gray-200 rounded-full">
+              Loading latest insights...
             </div>
           </div>
-        </motion.div>
+        )}
 
-        <hr className="border-gray-300" />
-
-        {/* Key Play 02 */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
-          className="py-12"
-        >
-          <h3 className="text-gray-400 font-semibold text-sm uppercase tracking-wide">
-            Key Play 02
-          </h3>
-          
-          <h2 className="text-2xl font-bold mt-2 mb-8">
-            Pivoting Through Y Combinator Feedback
-          </h2>
-          
-          <div className="grid md:grid-cols-2 gap-8 items-start">
-            <div className="space-y-4">
-              <p className="text-gray-700 leading-relaxed">
-                <strong>The Challenge:</strong> Our initial product wasn't gaining the traction we expected despite having a strong community foundation. Customer acquisition was slower than projected.
-              </p>
-              
-              <p className="text-gray-700 leading-relaxed">
-                <strong>The Decision:</strong> Applied to Y Combinator and used their structured feedback process to identify the core problem. Pivoted our approach based on real user behavior patterns and pain points.
-              </p>
-              
-              <p className="text-gray-700 leading-relaxed">
-                <strong>The Outcome:</strong> Found a more focused market fit, streamlined our value proposition, and built stronger product-market alignment through iterative testing and customer interviews.
-              </p>
-            </div>
-            
-            <div className="border border-gray-200 rounded-lg p-6 bg-gray-50 text-center">
-              <div className="text-2xl font-bold text-gray-800 mb-2">Y Combinator</div>
-              <div className="text-gray-600 mb-4">Structured Pivoting</div>
-              <div className="text-sm text-gray-500">Data-driven decision making</div>
+        {/* Error State */}
+        {error && (
+          <div className="text-center mb-12">
+            <div className="inline-flex items-center px-4 py-2 text-gray-600 bg-gray-200 rounded-full">
+              Showing curated insights
             </div>
           </div>
-        </motion.div>
+        )}
 
-        <hr className="border-gray-300" />
+        {/* Posts Grid - Two columns on desktop, single column on mobile */}
+        <div className="grid md:grid-cols-2 gap-8 mb-12">
+          {postsToDisplay.map((post, index) => (
+            <PlaybookPostCard
+              key={index}
+              title={post.title}
+              contentSnippet={post.contentSnippet}
+              link={post.link}
+              pubDate={post.pubDate}
+              index={index}
+            />
+          ))}
+        </div>
 
-        {/* Key Play 03 */}
+        {/* Newsletter Signup */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
-          className="py-12"
+          className="text-center"
         >
-          <h3 className="text-gray-400 font-semibold text-sm uppercase tracking-wide">
-            Key Play 03
-          </h3>
-          
-          <h2 className="text-2xl font-bold mt-2 mb-8">
-            Scaling Culture Through Remote-First Design
-          </h2>
-          
-          <div className="grid md:grid-cols-2 gap-8 items-start">
-            <div className="space-y-4">
-              <p className="text-gray-700 leading-relaxed">
-                <strong>The Challenge:</strong> As we grew, maintaining our startup culture and effective communication became increasingly difficult. Traditional office-based approaches weren't scalable for our distributed team.
-              </p>
-              
-              <p className="text-gray-700 leading-relaxed">
-                <strong>The Decision:</strong> Implemented a remote-first culture with documented processes, asynchronous communication principles, and regular virtual team building. Invested heavily in tooling and clear communication protocols.
-              </p>
-              
-              <p className="text-gray-700 leading-relaxed">
-                <strong>The Outcome:</strong> Maintained strong team cohesion while scaling to multiple time zones. Improved productivity through better documentation and clearer decision-making processes.
-              </p>
-            </div>
-            
-            <div className="border border-gray-200 rounded-lg p-6 bg-gray-50 text-center">
-              <div className="text-2xl font-bold text-gray-800 mb-2">Remote-First</div>
-              <div className="text-gray-600 mb-4">Culture Design</div>
-              <div className="text-sm text-gray-500">Scalable team operations</div>
+          <div className="bg-white rounded-lg p-8 border border-gray-200 max-w-2xl mx-auto shadow-sm">
+            <h3 className="text-2xl font-bold mb-4 text-gray-900">
+              Get the Playbook
+            </h3>
+            <p className="text-gray-600 mb-6">
+              Receive founder insights, strategic frameworks, and lessons learned from building technology ventures.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4">
+              <input
+                type="email"
+                placeholder="Enter your email"
+                className="flex-1 px-4 py-3 border border-gray-300 rounded-lg text-gray-900 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-gray-400 focus:border-transparent"
+              />
+              <button className="px-6 py-3 bg-gray-200 text-gray-800 font-medium rounded-full hover:bg-gray-300 transition-colors">
+                Subscribe
+              </button>
             </div>
           </div>
         </motion.div>
