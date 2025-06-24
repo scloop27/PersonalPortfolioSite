@@ -5,8 +5,8 @@ export default function Footer() {
         <div className="flex justify-between items-start">
           <div>
             <div className="text-lg font-medium text-charcoal leading-tight">
-              <div>Advait</div>
-              <div>Paliwal</div>
+              <div>Shivacharan</div>
+              <div>Mandhapuram</div>
             </div>
           </div>
           <div className="text-right">
