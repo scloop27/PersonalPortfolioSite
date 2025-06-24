@@ -74,7 +74,9 @@ export default function About() {
                 className="flex flex-col lg:flex-row justify-between items-start w-full py-20 gap-8 lg:gap-48"
               >
                 {/* Text Content */}
-                <div className="flex flex-col items-start gap-2 w-full lg:w-[480.94px]">
+                <div className={`flex flex-col items-start gap-2 w-full lg:w-[480.94px] ${
+                  index % 2 === 0 ? 'order-2 lg:order-1' : 'order-2'
+                }`}>
                   {/* Title */}
                   <div className="w-full h-[45px] flex items-center">
                     <h2
@@ -125,19 +127,96 @@ export default function About() {
 
                 {/* Image Container */}
                 <div
-                  className="flex flex-col items-start w-full lg:w-[687.06px] lg:h-[393.47px]"
+                  className={`flex flex-col items-start w-full lg:w-[687.06px] lg:h-[393.47px] ${
+                    index % 2 === 0 ? 'order-1 lg:order-2' : 'order-1'
+                  }`}
                   style={{ paddingBottom: "7px" }}
                 >
-                  <img
-                    src={project.image}
-                    alt={project.title}
-                    className="w-full h-full object-cover"
-                    style={{
-                      width: "100%",
-                      maxWidth: "687.06px",
-                      height: "clamp(250px, 25vw, 386.47px)",
-                    }}
-                  />
+                  {index === 0 ? (
+                    // Friday project - Purple gradient with email icon
+                    <div className="w-full h-full bg-gradient-to-br from-gray-900 to-purple-900 rounded-xl overflow-hidden shadow-lg flex items-center justify-center relative">
+                      <div className="text-center text-white px-8">
+                        <h3 className="text-3xl font-medium mb-2">Never check your<br />email again</h3>
+                        <div className="w-16 h-16 bg-purple-600 rounded-full mx-auto mt-8 flex items-center justify-center">
+                          <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                          </svg>
+                        </div>
+                      </div>
+                    </div>
+                  ) : index === 1 ? (
+                    // YouLearn project - Dark interface mockup
+                    <div className="w-full h-full bg-gray-900 rounded-xl overflow-hidden shadow-lg">
+                      <div className="h-full p-6">
+                        <div className="flex items-center justify-between mb-6">
+                          <div className="text-white text-lg font-medium">YouLearn</div>
+                          <div className="flex space-x-2">
+                            <div className="w-3 h-3 bg-red-500 rounded-full"></div>
+                            <div className="w-3 h-3 bg-yellow-500 rounded-full"></div>
+                            <div className="w-3 h-3 bg-green-500 rounded-full"></div>
+                          </div>
+                        </div>
+                        <div className="grid grid-cols-2 gap-4">
+                          <div className="bg-gray-800 rounded-lg p-4 h-20"></div>
+                          <div className="bg-gray-800 rounded-lg p-4 h-20"></div>
+                          <div className="bg-gray-700 rounded-lg p-4 h-16 col-span-2"></div>
+                          <div className="bg-purple-600 rounded-lg p-4 h-12"></div>
+                          <div className="bg-gray-800 rounded-lg p-4 h-12"></div>
+                        </div>
+                      </div>
+                    </div>
+                  ) : index === 2 ? (
+                    // Iris project - Wearable device mockup
+                    <div className="w-full h-full flex items-center justify-center space-x-8">
+                      <div className="w-48 h-48 bg-gray-100 rounded-full border border-gray-200 flex items-center justify-center shadow-lg">
+                        <div className="w-4 h-4 bg-black rounded-full"></div>
+                      </div>
+                      <div className="relative">
+                        <div className="w-24 h-48 bg-white rounded-3xl border-2 border-gray-200 shadow-lg overflow-hidden">
+                          <div className="bg-gray-900 h-6 rounded-t-2xl"></div>
+                          <div className="p-2 space-y-2">
+                            <div className="bg-gray-200 h-2 rounded"></div>
+                            <div className="bg-gray-300 h-2 rounded w-3/4"></div>
+                            <div className="bg-purple-200 h-4 rounded mt-4"></div>
+                            <div className="bg-gray-200 h-2 rounded"></div>
+                          </div>
+                        </div>
+                        <div className="absolute -top-2 -right-8 bg-gray-800 text-white text-xs px-3 py-2 rounded-lg shadow-lg">
+                          <div className="flex items-center space-x-2">
+                            <div className="w-2 h-2 bg-green-400 rounded-full"></div>
+                            <span>Smart reminder</span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  ) : (
+                    // Commencement Speech - Video player mockup
+                    <div className="w-full h-full bg-gray-900 rounded-xl overflow-hidden shadow-lg relative">
+                      <div className="absolute inset-0 flex items-center justify-center">
+                        <div className="w-16 h-16 bg-white bg-opacity-20 rounded-full flex items-center justify-center backdrop-blur-sm">
+                          <svg className="w-6 h-6 text-white ml-1" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M8 5v14l11-7z"/>
+                          </svg>
+                        </div>
+                      </div>
+                      <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black to-transparent p-6">
+                        <div className="flex items-center justify-between text-white">
+                          <div className="flex items-center space-x-4">
+                            <span className="text-sm">02:34</span>
+                            <div className="flex-1 h-1 bg-white bg-opacity-30 rounded-full">
+                              <div className="h-full w-1/3 bg-white rounded-full"></div>
+                            </div>
+                            <span className="text-sm">15:42</span>
+                          </div>
+                        </div>
+                      </div>
+                      <div className="absolute top-4 right-4 grid grid-cols-3 gap-1">
+                        <div className="w-8 h-6 bg-blue-600 rounded-sm"></div>
+                        <div className="w-8 h-6 bg-green-600 rounded-sm"></div>
+                        <div className="w-8 h-6 bg-purple-600 rounded-sm"></div>
+                      </div>
+                    </div>
+                  )}
                 </div>
               </motion.div>
             </div>
