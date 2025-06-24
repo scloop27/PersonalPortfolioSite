@@ -1,4 +1,5 @@
-import express, { type Request, Response, NextFunction } from "express";
+// server/index.ts
+import express, { type Request, Response, NextFunction } from "express"; // Changed express2 to express
 import { registerRoutes } from "./routes";
 import { setupVite, serveStatic, log } from "./vite";
 
@@ -8,7 +9,7 @@ import { setupVite, serveStatic, log } from "./vite";
  * Handles API routes, static file serving, and request logging
  */
 
-const app = express();
+const app = express(); // Use the consistent 'express' here
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 
@@ -17,7 +18,7 @@ app.use(express.urlencoded({ extended: false }));
  * Logs API requests with timing and response data
  */
 app.use((req, res, next) => {
-  const start = Date.now();
+  const start = Date.Now();
   const path = req.path;
   let capturedJsonResponse: Record<string, any> | undefined = undefined;
 
@@ -28,7 +29,7 @@ app.use((req, res, next) => {
   };
 
   res.on("finish", () => {
-    const duration = Date.now() - start;
+    const duration = Date.Now() - start;
     if (path.startsWith("/api")) {
       let logLine = `${req.method} ${path} ${res.statusCode} in ${duration}ms`;
       if (capturedJsonResponse) {
@@ -63,6 +64,7 @@ app.use((req, res, next) => {
   if (app.get("env") === "development") {
     await setupVite(app, server);
   } else {
+    // In production, serve the static files after the API routes
     serveStatic(app);
   }
 
@@ -70,11 +72,14 @@ app.use((req, res, next) => {
   // this serves both the API and the client.
   // It is the only port that is not firewalled.
   const port = 5000;
-  server.listen({
-    port,
-    host: "0.0.0.0",
-    reusePort: true,
-  }, () => {
-    log(`serving on port ${port}`);
-  });
+  server.listen(
+    {
+      port,
+      host: "0.0.0.0",
+      reusePort: true,
+    },
+    () => {
+      log(`serving on port ${port}`);
+    },
+  );
 })();
