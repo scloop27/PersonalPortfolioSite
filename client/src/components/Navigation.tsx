@@ -43,7 +43,15 @@ export default function Navbar() {
               isActive("/thoughts") ? "underline" : ""
             }`}
           >
-            Playbook⚡️
+            Thoughts
+          </Link>
+          <Link
+            href="/playbook"
+            className={`text-sm font-normal text-gray-900 hover:text-gray-600 transition-colors ${
+              isActive("/playbook") ? "underline" : ""
+            }`}
+          >
+            Playbook
           </Link>
         </div>
       </div>
