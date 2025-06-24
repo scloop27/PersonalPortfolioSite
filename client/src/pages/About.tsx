@@ -34,10 +34,7 @@ export default function About() {
       {/* Main Container */}
       <main className="flex flex-col items-center w-full pt-24">
         {/* Hero Section */}
-        <section
-          className="flex flex-row justify-center items-center w-full"
-          style={{ padding: "200px 0px" }}
-        >
+        <section className="flex flex-row justify-center items-center w-full min-h-screen">
           <div className="flex flex-col items-start px-10 w-full max-w-[1440px]">
             <motion.h1
               initial={{ opacity: 0, y: 20 }}

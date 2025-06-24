@@ -4,7 +4,7 @@ import { QueryClientProvider } from "@tanstack/react-query";
 import { Toaster } from "@/components/ui/toaster";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import Navigation from "@/components/Navigation";
-import Footer from "@/components/Footer";
+
 import About from "@/pages/About";
 import Experience from "@/pages/Experience";
 import Interests from "@/pages/Interests";
@@ -20,7 +20,6 @@ function Router() {
         <Route path="/interests" component={Interests} />
         <Route path="/thoughts" component={Thoughts} />
       </Switch>
-      <Footer />
     </div>
   );
 }
