@@ -1,59 +1,53 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 :root {
-  --background: hsl(0, 0%, 100%);
-  --foreground: hsl(0, 0%, 0%);
-  --muted: hsl(210, 40%, 96%);
-  --muted-foreground: hsl(0, 0%, 44%);
-  --popover: hsl(0, 0%, 100%);
-  --popover-foreground: hsl(0, 0%, 0%);
-  --card: hsl(0, 0%, 100%);
-  --card-foreground: hsl(0, 0%, 0%);
-  --border: hsl(214, 13%, 90%);
-  --input: hsl(214, 13%, 90%);
-  --primary: hsl(0, 0%, 0%);
-  --primary-foreground: hsl(0, 0%, 100%);
-  --secondary: hsl(210, 15%, 96%);
-  --secondary-foreground: hsl(0, 0%, 0%);
-  --accent: hsl(210, 15%, 96%);
-  --accent-foreground: hsl(0, 0%, 0%);
-  --destructive: hsl(0, 84.2%, 60.2%);
-  --destructive-foreground: hsl(0, 0%, 98%);
-  --ring: hsl(0, 0%, 0%);
+  --background: hsl(0, 0%, 6.7%);
+  --foreground: hsl(0, 0%, 100%);
+  --muted: hsl(0, 0%, 15.9%);
+  --muted-foreground: hsl(0, 0%, 64.9%);
+  --popover: hsl(0, 0%, 6.7%);
+  --popover-foreground: hsl(0, 0%, 100%);
+  --card: hsl(0, 0%, 10.2%);
+  --card-foreground: hsl(0, 0%, 100%);
+  --border: hsl(0, 0%, 20%);
+  --input: hsl(0, 0%, 15.9%);
+  --primary: hsl(0, 0%, 100%);
+  --primary-foreground: hsl(0, 0%, 6.7%);
+  --secondary: hsl(0, 0%, 15.9%);
+  --secondary-foreground: hsl(0, 0%, 100%);
+  --accent: hsl(0, 0%, 15.9%);
+  --accent-foreground: hsl(0, 0%, 100%);
+  --destructive: hsl(0, 62.8%, 30.6%);
+  --destructive-foreground: hsl(0, 0%, 100%);
+  --ring: hsl(0, 0%, 83.9%);
   --radius: 0.5rem;
-  
-  /* Custom portfolio colors matching exact specs */
-  --charcoal: #000000;
-  --medium-gray: #707070;
-  --pure-white: #FFFFFF;
-  --light-gray: #F5F5F5;
-  --border-gray: #E5E7EB;
 }
 
 .dark {
-  --background: hsl(240, 10%, 3.9%);
-  --foreground: hsl(0, 0%, 98%);
-  --muted: hsl(240, 3.7%, 15.9%);
-  --muted-foreground: hsl(240, 5%, 64.9%);
-  --popover: hsl(240, 10%, 3.9%);
-  --popover-foreground: hsl(0, 0%, 98%);
-  --card: hsl(240, 10%, 3.9%);
-  --card-foreground: hsl(0, 0%, 98%);
-  --border: hsl(240, 3.7%, 15.9%);
-  --input: hsl(240, 3.7%, 15.9%);
-  --primary: hsl(0, 0%, 98%);
-  --primary-foreground: hsl(0, 0%, 9%);
-  --secondary: hsl(240, 3.7%, 15.9%);
-  --secondary-foreground: hsl(0, 0%, 98%);
-  --accent: hsl(240, 3.7%, 15.9%);
-  --accent-foreground: hsl(0, 0%, 98%);
+  --background: hsl(0, 0%, 6.7%);
+  --foreground: hsl(0, 0%, 100%);
+  --muted: hsl(0, 0%, 15.9%);
+  --muted-foreground: hsl(0, 0%, 64.9%);
+  --popover: hsl(0, 0%, 6.7%);
+  --popover-foreground: hsl(0, 0%, 100%);
+  --card: hsl(0, 0%, 10.2%);
+  --card-foreground: hsl(0, 0%, 100%);
+  --border: hsl(0, 0%, 20%);
+  --input: hsl(0, 0%, 15.9%);
+  --primary: hsl(0, 0%, 100%);
+  --primary-foreground: hsl(0, 0%, 6.7%);
+  --secondary: hsl(0, 0%, 15.9%);
+  --secondary-foreground: hsl(0, 0%, 100%);
+  --accent: hsl(0, 0%, 15.9%);
+  --accent-foreground: hsl(0, 0%, 100%);
   --destructive: hsl(0, 62.8%, 30.6%);
-  --destructive-foreground: hsl(0, 0%, 98%);
-  --ring: hsl(240, 4.9%, 83.9%);
+  --destructive-foreground: hsl(0, 0%, 100%);
+  --ring: hsl(0, 0%, 83.9%);
+  --radius: 0.5rem;
 }
 
 @layer base {
@@ -62,83 +56,29 @@
   }
 
   body {
-    @apply font-inter antialiased;
-    background-color: var(--pure-white);
-    color: var(--charcoal);
+    @apply antialiased bg-background text-foreground;
+    font-family: 'Inter', system-ui, sans-serif;
   }
 }
 
-@layer utilities {
-  .font-inter {
-    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-  }
-  
-  .text-charcoal {
-    color: var(--charcoal);
-  }
-  
-  .text-medium-gray {
-    color: var(--medium-gray);
-  }
-  
-  .bg-pure-white {
-    background-color: var(--pure-white);
-  }
-  
-  .bg-light-gray {
-    background-color: var(--light-gray);
-  }
-  
-  .border-charcoal {
-    border-color: var(--charcoal);
-  }
-  
-  .border-gray {
-    border-color: var(--border-gray);
-  }
-  
-  /* Exact typography from CSS specs */
-  .hero-text {
-    font-size: 55.75px;
-    line-height: 77px;
-    letter-spacing: -1.28px;
-    font-weight: 400;
-  }
-  
-  .project-title {
-    font-size: 26.6016px;
-    line-height: 45px;
-    font-weight: 400;
-  }
-  
-  .project-description {
-    font-size: 17.3438px;
-    line-height: 30px;
-    font-weight: 400;
-  }
-  
-  .button-text {
-    font-size: 16.0312px;
-    line-height: 27px;
-    font-weight: 400;
-  }
+.horizontal-scroll-container {
+  scrollbar-width: thin;
+  scrollbar-color: rgba(255, 255, 255, 0.2) transparent;
+}
 
-  /* Responsive typography */
-  @media (max-width: 768px) {
-    .hero-text {
-      font-size: 32px;
-      line-height: 44px;
-      letter-spacing: -0.8px;
-    }
-    
-    .project-title {
-      font-size: 20px;
-      line-height: 32px;
-    }
-    
-    .project-description {
-      font-size: 16px;
-      line-height: 24px;
-    }
-  }
+.horizontal-scroll-container::-webkit-scrollbar {
+  height: 6px;
+}
+
+.horizontal-scroll-container::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.horizontal-scroll-container::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 3px;
+}
+
+.horizontal-scroll-container::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.3);
 }

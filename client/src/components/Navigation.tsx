@@ -1,38 +1,50 @@
 import { Link, useLocation } from "wouter";
 
-const navItems = [
-  { path: "/", label: "About" },
-  { path: "/experience", label: "Experience" },
-  { path: "/interests", label: "Interests" },
-  { path: "/thoughts", label: "Thoughts" },
-];
-
-export default function Navigation() {
+export default function Navbar() {
   const [location] = useLocation();
 
+  const isActive = (path: string) => {
+    if (path === "/" && location === "/") return true;
+    if (path !== "/" && location.startsWith(path)) return true;
+    return false;
+  };
+
   return (
-    <nav className="w-full py-8">
-      <div className="max-w-6xl mx-auto px-6">
-        <div className="flex justify-center">
-          <ul className="flex space-x-12 text-medium-gray tracking-wider text-sm">
-            {navItems.map((item) => {
-              const isActive = location === item.path;
-              return (
-                <li key={item.path}>
-                  <Link 
-                    href={item.path}
-                    className={`hover:text-charcoal transition-colors duration-200 ${
-                      isActive 
-                        ? "border-b-2 border-charcoal text-charcoal pb-1" 
-                        : ""
-                    }`}
-                  >
-                    {item.label}
-                  </Link>
-                </li>
-              );
-            })}
-          </ul>
+    <nav className="fixed top-0 left-0 right-0 z-50 bg-white border-b border-gray-100">
+      <div className="max-w-[1440px] mx-auto px-10 py-6">
+        <div className="flex justify-center space-x-12">
+          <Link
+            href="/"
+            className={`text-sm font-normal text-gray-900 hover:text-gray-600 transition-colors ${
+              isActive("/") ? "underline" : ""
+            }`}
+          >
+            About
+          </Link>
+          <Link
+            href="/experience"
+            className={`text-sm font-normal text-gray-900 hover:text-gray-600 transition-colors ${
+              isActive("/experience") ? "underline" : ""
+            }`}
+          >
+            Experience
+          </Link>
+          <Link
+            href="/interests"
+            className={`text-sm font-normal text-gray-900 hover:text-gray-600 transition-colors ${
+              isActive("/interests") ? "underline" : ""
+            }`}
+          >
+            Interests
+          </Link>
+          <Link
+            href="/thoughts"
+            className={`text-sm font-normal text-gray-900 hover:text-gray-600 transition-colors ${
+              isActive("/thoughts") ? "underline" : ""
+            }`}
+          >
+            Thoughts
+          </Link>
         </div>
       </div>
     </nav>
