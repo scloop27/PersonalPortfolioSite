@@ -24,35 +24,63 @@ import { motion } from "framer-motion";
 export default function Experience() {
   /**
    * ========================================
-   * 📋 EXPERIENCE DATA - EDIT HERE!
+   * 📋 EXPERIENCE DATA - COMPREHENSIVE EDITING GUIDE
    * ========================================
    * 
+   * 🎯 QUICK REFERENCE - File: src/pages/Experience.tsx, Lines: 57-85
+   * 
    * ➕ TO ADD A NEW EXPERIENCE:
-   * 1. Copy this template:
+   * 1. Copy this exact template:
    *    {
-   *      year: "2025",
-   *      title: "Your Company/Role Name", 
-   *      description: "Brief description of your role and achievements",
-   *      image: "https://images.unsplash.com/photo-example",
+   *      year: "2025", // 📝 EDIT: Time period (e.g., "2024", "2023-2024", "Present")
+   *      title: "Your Company/Role Name", // 📝 EDIT: Main heading text
+   *      description: "Brief description of your role and achievements", // 📝 EDIT: Summary text
+   *      image: "https://images.unsplash.com/photo-example", // Decorative only - not displayed
    *    },
-   * 2. Paste it at the BEGINNING of the array below (newest first)
-   * 3. Update all fields with your information
-   * 4. Update the View button links array below if needed
-   * 5. Save the file
+   * 2. Paste it at the BEGINNING of the experiences array (line 57, newest first)
+   * 3. Update year, title, and description with your information
+   * 4. Update the View button links array (see line 149 guide below)
+   * 5. Save the file - changes appear immediately
    * 
    * ❌ TO DELETE AN EXPERIENCE:
-   * 1. Find the experience object you want to remove
+   * 1. Find the experience object you want to remove in lines 57-85
    * 2. Delete the entire object (from { to }, including the comma)
    * 3. Save the file
    * 
-   * 🔗 TO UPDATE VIEW BUTTON LINKS:
-   * Find the array at lines ~149-156 and replace URLs with your project links
+   * ✏️ TO EDIT EXISTING EXPERIENCE:
+   * 1. Find the experience in the array below
+   * 2. Update year (line with year: "...")
+   * 3. Update title (line with title: "...")
+   * 4. Update description (line with description: "...")
+   * 5. Save the file
+   * 
+   * 🔗 VIEW BUTTON LINKS GUIDE:
+   * Location: Lines 149-156 (the links array)
+   * Each experience gets a clickable "View" button that opens a URL.
+   * The buttons cycle through this array of links.
+   * 
+   * TO UPDATE VIEW BUTTON LINKS:
+   * 1. Go to line ~149
+   * 2. Replace URLs in the links array with your project/company URLs
+   * 3. Add more URLs if you have more experiences
+   * 4. Save the file
    * 
    * 📝 FIELD EXPLANATIONS:
-   * - year: Time period (e.g., "2024", "2023-2024", "Present")
-   * - title: Company name, role title, or project name (main heading)
-   * - description: Brief summary of the experience (appears below title)
-   * - image: Decorative only, not displayed (kept for future use)
+   * - year: Time period (e.g., "2024", "2023-2024", "Present", "2022-2023")
+   * - title: Company name, role title, or project name (appears as main heading)
+   * - description: Brief summary of the experience (appears as body text)
+   * - image: Decorative URL only - not actually displayed (kept for future features)
+   * 
+   * 🔄 ORDER MATTERS:
+   * Experiences appear in the same order as this array. First experience = top of timeline.
+   * Keep newest experiences first (chronological order: Present, 2024, 2023, etc.)
+   * To reorder: Cut and paste entire experience objects to new positions.
+   * 
+   * 🎨 RESPONSIVE DESIGN:
+   * The layout automatically adjusts:
+   * - Mobile: Single column, stacked layout
+   * - Desktop: Side-by-side text and decorative image
+   * - Typography scales with screen size
    */
   const experiences = [
     {

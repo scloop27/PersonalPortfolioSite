@@ -31,43 +31,64 @@ import { motion } from "framer-motion";
 export default function About() {
   /**
    * ========================================
-   * 📋 PROJECT DATA - EDIT HERE!
+   * 📋 PROJECT DATA - COMPREHENSIVE EDITING GUIDE
    * ========================================
    * 
+   * 🎯 QUICK REFERENCE - File: src/pages/About.tsx, Lines: 47-93
+   * 
    * ➕ TO ADD A NEW PROJECT:
-   * 1. Copy this template:
+   * 1. Copy this exact template:
    *    {
-   *      title: "Your Project Name",
-   *      description: "Brief description of what your project does and its impact",
-   *      image: "https://images.unsplash.com/photo-example",
+   *      title: "Your Project Name", // 📝 EDIT: Main project heading
+   *      description: "Brief description of what your project does and its impact", // 📝 EDIT: Project summary
+   *      image: "https://images.unsplash.com/photo-example", // Decorative only - not displayed
    *    },
-   * 2. Paste it at the END of the array below
-   * 3. Update all fields with your project information
-   * 4. Add a custom mockup design in the rendering section (lines ~192-305)
-   * 5. Save the file
+   * 2. Paste it at the END of the projects array (line 92, before the closing ];)
+   * 3. Update title and description with your project information
+   * 4. Add a custom visual mockup (see mockup guide below)
+   * 5. Save the file - changes appear immediately
    * 
    * ❌ TO DELETE A PROJECT:
-   * 1. Find the project object you want to remove
+   * 1. Find the project object you want to remove in lines 65-92
    * 2. Delete the entire object (from { to }, including the comma)
-   * 3. Remove the corresponding mockup design in the conditional rendering section
+   * 3. Remove the corresponding mockup design in lines 200-320
    * 4. Save the file
    * 
-   * 🎨 TO ADD CUSTOM MOCKUP FOR NEW PROJECT:
-   * 1. Find the mockup section (around line ~192)
-   * 2. Add: } : index === 4 ? ( // For 5th project
-   * 3. Add your custom mockup JSX design
-   * 4. Use responsive classes: min-h-[250px] sm:min-h-[300px] lg:min-h-[393px]
+   * ✏️ TO EDIT EXISTING PROJECT:
+   * 1. Find the project in the array below
+   * 2. Update title (line with title: "...")
+   * 3. Update description (line with description: "...")
+   * 4. Save the file
    * 
-   * 🛡️ FUTURE-PROOFING RULES:
-   * - Always use responsive classes (w-full, min-h-[250px] sm:min-h-[300px])
-   * - Keep consistent HTML structure pattern
-   * - Use same CSS classes as existing projects
-   * - Test on mobile after adding content
+   * 🎨 VISUAL MOCKUPS GUIDE:
+   * Location: Lines 200-320 (the conditional rendering section)
+   * Each project gets a custom visual design (not the image URL):
+   * - Project 0 (Friday): Purple email interface mockup
+   * - Project 1 (YouLearn): Dark dashboard interface mockup
+   * - Project 2 (Iris): Light wearable device mockup
+   * - Project 3 (Commencement): Video player interface mockup
+   * 
+   * TO ADD MOCKUP FOR NEW PROJECT:
+   * 1. Go to line ~320 (end of mockup conditionals)
+   * 2. Add: } : index === 4 ? ( // For 5th project
+   * 3. Create your custom mockup design using HTML/Tailwind CSS
+   * 4. Use these responsive classes: min-h-[250px] sm:min-h-[300px] lg:min-h-[393px]
+   * 5. Follow the same pattern as existing mockups
+   * 
+   * 🛡️ RESPONSIVE DESIGN RULES:
+   * - Always use responsive classes: w-full, min-h-[250px] sm:min-h-[300px]
+   * - Keep consistent HTML structure pattern as existing projects
+   * - Use same Tailwind CSS classes for consistency
+   * - Test on mobile after adding content (use browser dev tools)
    * 
    * 📝 FIELD EXPLANATIONS:
-   * - title: Project name (appears as large heading)
-   * - description: Brief summary (appears below title)
-   * - image: Decorative only, not displayed (kept for future use)
+   * - title: Project name (appears as large heading in the card)
+   * - description: Brief summary (appears as body text below title)
+   * - image: Decorative URL only - not actually displayed (kept for future features)
+   * 
+   * 🔄 ORDER MATTERS:
+   * Projects appear in the same order as this array. First project = top of page.
+   * To reorder: Cut and paste entire project objects to new positions.
    */
   const projects = [
     {
@@ -113,6 +134,17 @@ export default function About() {
                 maxWidth: "100%",
               }}
             >
+              {/* 
+                🎯 MAIN INTRO TEXT - TO UPDATE THIS:
+                ===================================
+                1. Replace this text with your own introduction
+                2. Keep it concise (2-3 lines max for best responsive display)
+                3. This text automatically scales across all devices
+                4. Location: src/pages/About.tsx, lines 116-118
+                
+                Current: Hi, I'm Shiva — a 21 year old founder...
+                Update: Replace with your personal introduction
+              */}
               Hi, I'm Shiva — a 21 year old founder. I am passionate about
               building technology that makes a meaningful impact on people's
               lives.

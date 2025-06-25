@@ -13,10 +13,43 @@ import { Link, useLocation } from "wouter";
  * - Active page highlighting with white underline
  * - Responsive spacing for mobile/desktop
  * 
- * 📝 TO UPDATE NAVIGATION ITEMS:
- * 1. Modify the Link components below (lines ~53-90)
- * 2. Add new routes in client/src/App.tsx
- * 3. Create corresponding page components in client/src/pages/
+ * 📝 TO UPDATE NAVIGATION ITEMS - COMPREHENSIVE GUIDE:
+ * ========================================
+ * 
+ * 🎯 QUICK REFERENCE - File: src/components/Navigation.tsx, Lines: 53-90
+ * 
+ * ➕ TO ADD A NEW NAVIGATION ITEM:
+ * 1. Create the page component in src/pages/YourPage.tsx
+ * 2. Add the route in src/App.tsx:
+ *    <Route path="/your-page" component={YourPage} />
+ * 3. Add the navigation link below (around line 65):
+ *    <Link href="/your-page" className="text-gray-300 hover:text-white transition-colors duration-200 text-sm sm:text-base">
+ *      Your Page
+ *    </Link>
+ * 4. Save both files
+ * 
+ * ✏️ TO EDIT NAVIGATION TEXT:
+ * 1. Find the Link component you want to change (lines 53-90)
+ * 2. Update the text between the opening and closing Link tags
+ * 3. Keep the className for consistent styling
+ * 4. Save the file
+ * 
+ * ❌ TO REMOVE A NAVIGATION ITEM:
+ * 1. Delete the entire Link component from this file
+ * 2. Remove the corresponding Route from src/App.tsx
+ * 3. Delete the page component from src/pages/ if not needed
+ * 4. Save both files
+ * 
+ * 🎨 STYLING GUIDE:
+ * - All links use: text-gray-300 hover:text-white
+ * - Active state: white underline decoration
+ * - Responsive text: text-sm sm:text-base
+ * - Consistent spacing and transitions
+ * 
+ * 📱 RESPONSIVE BEHAVIOR:
+ * - Mobile: Smaller text and spacing
+ * - Desktop: Larger text and spacing
+ * - Fixed position with glassy backdrop effect
  * 
  * 🎨 STYLING:
  * - Background: Semi-transparent black with blur effect
