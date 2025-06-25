@@ -53,8 +53,8 @@ export default function About() {
               className="text-[#EAEAEA] font-normal leading-tight tracking-tight w-full"
               style={{
                 fontFamily: "'SF Pro Display', -apple-system, system-ui, sans-serif",
-                fontSize: "clamp(1.5rem, 5vw, 55.75px)",
-                lineHeight: "clamp(1.8rem, 6vw, 77px)",
+                fontSize: "clamp(1.75rem, 6vw, 64px)",
+                lineHeight: "clamp(2.1rem, 7vw, 88px)",
                 letterSpacing: "clamp(-0.3px, -0.1vw, -1.28px)",
                 maxWidth: "100%",
               }}
