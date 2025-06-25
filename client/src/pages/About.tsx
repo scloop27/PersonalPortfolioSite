@@ -34,13 +34,40 @@ export default function About() {
    * 📋 PROJECT DATA - EDIT HERE!
    * ========================================
    * 
-   * To change project information:
-   * 1. Update 'title' - appears as large heading
-   * 2. Update 'description' - appears below title
-   * 3. 'image' is decorative, not displayed (kept for future use)
+   * ➕ TO ADD A NEW PROJECT:
+   * 1. Copy this template:
+   *    {
+   *      title: "Your Project Name",
+   *      description: "Brief description of what your project does and its impact",
+   *      image: "https://images.unsplash.com/photo-example",
+   *    },
+   * 2. Paste it at the END of the array below
+   * 3. Update all fields with your project information
+   * 4. Add a custom mockup design in the rendering section (lines ~192-305)
+   * 5. Save the file
    * 
-   * To add more projects: Copy one object and paste it at the end
-   * Note: You'll need to add custom mockup design in the rendering section
+   * ❌ TO DELETE A PROJECT:
+   * 1. Find the project object you want to remove
+   * 2. Delete the entire object (from { to }, including the comma)
+   * 3. Remove the corresponding mockup design in the conditional rendering section
+   * 4. Save the file
+   * 
+   * 🎨 TO ADD CUSTOM MOCKUP FOR NEW PROJECT:
+   * 1. Find the mockup section (around line ~192)
+   * 2. Add: } : index === 4 ? ( // For 5th project
+   * 3. Add your custom mockup JSX design
+   * 4. Use responsive classes: min-h-[250px] sm:min-h-[300px] lg:min-h-[393px]
+   * 
+   * 🛡️ FUTURE-PROOFING RULES:
+   * - Always use responsive classes (w-full, min-h-[250px] sm:min-h-[300px])
+   * - Keep consistent HTML structure pattern
+   * - Use same CSS classes as existing projects
+   * - Test on mobile after adding content
+   * 
+   * 📝 FIELD EXPLANATIONS:
+   * - title: Project name (appears as large heading)
+   * - description: Brief summary (appears below title)
+   * - image: Decorative only, not displayed (kept for future use)
    */
   const projects = [
     {
@@ -182,8 +209,21 @@ export default function About() {
                   - Index 2 (Iris): Light wearable device mockup
                   - Index 3 (Speech): Video player interface
                   
-                  🔧 TO MODIFY: Find the specific index section below and edit the JSX
-                  🆕 TO ADD NEW: Add another condition like "index === 4"
+                  🆕 TO ADD NEW PROJECT MOCKUP:
+                  1. Add before the final ) : ( section:
+                     } : index === 4 ? (
+                  2. Copy this safe template:
+                     <div className="w-full h-full min-h-[250px] sm:min-h-[300px] lg:min-h-[393px] bg-gradient-to-br from-blue-500 to-purple-600 rounded-xl overflow-hidden shadow-lg relative flex items-center justify-center">
+                       <div className="text-white text-center p-6">
+                         <h3 className="text-2xl font-bold mb-2">Your Project</h3>
+                         <p className="text-sm opacity-90">Custom mockup design here</p>
+                       </div>
+                     </div>
+                  3. Customize the colors and content
+                  4. Always keep the responsive min-h classes for mobile compatibility
+                  
+                  🔧 TO MODIFY EXISTING: Find the specific index section below and edit the JSX
+                  🛡️ SAFETY: Always use min-h-[250px] sm:min-h-[300px] lg:min-h-[393px] for consistent heights
                 */}
                 <div
                   className="flex flex-col items-start w-full lg:w-[687.06px] lg:h-[393.47px] order-1 lg:order-2"
@@ -266,7 +306,7 @@ export default function About() {
                         </div>
                       </div>
                     </div>
-                  ) : (
+                  ) : index === 3 ? (
                     /* 🎨 COMMENCEMENT SPEECH MOCKUP - Video player interface design */
                     <div className="w-full h-full min-h-[250px] sm:min-h-[300px] lg:min-h-[393px] bg-gradient-to-br from-gray-900 via-blue-900 to-black rounded-xl overflow-hidden shadow-lg relative">
                       <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-black/20"></div>
@@ -296,6 +336,23 @@ export default function About() {
                         <div className="w-6 h-4 sm:w-8 sm:h-6 bg-gradient-to-r from-blue-600 to-blue-700 rounded-sm shadow-lg"></div>
                         <div className="w-6 h-4 sm:w-8 sm:h-6 bg-gradient-to-r from-green-600 to-green-700 rounded-sm shadow-lg"></div>
                         <div className="w-6 h-4 sm:w-8 sm:h-6 bg-gradient-to-r from-purple-600 to-purple-700 rounded-sm shadow-lg"></div>
+                      </div>
+                    </div>
+                  ) : (
+                    /* 🆕 DEFAULT FALLBACK - Shows for any additional projects beyond index 3
+                       
+                       TO ADD YOUR 5TH PROJECT MOCKUP:
+                       1. Replace this section with: } : index === 4 ? (
+                       2. Add your custom mockup design
+                       3. Keep the same responsive structure
+                    */
+                    <div className="w-full h-full min-h-[250px] sm:min-h-[300px] lg:min-h-[393px] bg-gradient-to-br from-gray-600 to-gray-800 rounded-xl overflow-hidden shadow-lg relative flex items-center justify-center">
+                      <div className="text-white text-center p-6">
+                        <h3 className="text-2xl font-bold mb-2">New Project</h3>
+                        <p className="text-sm opacity-75">Add custom mockup design here</p>
+                        <div className="mt-4 px-4 py-2 bg-white/20 rounded-full text-xs">
+                          Index: {index}
+                        </div>
                       </div>
                     </div>
                   )}

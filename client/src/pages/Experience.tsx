@@ -27,14 +27,32 @@ export default function Experience() {
    * 📋 EXPERIENCE DATA - EDIT HERE!
    * ========================================
    * 
-   * To change experience information:
-   * 1. Update 'year' - appears as small gray text above title
-   * 2. Update 'title' - main heading (company, role, or project name)
-   * 3. Update 'description' - brief summary of the experience
-   * 4. 'image' is decorative, not displayed (kept for future use)
+   * ➕ TO ADD A NEW EXPERIENCE:
+   * 1. Copy this template:
+   *    {
+   *      year: "2025",
+   *      title: "Your Company/Role Name", 
+   *      description: "Brief description of your role and achievements",
+   *      image: "https://images.unsplash.com/photo-example",
+   *    },
+   * 2. Paste it at the BEGINNING of the array below (newest first)
+   * 3. Update all fields with your information
+   * 4. Update the View button links array below if needed
+   * 5. Save the file
    * 
-   * To add more experiences: Copy one object and paste it at the beginning (newest first)
-   * To remove experiences: Delete the entire object from the array
+   * ❌ TO DELETE AN EXPERIENCE:
+   * 1. Find the experience object you want to remove
+   * 2. Delete the entire object (from { to }, including the comma)
+   * 3. Save the file
+   * 
+   * 🔗 TO UPDATE VIEW BUTTON LINKS:
+   * Find the array at lines ~149-156 and replace URLs with your project links
+   * 
+   * 📝 FIELD EXPLANATIONS:
+   * - year: Time period (e.g., "2024", "2023-2024", "Present")
+   * - title: Company name, role title, or project name (main heading)
+   * - description: Brief summary of the experience (appears below title)
+   * - image: Decorative only, not displayed (kept for future use)
    */
   const experiences = [
     {
