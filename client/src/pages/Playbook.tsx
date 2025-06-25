@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
-import PlaybookPostCard from "@/components/PlaybookPostCard";
-import { blogPosts, BlogPost } from "@/data/blogPosts";
+import PlaybookPostCard from "../components/PlaybookPostCard";
+import { blogPosts, BlogPost } from "../data/blogPosts";
 
 /**
  * Playbook page component - displays blog posts from static data
