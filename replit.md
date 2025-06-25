@@ -113,6 +113,7 @@ This is a modern portfolio website for Advait Paliwal, a 21-year-old founder and
 - June 25, 2025: Applied buildspace.so inspired dark color scheme with white accents
 - June 25, 2025: Added glassy navigation effect with backdrop blur and transparency
 - June 25, 2025: Enhanced project mockups with gradient overlays for improved text contrast and visual depth
+- June 25, 2025: Added comprehensive guide comments throughout codebase and created CONTENT_MANAGEMENT_GUIDE.md
 
 ## User Preferences
 

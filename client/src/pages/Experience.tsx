@@ -2,59 +2,76 @@ import React from "react";
 import { motion } from "framer-motion";
 
 /**
- * Experience page component - Professional timeline with visual elements
- * Features:
- * - Timeline layout with alternating content and images
- * - Responsive design for mobile and desktop
- * - Framer Motion animations on scroll
- * - Visual separators between experience sections
+ * ========================================
+ * 💼 EXPERIENCE PAGE - PROFESSIONAL TIMELINE
+ * ========================================
+ * 
+ * This page displays your professional experience in chronological order.
+ * Similar layout to About page but focused on career timeline.
+ * 
+ * 📋 TO UPDATE EXPERIENCES:
+ * Modify the 'experiences' array below - each entry creates a new timeline item
+ * 
+ * 🔗 TO UPDATE VIEW BUTTON LINKS:
+ * The "View" buttons cycle through a predefined list of URLs (lines ~126-133)
+ * Replace those URLs with your actual project/company links
+ * 
+ * 📱 RESPONSIVE DESIGN:
+ * - Mobile: Single column, stacked layout
+ * - Desktop: Side-by-side text and image
+ * - Same responsive patterns as About page
  */
 export default function Experience() {
-  // Static experience data - could be moved to CMS or API in future
+  /**
+   * ========================================
+   * 📋 EXPERIENCE DATA - EDIT HERE!
+   * ========================================
+   * 
+   * To change experience information:
+   * 1. Update 'year' - appears as small gray text above title
+   * 2. Update 'title' - main heading (company, role, or project name)
+   * 3. Update 'description' - brief summary of the experience
+   * 4. 'image' is decorative, not displayed (kept for future use)
+   * 
+   * To add more experiences: Copy one object and paste it at the beginning (newest first)
+   * To remove experiences: Delete the entire object from the array
+   */
   const experiences = [
     {
-      year: "Present",
-      title: "Friday",
-      description: "AI assistant for email. Backed by Y Combinator.",
-      image:
-        "https://images.unsplash.com/photo-1620712943543-bcc4688e7485?ixlib=rb-4.0.3&auto=format&fit=crop&w=687&h=386",
+      year: "Present", // 📝 EDIT: Time period (e.g., "2024", "2023-2024", "Present")
+      title: "Friday", // 📝 EDIT: Company name, role title, or project name
+      description: "AI assistant for email. Backed by Y Combinator.", // 📝 EDIT: Brief description
+      image: "https://images.unsplash.com/photo-1620712943543-bcc4688e7485?ixlib=rb-4.0.3&auto=format&fit=crop&w=687&h=386", // Decorative only
     },
     {
-      year: "Present",
-      title: "YouLearn",
-      description: "AI tutor for students. 1M+ users.",
-      image:
-        "https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&auto=format&fit=crop&w=687&h=386",
+      year: "Present", // 📝 EDIT: Time period
+      title: "YouLearn", // 📝 EDIT: Company/project name
+      description: "AI tutor for students. 1M+ users.", // 📝 EDIT: Description
+      image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&auto=format&fit=crop&w=687&h=386", // Decorative only
     },
     {
-      year: "2024",
-      title: "Iris",
-      description: "AI wearable that gives you infinite memory.",
-      image:
-        "https://images.unsplash.com/photo-1606107557195-0e29a4b5b4aa?ixlib=rb-4.0.3&auto=format&fit=crop&w=687&h=386",
+      year: "2024", // 📝 EDIT: Time period
+      title: "Iris", // 📝 EDIT: Company/project name
+      description: "AI wearable that gives you infinite memory.", // 📝 EDIT: Description
+      image: "https://images.unsplash.com/photo-1606107557195-0e29a4b5b4aa?ixlib=rb-4.0.3&auto=format&fit=crop&w=687&h=386", // Decorative only
     },
     {
-      year: "2023",
-      title: "Commencement Speech",
-      description:
-        "Spoke about chasing rejection to over 10,000 students at my graduation.",
-      image:
-        "https://images.unsplash.com/photo-1475721027785-f74eccf877e2?ixlib=rb-4.0.3&auto=format&fit=crop&w=687&h=386",
+      year: "2023", // 📝 EDIT: Time period
+      title: "Commencement Speech", // 📝 EDIT: Event/achievement name
+      description: "Spoke about chasing rejection to over 10,000 students at my graduation.", // 📝 EDIT: Description
+      image: "https://images.unsplash.com/photo-1475721027785-f74eccf877e2?ixlib=rb-4.0.3&auto=format&fit=crop&w=687&h=386", // Decorative only
     },
     {
-      year: "2022",
-      title: "Research Publication",
-      description:
-        "Published research on machine learning applications in healthcare.",
-      image:
-        "https://images.unsplash.com/photo-1576091160399-112ba8d25d1f?ixlib=rb-4.0.3&auto=format&fit=crop&w=687&h=386",
+      year: "2022", // 📝 EDIT: Time period
+      title: "Research Publication", // 📝 EDIT: Achievement name
+      description: "Published research on machine learning applications in healthcare.", // 📝 EDIT: Description
+      image: "https://images.unsplash.com/photo-1576091160399-112ba8d25d1f?ixlib=rb-4.0.3&auto=format&fit=crop&w=687&h=386", // Decorative only
     },
     {
-      year: "2021",
-      title: "Startup Accelerator",
-      description: "Participated in leading tech accelerator program.",
-      image:
-        "https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-4.0.3&auto=format&fit=crop&w=687&h=386",
+      year: "2021", // 📝 EDIT: Time period
+      title: "Startup Accelerator", // 📝 EDIT: Program/experience name
+      description: "Participated in leading tech accelerator program.", // 📝 EDIT: Description
+      image: "https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-4.0.3&auto=format&fit=crop&w=687&h=386", // Decorative only
     },
   ];
 
@@ -78,59 +95,67 @@ export default function Experience() {
               >
                 {/* Text Content */}
                 <div className="flex flex-col items-start gap-2 sm:gap-3 w-full lg:w-auto lg:flex-1 order-2 lg:order-1">
-                  {/* Year */}
+                  {/* Experience Year - Small gray text above title */}
                   <div className="w-full h-[21px] flex items-center">
                     <p
                       className="text-[#888888] font-normal flex items-center"
                       style={{
                         fontFamily: "'SF Pro Display', -apple-system, system-ui, sans-serif",
-                        fontSize: "clamp(10px, 1vw, 12.25px)",
+                        fontSize: "clamp(10px, 1vw, 12.25px)", // Responsive sizing
                         lineHeight: "21px",
                       }}
                     >
-                      {experience.year}
+                      {experience.year} {/* 📝 This pulls from the experiences array */}
                     </p>
                   </div>
 
-                  {/* Title */}
+                  {/* Experience Title - Main heading */}
                   <div className="w-full h-[45px] flex items-center">
                     <h2
                       className="text-[#EAEAEA] font-normal flex items-center"
                       style={{
                         fontFamily: "'SF Pro Display', -apple-system, system-ui, sans-serif",
-                        fontSize: "clamp(18px, 2vw, 26.6016px)",
+                        fontSize: "clamp(18px, 2vw, 26.6016px)", // Responsive sizing
                         lineHeight: "45px",
                       }}
                     >
-                      {experience.title}
+                      {experience.title} {/* 📝 This pulls from the experiences array */}
                     </h2>
                   </div>
 
-                  {/* Description */}
+                  {/* Experience Description - Brief summary */}
                   <div className="w-full h-[30px] flex items-center">
                     <p
                       className="text-[#888888] font-normal flex items-center"
                       style={{
                         fontFamily: "'SF Pro Display', -apple-system, system-ui, sans-serif",
-                        fontSize: "clamp(14px, 1.5vw, 17.3438px)",
+                        fontSize: "clamp(14px, 1.5vw, 17.3438px)", // Responsive sizing
                         lineHeight: "30px",
                       }}
                     >
-                      {experience.description}
+                      {experience.description} {/* 📝 This pulls from the experiences array */}
                     </p>
                   </div>
 
-                  {/* Button Container */}
+                  {/* 
+                    🔗 VIEW BUTTON LINKS - EDIT THE URLs BELOW!
+                    
+                    Currently cycles through 6 placeholder URLs.
+                    Replace these with your actual project/company links:
+                    - Index 0: Google → Replace with your first experience link
+                    - Index 1: GitHub → Replace with your second experience link
+                    - etc.
+                  */}
                   <div className="flex flex-col items-start pt-8 w-[85px] h-[79px]">
                     <a
                       href={[
-                        "https://google.com",
-                        "https://github.com",
-                        "https://youtube.com",
-                        "https://twitter.com",
-                        "https://linkedin.com",
-                        "https://instagram.com"
-                      ][index % 6]}
+                        "https://google.com", // 📝 EDIT: Replace with your first experience link
+                        "https://github.com", // 📝 EDIT: Replace with your second experience link
+                        "https://youtube.com", // 📝 EDIT: Replace with your third experience link
+                        "https://twitter.com", // 📝 EDIT: Replace with your fourth experience link
+                        "https://linkedin.com", // 📝 EDIT: Replace with your fifth experience link
+                        "https://instagram.com" // 📝 EDIT: Replace with your sixth experience link
+                      ][index % 6]} // Cycles through the array based on experience index
                       target="_blank"
                       rel="noopener noreferrer"
                       className="flex flex-row items-center justify-center rounded-full bg-white w-[85px] h-[47px] hover:bg-gray-200 transition-colors"

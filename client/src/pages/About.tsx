@@ -2,40 +2,66 @@ import React from "react";
 import { motion } from "framer-motion";
 
 /**
- * About page component - Homepage with hero section and project showcase
- * Features:
- * - Responsive hero section with dynamic typography
- * - Project grid with hover effects and animations
- * - Mobile-optimized layout and spacing
- * - SF Pro Display typography for native feel
+ * ========================================
+ * 🏠 ABOUT PAGE - HOMEPAGE & PROJECT SHOWCASE
+ * ========================================
+ * 
+ * This is the main landing page that visitors see first.
+ * Contains: Hero intro text + 4 project showcases + footer
+ * 
+ * 🎯 TO UPDATE YOUR INTRO TEXT:
+ * Find line ~62-64 and change the text inside the <motion.h1> tag
+ * 
+ * 🚀 TO UPDATE PROJECTS:
+ * Modify the 'projects' array below (lines ~47-75)
+ * Each project has: title, description, and decorative image URL
+ * 
+ * 🎨 PROJECT MOCKUPS:
+ * Each project gets a custom visual mockup (not the image URL)
+ * - Friday (index 0): Purple email interface
+ * - YouLearn (index 1): Dark dashboard interface  
+ * - Iris (index 2): Light wearable device mockup
+ * - Commencement Speech (index 3): Video player interface
+ * 
+ * 📱 RESPONSIVE DESIGN:
+ * - Mobile: Single column, stacked layout
+ * - Desktop: Side-by-side text and mockup
+ * - Typography scales automatically with clamp()
  */
 export default function About() {
-  // Static project data - could be moved to API in future
+  /**
+   * ========================================
+   * 📋 PROJECT DATA - EDIT HERE!
+   * ========================================
+   * 
+   * To change project information:
+   * 1. Update 'title' - appears as large heading
+   * 2. Update 'description' - appears below title
+   * 3. 'image' is decorative, not displayed (kept for future use)
+   * 
+   * To add more projects: Copy one object and paste it at the end
+   * Note: You'll need to add custom mockup design in the rendering section
+   */
   const projects = [
     {
-      title: "Friday",
-      description: "AI assistant for email. Backed by Y Combinator.",
-      image:
-        "https://images.unsplash.com/photo-1620712943543-bcc4688e7485?ixlib=rb-4.0.3&auto=format&fit=crop&w=687&h=386",
+      title: "Friday", // 📝 EDIT: Project name that appears as heading
+      description: "AI assistant for email. Backed by Y Combinator.", // 📝 EDIT: Description text
+      image: "https://images.unsplash.com/photo-1620712943543-bcc4688e7485?ixlib=rb-4.0.3&auto=format&fit=crop&w=687&h=386", // Decorative only
     },
     {
-      title: "YouLearn",
-      description: "AI tutor for students. 1M+ users.",
-      image:
-        "https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&auto=format&fit=crop&w=687&h=386",
+      title: "YouLearn", // 📝 EDIT: Project name
+      description: "AI tutor for students. 1M+ users.", // 📝 EDIT: Description
+      image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&auto=format&fit=crop&w=687&h=386", // Decorative only
     },
     {
-      title: "Iris",
-      description: "AI wearable that gives you infinite memory.",
-      image:
-        "https://images.unsplash.com/photo-1606107557195-0e29a4b5b4aa?ixlib=rb-4.0.3&auto=format&fit=crop&w=687&h=386",
+      title: "Iris", // 📝 EDIT: Project name
+      description: "AI wearable that gives you infinite memory.", // 📝 EDIT: Description
+      image: "https://images.unsplash.com/photo-1606107557195-0e29a4b5b4aa?ixlib=rb-4.0.3&auto=format&fit=crop&w=687&h=386", // Decorative only
     },
     {
-      title: "Commencement Speech",
-      description:
-        "Spoke about chasing rejection to over 10,000 students at my graduation.",
-      image:
-        "https://images.unsplash.com/photo-1475721027785-f74eccf877e2?ixlib=rb-4.0.3&auto=format&fit=crop&w=687&h=386",
+      title: "Commencement Speech", // 📝 EDIT: Project name
+      description: "Spoke about chasing rejection to over 10,000 students at my graduation.", // 📝 EDIT: Description
+      image: "https://images.unsplash.com/photo-1475721027785-f74eccf877e2?ixlib=rb-4.0.3&auto=format&fit=crop&w=687&h=386", // Decorative only
     },
   ];
 
@@ -67,10 +93,24 @@ export default function About() {
           </div>
         </section>
 
-        {/* Projects Sections */}
+        {/* 
+          ========================================
+          🚀 PROJECTS SECTION
+          ========================================
+          
+          This automatically creates a section for each project in the array above.
+          Each project gets:
+          - A horizontal separator line
+          - Text content (title, description, View button)
+          - Custom visual mockup (different for each project)
+          
+          The layout is responsive:
+          - Mobile: Mockup on top, text below
+          - Desktop: Text on left, mockup on right
+        */}
         {projects.map((project, index) => (
           <div key={index} className="flex flex-col items-center w-full">
-            {/* Separator Line */}
+            {/* Separator Line - Visual divider between projects */}
             <div className="w-full h-px border-t border-[#333333]"></div>
 
             {/* Project Container */}
@@ -131,12 +171,26 @@ export default function About() {
                   </div>
                 </div>
 
-                {/* Image Container */}
+                {/* 
+                  ========================================
+                  🎨 PROJECT MOCKUPS - CUSTOM DESIGNS
+                  ========================================
+                  
+                  Each project gets a unique visual mockup based on its index:
+                  - Index 0 (Friday): Email interface with purple gradients
+                  - Index 1 (YouLearn): Dark dashboard interface
+                  - Index 2 (Iris): Light wearable device mockup
+                  - Index 3 (Speech): Video player interface
+                  
+                  🔧 TO MODIFY: Find the specific index section below and edit the JSX
+                  🆕 TO ADD NEW: Add another condition like "index === 4"
+                */}
                 <div
                   className="flex flex-col items-start w-full lg:w-[687.06px] lg:h-[393.47px] order-1 lg:order-2"
                   style={{ paddingBottom: "7px" }}
                 >
                   {index === 0 ? (
+                    /* 🎨 FRIDAY PROJECT MOCKUP - Email interface design */
                     // Friday project - Purple gradient with email icon
                     <div className="w-full h-full bg-gradient-to-br from-gray-900 via-purple-900 to-black rounded-xl overflow-hidden shadow-lg flex items-center justify-center relative">
                       <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-black/20"></div>
@@ -164,7 +218,7 @@ export default function About() {
                       </div>
                     </div>
                   ) : index === 1 ? (
-                    // YouLearn project - Dark interface mockup
+                    /* 🎨 YOULEARN PROJECT MOCKUP - Dashboard interface design */
                     <div className="w-full h-full bg-gradient-to-br from-gray-900 via-gray-800 to-black rounded-xl overflow-hidden shadow-lg relative">
                       <div className="absolute inset-0 bg-gradient-to-br from-blue-900/20 via-transparent to-purple-900/30"></div>
                       <div className="h-full p-6 relative z-10">
@@ -188,7 +242,7 @@ export default function About() {
                       </div>
                     </div>
                   ) : index === 2 ? (
-                    // Iris project - Wearable device mockup
+                    /* 🎨 IRIS PROJECT MOCKUP - Wearable device design */
                     <div className="w-full h-full flex items-center justify-center space-x-8 bg-gradient-to-br from-gray-50 via-blue-50 to-purple-50 rounded-xl relative overflow-hidden">
                       <div className="absolute inset-0 bg-gradient-to-br from-blue-600/10 via-transparent to-purple-600/10"></div>
                       <div className="w-48 h-48 bg-gradient-to-br from-gray-100 to-gray-200 rounded-full border border-gray-300 flex items-center justify-center shadow-xl relative z-10">
@@ -213,7 +267,7 @@ export default function About() {
                       </div>
                     </div>
                   ) : (
-                    // Commencement Speech - Video player mockup
+                    /* 🎨 COMMENCEMENT SPEECH MOCKUP - Video player interface design */
                     <div className="w-full h-full min-h-[250px] sm:min-h-[300px] lg:min-h-[393px] bg-gradient-to-br from-gray-900 via-blue-900 to-black rounded-xl overflow-hidden shadow-lg relative">
                       <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-black/20"></div>
                       <div className="absolute inset-0 flex items-center justify-center z-10">
@@ -251,19 +305,33 @@ export default function About() {
           </div>
         ))}
 
-        {/* Footer Section */}
+        {/* 
+          ========================================
+          👤 FOOTER SECTION - PERSONAL INFO & LINKS
+          ========================================
+          
+          Contains: Your name + social media links
+          
+          📝 TO UPDATE YOUR NAME: Change the text in the <h2> tag below
+          🔗 TO UPDATE SOCIAL LINKS: Change the URLs in the <a> tags below
+          
+          Current social platforms: X, LinkedIn, GitHub, Instagram, Google Scholar, Substack
+        */}
         <footer className="py-16 border-t border-[#333333] w-full">
           <div className="max-w-[1440px] mx-auto px-10">
             <div className="grid md:grid-cols-2 gap-8 items-start">
               <div>
+                {/* 📝 EDIT YOUR NAME HERE: */}
                 <h2 className="text-4xl md:text-5xl font-bold mb-4 text-[#EAEAEA]">
                   Shiva Charan
                   <br />
                   Mandhpauram
                 </h2>
               </div>
+              {/* 📝 SOCIAL MEDIA LINKS - UPDATE THE URLs BELOW */}
               <div className="grid grid-cols-2 gap-8 text-sm">
                 <div className="space-y-3">
+                  {/* 🔗 EDIT: Replace with your X (Twitter) URL */}
                   <a
                     href="https://x.com/shivacharan"
                     target="_blank"
@@ -272,6 +340,7 @@ export default function About() {
                   >
                     X
                   </a>
+                  {/* 🔗 EDIT: Replace with your LinkedIn URL */}
                   <a
                     href="https://linkedin.com/in/shivacharan"
                     target="_blank"
@@ -280,6 +349,7 @@ export default function About() {
                   >
                     LinkedIn
                   </a>
+                  {/* 🔗 EDIT: Replace with your GitHub URL */}
                   <a
                     href="https://github.com/shivacharan"
                     target="_blank"
@@ -290,6 +360,7 @@ export default function About() {
                   </a>
                 </div>
                 <div className="space-y-3">
+                  {/* 🔗 EDIT: Replace with your Instagram URL */}
                   <a
                     href="https://instagram.com/shivacharan"
                     target="_blank"
@@ -298,6 +369,7 @@ export default function About() {
                   >
                     Instagram
                   </a>
+                  {/* 🔗 EDIT: Replace with your Google Scholar URL */}
                   <a
                     href="https://scholar.google.com/citations?user=shivacharan"
                     target="_blank"
@@ -306,6 +378,7 @@ export default function About() {
                   >
                     Google Scholar
                   </a>
+                  {/* 🔗 EDIT: Replace with your Substack URL */}
                   <a
                     href="https://shivacharan.substack.com"
                     target="_blank"

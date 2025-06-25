@@ -1,14 +1,45 @@
 /**
  * BLOG POSTS DATA - Easy to Edit!
  * 
- * To add a new blog post:
- * 1. Copy the structure below and paste it at the beginning of the array
- * 2. Update the id to be one higher than the highest existing id
- * 3. Fill in your title, date (YYYY-MM-DD format), summary, content preview, and tags
- * 4. Add your actual Substack URL in the 'link' field
+ * ========================================
+ * 📝 HOW TO ADD A NEW BLOG POST:
+ * ========================================
  * 
- * The 'link' field should contain the full URL to your Substack post
- * Each post will have a "Read Full Article" button that opens this link in a new tab
+ * 1. COPY this template and paste it at the BEGINNING of the blogPosts array:
+ * 
+ * {
+ *   id: [NEXT_NUMBER], // Use the next sequential number (current highest + 1)
+ *   title: "Your Blog Post Title Here",
+ *   date: "2025-01-15", // Format: YYYY-MM-DD (year-month-day)
+ *   summary: "Brief description that appears in the preview card",
+ *   content: "Longer preview text if needed",
+ *   tags: ["entrepreneurship", "ai", "startup"], // Relevant topic tags
+ *   link: "https://your-substack-url.com/p/your-post" // Full URL to your Substack post
+ * },
+ * 
+ * 2. SAVE the file - changes appear immediately!
+ * 
+ * ========================================
+ * 📋 FIELD EXPLANATIONS:
+ * ========================================
+ * - id: Unique number for each post (increment from highest existing)
+ * - title: Appears as the main heading on the blog card
+ * - date: Used for chronological sorting (newest first)
+ * - summary: Shows in both the main text and the quote box
+ * - content: Currently same as summary, can be different preview text
+ * - tags: Array of topic keywords (not currently displayed but ready for future use)
+ * - link: When users click "Read Full Article", this is where they go
+ * 
+ * ========================================
+ * 🎨 HOW IT APPEARS ON THE SITE:
+ * ========================================
+ * Each blog post creates a card with:
+ * - Large title text
+ * - Summary description
+ * - "Read Full Article" button (links to your Substack)
+ * - Quote box on the right with text preview
+ * 
+ * The posts automatically appear in date order (newest first)
  */
 
 export interface BlogPost {
