@@ -4,6 +4,53 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Mobile-specific responsive improvements */
+@layer base {
+  html {
+    -webkit-text-size-adjust: 100%;
+    text-size-adjust: 100%;
+  }
+  
+  body {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-family: 'SF Pro Display', -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
+  }
+  
+  /* Ensure proper touch targets on mobile */
+  button, a, input, textarea {
+    touch-action: manipulation;
+  }
+  
+  /* Improve mobile scrolling */
+  * {
+    -webkit-overflow-scrolling: touch;
+  }
+}
+
+@layer utilities {
+  /* Mobile-friendly text wrapping */
+  .text-wrap-mobile {
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+    hyphens: auto;
+  }
+  
+  /* Flexible spacing for mobile */
+  .space-mobile {
+    @apply space-y-4 sm:space-y-6 md:space-y-8;
+  }
+  
+  /* Mobile-optimized padding */
+  .px-mobile {
+    @apply px-3 sm:px-4 md:px-6 lg:px-8;
+  }
+  
+  .py-mobile {
+    @apply py-3 sm:py-4 md:py-6 lg:py-8;
+  }
+}
+
 :root {
   --background: hsl(0, 0%, 6.7%);
   --foreground: hsl(0, 0%, 100%);

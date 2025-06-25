@@ -42,21 +42,21 @@ export default function About() {
   return (
     <div className="flex flex-col items-center w-full bg-white overflow-y-scroll min-h-screen">
       {/* Main Container */}
-      <main className="flex flex-col items-center w-full pt-20 sm:pt-24">
+      <main className="flex flex-col items-center w-full pt-16 sm:pt-20 md:pt-24">
         {/* Hero Section */}
-        <section className="flex flex-row justify-center items-center w-full min-h-screen">
-          <div className="flex flex-col items-start px-4 sm:px-6 lg:px-10 w-full max-w-[1440px]">
+        <section className="flex flex-row justify-center items-center w-full min-h-[60vh] sm:min-h-[70vh] md:min-h-screen">
+          <div className="flex flex-col items-start px-4 sm:px-6 md:px-8 lg:px-10 w-full max-w-[1440px]">
             <motion.h1
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
-              className="text-black font-normal leading-tight tracking-tight"
+              className="text-black font-normal leading-tight tracking-tight w-full"
               style={{
                 fontFamily: "'SF Pro Display', -apple-system, system-ui, sans-serif",
-                fontSize: "clamp(2rem, 4vw, 55.75px)",
-                lineHeight: "clamp(2.5rem, 5vw, 77px)",
-                letterSpacing: "clamp(-0.5px, -0.1vw, -1.28px)",
-                maxWidth: "1357px",
+                fontSize: "clamp(1.5rem, 5vw, 55.75px)",
+                lineHeight: "clamp(1.8rem, 6vw, 77px)",
+                letterSpacing: "clamp(-0.3px, -0.1vw, -1.28px)",
+                maxWidth: "100%",
               }}
             >
               Hi, I'm Shivacharan Mandhapuram — a 21 year old founder. I am
@@ -73,23 +73,23 @@ export default function About() {
             <div className="w-full h-px border-t border-[#E5E7EB]"></div>
 
             {/* Project Container */}
-            <div className="flex flex-col items-center px-10 w-full max-w-[1440px]">
+            <div className="flex flex-col items-center px-4 sm:px-6 md:px-8 lg:px-10 w-full max-w-[1440px]">
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
-                className="flex flex-col lg:flex-row justify-between items-start w-full py-20 gap-8 lg:gap-48"
+                className="flex flex-col lg:flex-row justify-between items-start w-full py-12 sm:py-16 md:py-20 gap-6 sm:gap-8 lg:gap-48"
               >
                 {/* Text Content */}
-                <div className="flex flex-col items-start gap-2 w-full lg:w-[480.94px] order-2 lg:order-1">
+                <div className="flex flex-col items-start gap-3 sm:gap-4 w-full lg:w-auto lg:flex-1 order-2 lg:order-1">
                   {/* Title */}
-                  <div className="w-full h-[45px] flex items-center">
+                  <div className="w-full flex items-center">
                     <h2
-                      className="text-black font-normal flex items-center"
+                      className="text-black font-normal"
                       style={{
                         fontFamily: "'SF Pro Display', -apple-system, system-ui, sans-serif",
-                        fontSize: "clamp(18px, 2vw, 26.6016px)",
-                        lineHeight: "45px",
+                        fontSize: "clamp(20px, 3vw, 26.6016px)",
+                        lineHeight: "1.2",
                       }}
                     >
                       {project.title}
@@ -97,13 +97,13 @@ export default function About() {
                   </div>
 
                   {/* Description */}
-                  <div className="w-full h-[30px] flex items-center">
+                  <div className="w-full flex items-start">
                     <p
-                      className="text-[#707070] font-normal flex items-center"
+                      className="text-[#707070] font-normal leading-relaxed"
                       style={{
                         fontFamily: "'SF Pro Display', -apple-system, system-ui, sans-serif",
-                        fontSize: "clamp(14px, 1.5vw, 17.3438px)",
-                        lineHeight: "30px",
+                        fontSize: "clamp(14px, 2vw, 17.3438px)",
+                        lineHeight: "1.6",
                       }}
                     >
                       {project.description}
@@ -111,10 +111,9 @@ export default function About() {
                   </div>
 
                   {/* Button Container */}
-                  <div className="flex flex-col items-start pt-8 w-[85px] h-[79px]">
+                  <div className="flex flex-col items-start pt-4 sm:pt-6 md:pt-8">
                     <button
-                      className="flex flex-row items-center justify-center rounded-full bg-[#F5F5F5] w-[85px] h-[47px]"
-                      style={{ padding: "10px 24px" }}
+                      className="flex flex-row items-center justify-center rounded-full bg-[#F5F5F5] hover:bg-[#E5E5E5] transition-colors px-6 py-3 min-w-[85px] h-[47px]"
                     >
                       <span
                         className="text-black font-normal flex items-center justify-center"

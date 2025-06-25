@@ -25,40 +25,42 @@ export default function Navbar() {
 
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 bg-white border-b border-gray-100">
-      <div className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-10 py-4 sm:py-6">
-        <div className="flex justify-center space-x-6 sm:space-x-8 lg:space-x-12">
-          <Link
-            href="/"
-            className={`text-sm font-normal text-gray-900 hover:text-gray-600 transition-colors ${
-              isActive("/") ? "underline" : ""
-            }`}
-          >
-            About
-          </Link>
-          <Link
-            href="/experience"
-            className={`text-sm font-normal text-gray-900 hover:text-gray-600 transition-colors ${
-              isActive("/experience") ? "underline" : ""
-            }`}
-          >
-            Experience
-          </Link>
-          <Link
-            href="/interests"
-            className={`text-sm font-normal text-gray-900 hover:text-gray-600 transition-colors ${
-              isActive("/interests") ? "underline" : ""
-            }`}
-          >
-            Interests
-          </Link>
-          <Link
-            href="/playbook"
-            className={`text-sm font-normal text-gray-900 hover:text-gray-600 transition-colors ${
-              isActive("/playbook") ? "underline" : ""
-            }`}
-          >
-            Playbook
-          </Link>
+      <div className="max-w-[1440px] mx-auto px-3 sm:px-6 lg:px-10 py-3 sm:py-4 md:py-6">
+        <div className="flex justify-center items-center">
+          <div className="flex flex-wrap justify-center items-center gap-4 sm:gap-6 md:gap-8 lg:gap-12">
+            <Link
+              href="/"
+              className={`text-xs sm:text-sm font-normal text-gray-900 hover:text-gray-600 transition-colors whitespace-nowrap ${
+                isActive("/") ? "underline" : ""
+              }`}
+            >
+              About
+            </Link>
+            <Link
+              href="/experience"
+              className={`text-xs sm:text-sm font-normal text-gray-900 hover:text-gray-600 transition-colors whitespace-nowrap ${
+                isActive("/experience") ? "underline" : ""
+              }`}
+            >
+              Experience
+            </Link>
+            <Link
+              href="/interests"
+              className={`text-xs sm:text-sm font-normal text-gray-900 hover:text-gray-600 transition-colors whitespace-nowrap ${
+                isActive("/interests") ? "underline" : ""
+              }`}
+            >
+              Interests
+            </Link>
+            <Link
+              href="/playbook"
+              className={`text-xs sm:text-sm font-normal text-gray-900 hover:text-gray-600 transition-colors whitespace-nowrap ${
+                isActive("/playbook") ? "underline" : ""
+              }`}
+            >
+              Playbook
+            </Link>
+          </div>
         </div>
       </div>
     </nav>
