@@ -44,7 +44,7 @@ export default function About() {
       {/* Main Container */}
       <main className="flex flex-col items-center w-full pt-16 sm:pt-20 md:pt-24">
         {/* Hero Section */}
-        <section className="flex flex-row justify-center items-center w-full min-h-[60vh] sm:min-h-[70vh] md:min-h-screen">
+        <section className="flex flex-row justify-center items-center w-full min-h-[60vh] sm:min-h-[70vh] md:min-h-screen -mt-9">
           <div className="flex flex-col items-start px-4 sm:px-6 md:px-8 lg:px-10 w-full max-w-[1440px]">
             <motion.h1
               initial={{ opacity: 0, y: 20 }}
