@@ -10,9 +10,10 @@ This is a modern portfolio website for Advait Paliwal, a 21-year-old founder and
 - **Framework**: React 18 with TypeScript
 - **Routing**: Wouter (lightweight React router)
 - **UI Components**: Shadcn/ui component library with Radix UI primitives
-- **Styling**: Tailwind CSS with custom design tokens
-- **State Management**: TanStack Query for server state
+- **Styling**: Tailwind CSS with custom design tokens and dark theme
+- **Animations**: Framer Motion for page transitions and staggered reveals
 - **Build Tool**: Vite for fast development and optimized builds
+- **Static Data**: Blog posts managed via TypeScript data files
 
 ### Backend Architecture
 - **Runtime**: Node.js with Express.js
@@ -114,6 +115,12 @@ This is a modern portfolio website for Advait Paliwal, a 21-year-old founder and
 - June 25, 2025: Added glassy navigation effect with backdrop blur and transparency
 - June 25, 2025: Enhanced project mockups with gradient overlays for improved text contrast and visual depth
 - June 25, 2025: Added comprehensive guide comments throughout codebase and created CONTENT_MANAGEMENT_GUIDE.md
+- June 25, 2025: Added navigation bar to Playbook section with glassy backdrop effect
+- June 25, 2025: Enhanced blog post management system with comprehensive add/edit/delete guides
+- June 25, 2025: Improved Playbook section alignment with better spacing and typography
+- June 25, 2025: Added future-proofing for blog posts with empty state handling and responsive layout
+- June 25, 2025: Optimized project for Vercel hosting with vercel.json configuration
+- June 25, 2025: Created VERCEL_DEPLOYMENT_GUIDE.md with comprehensive deployment instructions
 
 ## User Preferences
 

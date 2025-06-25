@@ -49,28 +49,33 @@ export default function PlaybookPostCard({
       transition={{ duration: 0.6, delay: index * 0.1 }}
       className="w-full"
     >
-      <div className="flex flex-col lg:flex-row lg:items-start lg:justify-between gap-4 sm:gap-6 lg:gap-8">
-        <div className="flex-1 min-w-0">
-          <h2 className="text-lg sm:text-xl md:text-2xl font-bold mb-2 sm:mb-3 text-[#EAEAEA] leading-tight break-words">
+      <div className="flex flex-col lg:flex-row lg:items-start lg:justify-between gap-6 sm:gap-8 lg:gap-12">
+        <div className="flex-1 min-w-0 lg:pr-4">
+          <h2 className="text-xl sm:text-2xl md:text-3xl font-bold mb-3 sm:mb-4 text-[#EAEAEA] leading-tight break-words">
             {title}
           </h2>
-          <p className="text-[#888888] leading-relaxed mb-4 sm:mb-6 text-sm sm:text-base break-words">
+          <p className="text-[#888888] leading-relaxed mb-6 sm:mb-8 text-base sm:text-lg break-words">
             {contentSnippet}
           </p>
           <a
             href={link}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center px-3 sm:px-4 py-2 bg-white text-[#0A0A0A] font-medium rounded-full hover:bg-gray-200 transition-colors text-xs sm:text-sm whitespace-nowrap"
+            className="inline-flex items-center px-4 sm:px-6 py-2.5 sm:py-3 bg-white text-[#0A0A0A] font-medium rounded-full hover:bg-gray-200 transition-colors text-sm sm:text-base whitespace-nowrap"
           >
             Read Full Article
           </a>
         </div>
         
-        <div className="bg-[#1A1A1A] rounded-lg p-4 sm:p-6 lg:p-8 lg:max-w-sm">
-          <blockquote className="text-[#888888] italic leading-relaxed text-sm sm:text-base">
-            "{contentSnippet.substring(0, 150)}..."
+        <div className="bg-[#1A1A1A] rounded-xl p-6 sm:p-8 lg:max-w-md lg:min-w-[300px] lg:flex-shrink-0">
+          <blockquote className="text-[#888888] italic leading-relaxed text-base sm:text-lg">
+            "{contentSnippet.length > 120 ? contentSnippet.substring(0, 120) + '...' : contentSnippet}"
           </blockquote>
+          <div className="mt-4 pt-4 border-t border-[#333333]">
+            <time className="text-[#666666] text-sm">
+              {formatDate(pubDate)}
+            </time>
+          </div>
         </div>
       </div>
     </motion.article>

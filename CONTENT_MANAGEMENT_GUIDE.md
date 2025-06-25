@@ -257,6 +257,96 @@ href={[
 2. If you have more than 6 experiences, add more URLs to the array
 3. Save the file
 
+## 📝 Blog Posts Management
+
+### Location: `client/src/data/blogPosts.ts`
+
+### ➕ How to ADD a New Blog Post
+
+1. **Copy this template:**
+```javascript
+{
+  id: [NEXT_NUMBER], // Use next sequential number (current highest + 1)
+  title: "Your Blog Post Title Here",
+  date: "2025-01-15", // Format: YYYY-MM-DD (year-month-day)
+  summary: "Brief description that appears in the preview card",
+  content: "Longer preview text if needed",
+  tags: ["entrepreneurship", "ai", "startup"], // Relevant topic tags
+  link: "https://your-substack-url.com/p/your-post"
+},
+```
+
+2. **Paste at the BEGINNING** of the `blogPosts` array (newest posts first)
+3. **Update all fields** with your blog post information
+4. **Save the file** - changes appear immediately on the site
+
+### ❌ How to DELETE a Blog Post
+
+1. Find the blog post object you want to remove in the array
+2. Delete the entire object (from `{` to `},` including the comma)
+3. Save the file
+
+### ✏️ How to EDIT an Existing Blog Post
+
+1. Find the blog post you want to edit in the array
+2. Update any field: title, date, summary, content, tags, or link
+3. Save the file - changes appear immediately
+
+### 🔄 Example: Adding a New Blog Post
+
+**BEFORE:**
+```javascript
+export const blogPosts: BlogPost[] = [
+  {
+    id: 1,
+    title: "Why I'm Building in Public",
+    date: "2024-12-15",
+    // ... rest of post
+  },
+  // ... other posts
+];
+```
+
+**AFTER (with new post added):**
+```javascript
+export const blogPosts: BlogPost[] = [
+  {
+    id: 2, // 👈 NEW POST ADDED HERE (newest first)
+    title: "My Latest Thoughts on AI",
+    date: "2025-01-20",
+    summary: "Exploring the future of AI and entrepreneurship.",
+    content: "Exploring the future of AI and entrepreneurship.",
+    tags: ["ai", "entrepreneurship", "future"],
+    link: "https://yoursubstack.com/p/ai-thoughts"
+  },
+  {
+    id: 1,
+    title: "Why I'm Building in Public",
+    date: "2024-12-15",
+    // ... rest of post
+  },
+  // ... other posts
+];
+```
+
+### 📋 Field Explanations
+
+- **id**: Unique number for each post (increment from highest existing)
+- **title**: Appears as the main heading on the blog card
+- **date**: Used for chronological sorting (newest first) - Format: YYYY-MM-DD
+- **summary**: Shows in both the main text and the quote box preview
+- **content**: Currently same as summary, can be different preview text
+- **tags**: Array of topic keywords (ready for future filtering features)
+- **link**: When users click "Read Full Article", this is where they go
+
+### 🛡️ Future-Proofing Features
+
+- Posts automatically appear in date order (newest first)
+- Layout scales gracefully with any number of posts
+- Responsive design works on all screen sizes
+- Empty state shows helpful message if no posts exist
+- No manual layout changes needed when adding content
+
 ## 🎨 Styling & Colors
 
 ### Color Scheme
@@ -364,6 +454,22 @@ fontSize: "clamp(min-size, preferred-size, max-size)"
 - Update the URL array in Experience.tsx lines ~149-156
 - Ensure each URL starts with `https://`
 - Add more URLs to the array if you have more than 6 experiences
+
+**Blog posts not appearing:**
+- Check syntax in blogPosts array - ensure proper commas and brackets
+- Verify each post has all required fields: id, title, date, summary, content, tags, link
+- Ensure date format is YYYY-MM-DD
+- Check that newest posts are at the beginning of the array
+
+**Blog post links not working:**
+- Verify links start with `https://`
+- Test links in a separate browser tab before adding to site
+- Ensure no special characters break the URL format
+
+**Playbook page alignment issues:**
+- The layout automatically adjusts for different content lengths
+- Quote boxes scale responsively on all screen sizes
+- If content appears misaligned, check for overly long titles or descriptions
 
 ## 📞 Need Help?
 
