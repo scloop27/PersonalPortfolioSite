@@ -2,10 +2,15 @@
 
 ## 🎯 Quick Reference - Common Changes
 
-### Change Site Title & Favicon
-- **File**: `index.html` (lines 6-7)
+### Change Site Title, Favicon & Social Media Preview
+- **File**: `index.html` (lines 6-25)
 - **Title**: Update `<title>Your Name - Portfolio</title>`
 - **Favicon**: Replace `href="/attached_assets/your-image.png"` with your image path
+- **Open Graph Title**: Update `content="Your Name - Portfolio"` in og:title meta tag
+- **Open Graph Description**: Update the description in og:description meta tag
+- **Open Graph Image**: Replace `content="/attached_assets/your-image.png"` in og:image meta tag
+- **Twitter Card**: Update twitter:title, twitter:description, and twitter:image similarly
+- **Website URL**: Update og:url with your actual domain when deployed
 
 ### Update Main Intro Text
 - **File**: `src/pages/About.tsx` (around line 85)
@@ -295,6 +300,50 @@ w-full lg:w-1/2            /* Full width mobile, half width desktop */
 2. **Choose static hosting**
 3. **Build command**: `npm run build`
 4. **Output directory**: `dist`
+
+---
+
+## 📱 Social Media Preview Settings - Complete Guide
+
+**File**: `index.html` (lines 9-25)
+
+### What These Meta Tags Do
+When you share your portfolio link on social media, messaging apps, or anywhere online, these meta tags control what preview appears:
+- **Title**: Large heading text that appears in the preview
+- **Description**: Summary text that appears below the title
+- **Image**: Photo that appears alongside the text
+- **URL**: The actual website address
+
+### Open Graph Meta Tags (Facebook, LinkedIn, etc.)
+```html
+<meta property="og:title" content="Your Name - Portfolio" />
+<meta property="og:description" content="Your introduction text here" />
+<meta property="og:image" content="/attached_assets/your-photo.png" />
+<meta property="og:url" content="https://your-domain.com" />
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="Your Name Portfolio" />
+```
+
+### Twitter Card Meta Tags
+```html
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Your Name - Portfolio" />
+<meta name="twitter:description" content="Your introduction text here" />
+<meta name="twitter:image" content="/attached_assets/your-photo.png" />
+```
+
+### To Update Social Media Preview:
+1. **Change your name**: Update content in og:title and twitter:title
+2. **Change description**: Update content in og:description and twitter:description  
+3. **Change preview photo**: Upload new image to attached_assets/ and update og:image and twitter:image paths
+4. **Update website URL**: Change og:url to your actual domain after deployment
+5. **Save the file**
+
+### Testing Your Social Media Preview:
+- **Facebook**: Use Facebook Sharing Debugger tool
+- **Twitter**: Use Twitter Card Validator
+- **LinkedIn**: Share the link and check the preview
+- **WhatsApp/Telegram**: Send the link and verify the preview appears
 
 ---
 
