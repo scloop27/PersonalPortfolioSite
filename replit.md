@@ -110,7 +110,7 @@ This is a modern portfolio website for Advait Paliwal, a 21-year-old founder and
 - June 25, 2025: Added editable blog posts in client/src/data/blogPosts.ts with Substack links
 - June 25, 2025: Enhanced mobile responsiveness across all components with flexible alignment
 - June 25, 2025: Added mobile-first responsive design with clamp() typography and touch-friendly interactions
-- June 25, 2025: Applied buildspace.so inspired dark color scheme with electric green accents
+- June 25, 2025: Applied buildspace.so inspired dark color scheme with white accents
 - June 25, 2025: Added glassy navigation effect with backdrop blur and transparency
 
 ## User Preferences

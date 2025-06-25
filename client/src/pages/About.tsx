@@ -113,7 +113,7 @@ export default function About() {
                   {/* Button Container */}
                   <div className="flex flex-col items-start pt-4 sm:pt-6 md:pt-8">
                     <button
-                      className="flex flex-row items-center justify-center rounded-full bg-[#39FF14] hover:bg-[#2ECC11] transition-colors px-6 py-3 min-w-[85px] h-[47px]"
+                      className="flex flex-row items-center justify-center rounded-full bg-white hover:bg-gray-200 transition-colors px-6 py-3 min-w-[85px] h-[47px]"
                     >
                       <span
                         className="text-[#0A0A0A] font-normal flex items-center justify-center"
@@ -242,7 +242,7 @@ export default function About() {
                     href="https://x.com/shivacharan"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="block hover:text-[#39FF14] transition-colors text-[#888888]"
+                    className="block hover:text-white transition-colors text-[#888888]"
                   >
                     X
                   </a>
@@ -250,7 +250,7 @@ export default function About() {
                     href="https://linkedin.com/in/shivacharan"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="block hover:text-[#39FF14] transition-colors text-[#888888]"
+                    className="block hover:text-white transition-colors text-[#888888]"
                   >
                     LinkedIn
                   </a>
@@ -258,7 +258,7 @@ export default function About() {
                     href="https://github.com/shivacharan"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="block hover:text-[#39FF14] transition-colors text-[#888888]"
+                    className="block hover:text-white transition-colors text-[#888888]"
                   >
                     GitHub
                   </a>
@@ -268,7 +268,7 @@ export default function About() {
                     href="https://instagram.com/shivacharan"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="block hover:text-[#39FF14] transition-colors text-[#888888]"
+                    className="block hover:text-white transition-colors text-[#888888]"
                   >
                     Instagram
                   </a>
@@ -276,7 +276,7 @@ export default function About() {
                     href="https://scholar.google.com/citations?user=shivacharan"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="block hover:text-[#39FF14] transition-colors text-[#888888]"
+                    className="block hover:text-white transition-colors text-[#888888]"
                   >
                     Google Scholar
                   </a>
@@ -284,7 +284,7 @@ export default function About() {
                     href="https://shivacharan.substack.com"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="block hover:text-[#39FF14] transition-colors text-[#888888]"
+                    className="block hover:text-white transition-colors text-[#888888]"
                   >
                     Substack
                   </a>

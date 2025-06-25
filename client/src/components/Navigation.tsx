@@ -30,32 +30,32 @@ export default function Navbar() {
           <div className="flex flex-wrap justify-center items-center gap-4 sm:gap-6 md:gap-8 lg:gap-12">
             <Link
               href="/"
-              className={`text-xs sm:text-sm font-normal text-[#EAEAEA] hover:text-[#39FF14] transition-colors whitespace-nowrap ${
-                isActive("/") ? "underline decoration-[#39FF14]" : ""
+              className={`text-xs sm:text-sm font-normal text-[#EAEAEA] hover:text-white transition-colors whitespace-nowrap ${
+                isActive("/") ? "underline decoration-white" : ""
               }`}
             >
               About
             </Link>
             <Link
               href="/experience"
-              className={`text-xs sm:text-sm font-normal text-[#EAEAEA] hover:text-[#39FF14] transition-colors whitespace-nowrap ${
-                isActive("/experience") ? "underline decoration-[#39FF14]" : ""
+              className={`text-xs sm:text-sm font-normal text-[#EAEAEA] hover:text-white transition-colors whitespace-nowrap ${
+                isActive("/experience") ? "underline decoration-white" : ""
               }`}
             >
               Experience
             </Link>
             <Link
               href="/interests"
-              className={`text-xs sm:text-sm font-normal text-[#EAEAEA] hover:text-[#39FF14] transition-colors whitespace-nowrap ${
-                isActive("/interests") ? "underline decoration-[#39FF14]" : ""
+              className={`text-xs sm:text-sm font-normal text-[#EAEAEA] hover:text-white transition-colors whitespace-nowrap ${
+                isActive("/interests") ? "underline decoration-white" : ""
               }`}
             >
               Interests
             </Link>
             <Link
               href="/playbook"
-              className={`text-xs sm:text-sm font-normal text-[#EAEAEA] hover:text-[#39FF14] transition-colors whitespace-nowrap ${
-                isActive("/playbook") ? "underline decoration-[#39FF14]" : ""
+              className={`text-xs sm:text-sm font-normal text-[#EAEAEA] hover:text-white transition-colors whitespace-nowrap ${
+                isActive("/playbook") ? "underline decoration-white" : ""
               }`}
             >
               Playbook

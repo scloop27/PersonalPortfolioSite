@@ -133,7 +133,7 @@ export default function Experience() {
                       ][index % 6]}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="flex flex-row items-center justify-center rounded-full bg-[#39FF14] w-[85px] h-[47px] hover:bg-[#2ECC11] transition-colors"
+                      className="flex flex-row items-center justify-center rounded-full bg-white w-[85px] h-[47px] hover:bg-gray-200 transition-colors"
                       style={{ padding: "10px 24px" }}
                     >
                       <span
@@ -188,7 +188,7 @@ export default function Experience() {
                     href="https://x.com/shivacharan"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="block hover:text-[#39FF14] transition-colors text-[#888888]"
+                    className="block hover:text-white transition-colors text-[#888888]"
                   >
                     X
                   </a>
@@ -196,7 +196,7 @@ export default function Experience() {
                     href="https://linkedin.com/in/shivacharan"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="block hover:text-[#39FF14] transition-colors text-[#888888]"
+                    className="block hover:text-white transition-colors text-[#888888]"
                   >
                     LinkedIn
                   </a>
@@ -204,7 +204,7 @@ export default function Experience() {
                     href="https://github.com/shivacharan"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="block hover:text-[#39FF14] transition-colors text-[#888888]"
+                    className="block hover:text-white transition-colors text-[#888888]"
                   >
                     GitHub
                   </a>
@@ -214,7 +214,7 @@ export default function Experience() {
                     href="https://instagram.com/shivacharan"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="block hover:text-[#39FF14] transition-colors text-[#888888]"
+                    className="block hover:text-white transition-colors text-[#888888]"
                   >
                     Instagram
                   </a>
@@ -222,7 +222,7 @@ export default function Experience() {
                     href="https://scholar.google.com/citations?user=shivacharan"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="block hover:text-[#39FF14] transition-colors text-[#888888]"
+                    className="block hover:text-white transition-colors text-[#888888]"
                   >
                     Google Scholar
                   </a>
@@ -230,7 +230,7 @@ export default function Experience() {
                     href="https://shivacharan.substack.com"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="block hover:text-[#39FF14] transition-colors text-[#888888]"
+                    className="block hover:text-white transition-colors text-[#888888]"
                   >
                     Substack
                   </a>

@@ -61,7 +61,7 @@ export default function PlaybookPostCard({
             href={link}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center px-3 sm:px-4 py-2 bg-[#39FF14] text-[#0A0A0A] font-medium rounded-full hover:bg-[#2ECC11] transition-colors text-xs sm:text-sm whitespace-nowrap"
+            className="inline-flex items-center px-3 sm:px-4 py-2 bg-white text-[#0A0A0A] font-medium rounded-full hover:bg-gray-200 transition-colors text-xs sm:text-sm whitespace-nowrap"
           >
             Read Full Article
           </a>
