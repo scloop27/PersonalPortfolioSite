@@ -138,14 +138,15 @@ export default function About() {
                 >
                   {index === 0 ? (
                     // Friday project - Purple gradient with email icon
-                    <div className="w-full h-full bg-gradient-to-br from-gray-900 to-purple-900 rounded-xl overflow-hidden shadow-lg flex items-center justify-center relative">
-                      <div className="text-center text-white px-8">
-                        <h3 className="text-3xl font-medium mb-2">
+                    <div className="w-full h-full bg-gradient-to-br from-gray-900 via-purple-900 to-black rounded-xl overflow-hidden shadow-lg flex items-center justify-center relative">
+                      <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-black/20"></div>
+                      <div className="text-center text-white px-8 relative z-10">
+                        <h3 className="text-3xl font-medium mb-2 drop-shadow-lg">
                           Never check your
                           <br />
                           email again
                         </h3>
-                        <div className="w-16 h-16 bg-purple-600 rounded-full mx-auto mt-8 flex items-center justify-center">
+                        <div className="w-16 h-16 bg-purple-600 rounded-full mx-auto mt-8 flex items-center justify-center shadow-lg">
                           <svg
                             className="w-8 h-8 text-white"
                             fill="none"
@@ -164,46 +165,48 @@ export default function About() {
                     </div>
                   ) : index === 1 ? (
                     // YouLearn project - Dark interface mockup
-                    <div className="w-full h-full bg-gray-900 rounded-xl overflow-hidden shadow-lg">
-                      <div className="h-full p-6">
+                    <div className="w-full h-full bg-gradient-to-br from-gray-900 via-gray-800 to-black rounded-xl overflow-hidden shadow-lg relative">
+                      <div className="absolute inset-0 bg-gradient-to-br from-blue-900/20 via-transparent to-purple-900/30"></div>
+                      <div className="h-full p-6 relative z-10">
                         <div className="flex items-center justify-between mb-6">
-                          <div className="text-white text-lg font-medium">
+                          <div className="text-white text-lg font-medium drop-shadow-md">
                             YouLearn
                           </div>
                           <div className="flex space-x-2">
-                            <div className="w-3 h-3 bg-red-500 rounded-full"></div>
-                            <div className="w-3 h-3 bg-yellow-500 rounded-full"></div>
-                            <div className="w-3 h-3 bg-green-500 rounded-full"></div>
+                            <div className="w-3 h-3 bg-red-500 rounded-full shadow-sm"></div>
+                            <div className="w-3 h-3 bg-yellow-500 rounded-full shadow-sm"></div>
+                            <div className="w-3 h-3 bg-green-500 rounded-full shadow-sm"></div>
                           </div>
                         </div>
                         <div className="grid grid-cols-2 gap-4">
-                          <div className="bg-gray-800 rounded-lg p-4 h-20"></div>
-                          <div className="bg-gray-800 rounded-lg p-4 h-20"></div>
-                          <div className="bg-gray-700 rounded-lg p-4 h-16 col-span-2"></div>
-                          <div className="bg-purple-600 rounded-lg p-4 h-12"></div>
-                          <div className="bg-gray-800 rounded-lg p-4 h-12"></div>
+                          <div className="bg-gray-800/80 rounded-lg p-4 h-20 backdrop-blur-sm"></div>
+                          <div className="bg-gray-800/80 rounded-lg p-4 h-20 backdrop-blur-sm"></div>
+                          <div className="bg-gray-700/80 rounded-lg p-4 h-16 col-span-2 backdrop-blur-sm"></div>
+                          <div className="bg-purple-600/90 rounded-lg p-4 h-12 shadow-lg"></div>
+                          <div className="bg-gray-800/80 rounded-lg p-4 h-12 backdrop-blur-sm"></div>
                         </div>
                       </div>
                     </div>
                   ) : index === 2 ? (
                     // Iris project - Wearable device mockup
-                    <div className="w-full h-full flex items-center justify-center space-x-8">
-                      <div className="w-48 h-48 bg-gray-100 rounded-full border border-gray-200 flex items-center justify-center shadow-lg">
-                        <div className="w-4 h-4 bg-black rounded-full"></div>
+                    <div className="w-full h-full flex items-center justify-center space-x-8 bg-gradient-to-br from-gray-50 via-blue-50 to-purple-50 rounded-xl relative overflow-hidden">
+                      <div className="absolute inset-0 bg-gradient-to-br from-blue-600/10 via-transparent to-purple-600/10"></div>
+                      <div className="w-48 h-48 bg-gradient-to-br from-gray-100 to-gray-200 rounded-full border border-gray-300 flex items-center justify-center shadow-xl relative z-10">
+                        <div className="w-4 h-4 bg-black rounded-full shadow-sm"></div>
                       </div>
-                      <div className="relative">
-                        <div className="w-24 h-48 bg-white rounded-3xl border-2 border-gray-200 shadow-lg overflow-hidden">
-                          <div className="bg-gray-900 h-6 rounded-t-2xl"></div>
+                      <div className="relative z-10">
+                        <div className="w-24 h-48 bg-gradient-to-b from-white to-gray-50 rounded-3xl border-2 border-gray-200 shadow-xl overflow-hidden">
+                          <div className="bg-gradient-to-r from-gray-900 to-black h-6 rounded-t-2xl"></div>
                           <div className="p-2 space-y-2">
-                            <div className="bg-gray-200 h-2 rounded"></div>
-                            <div className="bg-gray-300 h-2 rounded w-3/4"></div>
-                            <div className="bg-purple-200 h-4 rounded mt-4"></div>
-                            <div className="bg-gray-200 h-2 rounded"></div>
+                            <div className="bg-gradient-to-r from-gray-200 to-gray-300 h-2 rounded"></div>
+                            <div className="bg-gradient-to-r from-gray-300 to-gray-400 h-2 rounded w-3/4"></div>
+                            <div className="bg-gradient-to-r from-purple-200 to-purple-300 h-4 rounded mt-4"></div>
+                            <div className="bg-gradient-to-r from-gray-200 to-gray-300 h-2 rounded"></div>
                           </div>
                         </div>
-                        <div className="absolute -top-2 -right-8 bg-gray-800 text-white text-xs px-3 py-2 rounded-lg shadow-lg">
+                        <div className="absolute -top-2 -right-8 bg-gradient-to-r from-gray-800 to-gray-900 text-white text-xs px-3 py-2 rounded-lg shadow-xl">
                           <div className="flex items-center space-x-2">
-                            <div className="w-2 h-2 bg-green-400 rounded-full"></div>
+                            <div className="w-2 h-2 bg-green-400 rounded-full shadow-sm"></div>
                             <span>Smart reminder</span>
                           </div>
                         </div>
@@ -211,11 +214,12 @@ export default function About() {
                     </div>
                   ) : (
                     // Commencement Speech - Video player mockup
-                    <div className="w-full h-full bg-gray-900 rounded-xl overflow-hidden shadow-lg relative">
-                      <div className="absolute inset-0 flex items-center justify-center">
-                        <div className="w-16 h-16 bg-white bg-opacity-20 rounded-full flex items-center justify-center backdrop-blur-sm">
+                    <div className="w-full h-full bg-gradient-to-br from-gray-900 via-blue-900 to-black rounded-xl overflow-hidden shadow-lg relative">
+                      <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-black/20"></div>
+                      <div className="absolute inset-0 flex items-center justify-center z-10">
+                        <div className="w-16 h-16 bg-white/20 rounded-full flex items-center justify-center backdrop-blur-md shadow-xl border border-white/10">
                           <svg
-                            className="w-6 h-6 text-white ml-1"
+                            className="w-6 h-6 text-white ml-1 drop-shadow-lg"
                             fill="currentColor"
                             viewBox="0 0 24 24"
                           >
@@ -223,21 +227,21 @@ export default function About() {
                           </svg>
                         </div>
                       </div>
-                      <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black to-transparent p-6">
+                      <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/90 via-black/50 to-transparent p-6 z-10">
                         <div className="flex items-center justify-between text-white">
                           <div className="flex items-center space-x-4">
-                            <span className="text-sm">02:34</span>
-                            <div className="flex-1 h-1 bg-white bg-opacity-30 rounded-full">
-                              <div className="h-full w-1/3 bg-white rounded-full"></div>
+                            <span className="text-sm drop-shadow-md">02:34</span>
+                            <div className="flex-1 h-1 bg-white/30 rounded-full backdrop-blur-sm">
+                              <div className="h-full w-1/3 bg-white rounded-full shadow-sm"></div>
                             </div>
-                            <span className="text-sm">15:42</span>
+                            <span className="text-sm drop-shadow-md">15:42</span>
                           </div>
                         </div>
                       </div>
-                      <div className="absolute top-4 right-4 grid grid-cols-3 gap-1">
-                        <div className="w-8 h-6 bg-blue-600 rounded-sm"></div>
-                        <div className="w-8 h-6 bg-green-600 rounded-sm"></div>
-                        <div className="w-8 h-6 bg-purple-600 rounded-sm"></div>
+                      <div className="absolute top-4 right-4 grid grid-cols-3 gap-1 z-10">
+                        <div className="w-8 h-6 bg-gradient-to-r from-blue-600 to-blue-700 rounded-sm shadow-lg"></div>
+                        <div className="w-8 h-6 bg-gradient-to-r from-green-600 to-green-700 rounded-sm shadow-lg"></div>
+                        <div className="w-8 h-6 bg-gradient-to-r from-purple-600 to-purple-700 rounded-sm shadow-lg"></div>
                       </div>
                     </div>
                   )}
