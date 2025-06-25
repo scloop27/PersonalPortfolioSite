@@ -8,7 +8,9 @@ async function startServer() {
       server: {
         port: 5000,
         host: '0.0.0.0',
-        strictPort: true
+        strictPort: true,
+        // Allow Replit's dynamic hostnames
+        allowedHosts: true
       },
       resolve: {
         alias: {
@@ -19,6 +21,7 @@ async function startServer() {
     
     await server.listen()
     console.log('Portfolio running on http://0.0.0.0:5000')
+    console.log('Configured for Replit dynamic hostnames')
   } catch (error) {
     console.error('Server failed to start:', error)
   }

@@ -1,3 +1,5 @@
+import React from "react";
+
 /**
  * Interests page component - Personal and technical interests showcase
  * Currently displays placeholder content with plans for future expansion

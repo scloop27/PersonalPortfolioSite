@@ -1,3 +1,4 @@
+import React from "react";
 import { motion } from "framer-motion";
 import PlaybookPostCard from "../components/PlaybookPostCard";
 import { blogPosts, BlogPost } from "../data/blogPosts";
