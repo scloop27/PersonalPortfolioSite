@@ -62,7 +62,7 @@ export default function PlaybookPostCard({
             rel="noopener noreferrer"
             className="inline-flex items-center px-3 sm:px-4 py-2 bg-gray-100 text-gray-800 font-medium rounded-full hover:bg-gray-200 transition-colors text-xs sm:text-sm"
           >
-            Read
+            Read Full Article
           </a>
         </div>
         

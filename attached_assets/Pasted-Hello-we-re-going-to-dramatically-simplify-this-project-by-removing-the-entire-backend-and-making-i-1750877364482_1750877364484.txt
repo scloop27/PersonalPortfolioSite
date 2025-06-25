@@ -1,0 +1,39 @@
+Hello, we're going to dramatically simplify this project by removing the entire backend and making it a static React portfolio site. This will eliminate all the deployment issues we've been facing.
+
+**OBJECTIVE:** Convert this from a full-stack application to a static React portfolio with an editable Playbook section that links to your actual Substack posts.
+
+**YOUR TASKS:**
+
+1. **Remove All Backend Code:**
+   - Delete the entire `server/` directory and all its contents
+   - Delete the `api/` directory if it exists
+   - Delete the `netlify/` directory if it exists
+   - Delete `vercel.json` file completely
+   - Delete `tsconfig.server.json` file
+
+2. **Clean Up package.json:**
+   - Remove ALL backend dependencies: express, cors, rss-parser, serverless-http, @types/express, etc.
+   - Remove ALL server-related scripts: build:server, build:client
+   - Keep only: "build": "vite build" and "dev": "vite"
+   - Keep only frontend dependencies: react, react-dom, vite, tailwindcss, etc.
+
+3. **Create Static Blog Data System with Links:**
+   - Create a new file: `src/data/blogPosts.js`
+   - Structure it as an exportable array of blog post objects
+   - Each post should have: { id, title, date, summary, content, tags, link }
+   - The `link` field should contain the actual Substack URL for each post
+   - Add 3-4 sample blog posts with your real Substack URLs
+
+4. **Update the Playbook Component:**
+   - Remove all API calls, useEffect hooks, and loading states
+   - Import the static blog data directly: `import { blogPosts } from '../data/blogPosts'`
+   - Display the posts immediately without any async operations
+   - Add a "Read Full Article" button/link for each post that opens the Substack link in a new tab
+   - Keep the existing UI/styling but remove loading spinners
+
+5. **Add Easy Editing Instructions:**
+   - Create a comment at the top of `blogPosts.js` with clear instructions
+   - Explain how to add new posts by copying the object structure
+   - Include instructions for adding Substack links
+
+**REQUIRED BLOG POST STRUCTURE:**
