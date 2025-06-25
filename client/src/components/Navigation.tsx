@@ -24,38 +24,38 @@ export default function Navbar() {
   };
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 bg-white border-b border-gray-100">
+    <nav className="fixed top-0 left-0 right-0 z-50 bg-[#0A0A0A] border-b border-[#333333]">
       <div className="max-w-[1440px] mx-auto px-3 sm:px-6 lg:px-10 py-3 sm:py-4 md:py-6">
         <div className="flex justify-center items-center">
           <div className="flex flex-wrap justify-center items-center gap-4 sm:gap-6 md:gap-8 lg:gap-12">
             <Link
               href="/"
-              className={`text-xs sm:text-sm font-normal text-gray-900 hover:text-gray-600 transition-colors whitespace-nowrap ${
-                isActive("/") ? "underline" : ""
+              className={`text-xs sm:text-sm font-normal text-[#EAEAEA] hover:text-[#39FF14] transition-colors whitespace-nowrap ${
+                isActive("/") ? "underline decoration-[#39FF14]" : ""
               }`}
             >
               About
             </Link>
             <Link
               href="/experience"
-              className={`text-xs sm:text-sm font-normal text-gray-900 hover:text-gray-600 transition-colors whitespace-nowrap ${
-                isActive("/experience") ? "underline" : ""
+              className={`text-xs sm:text-sm font-normal text-[#EAEAEA] hover:text-[#39FF14] transition-colors whitespace-nowrap ${
+                isActive("/experience") ? "underline decoration-[#39FF14]" : ""
               }`}
             >
               Experience
             </Link>
             <Link
               href="/interests"
-              className={`text-xs sm:text-sm font-normal text-gray-900 hover:text-gray-600 transition-colors whitespace-nowrap ${
-                isActive("/interests") ? "underline" : ""
+              className={`text-xs sm:text-sm font-normal text-[#EAEAEA] hover:text-[#39FF14] transition-colors whitespace-nowrap ${
+                isActive("/interests") ? "underline decoration-[#39FF14]" : ""
               }`}
             >
               Interests
             </Link>
             <Link
               href="/playbook"
-              className={`text-xs sm:text-sm font-normal text-gray-900 hover:text-gray-600 transition-colors whitespace-nowrap ${
-                isActive("/playbook") ? "underline" : ""
+              className={`text-xs sm:text-sm font-normal text-[#EAEAEA] hover:text-[#39FF14] transition-colors whitespace-nowrap ${
+                isActive("/playbook") ? "underline decoration-[#39FF14]" : ""
               }`}
             >
               Playbook

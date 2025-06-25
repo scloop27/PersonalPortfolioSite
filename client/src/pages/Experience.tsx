@@ -59,14 +59,14 @@ export default function Experience() {
   ];
 
   return (
-    <div className="flex flex-col items-center w-full bg-white overflow-y-scroll min-h-screen">
+    <div className="flex flex-col items-center w-full bg-[#0A0A0A] overflow-y-scroll min-h-screen">
       {/* Main Container */}
       <main className="flex flex-col items-center w-full pt-16 sm:pt-20 md:pt-24">
         {/* Experience Sections */}
         {experiences.map((experience, index) => (
           <div key={index} className="flex flex-col items-center w-full">
             {/* Separator Line */}
-            <div className="w-full h-px border-t border-[#E5E7EB]"></div>
+            <div className="w-full h-px border-t border-[#333333]"></div>
 
             {/* Experience Container */}
             <div className="flex flex-col items-center px-3 sm:px-4 md:px-6 lg:px-10 w-full max-w-[1440px]">
@@ -81,7 +81,7 @@ export default function Experience() {
                   {/* Year */}
                   <div className="w-full h-[21px] flex items-center">
                     <p
-                      className="text-[#6B7280] font-normal flex items-center"
+                      className="text-[#888888] font-normal flex items-center"
                       style={{
                         fontFamily: "'SF Pro Display', -apple-system, system-ui, sans-serif",
                         fontSize: "clamp(10px, 1vw, 12.25px)",
@@ -95,7 +95,7 @@ export default function Experience() {
                   {/* Title */}
                   <div className="w-full h-[45px] flex items-center">
                     <h2
-                      className="text-black font-normal flex items-center"
+                      className="text-[#EAEAEA] font-normal flex items-center"
                       style={{
                         fontFamily: "'SF Pro Display', -apple-system, system-ui, sans-serif",
                         fontSize: "clamp(18px, 2vw, 26.6016px)",
@@ -109,7 +109,7 @@ export default function Experience() {
                   {/* Description */}
                   <div className="w-full h-[30px] flex items-center">
                     <p
-                      className="text-[#707070] font-normal flex items-center"
+                      className="text-[#888888] font-normal flex items-center"
                       style={{
                         fontFamily: "'SF Pro Display', -apple-system, system-ui, sans-serif",
                         fontSize: "clamp(14px, 1.5vw, 17.3438px)",
@@ -133,11 +133,11 @@ export default function Experience() {
                       ][index % 6]}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="flex flex-row items-center justify-center rounded-full bg-[#F5F5F5] w-[85px] h-[47px] hover:bg-[#E5E5E5] transition-colors"
+                      className="flex flex-row items-center justify-center rounded-full bg-[#39FF14] w-[85px] h-[47px] hover:bg-[#2ECC11] transition-colors"
                       style={{ padding: "10px 24px" }}
                     >
                       <span
-                        className="text-black font-normal flex items-center justify-center"
+                        className="text-[#0A0A0A] font-normal flex items-center justify-center"
                         style={{
                           fontFamily: "'SF Pro Display', -apple-system, system-ui, sans-serif",
                           fontSize: "clamp(14px, 1vw, 16.0312px)",
@@ -172,11 +172,11 @@ export default function Experience() {
         ))}
 
         {/* Footer Section */}
-        <footer className="py-16 border-t border-gray-200 w-full">
+        <footer className="py-16 border-t border-[#333333] w-full">
           <div className="max-w-[1440px] mx-auto px-10">
             <div className="grid md:grid-cols-2 gap-8 items-start">
               <div>
-                <h2 className="text-4xl md:text-5xl font-bold mb-4 text-gray-900">
+                <h2 className="text-4xl md:text-5xl font-bold mb-4 text-[#EAEAEA]">
                   Shiva Charan
                   <br />
                   Mandhpauram
@@ -188,7 +188,7 @@ export default function Experience() {
                     href="https://x.com/shivacharan"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="block hover:text-gray-600 transition-colors text-gray-900"
+                    className="block hover:text-[#39FF14] transition-colors text-[#888888]"
                   >
                     X
                   </a>
@@ -196,7 +196,7 @@ export default function Experience() {
                     href="https://linkedin.com/in/shivacharan"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="block hover:text-gray-600 transition-colors text-gray-900"
+                    className="block hover:text-[#39FF14] transition-colors text-[#888888]"
                   >
                     LinkedIn
                   </a>
@@ -204,7 +204,7 @@ export default function Experience() {
                     href="https://github.com/shivacharan"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="block hover:text-gray-600 transition-colors text-gray-900"
+                    className="block hover:text-[#39FF14] transition-colors text-[#888888]"
                   >
                     GitHub
                   </a>
@@ -214,7 +214,7 @@ export default function Experience() {
                     href="https://instagram.com/shivacharan"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="block hover:text-gray-600 transition-colors text-gray-900"
+                    className="block hover:text-[#39FF14] transition-colors text-[#888888]"
                   >
                     Instagram
                   </a>
@@ -222,7 +222,7 @@ export default function Experience() {
                     href="https://scholar.google.com/citations?user=shivacharan"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="block hover:text-gray-600 transition-colors text-gray-900"
+                    className="block hover:text-[#39FF14] transition-colors text-[#888888]"
                   >
                     Google Scholar
                   </a>
@@ -230,7 +230,7 @@ export default function Experience() {
                     href="https://shivacharan.substack.com"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="block hover:text-gray-600 transition-colors text-gray-900"
+                    className="block hover:text-[#39FF14] transition-colors text-[#888888]"
                   >
                     Substack
                   </a>

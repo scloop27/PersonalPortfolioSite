@@ -51,24 +51,24 @@ export default function PlaybookPostCard({
     >
       <div className="flex flex-col lg:flex-row lg:items-start lg:justify-between gap-4 sm:gap-6 lg:gap-8">
         <div className="flex-1 min-w-0">
-          <h2 className="text-lg sm:text-xl md:text-2xl font-bold mb-2 sm:mb-3 text-gray-900 leading-tight break-words">
+          <h2 className="text-lg sm:text-xl md:text-2xl font-bold mb-2 sm:mb-3 text-[#EAEAEA] leading-tight break-words">
             {title}
           </h2>
-          <p className="text-gray-600 leading-relaxed mb-4 sm:mb-6 text-sm sm:text-base break-words">
+          <p className="text-[#888888] leading-relaxed mb-4 sm:mb-6 text-sm sm:text-base break-words">
             {contentSnippet}
           </p>
           <a
             href={link}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center px-3 sm:px-4 py-2 bg-gray-100 text-gray-800 font-medium rounded-full hover:bg-gray-200 transition-colors text-xs sm:text-sm whitespace-nowrap"
+            className="inline-flex items-center px-3 sm:px-4 py-2 bg-[#39FF14] text-[#0A0A0A] font-medium rounded-full hover:bg-[#2ECC11] transition-colors text-xs sm:text-sm whitespace-nowrap"
           >
             Read Full Article
           </a>
         </div>
         
-        <div className="bg-gray-100 rounded-lg p-4 sm:p-6 lg:p-8 lg:max-w-sm">
-          <blockquote className="text-gray-700 italic leading-relaxed text-sm sm:text-base">
+        <div className="bg-[#1A1A1A] rounded-lg p-4 sm:p-6 lg:p-8 lg:max-w-sm">
+          <blockquote className="text-[#888888] italic leading-relaxed text-sm sm:text-base">
             "{contentSnippet.substring(0, 150)}..."
           </blockquote>
         </div>

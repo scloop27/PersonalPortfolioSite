@@ -9,7 +9,7 @@ import Playbook from "./pages/Playbook";
 
 function Router() {
   return (
-    <div className="min-h-screen bg-pure-white">
+    <div className="min-h-screen bg-[#0A0A0A]">
       <Navigation />
       <Switch>
         <Route path="/" component={About} />

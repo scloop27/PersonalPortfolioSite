@@ -40,7 +40,7 @@ export default function About() {
   ];
 
   return (
-    <div className="flex flex-col items-center w-full bg-white overflow-y-scroll min-h-screen">
+    <div className="flex flex-col items-center w-full bg-[#0A0A0A] overflow-y-scroll min-h-screen">
       {/* Main Container */}
       <main className="flex flex-col items-center w-full pt-16 sm:pt-20 md:pt-24">
         {/* Hero Section */}
@@ -50,7 +50,7 @@ export default function About() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
-              className="text-black font-normal leading-tight tracking-tight w-full"
+              className="text-[#EAEAEA] font-normal leading-tight tracking-tight w-full"
               style={{
                 fontFamily: "'SF Pro Display', -apple-system, system-ui, sans-serif",
                 fontSize: "clamp(1.5rem, 5vw, 55.75px)",
@@ -70,7 +70,7 @@ export default function About() {
         {projects.map((project, index) => (
           <div key={index} className="flex flex-col items-center w-full">
             {/* Separator Line */}
-            <div className="w-full h-px border-t border-[#E5E7EB]"></div>
+            <div className="w-full h-px border-t border-[#333333]"></div>
 
             {/* Project Container */}
             <div className="flex flex-col items-center px-4 sm:px-6 md:px-8 lg:px-10 w-full max-w-[1440px]">
@@ -85,7 +85,7 @@ export default function About() {
                   {/* Title */}
                   <div className="w-full flex items-center">
                     <h2
-                      className="text-black font-normal"
+                      className="text-[#EAEAEA] font-normal"
                       style={{
                         fontFamily: "'SF Pro Display', -apple-system, system-ui, sans-serif",
                         fontSize: "clamp(20px, 3vw, 26.6016px)",
@@ -99,7 +99,7 @@ export default function About() {
                   {/* Description */}
                   <div className="w-full flex items-start">
                     <p
-                      className="text-[#707070] font-normal leading-relaxed"
+                      className="text-[#888888] font-normal leading-relaxed"
                       style={{
                         fontFamily: "'SF Pro Display', -apple-system, system-ui, sans-serif",
                         fontSize: "clamp(14px, 2vw, 17.3438px)",
@@ -113,10 +113,10 @@ export default function About() {
                   {/* Button Container */}
                   <div className="flex flex-col items-start pt-4 sm:pt-6 md:pt-8">
                     <button
-                      className="flex flex-row items-center justify-center rounded-full bg-[#F5F5F5] hover:bg-[#E5E5E5] transition-colors px-6 py-3 min-w-[85px] h-[47px]"
+                      className="flex flex-row items-center justify-center rounded-full bg-[#39FF14] hover:bg-[#2ECC11] transition-colors px-6 py-3 min-w-[85px] h-[47px]"
                     >
                       <span
-                        className="text-black font-normal flex items-center justify-center"
+                        className="text-[#0A0A0A] font-normal flex items-center justify-center"
                         style={{
                           fontFamily: "'SF Pro Display', -apple-system, system-ui, sans-serif",
                           fontSize: "clamp(14px, 1vw, 16.0312px)",
@@ -226,11 +226,11 @@ export default function About() {
         ))}
 
         {/* Footer Section */}
-        <footer className="py-16 border-t border-gray-200 w-full">
+        <footer className="py-16 border-t border-[#333333] w-full">
           <div className="max-w-[1440px] mx-auto px-10">
             <div className="grid md:grid-cols-2 gap-8 items-start">
               <div>
-                <h2 className="text-4xl md:text-5xl font-bold mb-4 text-gray-900">
+                <h2 className="text-4xl md:text-5xl font-bold mb-4 text-[#EAEAEA]">
                   Shiva Charan
                   <br />
                   Mandhpauram
@@ -242,7 +242,7 @@ export default function About() {
                     href="https://x.com/shivacharan"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="block hover:text-gray-600 transition-colors text-gray-900"
+                    className="block hover:text-[#39FF14] transition-colors text-[#888888]"
                   >
                     X
                   </a>
@@ -250,7 +250,7 @@ export default function About() {
                     href="https://linkedin.com/in/shivacharan"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="block hover:text-gray-600 transition-colors text-gray-900"
+                    className="block hover:text-[#39FF14] transition-colors text-[#888888]"
                   >
                     LinkedIn
                   </a>
@@ -258,7 +258,7 @@ export default function About() {
                     href="https://github.com/shivacharan"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="block hover:text-gray-600 transition-colors text-gray-900"
+                    className="block hover:text-[#39FF14] transition-colors text-[#888888]"
                   >
                     GitHub
                   </a>
@@ -268,7 +268,7 @@ export default function About() {
                     href="https://instagram.com/shivacharan"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="block hover:text-gray-600 transition-colors text-gray-900"
+                    className="block hover:text-[#39FF14] transition-colors text-[#888888]"
                   >
                     Instagram
                   </a>
@@ -276,7 +276,7 @@ export default function About() {
                     href="https://scholar.google.com/citations?user=shivacharan"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="block hover:text-gray-600 transition-colors text-gray-900"
+                    className="block hover:text-[#39FF14] transition-colors text-[#888888]"
                   >
                     Google Scholar
                   </a>
@@ -284,7 +284,7 @@ export default function About() {
                     href="https://shivacharan.substack.com"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="block hover:text-gray-600 transition-colors text-gray-900"
+                    className="block hover:text-[#39FF14] transition-colors text-[#888888]"
                   >
                     Substack
                   </a>
