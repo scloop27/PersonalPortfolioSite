@@ -52,16 +52,17 @@ export default function About() {
               transition={{ duration: 0.8 }}
               className="text-[#EAEAEA] font-normal leading-tight tracking-tight w-full"
               style={{
-                fontFamily: "'SF Pro Display', -apple-system, system-ui, sans-serif",
-                fontSize: "clamp(1.75rem, 6vw, 64px)",
-                lineHeight: "clamp(2.1rem, 7vw, 88px)",
+                fontFamily:
+                  "'SF Pro Display', -apple-system, system-ui, sans-serif",
+                fontSize: "clamp(1.6rem, 5.5vw, 60px)",
+                lineHeight: "clamp(2rem, 6.5vw, 80px)",
                 letterSpacing: "clamp(-0.3px, -0.1vw, -1.28px)",
                 maxWidth: "100%",
               }}
             >
-              Hi, I'm Shivacharan Mandhapuram — a 21 year old founder. I am
-              passionate about building technology that makes a meaningful
-              impact on people's lives.
+              Hi, I'm Shiva — a 21 year old founder. I am passionate about
+              building technology that makes a meaningful impact on people's
+              lives.
             </motion.h1>
           </div>
         </section>
@@ -87,7 +88,8 @@ export default function About() {
                     <h2
                       className="text-[#EAEAEA] font-normal"
                       style={{
-                        fontFamily: "'SF Pro Display', -apple-system, system-ui, sans-serif",
+                        fontFamily:
+                          "'SF Pro Display', -apple-system, system-ui, sans-serif",
                         fontSize: "clamp(20px, 3vw, 26.6016px)",
                         lineHeight: "1.2",
                       }}
@@ -101,7 +103,8 @@ export default function About() {
                     <p
                       className="text-[#888888] font-normal leading-relaxed"
                       style={{
-                        fontFamily: "'SF Pro Display', -apple-system, system-ui, sans-serif",
+                        fontFamily:
+                          "'SF Pro Display', -apple-system, system-ui, sans-serif",
                         fontSize: "clamp(14px, 2vw, 17.3438px)",
                         lineHeight: "1.6",
                       }}
@@ -112,13 +115,12 @@ export default function About() {
 
                   {/* Button Container */}
                   <div className="flex flex-col items-start pt-4 sm:pt-6 md:pt-8">
-                    <button
-                      className="flex flex-row items-center justify-center rounded-full bg-white hover:bg-gray-200 transition-colors px-6 py-3 min-w-[85px] h-[47px]"
-                    >
+                    <button className="flex flex-row items-center justify-center rounded-full bg-white hover:bg-gray-200 transition-colors px-6 py-3 min-w-[85px] h-[47px]">
                       <span
                         className="text-[#0A0A0A] font-normal flex items-center justify-center"
                         style={{
-                          fontFamily: "'SF Pro Display', -apple-system, system-ui, sans-serif",
+                          fontFamily:
+                            "'SF Pro Display', -apple-system, system-ui, sans-serif",
                           fontSize: "clamp(14px, 1vw, 16.0312px)",
                           lineHeight: "27px",
                         }}
@@ -138,10 +140,24 @@ export default function About() {
                     // Friday project - Purple gradient with email icon
                     <div className="w-full h-full bg-gradient-to-br from-gray-900 to-purple-900 rounded-xl overflow-hidden shadow-lg flex items-center justify-center relative">
                       <div className="text-center text-white px-8">
-                        <h3 className="text-3xl font-medium mb-2">Never check your<br />email again</h3>
+                        <h3 className="text-3xl font-medium mb-2">
+                          Never check your
+                          <br />
+                          email again
+                        </h3>
                         <div className="w-16 h-16 bg-purple-600 rounded-full mx-auto mt-8 flex items-center justify-center">
-                          <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                          <svg
+                            className="w-8 h-8 text-white"
+                            fill="none"
+                            stroke="currentColor"
+                            viewBox="0 0 24 24"
+                          >
+                            <path
+                              strokeLinecap="round"
+                              strokeLinejoin="round"
+                              strokeWidth={2}
+                              d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
+                            />
                           </svg>
                         </div>
                       </div>
@@ -151,7 +167,9 @@ export default function About() {
                     <div className="w-full h-full bg-gray-900 rounded-xl overflow-hidden shadow-lg">
                       <div className="h-full p-6">
                         <div className="flex items-center justify-between mb-6">
-                          <div className="text-white text-lg font-medium">YouLearn</div>
+                          <div className="text-white text-lg font-medium">
+                            YouLearn
+                          </div>
                           <div className="flex space-x-2">
                             <div className="w-3 h-3 bg-red-500 rounded-full"></div>
                             <div className="w-3 h-3 bg-yellow-500 rounded-full"></div>
@@ -196,8 +214,12 @@ export default function About() {
                     <div className="w-full h-full bg-gray-900 rounded-xl overflow-hidden shadow-lg relative">
                       <div className="absolute inset-0 flex items-center justify-center">
                         <div className="w-16 h-16 bg-white bg-opacity-20 rounded-full flex items-center justify-center backdrop-blur-sm">
-                          <svg className="w-6 h-6 text-white ml-1" fill="currentColor" viewBox="0 0 24 24">
-                            <path d="M8 5v14l11-7z"/>
+                          <svg
+                            className="w-6 h-6 text-white ml-1"
+                            fill="currentColor"
+                            viewBox="0 0 24 24"
+                          >
+                            <path d="M8 5v14l11-7z" />
                           </svg>
                         </div>
                       </div>
