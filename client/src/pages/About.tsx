@@ -214,12 +214,12 @@ export default function About() {
                     </div>
                   ) : (
                     // Commencement Speech - Video player mockup
-                    <div className="w-full h-full bg-gradient-to-br from-gray-900 via-blue-900 to-black rounded-xl overflow-hidden shadow-lg relative">
+                    <div className="w-full h-full min-h-[250px] sm:min-h-[300px] lg:min-h-[393px] bg-gradient-to-br from-gray-900 via-blue-900 to-black rounded-xl overflow-hidden shadow-lg relative">
                       <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-black/20"></div>
                       <div className="absolute inset-0 flex items-center justify-center z-10">
-                        <div className="w-16 h-16 bg-white/20 rounded-full flex items-center justify-center backdrop-blur-md shadow-xl border border-white/10">
+                        <div className="w-12 h-12 sm:w-16 sm:h-16 bg-white/20 rounded-full flex items-center justify-center backdrop-blur-md shadow-xl border border-white/10">
                           <svg
-                            className="w-6 h-6 text-white ml-1 drop-shadow-lg"
+                            className="w-4 h-4 sm:w-6 sm:h-6 text-white ml-1 drop-shadow-lg"
                             fill="currentColor"
                             viewBox="0 0 24 24"
                           >
@@ -227,21 +227,21 @@ export default function About() {
                           </svg>
                         </div>
                       </div>
-                      <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/90 via-black/50 to-transparent p-6 z-10">
+                      <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/90 via-black/50 to-transparent p-3 sm:p-6 z-10">
                         <div className="flex items-center justify-between text-white">
-                          <div className="flex items-center space-x-4">
-                            <span className="text-sm drop-shadow-md">02:34</span>
+                          <div className="flex items-center space-x-2 sm:space-x-4 w-full">
+                            <span className="text-xs sm:text-sm drop-shadow-md">02:34</span>
                             <div className="flex-1 h-1 bg-white/30 rounded-full backdrop-blur-sm">
                               <div className="h-full w-1/3 bg-white rounded-full shadow-sm"></div>
                             </div>
-                            <span className="text-sm drop-shadow-md">15:42</span>
+                            <span className="text-xs sm:text-sm drop-shadow-md">15:42</span>
                           </div>
                         </div>
                       </div>
-                      <div className="absolute top-4 right-4 grid grid-cols-3 gap-1 z-10">
-                        <div className="w-8 h-6 bg-gradient-to-r from-blue-600 to-blue-700 rounded-sm shadow-lg"></div>
-                        <div className="w-8 h-6 bg-gradient-to-r from-green-600 to-green-700 rounded-sm shadow-lg"></div>
-                        <div className="w-8 h-6 bg-gradient-to-r from-purple-600 to-purple-700 rounded-sm shadow-lg"></div>
+                      <div className="absolute top-3 right-3 sm:top-4 sm:right-4 grid grid-cols-3 gap-1 z-10">
+                        <div className="w-6 h-4 sm:w-8 sm:h-6 bg-gradient-to-r from-blue-600 to-blue-700 rounded-sm shadow-lg"></div>
+                        <div className="w-6 h-4 sm:w-8 sm:h-6 bg-gradient-to-r from-green-600 to-green-700 rounded-sm shadow-lg"></div>
+                        <div className="w-6 h-4 sm:w-8 sm:h-6 bg-gradient-to-r from-purple-600 to-purple-700 rounded-sm shadow-lg"></div>
                       </div>
                     </div>
                   )}
