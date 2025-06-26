@@ -2,7 +2,7 @@ import React from "react";
 import { motion } from "framer-motion";
 import PlaybookPostCard from "../components/PlaybookPostCard";
 import { blogPosts, BlogPost } from "../data/blogPosts";
-import BottomNavigation from "../components/BottomNavigation";
+import Navbar from "../components/Navigation";
 
 /**
  * ========================================
@@ -29,8 +29,10 @@ import BottomNavigation from "../components/BottomNavigation";
  */
 export default function Playbook() {
   return (
-    <div className="bg-[#0A0A0A] min-h-screen flex flex-col">
-      <div className="flex-1 pt-16 sm:pt-20 md:pt-24 pb-12 sm:pb-16">
+    <React.Fragment>
+      <Navbar />
+      
+      <div className="pt-16 sm:pt-20 md:pt-24 pb-12 sm:pb-16 bg-[#0A0A0A] min-h-screen">
         <div className="max-w-4xl mx-auto px-3 sm:px-4 md:px-6">
           {/* Blog posts list with future-proof layout */}
           <div className="space-y-8 sm:space-y-12">
@@ -57,8 +59,6 @@ export default function Playbook() {
           </div>
         </div>
       </div>
-      
-      <BottomNavigation />
-    </div>
+    </React.Fragment>
   );
 }
