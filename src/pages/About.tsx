@@ -136,8 +136,8 @@ export default function About() {
           - Navigation stays at top, content centers below it
           - Responsive padding for all phone sizes (375px, 414px, etc.)
         */}
-        <section className="min-h-screen flex flex-col justify-center items-start w-full px-6 sm:px-8 md:px-10 lg:px-12">
-          <div className="flex flex-col items-start text-left w-full max-w-[1440px] mt-8 sm:mt-12 md:mt-16">
+        <section className="min-h-screen flex flex-col justify-center items-center w-full px-6 sm:px-8 md:px-10 lg:px-12">
+          <div className="flex flex-col items-center text-center w-full max-w-[800px]">
             <motion.h1
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
