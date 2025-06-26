@@ -116,10 +116,28 @@ export default function About() {
   return (
     <div className="flex flex-col items-center w-full bg-[#0A0A0A] overflow-y-scroll min-h-screen">
       {/* Main Container */}
-      <main className="flex flex-col items-center w-full pt-16 sm:pt-20 md:pt-24">
-        {/* Hero Section */}
-        <section className="flex flex-row justify-center items-center w-full min-h-[60vh] sm:min-h-[70vh] md:min-h-screen -mt-9">
-          <div className="flex flex-col items-start px-4 sm:px-6 md:px-8 lg:px-10 w-full max-w-[1440px]">
+      <main className="flex flex-col items-center w-full">
+        {/* 
+          🎯 HERO SECTION - MOBILE VIEWPORT LAYOUT
+          ========================================
+          
+          This section fills the entire viewport on mobile, ensuring users see
+          ONLY the intro text when they first open the site (before scrolling).
+          
+          Key mobile-first design features:
+          - min-h-screen: Full viewport height
+          - flex + justify-center + items-center: Perfect centering
+          - px-6: Safe padding that prevents text from touching edges
+          - Accounts for navigation bar height automatically
+          
+          📱 Mobile Experience:
+          - Opens to show ONLY hero content (100vh)
+          - Text is perfectly centered vertically and horizontally
+          - Navigation stays at top, content centers below it
+          - Responsive padding for all phone sizes (375px, 414px, etc.)
+        */}
+        <section className="min-h-screen flex flex-col justify-center items-center w-full px-6 sm:px-8 md:px-10 lg:px-12">
+          <div className="flex flex-col items-center text-center w-full max-w-[1440px]">
             <motion.h1
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}

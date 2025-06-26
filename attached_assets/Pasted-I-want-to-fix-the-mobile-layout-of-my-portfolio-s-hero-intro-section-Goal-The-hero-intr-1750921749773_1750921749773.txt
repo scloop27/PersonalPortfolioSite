@@ -1,0 +1,46 @@
+I want to fix the mobile layout of my portfolio's hero (intro) section.
+
+**Goal:**  
+- The hero/intro section (the one with "Hi, I'm Shiva — a 21 year old founder...") should always fill the entire viewport on mobile, so when someone opens the site, they see ONLY this intro section—nothing below—until they scroll.
+- The intro text should be vertically and horizontally centered in the viewport.
+- The navigation bar should stay at the top, but the hero content should be perfectly centered beneath it.
+- The spacing, font size, and alignment should look as clean and balanced as advaitpaliwal.com on mobile.
+
+**Instructions:**  
+1. **CSS/Classes:**  
+   - Make the hero section use `min-h-screen` or `min-height: 100vh` (Tailwind or CSS).
+   - Use flexbox (`flex`, `flex-col`, `justify-center`, `items-center`) to center the content both vertically and horizontally.
+   - Add responsive padding so the text never touches the edges on any phone.
+   - Ensure the navigation bar height is accounted for (e.g., use `min-h-[calc(100vh-56px)]` if the navbar is 56px tall, or use `pt-16` if you use sticky/fixed nav).
+
+2. **Mobile-First:**  
+   - Test on common mobile breakpoints (375px, 414px, etc.).
+   - The intro text should not overflow or be squished; font size should remain readable.
+
+3. **No Color/Content Changes:**  
+   - Do NOT change any colors, text, or structure—only fix the alignment and spacing for mobile hero section.
+
+4. **Example (Tailwind):**  
+   - The hero section should have classes like:
+     ```
+     <section className="min-h-screen flex flex-col justify-center items-center px-6">
+       {/* intro text */}
+     </section>
+     ```
+   - Or, if you use custom CSS, set:
+     ```
+     .hero-section {
+       min-height: 100vh;
+       display: flex;
+       flex-direction: column;
+       justify-content: center;
+       align-items: center;
+       padding-left: 1.5rem;
+       padding-right: 1.5rem;
+     }
+     ```
+
+5. **Result:**  
+   - On mobile, the user should see ONLY the intro section (with proper spacing and centering) when they open the site, just like advaitpaliwal.com.
+
+Please update the hero section and any related styles/components so the mobile experience matches this expectation.
