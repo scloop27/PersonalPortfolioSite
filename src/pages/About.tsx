@@ -1,5 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
+import { Link } from "wouter";
 
 /**
  * ========================================
@@ -114,61 +115,74 @@ export default function About() {
   ];
 
   return (
-    <div className="flex flex-col items-center w-full bg-[#0A0A0A] overflow-y-scroll min-h-screen">
-      {/* Main Container */}
+    <div className="w-full bg-[#0A0A0A] min-h-screen" style={{ fontFamily: 'Inter, sans-serif' }}>
+      {/* Full-width Navigation */}
+      <nav 
+        className="w-full flex justify-center"
+        style={{ paddingTop: '32px' }}
+        aria-label="Main navigation"
+      >
+        <div className="flex" style={{ gap: '24px' }}>
+          <Link 
+            href="/" 
+            className="text-[#EAEAEA] hover:text-white transition-colors duration-200"
+            style={{ fontSize: '15px', fontWeight: 400, letterSpacing: '0.2px' }}
+          >
+            About
+          </Link>
+          <Link 
+            href="/experience" 
+            className="text-[#EAEAEA] hover:text-white transition-colors duration-200"
+            style={{ fontSize: '15px', fontWeight: 400, letterSpacing: '0.2px' }}
+          >
+            Experience
+          </Link>
+          <Link 
+            href="/interests" 
+            className="text-[#EAEAEA] hover:text-white transition-colors duration-200"
+            style={{ fontSize: '15px', fontWeight: 400, letterSpacing: '0.2px' }}
+          >
+            Interests
+          </Link>
+          <Link 
+            href="/playbook" 
+            className="text-[#EAEAEA] hover:text-white transition-colors duration-200"
+            style={{ fontSize: '15px', fontWeight: 400, letterSpacing: '0.2px' }}
+          >
+            Playbook
+          </Link>
+        </div>
+      </nav>
+
+      {/* Hero Container */}
+      <div 
+        className="hero-container px-4"
+        style={{ 
+          maxWidth: '880px', 
+          margin: '160px auto 240px auto',
+          textAlign: 'left'
+        }}
+      >
+        <motion.h1
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+          className="text-[#EAEAEA]"
+          style={{
+            fontFamily: 'Inter, sans-serif',
+            fontWeight: 600,
+            lineHeight: '110%',
+            fontSize: 'clamp(48px, 7vw, 80px)'
+          }}
+        >
+          Hi, I'm Shiva — a 21 year old founder. I am passionate about
+          building technology that makes a meaningful impact on people's
+          lives.
+        </motion.h1>
+      </div>
+
+      {/* Main Container for Projects */}
       <main className="flex flex-col items-center w-full">
-        {/* 
-          🎯 HERO SECTION - MOBILE VIEWPORT LAYOUT
-          ========================================
-          
-          This section fills the entire viewport on mobile, ensuring users see
-          ONLY the intro text when they first open the site (before scrolling).
-          
-          Key mobile-first design features:
-          - min-h-screen: Full viewport height
-          - flex + justify-center + items-center: Perfect centering
-          - px-6: Safe padding that prevents text from touching edges
-          - Accounts for navigation bar height automatically
-          
-          📱 Mobile Experience:
-          - Opens to show ONLY hero content (100vh)
-          - Text is perfectly centered vertically and horizontally
-          - Navigation stays at top, content centers below it
-          - Responsive padding for all phone sizes (375px, 414px, etc.)
-        */}
-        <section className="min-h-screen flex flex-col justify-center items-start w-full px-6 sm:px-8 md:px-10 lg:px-12">
-          <div className="flex flex-col items-start text-left w-full max-w-[1440px] mt-8 sm:mt-12 md:mt-16">
-            <motion.h1
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              className="text-[#EAEAEA] font-normal leading-tight tracking-tight w-full"
-              style={{
-                fontFamily:
-                  "'SF Pro Display', -apple-system, system-ui, sans-serif",
-                fontSize: "clamp(1.6rem, 5.5vw, 60px)",
-                lineHeight: "clamp(2rem, 6.5vw, 80px)",
-                letterSpacing: "clamp(-0.3px, -0.1vw, -1.28px)",
-                maxWidth: "100%",
-              }}
-            >
-              {/* 
-                🎯 MAIN INTRO TEXT - TO UPDATE THIS:
-                ===================================
-                1. Replace this text with your own introduction
-                2. Keep it concise (2-3 lines max for best responsive display)
-                3. This text automatically scales across all devices
-                4. Location: src/pages/About.tsx, lines 116-118
-                
-                Current: Hi, I'm Shiva — a 21 year old founder...
-                Update: Replace with your personal introduction
-              */}
-              Hi, I'm Shiva — a 21 year old founder. I am passionate about
-              building technology that makes a meaningful impact on people's
-              lives.
-            </motion.h1>
-          </div>
-        </section>
 
         {/* 
           ========================================
