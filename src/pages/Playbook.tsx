@@ -1,7 +1,6 @@
 import { motion } from "framer-motion";
 import PlaybookPostCard from "../components/PlaybookPostCard";
 import { blogPosts, BlogPost } from "../data/blogPosts";
-import Navbar from "../components/Navigation";
 
 /**
  * ========================================
@@ -28,10 +27,7 @@ import Navbar from "../components/Navigation";
  */
 export default function Playbook() {
   return (
-    <>
-      <Navbar />
-      
-      <div className="pt-16 sm:pt-20 md:pt-24 pb-12 sm:pb-16 bg-[#0A0A0A] min-h-screen">
+    <div className="pt-16 sm:pt-20 md:pt-24 pb-12 sm:pb-16 bg-[#0A0A0A] min-h-screen">
         <div className="max-w-4xl mx-auto px-3 sm:px-4 md:px-6">
           {/* Blog posts list with future-proof layout */}
           <div className="space-y-8 sm:space-y-12">
@@ -57,7 +53,6 @@ export default function Playbook() {
             )}
           </div>
         </div>
-      </div>
-    </>
+    </div>
   );
 }
