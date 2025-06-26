@@ -53,6 +53,75 @@ export default function Playbook() {
             )}
           </div>
         </div>
+        
+        {/* Footer Section - Social Links */}
+        <footer className="py-16 border-t border-[#333333] w-full">
+          <div className="max-w-[1440px] mx-auto px-10">
+            <div className="grid md:grid-cols-2 gap-8 items-start">
+              <div>
+                <h2 className="text-4xl md:text-5xl font-bold mb-4 text-[#EAEAEA]">
+                  Shiva Charan
+                  <br />
+                  Mandhpauram
+                </h2>
+              </div>
+              <div className="grid grid-cols-2 gap-8 text-sm">
+                <div className="space-y-3">
+                  <a
+                    href="https://x.com/shivacharan"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="block hover:text-white transition-colors text-[#888888]"
+                  >
+                    X
+                  </a>
+                  <a
+                    href="https://linkedin.com/in/shivacharan"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="block hover:text-white transition-colors text-[#888888]"
+                  >
+                    LinkedIn
+                  </a>
+                  <a
+                    href="https://github.com/shivacharan"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="block hover:text-white transition-colors text-[#888888]"
+                  >
+                    GitHub
+                  </a>
+                </div>
+                <div className="space-y-3">
+                  <a
+                    href="https://instagram.com/shivacharan"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="block hover:text-white transition-colors text-[#888888]"
+                  >
+                    Instagram
+                  </a>
+                  <a
+                    href="https://scholar.google.com/citations?user=shivacharan"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="block hover:text-white transition-colors text-[#888888]"
+                  >
+                    Google Scholar
+                  </a>
+                  <a
+                    href="https://shivacharan.substack.com"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="block hover:text-white transition-colors text-[#888888]"
+                  >
+                    Substack
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </footer>
     </div>
   );
 }
