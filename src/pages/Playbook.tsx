@@ -1,4 +1,3 @@
-import React from "react";
 import { motion } from "framer-motion";
 import PlaybookPostCard from "../components/PlaybookPostCard";
 import { blogPosts, BlogPost } from "../data/blogPosts";
@@ -29,7 +28,7 @@ import Navbar from "../components/Navigation";
  */
 export default function Playbook() {
   return (
-    <React.Fragment>
+    <>
       <Navbar />
       
       <div className="pt-16 sm:pt-20 md:pt-24 pb-12 sm:pb-16 bg-[#0A0A0A] min-h-screen">
@@ -52,13 +51,13 @@ export default function Playbook() {
               <div className="text-center py-16 sm:py-24">
                 <div className="text-gray-400 text-lg mb-4">No blog posts yet</div>
                 <div className="text-gray-600 text-sm">
-                  Add your first post in client/src/data/blogPosts.ts
+                  Add your first post in src/data/blogPosts.ts
                 </div>
               </div>
             )}
           </div>
         </div>
       </div>
-    </React.Fragment>
+    </>
   );
 }

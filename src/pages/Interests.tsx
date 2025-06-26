@@ -1,4 +1,4 @@
-import React from "react";
+
 
 /**
  * Interests page component - Personal and technical interests showcase
