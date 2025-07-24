@@ -284,32 +284,12 @@ export default function About() {
                   style={{ paddingBottom: "7px" }}
                 >
                   {index === 0 ? (
-                    /* 🎨 FRIDAY PROJECT MOCKUP - Email interface design */
-                    // Friday project - Purple gradient with email icon
-                    <div className="w-full h-full bg-gradient-to-br from-gray-900 via-purple-900 to-black rounded-xl overflow-hidden shadow-lg flex items-center justify-center relative">
-                      <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-black/20"></div>
-                      <div className="text-center text-white px-8 relative z-10">
-                        <h3 className="text-3xl font-medium mb-2 drop-shadow-lg">
-                          Never check your
-                          <br />
-                          email again
-                        </h3>
-                        <div className="w-16 h-16 bg-purple-600 rounded-full mx-auto mt-8 flex items-center justify-center shadow-lg">
-                          <svg
-                            className="w-8 h-8 text-white"
-                            fill="none"
-                            stroke="currentColor"
-                            viewBox="0 0 24 24"
-                          >
-                            <path
-                              strokeLinecap="round"
-                              strokeLinejoin="round"
-                              strokeWidth={2}
-                              d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
-                            />
-                          </svg>
-                        </div>
-                      </div>
+                    <div className="w-full h-full min-h-[250px] sm:min-h-[300px] lg:min-h-[393px] rounded-xl overflow-hidden shadow-lg">
+                      <img
+                        src={project.image}
+                        alt={project.title}
+                        className="w-full h-full object-cover"
+                      />
                     </div>
                   ) : index === 1 ? (
                     /* 🎨 YOULEARN PROJECT MOCKUP - Dashboard interface design */
