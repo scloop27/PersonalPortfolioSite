@@ -97,10 +97,10 @@ export default function About() {
       image: "/attached_assets/avidia.png?v=" + Date.now(), // Decorative only
     },
     {
-      title: "YouLearn", // 📝 EDIT: Project name
-      description: "AI tutor for students. 1M+ users.", // 📝 EDIT: Description
-      image:
-        "https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&auto=format&fit=crop&w=687&h=386", // Decorative only
+      title: "Coffeecodes", // 📝 EDIT: Project name
+      description:
+        "Co-Founder & Product Lead. A tech consultancy building MVPs and trust for fellow founders. Served 12+ founders, bridging technical execution and business strategy, doing 'dandha' that matters.", // 📝 EDIT: Description
+      image: "/attached_assets/coffeecodes.png?v=" + Date.now(), // Decorative only
     },
     {
       title: "Iris", // 📝 EDIT: Project name
@@ -292,27 +292,66 @@ export default function About() {
                       />
                     </div>
                   ) : index === 1 ? (
-                    /* 🎨 YOULEARN PROJECT MOCKUP - Dashboard interface design */
-                    <div className="w-full h-full bg-gradient-to-br from-gray-900 via-gray-800 to-black rounded-xl overflow-hidden shadow-lg relative">
-                      <div className="absolute inset-0 bg-gradient-to-br from-blue-900/20 via-transparent to-purple-900/30"></div>
-                      <div className="h-full p-6 relative z-10">
-                        <div className="flex items-center justify-between mb-6">
-                          <div className="text-white text-lg font-medium drop-shadow-md">
-                            YouLearn
-                          </div>
-                          <div className="flex space-x-2">
-                            <div className="w-3 h-3 bg-red-500 rounded-full shadow-sm"></div>
-                            <div className="w-3 h-3 bg-yellow-500 rounded-full shadow-sm"></div>
-                            <div className="w-3 h-3 bg-green-500 rounded-full shadow-sm"></div>
-                          </div>
+                    // ========================================
+                    // NEW MOCKUP FOR COFFEECODES
+                    // ========================================
+                    <div className="w-full h-full bg-gradient-to-br from-gray-900 via-blue-900 to-black rounded-xl overflow-hidden shadow-lg p-6 flex flex-col justify-between relative">
+                      <div className="flex justify-between items-center">
+                        <h3 className="text-white text-lg font-medium">
+                          Client Dashboard
+                        </h3>
+                        <div className="flex items-center space-x-2 text-green-400">
+                          <div className="w-2 h-2 bg-green-400 rounded-full"></div>
+                          <span className="text-xs">
+                            All Systems Operational
+                          </span>
                         </div>
-                        <div className="grid grid-cols-2 gap-4">
-                          <div className="bg-gray-800/80 rounded-lg p-4 h-20 backdrop-blur-sm"></div>
-                          <div className="bg-gray-800/80 rounded-lg p-4 h-20 backdrop-blur-sm"></div>
-                          <div className="bg-gray-700/80 rounded-lg p-4 h-16 col-span-2 backdrop-blur-sm"></div>
-                          <div className="bg-purple-600/90 rounded-lg p-4 h-12 shadow-lg"></div>
-                          <div className="bg-gray-800/80 rounded-lg p-4 h-12 backdrop-blur-sm"></div>
+                      </div>
+                      <div className="grid grid-cols-3 gap-4 text-center">
+                        <div className="bg-white/10 p-4 rounded-lg backdrop-blur-sm">
+                          <p className="text-2xl font-bold text-white">12+</p>
+                          <p className="text-xs text-gray-300">
+                            Founders Served
+                          </p>
                         </div>
+                        <div className="bg-white/10 p-4 rounded-lg backdrop-blur-sm">
+                          <p className="text-2xl font-bold text-white">MVP</p>
+                          <p className="text-xs text-gray-300">to Market</p>
+                        </div>
+                        <div className="bg-white/10 p-4 rounded-lg backdrop-blur-sm flex flex-col items-center justify-center">
+                          <svg
+                            className="w-6 h-6 text-white mb-1"
+                            fill="none"
+                            stroke="currentColor"
+                            viewBox="0 0 24 24"
+                          >
+                            <path
+                              strokeLinecap="round"
+                              strokeLinejoin="round"
+                              strokeWidth="2"
+                              d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"
+                            ></path>
+                          </svg>
+                          <p className="text-xs text-gray-300">On Time</p>
+                        </div>
+                      </div>
+                      <div className="flex items-center justify-between bg-black/30 p-3 rounded-lg">
+                        <span className="text-sm text-gray-200">
+                          Building trust, one product at a time.
+                        </span>
+                        <svg
+                          className="w-6 h-6 text-yellow-200"
+                          fill="none"
+                          stroke="currentColor"
+                          viewBox="0 0 24 24"
+                        >
+                          <path
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                            strokeWidth="2"
+                            d="M14.828 14.828a4 4 0 01-5.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
+                          ></path>
+                        </svg>
                       </div>
                     </div>
                   ) : index === 2 ? (
