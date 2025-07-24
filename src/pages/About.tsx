@@ -93,27 +93,26 @@ export default function About() {
     {
       title: "Avidia", // 📝 EDIT: Project name that appears as heading
       description:
-        'Co-Founder. AI-powered learning platform tackling "tutorial hell". Pitched in Shark Tank India Audition. Built to learn programming by building, not watching tutorials.', // 📝 EDIT: Description text
+        'Co-Founder (Jan 2023 - Dec 2024). AI-powered learning platform tackling "tutorial hell". Pitched in Shark Tank India Audition. Built to learn programming by building, not watching tutorials.', // 📝 EDIT: Description text
       image: "/attached_assets/avidia.png?v=" + Date.now(), // Decorative only
     },
     {
       title: "Coffeecodes", // 📝 EDIT: Project name
       description:
-        "Co-Founder & Product Lead. A tech consultancy building MVPs and trust for fellow founders. Served 12+ founders, bridging technical execution and business strategy, doing 'dandha' that matters.", // 📝 EDIT: Description
+        "Co-Founder & Product Lead (Feb 2024 - Apr 2025) . A tech consultancy building MVPs and trust for fellow founders. Served 12+ founders, bridging technical execution and business strategy, doing 'dandha' that matters.", // 📝 EDIT: Description
       image: "/attached_assets/coffeecodes.png?v=" + Date.now(), // Decorative only
     },
     {
-      title: "Iris", // 📝 EDIT: Project name
-      description: "AI wearable that gives you infinite memory.", // 📝 EDIT: Description
-      image:
-        "https://images.unsplash.com/photo-1606107557195-0e29a4b5b4aa?ixlib=rb-4.0.3&auto=format&fit=crop&w=687&h=386", // Decorative only
+      title: "Noobslearning", // 📝 EDIT: Project name
+      description:
+        " Grew a community of 5,000+ students into a platform for networking, sharing notes, and learning. We hosted 15+ workshops and several hackathons, fostering a hands-on builder culture.", // 📝 EDIT: Description
+      image: "/attached_assets/noobslearning.png?v=" + Date.now(), // Decorative only
     },
     {
-      title: "Commencement Speech", // 📝 EDIT: Project name
+      title: "lyzn.ai", // 📝 EDIT: Project name
       description:
-        "Spoke about chasing rejection to over 10,000 students at my graduation.", // 📝 EDIT: Description
-      image:
-        "https://images.unsplash.com/photo-1475721027785-f74eccf877e2?ixlib=rb-4.0.3&auto=format&fit=crop&w=687&h=386", // Decorative only
+        "Building an AI company from the ground up, applying lessons from previous ventures. Focusing on solving real problems with AI.", // 📝 EDIT: Description
+      image: "", // Decorative only
     },
   ];
 
@@ -303,7 +302,7 @@ export default function About() {
                         <div className="flex items-center space-x-2 text-green-400">
                           <div className="w-2 h-2 bg-green-400 rounded-full"></div>
                           <span className="text-xs">
-                            All Systems Operational
+                            5+ Production Level Projects
                           </span>
                         </div>
                       </div>
@@ -355,83 +354,88 @@ export default function About() {
                       </div>
                     </div>
                   ) : index === 2 ? (
-                    /* 🎨 IRIS PROJECT MOCKUP - Wearable device design */
-                    <div className="w-full h-full flex items-center justify-center space-x-8 bg-gradient-to-br from-gray-50 via-blue-50 to-purple-50 rounded-xl relative overflow-hidden">
-                      <div className="absolute inset-0 bg-gradient-to-br from-blue-600/10 via-transparent to-purple-600/10"></div>
-                      <div className="w-48 h-48 bg-gradient-to-br from-gray-100 to-gray-200 rounded-full border border-gray-300 flex items-center justify-center shadow-xl relative z-10">
-                        <div className="w-4 h-4 bg-black rounded-full shadow-sm"></div>
-                      </div>
-                      <div className="relative z-10">
-                        <div className="w-24 h-48 bg-gradient-to-b from-white to-gray-50 rounded-3xl border-2 border-gray-200 shadow-xl overflow-hidden">
-                          <div className="bg-gradient-to-r from-gray-900 to-black h-6 rounded-t-2xl"></div>
-                          <div className="p-2 space-y-2">
-                            <div className="bg-gradient-to-r from-gray-200 to-gray-300 h-2 rounded"></div>
-                            <div className="bg-gradient-to-r from-gray-300 to-gray-400 h-2 rounded w-3/4"></div>
-                            <div className="bg-gradient-to-r from-purple-200 to-purple-300 h-4 rounded mt-4"></div>
-                            <div className="bg-gradient-to-r from-gray-200 to-gray-300 h-2 rounded"></div>
+                    <div className="w-full h-full flex items-center justify-center bg-gradient-to-br from-purple-50 via-blue-50 to-indigo-50 rounded-xl relative overflow-hidden">
+                      <div className="text-center relative z-10">
+                        <h3 className="text-2xl font-bold mb-2 text-gray-800">
+                          5,000+ Students
+                        </h3>
+                        <p className="text-sm text-gray-600 mb-4">
+                          A community for builders.
+                        </p>
+                        <div className="flex justify-center space-x-2">
+                          <div className="px-3 py-1 bg-purple-100 text-purple-800 rounded-full text-xs font-medium">
+                            15+ Workshops
+                          </div>
+                          <div className="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-xs font-medium">
+                            Hackathons
+                          </div>
+                          <div className="px-3 py-1 bg-green-100 text-green-800 rounded-full text-xs font-medium">
+                            Networking
                           </div>
                         </div>
-                        <div className="absolute -top-2 -right-8 bg-gradient-to-r from-gray-800 to-gray-900 text-white text-xs px-3 py-2 rounded-lg shadow-xl">
-                          <div className="flex items-center space-x-2">
-                            <div className="w-2 h-2 bg-green-400 rounded-full shadow-sm"></div>
-                            <span>Smart reminder</span>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  ) : index === 3 ? (
-                    /* 🎨 COMMENCEMENT SPEECH MOCKUP - Video player interface design */
-                    <div className="w-full h-full min-h-[250px] sm:min-h-[300px] lg:min-h-[393px] bg-gradient-to-br from-gray-900 via-blue-900 to-black rounded-xl overflow-hidden shadow-lg relative">
-                      <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-black/20"></div>
-                      <div className="absolute inset-0 flex items-center justify-center z-10">
-                        <div className="w-12 h-12 sm:w-16 sm:h-16 bg-white/20 rounded-full flex items-center justify-center backdrop-blur-md shadow-xl border border-white/10">
-                          <svg
-                            className="w-4 h-4 sm:w-6 sm:h-6 text-white ml-1 drop-shadow-lg"
-                            fill="currentColor"
-                            viewBox="0 0 24 24"
-                          >
-                            <path d="M8 5v14l11-7z" />
-                          </svg>
-                        </div>
-                      </div>
-                      <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/90 via-black/50 to-transparent p-3 sm:p-6 z-10">
-                        <div className="flex items-center justify-between text-white">
-                          <div className="flex items-center space-x-2 sm:space-x-4 w-full">
-                            <span className="text-xs sm:text-sm drop-shadow-md">
-                              02:34
-                            </span>
-                            <div className="flex-1 h-1 bg-white/30 rounded-full backdrop-blur-sm">
-                              <div className="h-full w-1/3 bg-white rounded-full shadow-sm"></div>
-                            </div>
-                            <span className="text-xs sm:text-sm drop-shadow-md">
-                              15:42
-                            </span>
-                          </div>
-                        </div>
-                      </div>
-                      <div className="absolute top-3 right-3 sm:top-4 sm:right-4 grid grid-cols-3 gap-1 z-10">
-                        <div className="w-6 h-4 sm:w-8 sm:h-6 bg-gradient-to-r from-blue-600 to-blue-700 rounded-sm shadow-lg"></div>
-                        <div className="w-6 h-4 sm:w-8 sm:h-6 bg-gradient-to-r from-green-600 to-green-700 rounded-sm shadow-lg"></div>
-                        <div className="w-6 h-4 sm:w-8 sm:h-6 bg-gradient-to-r from-purple-600 to-purple-700 rounded-sm shadow-lg"></div>
                       </div>
                     </div>
                   ) : (
-                    /* 🆕 DEFAULT FALLBACK - Shows for any additional projects beyond index 3
-                       
-                       TO ADD YOUR 5TH PROJECT MOCKUP:
-                       1. Replace this section with: } : index === 4 ? (
-                       2. Add your custom mockup design
-                       3. Keep the same responsive structure
-                    */
-                    <div className="w-full h-full min-h-[250px] sm:min-h-[300px] lg:min-h-[393px] bg-gradient-to-br from-gray-600 to-gray-800 rounded-xl overflow-hidden shadow-lg relative flex items-center justify-center">
-                      <div className="text-white text-center p-6">
-                        <h3 className="text-2xl font-bold mb-2">New Project</h3>
-                        <p className="text-sm opacity-75">
-                          Add custom mockup design here
-                        </p>
-                        <div className="mt-4 px-4 py-2 bg-white/20 rounded-full text-xs">
-                          Index: {index}
+                    // ========================================
+                    //  NEW MOCKUP FOR LYZN.AI
+                    // ========================================
+                    <div className="w-full h-full min-h-[250px] sm:min-h-[300px] lg:min-h-[393px] bg-gradient-to-br from-gray-900 via-purple-900 to-black rounded-xl overflow-hidden shadow-2xl relative flex items-center justify-center p-6">
+                      <div className="absolute inset-0 opacity-20">
+                        {/* Abstract background representing neural pathways */}
+                        <svg
+                          width="100%"
+                          height="100%"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <defs>
+                            <pattern
+                              id="neural"
+                              patternUnits="userSpaceOnUse"
+                              width="100"
+                              height="100"
+                            >
+                              <path
+                                d="M50 0 V100 M0 50 H100"
+                                stroke="rgba(167, 139, 250, 0.2)"
+                                strokeWidth="1"
+                              />
+                              <circle
+                                cx="50"
+                                cy="50"
+                                r="1.5"
+                                fill="rgba(192, 132, 252, 0.5)"
+                              />
+                            </pattern>
+                          </defs>
+                          <rect
+                            width="100%"
+                            height="100%"
+                            fill="url(#neural)"
+                          />
+                        </svg>
+                      </div>
+                      <div className="text-center text-white relative z-10">
+                        <div className="w-20 h-20 bg-gradient-to-br from-purple-500 to-indigo-600 rounded-full mx-auto mb-4 flex items-center justify-center shadow-lg border-2 border-purple-400/50">
+                          <svg
+                            className="w-10 h-10 text-white"
+                            fill="none"
+                            stroke="currentColor"
+                            viewBox="0 0 24 24"
+                          >
+                            <path
+                              strokeLinecap="round"
+                              strokeLinejoin="round"
+                              strokeWidth="2"
+                              d="M13 10V3L4 14h7v7l9-11h-7z"
+                            ></path>
+                          </svg>
                         </div>
+                        <h3 className="text-2xl font-bold mb-2 drop-shadow-lg">
+                          lyzn.ai
+                        </h3>
+                        <p className="text-sm opacity-75">
+                          Thinks. Plans. Acts.
+                        </p>
                       </div>
                     </div>
                   )}
