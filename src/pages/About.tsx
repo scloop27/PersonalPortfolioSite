@@ -223,7 +223,7 @@ export default function About() {
                         <h3 className="text-white text-lg font-medium">Client Dashboard</h3>
                         <div className="flex items-center space-x-2 text-green-400">
                           <div className="w-2 h-2 bg-green-400 rounded-full"></div>
-                          <span className="text-xs">All Systems Operational</span>
+                          <span className="text-xs">5+ Live Production Projects </span>
                         </div>
                       </div>
                       <div className="grid grid-cols-3 gap-4 text-center">
