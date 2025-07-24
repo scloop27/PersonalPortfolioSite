@@ -94,7 +94,7 @@ export default function About() {
       title: "Avidia", // 📝 EDIT: Project name that appears as heading
       description:
         'Co-Founder. AI-powered learning platform tackling "tutorial hell". Pitched in Shark Tank India Audition. Built to learn programming by building, not watching tutorials.', // 📝 EDIT: Description text
-      image: "attached_assets/avidia.png?v=" + Date.now(), // Decorative only
+      image: "/attached_assets/avidia.png?v=" + Date.now(), // Decorative only
     },
     {
       title: "YouLearn", // 📝 EDIT: Project name
