@@ -4,24 +4,24 @@ import { motion } from "framer-motion";
  * ========================================
  * 🏠 ABOUT PAGE - HOMEPAGE & PROJECT SHOWCASE
  * ========================================
- * 
+ *
  * This is the main landing page that visitors see first.
  * Contains: Hero intro text + 4 project showcases + footer
- * 
+ *
  * 🎯 TO UPDATE YOUR INTRO TEXT:
  * Find line ~62-64 and change the text inside the <motion.h1> tag
- * 
+ *
  * 🚀 TO UPDATE PROJECTS:
  * Modify the 'projects' array below (lines ~47-75)
  * Each project has: title, description, and decorative image URL
- * 
+ *
  * 🎨 PROJECT MOCKUPS:
  * Each project gets a custom visual mockup (not the image URL)
  * - Friday (index 0): Purple email interface
- * - YouLearn (index 1): Dark dashboard interface  
+ * - YouLearn (index 1): Dark dashboard interface
  * - Iris (index 2): Light wearable device mockup
  * - Commencement Speech (index 3): Video player interface
- * 
+ *
  * 📱 RESPONSIVE DESIGN:
  * - Mobile: Single column, stacked layout
  * - Desktop: Side-by-side text and mockup
@@ -32,9 +32,9 @@ export default function About() {
    * ========================================
    * 📋 PROJECT DATA - COMPREHENSIVE EDITING GUIDE
    * ========================================
-   * 
+   *
    * 🎯 QUICK REFERENCE - File: src/pages/About.tsx, Lines: 47-93
-   * 
+   *
    * ➕ TO ADD A NEW PROJECT:
    * 1. Copy this exact template:
    *    {
@@ -46,19 +46,19 @@ export default function About() {
    * 3. Update title and description with your project information
    * 4. Add a custom visual mockup (see mockup guide below)
    * 5. Save the file - changes appear immediately
-   * 
+   *
    * ❌ TO DELETE A PROJECT:
    * 1. Find the project object you want to remove in lines 65-92
    * 2. Delete the entire object (from { to }, including the comma)
    * 3. Remove the corresponding mockup design in lines 200-320
    * 4. Save the file
-   * 
+   *
    * ✏️ TO EDIT EXISTING PROJECT:
    * 1. Find the project in the array below
    * 2. Update title (line with title: "...")
    * 3. Update description (line with description: "...")
    * 4. Save the file
-   * 
+   *
    * 🎨 VISUAL MOCKUPS GUIDE:
    * Location: Lines 200-320 (the conditional rendering section)
    * Each project gets a custom visual design (not the image URL):
@@ -66,49 +66,54 @@ export default function About() {
    * - Project 1 (YouLearn): Dark dashboard interface mockup
    * - Project 2 (Iris): Light wearable device mockup
    * - Project 3 (Commencement): Video player interface mockup
-   * 
+   *
    * TO ADD MOCKUP FOR NEW PROJECT:
    * 1. Go to line ~320 (end of mockup conditionals)
    * 2. Add: } : index === 4 ? ( // For 5th project
    * 3. Create your custom mockup design using HTML/Tailwind CSS
    * 4. Use these responsive classes: min-h-[250px] sm:min-h-[300px] lg:min-h-[393px]
    * 5. Follow the same pattern as existing mockups
-   * 
+   *
    * 🛡️ RESPONSIVE DESIGN RULES:
    * - Always use responsive classes: w-full, min-h-[250px] sm:min-h-[300px]
    * - Keep consistent HTML structure pattern as existing projects
    * - Use same Tailwind CSS classes for consistency
    * - Test on mobile after adding content (use browser dev tools)
-   * 
+   *
    * 📝 FIELD EXPLANATIONS:
    * - title: Project name (appears as large heading in the card)
    * - description: Brief summary (appears as body text below title)
    * - image: Decorative URL only - not actually displayed (kept for future features)
-   * 
+   *
    * 🔄 ORDER MATTERS:
    * Projects appear in the same order as this array. First project = top of page.
    * To reorder: Cut and paste entire project objects to new positions.
    */
   const projects = [
     {
-      title: "Friday", // 📝 EDIT: Project name that appears as heading
-      description: "AI assistant for email. Backed by Y Combinator.", // 📝 EDIT: Description text
-      image: "https://images.unsplash.com/photo-1620712943543-bcc4688e7485?ixlib=rb-4.0.3&auto=format&fit=crop&w=687&h=386", // Decorative only
+      title: "Avidia", // 📝 EDIT: Project name that appears as heading
+      description:
+        'Co-Founder. AI-powered learning platform tackling "tutorial hell". Pitched in Shark Tank India Audition. Built to learn programming by building, not watching tutorials.', // 📝 EDIT: Description text
+      image: "/attached_assets/avidia.png", // Decorative only
     },
     {
       title: "YouLearn", // 📝 EDIT: Project name
       description: "AI tutor for students. 1M+ users.", // 📝 EDIT: Description
-      image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&auto=format&fit=crop&w=687&h=386", // Decorative only
+      image:
+        "https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&auto=format&fit=crop&w=687&h=386", // Decorative only
     },
     {
       title: "Iris", // 📝 EDIT: Project name
       description: "AI wearable that gives you infinite memory.", // 📝 EDIT: Description
-      image: "https://images.unsplash.com/photo-1606107557195-0e29a4b5b4aa?ixlib=rb-4.0.3&auto=format&fit=crop&w=687&h=386", // Decorative only
+      image:
+        "https://images.unsplash.com/photo-1606107557195-0e29a4b5b4aa?ixlib=rb-4.0.3&auto=format&fit=crop&w=687&h=386", // Decorative only
     },
     {
       title: "Commencement Speech", // 📝 EDIT: Project name
-      description: "Spoke about chasing rejection to over 10,000 students at my graduation.", // 📝 EDIT: Description
-      image: "https://images.unsplash.com/photo-1475721027785-f74eccf877e2?ixlib=rb-4.0.3&auto=format&fit=crop&w=687&h=386", // Decorative only
+      description:
+        "Spoke about chasing rejection to over 10,000 students at my graduation.", // 📝 EDIT: Description
+      image:
+        "https://images.unsplash.com/photo-1475721027785-f74eccf877e2?ixlib=rb-4.0.3&auto=format&fit=crop&w=687&h=386", // Decorative only
     },
   ];
 
@@ -373,11 +378,15 @@ export default function About() {
                       <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/90 via-black/50 to-transparent p-3 sm:p-6 z-10">
                         <div className="flex items-center justify-between text-white">
                           <div className="flex items-center space-x-2 sm:space-x-4 w-full">
-                            <span className="text-xs sm:text-sm drop-shadow-md">02:34</span>
+                            <span className="text-xs sm:text-sm drop-shadow-md">
+                              02:34
+                            </span>
                             <div className="flex-1 h-1 bg-white/30 rounded-full backdrop-blur-sm">
                               <div className="h-full w-1/3 bg-white rounded-full shadow-sm"></div>
                             </div>
-                            <span className="text-xs sm:text-sm drop-shadow-md">15:42</span>
+                            <span className="text-xs sm:text-sm drop-shadow-md">
+                              15:42
+                            </span>
                           </div>
                         </div>
                       </div>
@@ -398,7 +407,9 @@ export default function About() {
                     <div className="w-full h-full min-h-[250px] sm:min-h-[300px] lg:min-h-[393px] bg-gradient-to-br from-gray-600 to-gray-800 rounded-xl overflow-hidden shadow-lg relative flex items-center justify-center">
                       <div className="text-white text-center p-6">
                         <h3 className="text-2xl font-bold mb-2">New Project</h3>
-                        <p className="text-sm opacity-75">Add custom mockup design here</p>
+                        <p className="text-sm opacity-75">
+                          Add custom mockup design here
+                        </p>
                         <div className="mt-4 px-4 py-2 bg-white/20 rounded-full text-xs">
                           Index: {index}
                         </div>
