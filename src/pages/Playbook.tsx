@@ -65,13 +65,30 @@ export default function Playbook() {
       {/* Main Container - Matches Experience page structure */}
       <main className="flex flex-col items-center w-full pt-16 sm:pt-20 md:pt-24">
         
-        {/* Blog Posts Sections - Each post gets its own section like Experience page */}
+        {/* 
+          📖 PLAYBOOK BLOG POSTS SECTION
+          ===============================
+          This section displays all blog posts from the blogPosts array.
+          Layout matches the Experience page for consistency.
+          
+          🚫 IMPORTANT - ALIGNMENT PREVENTION MEASURES:
+          - NO fixed heights on text containers (causes overflow)
+          - Flexible gap spacing between elements
+          - Proper line-height for text wrapping
+          - Responsive font sizing with clamp()
+          - Consistent button styling across all sections
+          
+          ✅ SAFE TO EDIT:
+          - Update blogPosts.ts to add/edit/remove posts
+          - All layout adjustments happen automatically
+          - Text content flows naturally without cutoff
+        */}
         {blogPosts.map((post, index) => (
           <div key={post.id} className="flex flex-col items-center w-full">
             {/* Separator Line - Matches Experience page */}
             <div className="w-full h-px border-t border-[#333333]"></div>
 
-            {/* Blog Post Container - Matches Experience page layout */}
+            {/* Blog Post Container - Matches Experience page layout with alignment fixes */}
             <div className="flex flex-col items-center px-3 sm:px-4 md:px-6 lg:px-10 w-full max-w-[1440px]">
               <motion.article
                 initial={{ opacity: 0, y: 20 }}
@@ -79,43 +96,43 @@ export default function Playbook() {
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 className="flex flex-col lg:flex-row justify-between items-start w-full py-8 sm:py-12 md:py-16 lg:py-20 gap-4 sm:gap-6 lg:gap-48"
               >
-                {/* Text Content - Left side */}
-                <div className="flex flex-col items-start gap-2 sm:gap-3 w-full lg:w-auto lg:flex-1 order-2 lg:order-1">
+                {/* Text Content - Left side with proper spacing and alignment */}
+                <div className="flex flex-col items-start gap-3 sm:gap-4 w-full lg:w-auto lg:flex-1 order-2 lg:order-1">
                   {/* Blog Date - Small gray text above title */}
-                  <div className="w-full h-[21px] flex items-center">
+                  <div className="w-full flex items-center">
                     <time
-                      className="text-[#888888] font-normal flex items-center"
+                      className="text-[#888888] font-normal"
                       style={{
                         fontFamily: "'SF Pro Display', -apple-system, system-ui, sans-serif",
                         fontSize: "clamp(10px, 1vw, 12.25px)",
-                        lineHeight: "21px",
+                        lineHeight: "1.4",
                       }}
                     >
                       {formatDate(post.date)}
                     </time>
                   </div>
 
-                  {/* Blog Title - Main heading */}
-                  <div className="w-full h-[45px] flex items-center">
+                  {/* Blog Title - Main heading with proper text wrapping */}
+                  <div className="w-full flex items-start">
                     <h2
-                      className="text-[#EAEAEA] font-normal flex items-center"
+                      className="text-[#EAEAEA] font-normal leading-tight"
                       style={{
                         fontFamily: "'SF Pro Display', -apple-system, system-ui, sans-serif",
-                        fontSize: "clamp(20px, 4vw, 36.75px)",
-                        lineHeight: "45px",
+                        fontSize: "clamp(20px, 3vw, 26.6016px)", // Reduced max size for better readability
+                        lineHeight: "1.2", // Better line height for long titles
                       }}
                     >
                       {post.title}
                     </h2>
                   </div>
 
-                  {/* Blog Summary - Description */}
+                  {/* Blog Summary - Description with proper text flow */}
                   <div className="w-full">
                     <p
-                      className="text-[#888888] font-normal"
+                      className="text-[#888888] font-normal leading-relaxed"
                       style={{
                         fontFamily: "'SF Pro Display', -apple-system, system-ui, sans-serif",
-                        fontSize: "clamp(14px, 2vw, 16px)",
+                        fontSize: "clamp(14px, 1.5vw, 17.3438px)", // Consistent with Experience page
                         lineHeight: "1.6",
                       }}
                     >
@@ -123,24 +140,30 @@ export default function Playbook() {
                     </p>
                   </div>
 
-                  {/* Read Full Article Button */}
-                  <div className="mt-4 sm:mt-6">
+                  {/* Read Full Article Button with consistent styling */}
+                  <div className="flex flex-col items-start pt-6">
                     <a
                       href={post.link}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="inline-flex items-center px-4 sm:px-6 py-2.5 sm:py-3 bg-white text-[#0A0A0A] font-medium rounded-full hover:bg-gray-200 transition-colors text-sm sm:text-base whitespace-nowrap"
-                      style={{
-                        fontFamily: "'SF Pro Display', -apple-system, system-ui, sans-serif",
-                      }}
+                      className="flex flex-row items-center justify-center rounded-full bg-white hover:bg-gray-200 transition-colors px-6 py-3 min-w-[160px] h-[47px] shadow"
                     >
-                      Read Full Article
+                      <span
+                        className="text-[#0A0A0A] font-normal flex items-center justify-center"
+                        style={{
+                          fontFamily: "'SF Pro Display', -apple-system, system-ui, sans-serif",
+                          fontSize: "clamp(14px, 1vw, 16.0312px)",
+                          lineHeight: "27px",
+                        }}
+                      >
+                        Read Full Article
+                      </span>
                     </a>
                   </div>
                 </div>
 
-                {/* Quote Box - Right side for larger content preview */}
-                <div className="bg-[#1A1A1A] rounded-xl p-6 sm:p-8 lg:max-w-md lg:min-w-[300px] lg:flex-shrink-0 order-1 lg:order-2 w-full lg:w-auto">
+                {/* Quote Box - Right side with consistent responsive sizing */}
+                <div className="bg-[#1A1A1A] rounded-xl p-6 sm:p-8 w-full lg:w-[687.06px] lg:max-w-none lg:flex-shrink-0 order-1 lg:order-2 lg:min-h-[300px] flex flex-col justify-between">
                   <blockquote 
                     className="text-[#888888] italic leading-relaxed"
                     style={{
