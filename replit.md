@@ -141,6 +141,7 @@ This is a modern portfolio website for Advait Paliwal, a 21-year-old founder and
 - August 14, 2025: Updated project images to use new organized structure (/images/projects/) with generated placeholder images for missing projects
 - August 14, 2025: Replaced hardcoded CSS mockups with actual image displays throughout About page
 - August 14, 2025: Added company logo support to Experience page with detailed image management guides
+- August 14, 2025: Updated all page footers to match About page - consistent social media links across the entire site
 
 ## User Preferences
 

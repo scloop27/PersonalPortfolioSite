@@ -195,13 +195,13 @@ export default function Playbook() {
                 <h2 className="text-4xl md:text-5xl font-bold mb-4 text-[#EAEAEA]">
                   Shiva Charan
                   <br />
-                  Mandhpauram
+                  Mandhapuram
                 </h2>
               </div>
               <div className="grid grid-cols-2 gap-8 text-sm">
                 <div className="space-y-3">
                   <a
-                    href="https://x.com/shivacharan"
+                    href="https://x.com/shivacharanm7"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="block hover:text-white transition-colors text-[#888888]"
@@ -209,7 +209,7 @@ export default function Playbook() {
                     X
                   </a>
                   <a
-                    href="https://linkedin.com/in/shivacharan"
+                    href="https://www.linkedin.com/in/shiva-charan-mandhapuram/"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="block hover:text-white transition-colors text-[#888888]"
@@ -217,33 +217,17 @@ export default function Playbook() {
                     LinkedIn
                   </a>
                   <a
-                    href="https://github.com/shivacharan"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="block hover:text-white transition-colors text-[#888888]"
-                  >
-                    GitHub
-                  </a>
-                </div>
-                <div className="space-y-3">
-                  <a
-                    href="https://instagram.com/shivacharan"
+                    href="https://www.instagram.com/shivacharanmandhapuram/"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="block hover:text-white transition-colors text-[#888888]"
                   >
                     Instagram
                   </a>
+                </div>
+                <div className="space-y-3">
                   <a
-                    href="https://scholar.google.com/citations?user=shivacharan"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="block hover:text-white transition-colors text-[#888888]"
-                  >
-                    Google Scholar
-                  </a>
-                  <a
-                    href="https://shivacharan.substack.com"
+                    href="https://shivacharanmandhapuram.substack.com"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="block hover:text-white transition-colors text-[#888888]"
@@ -252,6 +236,10 @@ export default function Playbook() {
                   </a>
                 </div>
               </div>
+            </div>
+            {/* Subtle, extra-small, credit for build and design inspiration */}
+            <div className="text-[10px] text-gray-600 text-center mt-6 tracking-tight opacity-80">
+              Built with ⚡️ | Design inspired by Advait Paliwal
             </div>
           </div>
         </footer>
