@@ -4,22 +4,22 @@ import { motion } from "framer-motion";
  * ========================================
  * 💼 EXPERIENCE PAGE - PROFESSIONAL TIMELINE
  * ========================================
- * 
+ *
  * This page displays your professional experience in chronological order.
  * Similar layout to About page but focused on career timeline.
- * 
+ *
  * 📋 TO UPDATE EXPERIENCES:
  * Modify the 'experiences' array below - each entry creates a new timeline item
- * 
+ *
  * 🖼️ TO ADD COMPANY LOGOS/IMAGES:
  * 1. Upload company logo to public/images/experience/
- * 2. Add 'logo' field to experience: logo: "/images/experience/company-name.png"  
+ * 2. Add 'logo' field to experience: logo: "/images/experience/company-name.png"
  * 3. Recommended size: 200px width, PNG format with transparency
- * 
+ *
  * 🔗 TO UPDATE VIEW BUTTON LINKS:
- * The "View" buttons cycle through a predefined list of URLs (lines ~126-133)
+ * The "View" buttons cycle through a predefined list of URLs (lines ~175-185)
  * Replace those URLs with your actual project/company links
- * 
+ *
  * 📱 RESPONSIVE DESIGN:
  * - Mobile: Single column, stacked layout
  * - Desktop: Side-by-side text and image
@@ -30,9 +30,9 @@ export default function Experience() {
    * ========================================
    * 📋 EXPERIENCE DATA - COMPREHENSIVE EDITING GUIDE
    * ========================================
-   * 
-   * 🎯 QUICK REFERENCE - File: src/pages/Experience.tsx, Lines: 57-85
-   * 
+   *
+   * 🎯 QUICK REFERENCE - File: src/pages/Experience.tsx, Lines: 57-110
+   *
    * ➕ TO ADD A NEW EXPERIENCE:
    * 1. Copy this exact template:
    *    {
@@ -40,48 +40,48 @@ export default function Experience() {
    *      title: "Your Company/Role Name", // 📝 EDIT: Main heading text
    *      description: "Brief description of your role and achievements", // 📝 EDIT: Summary text
    *      logo: "/images/experience/company-logo.png", // 📝 EDIT: Company logo path (optional)
- *      image: "https://images.unsplash.com/photo-example", // Background only - not displayed
+   *      image: "https://images.unsplash.com/photo-example", // Background only - not displayed
    *    },
    * 2. Paste it at the BEGINNING of the experiences array (line 57, newest first)
    * 3. Update year, title, and description with your information
-   * 4. Update the View button links array (see line 149 guide below)
+   * 4. Update the View button links array (see line 175 guide below)
    * 5. Save the file - changes appear immediately
-   * 
+   *
    * ❌ TO DELETE AN EXPERIENCE:
-   * 1. Find the experience object you want to remove in lines 57-85
+   * 1. Find the experience object you want to remove in lines 57-110
    * 2. Delete the entire object (from { to }, including the comma)
    * 3. Save the file
-   * 
+   *
    * ✏️ TO EDIT EXISTING EXPERIENCE:
    * 1. Find the experience in the array below
    * 2. Update year (line with year: "...")
    * 3. Update title (line with title: "...")
    * 4. Update description (line with description: "...")
    * 5. Save the file
-   * 
+   *
    * 🔗 VIEW BUTTON LINKS GUIDE:
-   * Location: Lines 149-156 (the links array)
+   * Location: Lines 175-185 (the links array)
    * Each experience gets a clickable "View" button that opens a URL.
    * The buttons cycle through this array of links.
-   * 
+   *
    * TO UPDATE VIEW BUTTON LINKS:
-   * 1. Go to line ~149
+   * 1. Go to line ~175
    * 2. Replace URLs in the links array with your project/company URLs
    * 3. Add more URLs if you have more experiences
    * 4. Save the file
-   * 
+   *
    * 📝 FIELD EXPLANATIONS:
    * - year: Time period (e.g., "2024", "2023-2024", "Present", "2022-2023")
    * - title: Company name, role title, or project name (appears as main heading)
    * - description: Brief summary of the experience (appears as body text)
    * - logo: Optional company logo path (/images/experience/logo.png)
- * - image: Background URL only - not actually displayed (kept for future features)
-   * 
+   * - image: Background URL only - not actually displayed (kept for future features)
+   *
    * 🔄 ORDER MATTERS:
    * Experiences appear in the same order as this array. First experience = top of timeline.
    * Keep newest experiences first (chronological order: Present, 2024, 2023, etc.)
    * To reorder: Cut and paste entire experience objects to new positions.
-   * 
+   *
    * 🎨 RESPONSIVE DESIGN:
    * The layout automatically adjusts:
    * - Mobile: Single column, stacked layout
@@ -92,13 +92,13 @@ export default function Experience() {
    * 🖼️ EXPERIENCE IMAGES GUIDE:
    * ===========================
    * You can now add company logos to each experience!
-   * 
+   *
    * 📁 TO ADD COMPANY LOGOS:
    * 1. Upload logo to: public/images/experience/
    * 2. Add 'logo' field to experience: logo: "/images/experience/company-name.png"
    * 3. Recommended: PNG format with transparency, ~200px width
    * 4. The logo appears next to the company name
-   * 
+   *
    * 📋 EXAMPLE WITH LOGO:
    * {
    *   year: "2024",
@@ -111,45 +111,75 @@ export default function Experience() {
   const experiences = [
     {
       year: "Present", // 📝 EDIT: Time period (e.g., "2024", "2023-2024", "Present")
-      title: "Friday", // 📝 EDIT: Company name, role title, or project name
-      description: "AI assistant for email. Backed by Y Combinator.", // 📝 EDIT: Brief description
-      logo: "", // 📝 EDIT: Add company logo: "/images/experience/friday-logo.png"
-      image: "https://images.unsplash.com/photo-1620712943543-bcc4688e7485?ixlib=rb-4.0.3&auto=format&fit=crop&w=687&h=386", // Background only
+      title: "lyzn.ai", // 📝 EDIT: Company name, role title, or project name
+      description:
+        "Building personal AI superintelligence in beta. Creating an AI companion that thinks, plans, and acts for users.", // 📝 EDIT: Brief description
+      logo: "", // 📝 EDIT: Add company logo: "/images/experience/lyzn-logo.png"
+      image:
+        "https://images.unsplash.com/photo-1620712943543-bcc4688e7485?ixlib=rb-4.0.3&auto=format&fit=crop&w=687&h=386", // Background only
     },
     {
       year: "Present", // 📝 EDIT: Time period
-      title: "YouLearn", // 📝 EDIT: Company/project name
-      description: "AI tutor for students. 1M+ users.", // 📝 EDIT: Description
-      logo: "", // 📝 EDIT: Add company logo: "/images/experience/youlearn-logo.png"
-      image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&auto=format&fit=crop&w=687&h=386", // Background only
+      title: "Certified Scrum Master", // 📝 EDIT: Company/project name
+      description:
+        "Earned CSM certification to master agile methodologies and team dynamics for efficient product execution.", // 📝 EDIT: Description
+      logo: "", // 📝 EDIT: Add company logo: "/images/experience/csm-logo.png"
+      image:
+        "https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&auto=format&fit=crop&w=687&h=386", // Background only
     },
     {
       year: "2024", // 📝 EDIT: Time period
-      title: "Iris", // 📝 EDIT: Company/project name
-      description: "AI wearable that gives you infinite memory.", // 📝 EDIT: Description
-      logo: "", // 📝 EDIT: Add company logo: "/images/experience/iris-logo.png"
-      image: "https://images.unsplash.com/photo-1606107557195-0e29a4b5b4aa?ixlib=rb-4.0.3&auto=format&fit=crop&w=687&h=386", // Background only
+      title: "Juzzt", // 📝 EDIT: Company/project name
+      description:
+        "Product Lead for dating app with rating-based compatibility. Onboarded 230+ users at IIT Bombay's Mood Indigo festival.", // 📝 EDIT: Description
+      logo: "", // 📝 EDIT: Add company logo: "/images/experience/juzzt-logo.png"
+      image:
+        "https://images.unsplash.com/photo-1606107557195-0e29a4b5b4aa?ixlib=rb-4.0.3&auto=format&fit=crop&w=687&h=386", // Background only
+    },
+    {
+      year: "2024", // 📝 EDIT: Time period
+      title: "Mjollnir", // 📝 EDIT: Event/achievement name
+      description:
+        "Product & Strategy Lead for EV bike booking app. Launched at Nehru Zoological Park in Hyderabad.", // 📝 EDIT: Description
+      logo: "", // 📝 EDIT: Add event logo: "/images/experience/mjollnir-logo.png"
+      image:
+        "https://images.unsplash.com/photo-1475721027785-f74eccf877e2?ixlib=rb-4.0.3&auto=format&fit=crop&w=687&h=386", // Background only
     },
     {
       year: "2023", // 📝 EDIT: Time period
-      title: "Commencement Speech", // 📝 EDIT: Event/achievement name
-      description: "Spoke about chasing rejection to over 10,000 students at my graduation.", // 📝 EDIT: Description
-      logo: "", // 📝 EDIT: Add event logo: "/images/experience/graduation-logo.png"
-      image: "https://images.unsplash.com/photo-1475721027785-f74eccf877e2?ixlib=rb-4.0.3&auto=format&fit=crop&w=687&h=386", // Background only
+      title: "Jagriti Yatra", // 📝 EDIT: Achievement name
+      description:
+        "Participated in 15-day entrepreneurial journey across India, connecting with grassroots innovators solving real problems.", // 📝 EDIT: Description
+      logo: "", // 📝 EDIT: Add institution logo: "/images/experience/jagriti-logo.png"
+      image:
+        "https://images.unsplash.com/photo-1576091160399-112ba8d25d1f?ixlib=rb-4.0.3&auto=format&fit=crop&w=687&h=386", // Background only
+    },
+    {
+      year: "2023", // 📝 EDIT: Time period
+      title: "Avidia", // 📝 EDIT: Program/experience name
+      description:
+        "Co-founded AI learning platform to combat 'tutorial hell.' Pitched at Shark Tank India auditions.", // 📝 EDIT: Description
+      logo: "", // 📝 EDIT: Add accelerator logo: "/images/experience/avidia-logo.png"
+      image:
+        "https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-4.0.3&auto=format&fit=crop&w=687&h=386", // Background only
+    },
+    {
+      year: "2023", // 📝 EDIT: Time period
+      title: "Coffeecodes", // 📝 EDIT: Program/experience name
+      description:
+        "Founded tech consultancy building MVPs for founders. Served 12+ clients bridging ideas to market-ready products.", // 📝 EDIT: Description
+      logo: "", // 📝 EDIT: Add accelerator logo: "/images/experience/coffeecodes-logo.png"
+      image:
+        "https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-4.0.3&auto=format&fit=crop&w=687&h=386", // Background only
     },
     {
       year: "2022", // 📝 EDIT: Time period
-      title: "Research Publication", // 📝 EDIT: Achievement name
-      description: "Published research on machine learning applications in healthcare.", // 📝 EDIT: Description
-      logo: "", // 📝 EDIT: Add institution logo: "/images/experience/research-logo.png"
-      image: "https://images.unsplash.com/photo-1576091160399-112ba8d25d1f?ixlib=rb-4.0.3&auto=format&fit=crop&w=687&h=386", // Background only
-    },
-    {
-      year: "2021", // 📝 EDIT: Time period
-      title: "Startup Accelerator", // 📝 EDIT: Program/experience name
-      description: "Participated in leading tech accelerator program.", // 📝 EDIT: Description
-      logo: "", // 📝 EDIT: Add accelerator logo: "/images/experience/accelerator-logo.png"
-      image: "https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-4.0.3&auto=format&fit=crop&w=687&h=386", // Background only
+      title: "Noobslearning", // 📝 EDIT: Program/experience name
+      description:
+        "Founded and grew 5,000+ member student community. Organized 15+ workshops and hackathons fostering builder culture.", // 📝 EDIT: Description
+      logo: "", // 📝 EDIT: Add accelerator logo: "/images/experience/noobs-logo.png"
+      image:
+        "https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-4.0.3&auto=format&fit=crop&w=687&h=386", // Background only
     },
   ];
 
@@ -178,12 +208,14 @@ export default function Experience() {
                     <p
                       className="text-[#888888] font-normal flex items-center"
                       style={{
-                        fontFamily: "'SF Pro Display', -apple-system, system-ui, sans-serif",
+                        fontFamily:
+                          "'SF Pro Display', -apple-system, system-ui, sans-serif",
                         fontSize: "clamp(10px, 1vw, 12.25px)", // Responsive sizing
                         lineHeight: "21px",
                       }}
                     >
-                      {experience.year} {/* 📝 This pulls from the experiences array */}
+                      {experience.year}{" "}
+                      {/* 📝 This pulls from the experiences array */}
                     </p>
                   </div>
 
@@ -201,19 +233,21 @@ export default function Experience() {
                         className="h-8 w-auto object-contain"
                         onError={(e) => {
                           // Hide logo if image fails to load
-                          e.currentTarget.style.display = 'none';
+                          e.currentTarget.style.display = "none";
                         }}
                       />
                     )}
                     <h2
                       className="text-[#EAEAEA] font-normal flex items-center"
                       style={{
-                        fontFamily: "'SF Pro Display', -apple-system, system-ui, sans-serif",
+                        fontFamily:
+                          "'SF Pro Display', -apple-system, system-ui, sans-serif",
                         fontSize: "clamp(18px, 2vw, 26.6016px)", // Responsive sizing
                         lineHeight: "45px",
                       }}
                     >
-                      {experience.title} {/* 📝 This pulls from the experiences array */}
+                      {experience.title}{" "}
+                      {/* 📝 This pulls from the experiences array */}
                     </h2>
                   </div>
 
@@ -222,35 +256,56 @@ export default function Experience() {
                     <p
                       className="text-[#888888] font-normal flex items-center"
                       style={{
-                        fontFamily: "'SF Pro Display', -apple-system, system-ui, sans-serif",
+                        fontFamily:
+                          "'SF Pro Display', -apple-system, system-ui, sans-serif",
                         fontSize: "clamp(14px, 1.5vw, 17.3438px)", // Responsive sizing
                         lineHeight: "30px",
                       }}
                     >
-                      {experience.description} {/* 📝 This pulls from the experiences array */}
+                      {experience.description}{" "}
+                      {/* 📝 This pulls from the experiences array */}
                     </p>
                   </div>
 
                   {/* 
                     🔗 VIEW BUTTON LINKS - EDIT THE URLs BELOW!
-                    
-                    Currently cycles through 6 placeholder URLs.
-                    Replace these with your actual project/company links:
-                    - Index 0: Google → Replace with your first experience link
-                    - Index 1: GitHub → Replace with your second experience link
+
+                    Currently cycles through your actual project/company links.
+                    Replace these with your updated project URLs:
+                    - Index 0: lyzn.ai → lyzn.ai/beta
+                    - Index 1: CSM → Your CSM certificate or profile
+                    - Index 2: Juzzt → juzzt.com
+                    - Index 3: Mjollnir → mjollnir.in
                     - etc.
                   */}
                   <div className="flex flex-col items-start pt-8 w-[85px] h-[79px]">
                     <a
-                      href={[
-                        "https://google.com", // 📝 EDIT: Replace with your first experience link
-                        "https://github.com", // 📝 EDIT: Replace with your second experience link
-                        "https://youtube.com", // 📝 EDIT: Replace with your third experience link
-                        "https://twitter.com", // 📝 EDIT: Replace with your fourth experience link
-                        "https://linkedin.com", // 📝 EDIT: Replace with your fifth experience link
-                        "https://instagram.com" // 📝 EDIT: Replace with your sixth experience link
-                      ][index % 6]} // Cycles through the array based on experience index
-                      target="_blank"
+                      href={
+                        [
+                          "https://lyzn.ai/beta", // 📝 EDIT: lyzn.ai beta link
+                          "#", // 📝 EDIT: Replace with your CSM certificate link
+                          "https://juzzt.com", // 📝 EDIT: Juzzt dating app link
+                          "https://mjollnir.in", // 📝 EDIT: Mjollnir EV booking app link
+                          "#", // 📝 EDIT: Replace with Jagriti Yatra experience link
+                          "/playbook#avidia", // 📝 EDIT: Link to Avidia story in playbook
+                          "/playbook#coffeecodes", // 📝 EDIT: Link to Coffeecodes story in playbook
+                          "/playbook#noobslearning", // 📝 EDIT: Link to Noobslearning story in playbook
+                        ][index % 8]
+                      } // Cycles through the array based on experience index
+                      target={
+                        [
+                          "https://lyzn.ai/beta",
+                          "#",
+                          "https://juzzt.com",
+                          "https://mjollnir.in",
+                          "#",
+                          "/playbook#avidia",
+                          "/playbook#coffeecodes",
+                          "/playbook#noobslearning",
+                        ][index % 8].startsWith("http")
+                          ? "_blank"
+                          : "_self"
+                      }
                       rel="noopener noreferrer"
                       className="flex flex-row items-center justify-center rounded-full bg-white w-[85px] h-[47px] hover:bg-gray-200 transition-colors"
                       style={{ padding: "10px 24px" }}
@@ -258,7 +313,8 @@ export default function Experience() {
                       <span
                         className="text-[#0A0A0A] font-normal flex items-center justify-center"
                         style={{
-                          fontFamily: "'SF Pro Display', -apple-system, system-ui, sans-serif",
+                          fontFamily:
+                            "'SF Pro Display', -apple-system, system-ui, sans-serif",
                           fontSize: "clamp(14px, 1vw, 16.0312px)",
                           lineHeight: "27px",
                         }}
@@ -298,13 +354,13 @@ export default function Experience() {
                 <h2 className="text-4xl md:text-5xl font-bold mb-4 text-[#EAEAEA]">
                   Shiva Charan
                   <br />
-                  Mandhpauram
+                  Mandhapuram
                 </h2>
               </div>
               <div className="grid grid-cols-2 gap-8 text-sm">
                 <div className="space-y-3">
                   <a
-                    href="https://x.com/shivacharan"
+                    href="https://x.com/shivacharanm7"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="block hover:text-white transition-colors text-[#888888]"
@@ -312,7 +368,7 @@ export default function Experience() {
                     X
                   </a>
                   <a
-                    href="https://linkedin.com/in/shivacharan"
+                    href="https://www.linkedin.com/in/shiva-charan-mandhapuram/"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="block hover:text-white transition-colors text-[#888888]"
@@ -320,33 +376,17 @@ export default function Experience() {
                     LinkedIn
                   </a>
                   <a
-                    href="https://github.com/shivacharan"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="block hover:text-white transition-colors text-[#888888]"
-                  >
-                    GitHub
-                  </a>
-                </div>
-                <div className="space-y-3">
-                  <a
-                    href="https://instagram.com/shivacharan"
+                    href="https://www.instagram.com/shivacharanmandhapuram/"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="block hover:text-white transition-colors text-[#888888]"
                   >
                     Instagram
                   </a>
+                </div>
+                <div className="space-y-3">
                   <a
-                    href="https://scholar.google.com/citations?user=shivacharan"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="block hover:text-white transition-colors text-[#888888]"
-                  >
-                    Google Scholar
-                  </a>
-                  <a
-                    href="https://shivacharan.substack.com"
+                    href="https://shivacharanmandhapuram.substack.com"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="block hover:text-white transition-colors text-[#888888]"
@@ -355,6 +395,10 @@ export default function Experience() {
                   </a>
                 </div>
               </div>
+            </div>
+            {/* Built with credit */}
+            <div className="text-[10px] text-gray-600 text-center mt-6 tracking-tight opacity-80">
+              Built with ⚡️ | Design inspired by Advait Paliwal
             </div>
           </div>
         </footer>
