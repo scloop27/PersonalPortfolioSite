@@ -2,15 +2,15 @@
  * ========================================
  * 📝 BLOG POSTS DATA - EASY TO EDIT!
  * ========================================
- * 
+ *
  * This file contains all your blog posts. Adding new posts is simple and safe.
  * The layout automatically adjusts for any number of posts - no manual changes needed.
- * 
+ *
  * ➕ HOW TO ADD A NEW BLOG POST:
  * ========================================
- * 
+ *
  * 1. **COPY this template:**
- * 
+ *
  * {
  *   id: [NEXT_NUMBER], // Use the next sequential number (current highest + 1)
  *   title: "Your Blog Post Title Here",
@@ -20,28 +20,28 @@
  *   tags: ["entrepreneurship", "ai", "startup"], // Relevant topic tags
  *   link: "https://your-substack-url.com/p/your-post" // Full URL to your Substack post
  * },
- * 
+ *
  * 2. **PASTE it at the BEGINNING** of the blogPosts array below (newest posts first)
  * 3. **UPDATE all the fields** with your blog post information
  * 4. **SAVE the file** - changes appear immediately on the site!
- * 
+ *
  * ❌ HOW TO DELETE A BLOG POST:
  * ========================================
- * 
+ *
  * 1. Find the blog post object you want to remove
  * 2. Delete the entire object (from { to }, including the comma)
  * 3. Save the file
- * 
+ *
  * ✏️ HOW TO EDIT AN EXISTING BLOG POST:
  * ========================================
- * 
+ *
  * 1. Find the blog post you want to edit in the array below
  * 2. Update any field: title, date, summary, content, tags, or link
  * 3. Save the file - changes appear immediately
- * 
+ *
  * 🔄 EXAMPLE: Adding a New Blog Post
  * ========================================
- * 
+ *
  * **BEFORE:**
  * export const blogPosts: BlogPost[] = [
  *   {
@@ -52,7 +52,7 @@
  *   },
  *   // ... other posts
  * ];
- * 
+ *
  * **AFTER (with new post added):**
  * export const blogPosts: BlogPost[] = [
  *   {
@@ -72,7 +72,7 @@
  *   },
  *   // ... other posts
  * ];
- * 
+ *
  * ========================================
  * 📋 FIELD EXPLANATIONS:
  * ========================================
@@ -83,7 +83,7 @@
  * - **content**: Currently same as summary, can be different preview text
  * - **tags**: Array of topic keywords (ready for future filtering features)
  * - **link**: When users click "Read Full Article", this is where they go
- * 
+ *
  * ========================================
  * 🎨 HOW IT APPEARS ON THE SITE:
  * ========================================
@@ -93,7 +93,7 @@
  * - "Read Full Article" button (opens your Substack post)
  * - Quote box on the right with text preview (mobile: below main content)
  * - Staggered animation effects for smooth loading
- * 
+ *
  * 🛡️ FUTURE-PROOFING:
  * ========================================
  * - Posts automatically appear in date order (newest first)
@@ -118,12 +118,12 @@ export interface BlogPost {
  * ========================================
  * 📝 BLOG POSTS DATA - COMPREHENSIVE EDITING GUIDE
  * ========================================
- * 
+ *
  * 🎯 QUICK REFERENCE - File: src/data/blogPosts.ts, Lines: 150+
- * 
+ *
  * This array contains all your blog posts. The Playbook page automatically
  * displays them in a clean, responsive layout. Changes appear immediately.
- * 
+ *
  * ➕ TO ADD A NEW BLOG POST:
  * 1. Copy this exact template:
  *    {
@@ -140,17 +140,17 @@ export interface BlogPost {
  * 3. Update ALL fields with your blog post information
  * 4. Make sure the ID is the next number in sequence
  * 5. Save the file - changes appear immediately on the site
- * 
+ *
  * ❌ TO DELETE A BLOG POST:
  * 1. Find the blog post object you want to remove
  * 2. Delete the entire object (from { to }, including the comma)
  * 3. Save the file
- * 
+ *
  * ✏️ TO EDIT EXISTING BLOG POST:
  * 1. Find the blog post in the array below
  * 2. Update any field: title, date, summary, content, tags, or link
  * 3. Save the file - changes appear immediately
- * 
+ *
  * 📝 FIELD EXPLANATIONS:
  * - id: Unique number for each post (always increment from highest existing)
  * - title: Blog post title (appears as main heading on the card)
@@ -159,12 +159,12 @@ export interface BlogPost {
  * - content: Text that appears in the quote box preview (can be same as summary)
  * - tags: Array of topic keywords (ready for future filtering features)
  * - link: Full URL where users go when they click "Read Full Article"
- * 
+ *
  * 🔄 ORDER & SORTING:
  * Posts automatically appear in date order (newest first).
  * Always add new posts at the BEGINNING of the array.
  * The layout automatically adjusts for any number of posts.
- * 
+ *
  * 🎨 HOW IT APPEARS ON THE SITE:
  * Each blog post creates a responsive card with:
  * - Large title text (scales with screen size)
@@ -172,14 +172,14 @@ export interface BlogPost {
  * - "Read Full Article" button (opens your link)
  * - Quote box on the right with content preview (mobile: below main content)
  * - Staggered animation effects for smooth loading
- * 
+ *
  * 🛡️ FUTURE-PROOFING:
  * - Posts automatically appear in chronological order
  * - Layout scales gracefully with any number of posts
  * - Responsive design works on all screen sizes
  * - Empty state shows helpful message if no posts exist
  * - No manual layout changes needed when adding content
- * 
+ *
  * 💡 BEST PRACTICES:
  * - Keep titles concise but descriptive
  * - Make summaries engaging (they're the preview that hooks readers)
@@ -189,39 +189,20 @@ export interface BlogPost {
  */
 export const blogPosts: BlogPost[] = [
   {
-    id: 4,
-    title: "The Future of AI-Powered Development",
-    date: "2024-12-20",
-    summary: "Exploring how artificial intelligence is reshaping the way we build software and what it means for developers...",
-    content: "As AI tools become more sophisticated, the landscape of software development is evolving rapidly. From code generation to automated testing, we're witnessing a transformation that could redefine what it means to be a developer.",
-    tags: ["AI", "Development", "Future", "Technology"],
-    link: "https://advaitpaliwal.substack.com/p/future-of-ai-development"
-  },
-  {
-    id: 3,
-    title: "Building My First Startup at 21",
-    date: "2024-12-10",
-    summary: "Lessons learned from launching a company while still in college and the challenges of young entrepreneurship...",
-    content: "Starting a company at 21 comes with unique challenges and opportunities. Here's what I've learned about building products, managing teams, and staying focused on what matters most.",
-    tags: ["Entrepreneurship", "Startup", "Leadership", "Personal"],
-    link: "https://advaitpaliwal.substack.com/p/building-startup-at-21"
-  },
-  {
-    id: 2,
-    title: "The Art of Product Design",
-    date: "2024-11-28",
-    summary: "How thoughtful design principles can make or break a product, with real examples from successful companies...",
-    content: "Great product design isn't just about making things look pretty. It's about understanding user needs, solving real problems, and creating experiences that feel intuitive and delightful.",
-    tags: ["Design", "Product", "UX", "Strategy"],
-    link: "https://advaitpaliwal.substack.com/p/art-of-product-design"
-  },
-  {
     id: 1,
-    title: "Building My First Full-Stack Application",
-    date: "2024-11-15",
-    summary: "Lessons learned while building a React and Express application from scratch, including common pitfalls and solutions...",
-    content: "Building a full-stack application from the ground up taught me valuable lessons about architecture, deployment, and user experience. Here are the key insights that shaped my development approach.",
-    tags: ["React", "Express", "Full-Stack", "Development"],
-    link: "https://advaitpaliwal.substack.com/p/first-fullstack-app"
-  }
+    title: "Built, Burnt, and Building Again–My Startup Story at 19",
+    date: "2025-08-14",
+    summary:
+      "How starting my first company at 19 taught me the difference between building features and building businesses—and why failing fast became my competitive advantage.",
+    content:
+      "At 19, I thought passion and code were enough to build a startup. Two years and one failed venture later, I learned that execution beats ideas, user validation beats assumptions, and building something people pay for beats building something people praise.",
+    tags: [
+      "Entrepreneurship",
+      "Failure",
+      "Execution",
+      "Early-Stage",
+      "Learning",
+    ],
+    link: "https://substack.com/@shivacharanmandhapuram/p-170364005",
+  },
 ];
