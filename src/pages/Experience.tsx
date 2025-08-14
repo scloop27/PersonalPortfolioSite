@@ -202,9 +202,9 @@ export default function Experience() {
                 className="flex flex-col lg:flex-row justify-between items-start w-full py-8 sm:py-12 md:py-16 lg:py-20 gap-4 sm:gap-6 lg:gap-48"
               >
                 {/* Text Content */}
-                <div className="flex flex-col items-start gap-2 sm:gap-3 w-full lg:w-auto lg:flex-1 order-2 lg:order-1">
+                <div className="flex flex-col items-start gap-3 sm:gap-4 w-full lg:w-auto lg:flex-1 order-2 lg:order-1">
                   {/* Experience Year - Small gray text above title */}
-                  <div className="w-full h-[21px] flex items-center">
+                  <div className="w-full flex items-center">
                     <p
                       className="text-[#888888] font-normal flex items-center"
                       style={{
@@ -220,7 +220,7 @@ export default function Experience() {
                   </div>
 
                   {/* Experience Title - Main heading with optional logo */}
-                  <div className="w-full h-[45px] flex items-center gap-3">
+                  <div className="w-full flex items-center gap-3">
                     {/* 
                       🖼️ COMPANY LOGO DISPLAY:
                       Shows company logo if available in experience.logo field
@@ -251,15 +251,15 @@ export default function Experience() {
                     </h2>
                   </div>
 
-                  {/* Experience Description - Brief summary */}
-                  <div className="w-full h-[30px] flex items-center">
+                  {/* Experience Description - Brief summary with proper text wrapping */}
+                  <div className="w-full flex items-start">
                     <p
-                      className="text-[#888888] font-normal flex items-center"
+                      className="text-[#888888] font-normal leading-relaxed"
                       style={{
                         fontFamily:
                           "'SF Pro Display', -apple-system, system-ui, sans-serif",
                         fontSize: "clamp(14px, 1.5vw, 17.3438px)", // Responsive sizing
-                        lineHeight: "30px",
+                        lineHeight: "1.6", // Better line spacing for readability
                       }}
                     >
                       {experience.description}{" "}
@@ -278,7 +278,7 @@ export default function Experience() {
                     - Index 3: Mjollnir → mjollnir.in
                     - etc.
                   */}
-                  <div className="flex flex-col items-start pt-8 w-[85px] h-[79px]">
+                  <div className="flex flex-col items-start pt-6">
                     <a
                       href={
                         [
