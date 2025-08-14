@@ -24,17 +24,17 @@ import { motion } from "framer-motion";
  *        {
  *          title: "Project Name",
  *          description: "What it is, what makes it special.",
- *          image: "/attached_assets/yourimage.png?v=" + Date.now(),
+ *          image: "/images/projects/yourimage.png",
  *          button: {
  *            label: "Button Text",
  *            url: "/playbook#anchor" // or full URL
  *          },
  *        }
  *   2. Paste as the last element in the 'projects' array.
- *   3. Add a new block in the JSX (see mockup instructions below).
- *   4. For static images, put the file in /public/attached_assets.
- *      Use a leading slash, e.g. /attached_assets/yourimage.png.
- *      Do NOT include 'public' in the path.
+ *   3. Upload your project image to public/images/projects/ folder.
+ *   4. For project images, put the file in /public/images/projects/.
+ *      Use format: /images/projects/yourimage.png
+ *      Recommended size: 687x393px (16:9 aspect ratio)
  *
  * To change the visual design per project:
  *   - See inside {projects.map(...)} and the index-based mocks (lines ~107+).
@@ -203,87 +203,44 @@ export default function About() {
                   </div>
                 </div>
                 {/* --- Visual/Mockup Column --- */}
+                {/* 
+                  🖼️ PROJECT IMAGES GUIDE:
+                  ========================
+                  This section displays project images for each project in the array.
+                  All projects now use actual images instead of hardcoded CSS mockups.
+                  
+                  📁 TO UPDATE PROJECT IMAGES:
+                  1. Upload your project image to: public/images/projects/
+                  2. Update the project.image field in the projects array above
+                  3. Use format: "/images/projects/your-image-name.png"
+                  4. Recommended size: 687x393px (16:9 aspect ratio)
+                  
+                  📋 SUPPORTED FORMATS: PNG, JPG, JPEG, WebP
+                  📏 RESPONSIVE BEHAVIOR: Images automatically scale on mobile
+                  🎨 FALLBACK: Gray background shows if image fails to load
+                */}
                 <div
                   className="flex flex-col items-start w-full lg:w-[687.06px] lg:h-[393.47px] order-1 lg:order-2"
                   style={{ paddingBottom: "7px" }}
                 >
-                  {index === 0 ? (
-                    // Avidia: use logo image
-                    <div className="w-full h-full min-h-[250px] sm:min-h-[300px] lg:min-h-[393px] rounded-xl overflow-hidden shadow-lg">
-                      <img
-                        src={project.image}
-                        alt={project.title}
-                        className="w-full h-full object-cover"
-                      />
-                    </div>
-                  ) : index === 1 ? (
-                    // Coffeecodes: dark dashboard-style visual
-                    <div className="w-full h-full bg-gradient-to-br from-gray-900 via-blue-900 to-black rounded-xl overflow-hidden shadow-lg p-6 flex flex-col justify-between relative">
-                      <div className="flex justify-between items-center">
-                        <h3 className="text-white text-lg font-medium">Client Dashboard</h3>
-                        <div className="flex items-center space-x-2 text-green-400">
-                          <div className="w-2 h-2 bg-green-400 rounded-full"></div>
-                          <span className="text-xs">5+ Live Production Projects </span>
-                        </div>
-                      </div>
-                      <div className="grid grid-cols-3 gap-4 text-center">
-                        <div className="bg-white/10 p-4 rounded-lg backdrop-blur-sm">
-                          <p className="text-2xl font-bold text-white">12+</p>
-                          <p className="text-xs text-gray-300">Founders Served</p>
-                        </div>
-                        <div className="bg-white/10 p-4 rounded-lg backdrop-blur-sm">
-                          <p className="text-2xl font-bold text-white">MVP</p>
-                          <p className="text-xs text-gray-300">to Market</p>
-                        </div>
-                        <div className="bg-white/10 p-4 rounded-lg backdrop-blur-sm flex flex-col items-center justify-center">
-                          <svg className="w-6 h-6 text-white mb-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
-                          <p className="text-xs text-gray-300">On Time</p>
-                        </div>
-                      </div>
-                      <div className="flex items-center justify-between bg-black/30 p-3 rounded-lg">
-                        <span className="text-sm text-gray-200">Building trust, one product at a time.</span>
-                        <svg className="w-6 h-6 text-yellow-200" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M14.828 14.828a4 4 0 01-5.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
-                      </div>
-                    </div>
-                  ) : index === 2 ? (
-                    // Noobslearning: pastel community badges
-                    <div className="w-full h-full flex items-center justify-center bg-gradient-to-br from-purple-50 via-blue-50 to-indigo-50 rounded-xl relative overflow-hidden">
-                      <div className="text-center relative z-10">
-                        <h3 className="text-2xl font-bold mb-2 text-gray-800">5,000+ Students</h3>
-                        <p className="text-sm text-gray-600 mb-4">A community for builders.</p>
-                        <div className="flex justify-center space-x-2">
-                          <div className="px-3 py-1 bg-purple-100 text-purple-800 rounded-full text-xs font-medium">15+ Workshops</div>
-                          <div className="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-xs font-medium">Hackathons</div>
-                          <div className="px-3 py-1 bg-green-100 text-green-800 rounded-full text-xs font-medium">Networking</div>
-                        </div>
-                      </div>
-                    </div>
-                  ) : (
-                    // lyzn.ai: neural/AI theme
-                    <div className="w-full h-full min-h-[250px] sm:min-h-[300px] lg:min-h-[393px] bg-gradient-to-br from-green-200 via-green-100 to-green-300 rounded-xl overflow-hidden shadow-2xl relative flex items-center justify-center p-6">
-            <div className="absolute inset-0 opacity-25">
-            <svg width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
-              <defs>
-              <pattern id="neural" patternUnits="userSpaceOnUse" width="100" height="100">
-                <path d="M50 0 V100 M0 50 H100" stroke="rgba(16, 185, 129, 0.16)" strokeWidth="1.5"/>
-                <circle cx="50" cy="50" r="2" fill="rgba(45, 212, 191, 0.4)"/>
-              </pattern>
-              </defs>
-              <rect width="100%" height="100%" fill="url(#neural)" />
-            </svg>
-            </div>
-            <div className="text-center text-black relative z-10">
-            <div className="w-20 h-20 bg-gradient-to-br from-teal-500 to-green-400 rounded-full mx-auto mb-4 flex items-center justify-center shadow-lg border-2 border-green-300/60">
-              <svg className="w-10 h-10 text-black" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
-              </svg>
-            </div>
-            <h3 className="text-2xl font-bold mb-2 drop-shadow-lg text-black">lyzn.ai</h3>
-            <p className="text-sm opacity-80 text-black">Thinks. Plans. Acts.</p>
-            </div>
-          </div>
-
-                  )}
+                  <div className="w-full h-full min-h-[250px] sm:min-h-[300px] lg:min-h-[393px] rounded-xl overflow-hidden shadow-lg bg-gray-800">
+                    {/* 
+                      📝 IMAGE DISPLAY LOGIC:
+                      - Shows actual project image from /images/projects/ folder
+                      - Uses object-cover to maintain aspect ratio
+                      - Includes alt text for accessibility
+                      - Gray background appears if image is missing
+                    */}
+                    <img
+                      src={project.image}
+                      alt={`${project.title} project screenshot`}
+                      className="w-full h-full object-cover"
+                      onError={(e) => {
+                        // Fallback styling if image fails to load
+                        e.currentTarget.style.display = 'none';
+                      }}
+                    />
+                  </div>
                 </div>
               </motion.div>
             </div>

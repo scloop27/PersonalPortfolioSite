@@ -39,7 +39,8 @@ export default function Experience() {
    *      year: "2025", // 📝 EDIT: Time period (e.g., "2024", "2023-2024", "Present")
    *      title: "Your Company/Role Name", // 📝 EDIT: Main heading text
    *      description: "Brief description of your role and achievements", // 📝 EDIT: Summary text
-   *      image: "https://images.unsplash.com/photo-example", // Decorative only - not displayed
+   *      logo: "/images/experience/company-logo.png", // 📝 EDIT: Company logo path (optional)
+ *      image: "https://images.unsplash.com/photo-example", // Background only - not displayed
    *    },
    * 2. Paste it at the BEGINNING of the experiences array (line 57, newest first)
    * 3. Update year, title, and description with your information
@@ -73,7 +74,8 @@ export default function Experience() {
    * - year: Time period (e.g., "2024", "2023-2024", "Present", "2022-2023")
    * - title: Company name, role title, or project name (appears as main heading)
    * - description: Brief summary of the experience (appears as body text)
-   * - image: Decorative URL only - not actually displayed (kept for future features)
+   * - logo: Optional company logo path (/images/experience/logo.png)
+ * - image: Background URL only - not actually displayed (kept for future features)
    * 
    * 🔄 ORDER MATTERS:
    * Experiences appear in the same order as this array. First experience = top of timeline.
@@ -86,42 +88,68 @@ export default function Experience() {
    * - Desktop: Side-by-side text and decorative image
    * - Typography scales with screen size
    */
+  /**
+   * 🖼️ EXPERIENCE IMAGES GUIDE:
+   * ===========================
+   * You can now add company logos to each experience!
+   * 
+   * 📁 TO ADD COMPANY LOGOS:
+   * 1. Upload logo to: public/images/experience/
+   * 2. Add 'logo' field to experience: logo: "/images/experience/company-name.png"
+   * 3. Recommended: PNG format with transparency, ~200px width
+   * 4. The logo appears next to the company name
+   * 
+   * 📋 EXAMPLE WITH LOGO:
+   * {
+   *   year: "2024",
+   *   title: "Google",
+   *   description: "Software Engineer at Google...",
+   *   logo: "/images/experience/google-logo.png", // ADD THIS LINE
+   *   image: "https://background-url.com" // Keep this for backgrounds
+   * }
+   */
   const experiences = [
     {
       year: "Present", // 📝 EDIT: Time period (e.g., "2024", "2023-2024", "Present")
       title: "Friday", // 📝 EDIT: Company name, role title, or project name
       description: "AI assistant for email. Backed by Y Combinator.", // 📝 EDIT: Brief description
-      image: "https://images.unsplash.com/photo-1620712943543-bcc4688e7485?ixlib=rb-4.0.3&auto=format&fit=crop&w=687&h=386", // Decorative only
+      logo: "", // 📝 EDIT: Add company logo: "/images/experience/friday-logo.png"
+      image: "https://images.unsplash.com/photo-1620712943543-bcc4688e7485?ixlib=rb-4.0.3&auto=format&fit=crop&w=687&h=386", // Background only
     },
     {
       year: "Present", // 📝 EDIT: Time period
       title: "YouLearn", // 📝 EDIT: Company/project name
       description: "AI tutor for students. 1M+ users.", // 📝 EDIT: Description
-      image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&auto=format&fit=crop&w=687&h=386", // Decorative only
+      logo: "", // 📝 EDIT: Add company logo: "/images/experience/youlearn-logo.png"
+      image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&auto=format&fit=crop&w=687&h=386", // Background only
     },
     {
       year: "2024", // 📝 EDIT: Time period
       title: "Iris", // 📝 EDIT: Company/project name
       description: "AI wearable that gives you infinite memory.", // 📝 EDIT: Description
-      image: "https://images.unsplash.com/photo-1606107557195-0e29a4b5b4aa?ixlib=rb-4.0.3&auto=format&fit=crop&w=687&h=386", // Decorative only
+      logo: "", // 📝 EDIT: Add company logo: "/images/experience/iris-logo.png"
+      image: "https://images.unsplash.com/photo-1606107557195-0e29a4b5b4aa?ixlib=rb-4.0.3&auto=format&fit=crop&w=687&h=386", // Background only
     },
     {
       year: "2023", // 📝 EDIT: Time period
       title: "Commencement Speech", // 📝 EDIT: Event/achievement name
       description: "Spoke about chasing rejection to over 10,000 students at my graduation.", // 📝 EDIT: Description
-      image: "https://images.unsplash.com/photo-1475721027785-f74eccf877e2?ixlib=rb-4.0.3&auto=format&fit=crop&w=687&h=386", // Decorative only
+      logo: "", // 📝 EDIT: Add event logo: "/images/experience/graduation-logo.png"
+      image: "https://images.unsplash.com/photo-1475721027785-f74eccf877e2?ixlib=rb-4.0.3&auto=format&fit=crop&w=687&h=386", // Background only
     },
     {
       year: "2022", // 📝 EDIT: Time period
       title: "Research Publication", // 📝 EDIT: Achievement name
       description: "Published research on machine learning applications in healthcare.", // 📝 EDIT: Description
-      image: "https://images.unsplash.com/photo-1576091160399-112ba8d25d1f?ixlib=rb-4.0.3&auto=format&fit=crop&w=687&h=386", // Decorative only
+      logo: "", // 📝 EDIT: Add institution logo: "/images/experience/research-logo.png"
+      image: "https://images.unsplash.com/photo-1576091160399-112ba8d25d1f?ixlib=rb-4.0.3&auto=format&fit=crop&w=687&h=386", // Background only
     },
     {
       year: "2021", // 📝 EDIT: Time period
       title: "Startup Accelerator", // 📝 EDIT: Program/experience name
       description: "Participated in leading tech accelerator program.", // 📝 EDIT: Description
-      image: "https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-4.0.3&auto=format&fit=crop&w=687&h=386", // Decorative only
+      logo: "", // 📝 EDIT: Add accelerator logo: "/images/experience/accelerator-logo.png"
+      image: "https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-4.0.3&auto=format&fit=crop&w=687&h=386", // Background only
     },
   ];
 
@@ -159,8 +187,24 @@ export default function Experience() {
                     </p>
                   </div>
 
-                  {/* Experience Title - Main heading */}
-                  <div className="w-full h-[45px] flex items-center">
+                  {/* Experience Title - Main heading with optional logo */}
+                  <div className="w-full h-[45px] flex items-center gap-3">
+                    {/* 
+                      🖼️ COMPANY LOGO DISPLAY:
+                      Shows company logo if available in experience.logo field
+                      Automatically hides if no logo specified
+                    */}
+                    {experience.logo && (
+                      <img
+                        src={experience.logo}
+                        alt={`${experience.title} logo`}
+                        className="h-8 w-auto object-contain"
+                        onError={(e) => {
+                          // Hide logo if image fails to load
+                          e.currentTarget.style.display = 'none';
+                        }}
+                      />
+                    )}
                     <h2
                       className="text-[#EAEAEA] font-normal flex items-center"
                       style={{
