@@ -58,7 +58,7 @@ export default function About() {
   /**
    * PROJECTS ARRAY
    * ------------------------------------
-   * Edit or add projects here. The 'image' field is a path to /public/attached_assets.
+   * Edit or add projects here. The 'image' field is a path to /public/images/projects/.
    * For live links, use full URLs; for internal anchors, use hash routes.
    */
   const projects = [
@@ -66,7 +66,7 @@ export default function About() {
       title: "Avidia",
       description:
         'Co-Founder (Jan 2023 - Dec 2024). AI-powered learning platform tackling "tutorial hell". Pitched in Shark Tank India Audition. Built to learn programming by building, not watching tutorials.',
-      image: "/attached_assets/avidia.png?v=" + Date.now(),
+      image: "/images/projects/avidia.png",
       button: {
         label: "Read Story",
         url: "/playbook#avidia", // Link to your Playbook story or section
@@ -76,7 +76,7 @@ export default function About() {
       title: "Coffeecodes",
       description:
         "Co-Founder & Business Head (Dec 2023 - Apr 2025). A tech consultancy building MVPs and trust for fellow founders. Served 12+ founders, bridging technical execution and business strategy.",
-      image: "/attached_assets/coffeecodes.png?v=" + Date.now(),
+      image: "/images/projects/coffeecodes.png",
       button: {
         label: "Read Story",
         url: "/playbook#coffeecodes", // Link to Playbook story for Coffeecodes
@@ -86,7 +86,7 @@ export default function About() {
       title: "Noobslearning",
       description:
         "Grew a community of 5,000+ students into a platform for networking, sharing notes, and learning. We hosted 15+ workshops and several hackathons, fostering a hands-on builder culture.",
-      image: "/attached_assets/noobslearning.png?v=" + Date.now(),
+      image: "/images/projects/noobslearning-placeholder.png",
       button: {
         label: "Read Story",
         url: "/playbook#noobslearning", // Link to Playbook story for Noobslearning
@@ -96,7 +96,7 @@ export default function About() {
       title: "lyzn.ai",
       description:
         "The First AI Companion That Thinks, Plans, and Acts For You. Building a next-gen AI co-presence infrastructure, starting with our Lyzn pendant and agentic flows.",
-      image: "",
+      image: "/images/projects/lyzn-placeholder.png",
       button: {
         label: "Visit lyzn.ai",
         url: "https://lyzn.ai"

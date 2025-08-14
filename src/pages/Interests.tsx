@@ -1,12 +1,27 @@
 
 
 /**
- * Interests page component - Personal and technical interests showcase
- * Currently displays placeholder content with plans for future expansion
- * Features:
- * - Responsive layout matching site design
- * - Placeholder for future content expansion
- * - Consistent typography and spacing
+ * ========================================
+ * 🎯 INTERESTS PAGE - HOBBIES & TECH SHOWCASE
+ * ========================================
+ * 
+ * This page displays your personal interests, hobbies, and technical skills.
+ * Similar layout structure to About and Experience pages.
+ * 
+ * 🖼️ TO ADD INTEREST IMAGES:
+ * 1. Upload hobby photos or tech icons to public/images/interests/
+ * 2. Add images to interests array with field: image: "/images/interests/hobby-name.jpg"
+ * 3. Recommended sizes: Various based on content (photos ~400px, icons ~100px)
+ * 
+ * 📋 TO ADD INTERESTS:
+ * 1. Create an interests array similar to projects/experiences
+ * 2. Each interest can have: name, description, image, category
+ * 3. Categories: Technology, Hobbies, Sports, Creative, etc.
+ * 
+ * 📱 RESPONSIVE DESIGN:
+ * - Mobile: Single column grid
+ * - Desktop: Multi-column layout 
+ * - Consistent with site design patterns
  */
 export default function Interests() {
   return (

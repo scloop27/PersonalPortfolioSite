@@ -11,6 +11,11 @@ import { motion } from "framer-motion";
  * 📋 TO UPDATE EXPERIENCES:
  * Modify the 'experiences' array below - each entry creates a new timeline item
  * 
+ * 🖼️ TO ADD COMPANY LOGOS/IMAGES:
+ * 1. Upload company logo to public/images/experience/
+ * 2. Add 'logo' field to experience: logo: "/images/experience/company-name.png"  
+ * 3. Recommended size: 200px width, PNG format with transparency
+ * 
  * 🔗 TO UPDATE VIEW BUTTON LINKS:
  * The "View" buttons cycle through a predefined list of URLs (lines ~126-133)
  * Replace those URLs with your actual project/company links

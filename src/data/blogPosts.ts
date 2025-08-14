@@ -111,6 +111,7 @@ export interface BlogPost {
   content: string;
   tags: string[];
   link: string;
+  featuredImage?: string; // Optional field for blog post images
 }
 
 /**
@@ -132,7 +133,8 @@ export interface BlogPost {
  *      summary: "Brief description for the preview card", // 📝 EDIT: Card preview text
  *      content: "Longer preview text for the quote box", // 📝 EDIT: Quote box text
  *      tags: ["topic1", "topic2"], // 📝 EDIT: Relevant keywords
- *      link: "https://your-substack-url.com/p/your-post" // 📝 EDIT: Full URL to your post
+ *      link: "https://your-substack-url.com/p/your-post", // 📝 EDIT: Full URL to your post
+ *      featuredImage: "/images/blog/your-blog-image.png" // 📝 OPTIONAL: Blog featured image
  *    },
  * 2. Paste it at the BEGINNING of the blogPosts array (newest first)
  * 3. Update ALL fields with your blog post information
