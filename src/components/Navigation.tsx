@@ -80,8 +80,13 @@ export default function Navbar() {
       <div className="max-w-[1440px] mx-auto px-3 sm:px-6 lg:px-10 py-3 sm:py-4 md:py-6">
         <div className="flex justify-center items-center">
           {/* 
-            📝 NAVIGATION LINKS - EDIT HERE TO ADD/REMOVE PAGES
-            
+            📝 NAVIGATION LINKS - STREAMLINED FOR LEVERAGE
+
+            Focused navigation structure that builds your leveraged identity:
+            - About: Who you are and what you build
+            - Experience: Your execution track record  
+            - Playbook: Your documented insights and specific knowledge
+
             To add a new navigation item:
             1. Copy one of the Link components below
             2. Update the href="/new-page" 
@@ -108,10 +113,6 @@ export default function Navbar() {
               }`}
             >
               Experience {/* 📝 EDIT: Display text */}
-            </Link>
-
-            {/* Interests Page Link */}
-              Interests {/* 📝 EDIT: Display text */}
             </Link>
 
             {/* Blog/Playbook Page Link */}
