@@ -111,12 +111,6 @@ export default function Navbar() {
             </Link>
 
             {/* Interests Page Link */}
-            <Link
-              href="/interests" // 📝 EDIT: Page URL
-              className={`text-xs sm:text-sm font-normal text-[#EAEAEA] hover:text-white transition-colors whitespace-nowrap ${
-                isActive("/interests") ? "underline decoration-white" : ""
-              }`}
-            >
               Interests {/* 📝 EDIT: Display text */}
             </Link>
 

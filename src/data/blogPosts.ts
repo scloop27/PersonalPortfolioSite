@@ -147,7 +147,7 @@ export const blogPosts: BlogPost[] = [
       "early-stage",
       "learning",
     ],
-    link: "https://substack.com/@shivacharanmandhapuram/p-170364005",
+    link: "https://shivacharanmandhapuram.substack.com/p/built-burnt-and-building-againmy",
   },
   // 📝 ADD YOUR NEXT POSTS HERE:
   //
