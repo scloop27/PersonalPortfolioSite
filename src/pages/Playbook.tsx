@@ -94,10 +94,10 @@ export default function Playbook() {
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
-                className="flex flex-col lg:flex-row justify-between items-start w-full py-8 sm:py-12 md:py-16 lg:py-20 gap-4 sm:gap-6 lg:gap-48"
+                className="flex flex-col lg:flex-row justify-between items-start w-full py-8 sm:py-12 md:py-16 lg:py-20 gap-8 lg:gap-12"
               >
                 {/* Text Content - Left side with proper spacing and alignment */}
-                <div className="flex flex-col items-start gap-3 sm:gap-4 w-full lg:w-auto lg:flex-1 order-2 lg:order-1">
+                <div className="flex flex-col items-start gap-3 sm:gap-4 w-full lg:flex-1">
                   {/* Blog Date - Small gray text above title */}
                   <div className="w-full flex items-center">
                     <time
@@ -118,7 +118,7 @@ export default function Playbook() {
                       className="text-[#EAEAEA] font-normal leading-tight"
                       style={{
                         fontFamily: "'SF Pro Display', -apple-system, system-ui, sans-serif",
-                        fontSize: "clamp(20px, 3vw, 26.6016px)", // Reduced max size for better readability
+                        fontSize: "clamp(18px, 4vw, 28px)",
                         lineHeight: "1.2", // Better line height for long titles
                       }}
                     >
@@ -132,7 +132,7 @@ export default function Playbook() {
                       className="text-[#888888] font-normal leading-relaxed"
                       style={{
                         fontFamily: "'SF Pro Display', -apple-system, system-ui, sans-serif",
-                        fontSize: "clamp(14px, 1.5vw, 17.3438px)", // Consistent with Experience page
+                        fontSize: "clamp(14px, 2vw, 16px)",
                         lineHeight: "1.6",
                       }}
                     >
@@ -152,7 +152,7 @@ export default function Playbook() {
                         className="text-[#0A0A0A] font-normal flex items-center justify-center"
                         style={{
                           fontFamily: "'SF Pro Display', -apple-system, system-ui, sans-serif",
-                          fontSize: "clamp(14px, 1vw, 16.0312px)",
+                          fontSize: "clamp(14px, 2vw, 16px)",
                           lineHeight: "27px",
                         }}
                       >
@@ -163,12 +163,12 @@ export default function Playbook() {
                 </div>
 
                 {/* Quote Box - Right side with consistent responsive sizing */}
-                <div className="bg-[#1A1A1A] rounded-xl p-6 sm:p-8 w-full lg:w-[687.06px] lg:max-w-none lg:flex-shrink-0 order-1 lg:order-2 lg:min-h-[300px] flex flex-col justify-between">
+                <div className="bg-[#1A1A1A] rounded-xl p-4 sm:p-6 w-full lg:w-auto lg:max-w-lg lg:flex-shrink-0 flex flex-col justify-between">
                   <blockquote 
                     className="text-[#888888] italic leading-relaxed"
                     style={{
                       fontFamily: "'SF Pro Display', -apple-system, system-ui, sans-serif",
-                      fontSize: "clamp(14px, 2vw, 16px)",
+                      fontSize: "clamp(13px, 1.8vw, 15px)",
                       lineHeight: "1.6",
                     }}
                   >
@@ -211,8 +211,8 @@ export default function Playbook() {
         )}
 
         {/* Footer Section - Social Links */}
-        <footer className="py-16 border-t border-[#333333] w-full">
-          <div className="max-w-[1440px] mx-auto px-10">
+        <footer className="py-8 sm:py-12 md:py-16 border-t border-[#333333] w-full">
+          <div className="max-w-[1440px] mx-auto px-3 sm:px-4 md:px-6 lg:px-10">
             <div className="grid md:grid-cols-2 gap-8 items-start">
               <div>
                 <h2 className="text-4xl md:text-5xl font-bold mb-4 text-[#EAEAEA]">
