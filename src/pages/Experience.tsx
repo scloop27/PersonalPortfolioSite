@@ -11,7 +11,38 @@ import { motion } from "framer-motion";
  * 📋 TO UPDATE EXPERIENCES:
  * Modify the 'experiences' array below - each entry creates a new timeline item
  *
- * 🖼️ TO ADD COMPANY LOGOS/IMAGES:
+ * 🖼️ TO REPLACE EXPERIENCE IMAGES:
+ * ========================================
+ * 
+ * 📁 CURRENT IMAGE LOCATIONS:
+ * All experience images are stored in: public/images/experience/
+ * 
+ * 🎯 TO UPDATE AN IMAGE:
+ * 1. Replace the image file in public/images/experience/ (keep same filename)
+ * OR
+ * 2. Upload new image with different name and update the path in the experience array
+ * 
+ * 📋 CURRENT IMAGE FILES:
+ * - lyzn-ai.png (lyzn.ai experience)
+ * - scrum-master.png (Scrum Master certification)
+ * - juzzt.png (Juzzt dating app)
+ * - mjollnir.png (Mjollnir EV booking)
+ * - jagriti-yatra.png (Jagriti Yatra journey)
+ * - avidia.png (Avidia AI platform)
+ * - coffeecodes.png (Coffeecodes consultancy)
+ * - noobslearning.png (Noobslearning community)
+ * 
+ * 💡 QUICK IMAGE REPLACEMENT:
+ * 1. Go to public/images/experience/ in file manager
+ * 2. Replace any image with your new image (use same name)
+ * 3. Refresh browser - changes appear immediately!
+ * 
+ * 📐 RECOMMENDED IMAGE SPECS:
+ * - Size: 687px width x 386px height (or similar ratio)
+ * - Format: PNG, JPG, or WebP
+ * - Quality: High resolution for retina displays
+ * 
+ * 🖼️ TO ADD COMPANY LOGOS:
  * 1. Upload company logo to public/images/experience/
  * 2. Add 'logo' field to experience: logo: "/images/experience/company-name.png"
  * 3. Recommended size: 200px width, PNG format with transparency
@@ -116,7 +147,7 @@ export default function Experience() {
         "Building personal AI superintelligence in beta. Creating an AI companion that thinks, plans, and acts for users.", // 📝 EDIT: Brief description
       logo: "", // 📝 EDIT: Add company logo: "/images/experience/lyzn-logo.png"
       image:
-        "https://images.unsplash.com/photo-1620712943543-bcc4688e7485?ixlib=rb-4.0.3&auto=format&fit=crop&w=687&h=386", // Background only
+        "/images/experience/lyzn-ai.png", // 📝 EDIT: Replace with your lyzn.ai company image
     },
     {
       year: "Present", // 📝 EDIT: Time period
@@ -125,7 +156,7 @@ export default function Experience() {
         "Earned CSM certification to master agile methodologies and team dynamics for efficient product execution.", // 📝 EDIT: Description
       logo: "", // 📝 EDIT: Add company logo: "/images/experience/csm-logo.png"
       image:
-        "https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&auto=format&fit=crop&w=687&h=386", // Background only
+        "/images/experience/scrum-master.png", // 📝 EDIT: Replace with your Scrum Master certificate image
     },
     {
       year: "2024", // 📝 EDIT: Time period
@@ -134,7 +165,7 @@ export default function Experience() {
         "Product Lead for dating app with rating-based compatibility. Onboarded 230+ users at IIT Bombay's Mood Indigo festival.", // 📝 EDIT: Description
       logo: "", // 📝 EDIT: Add company logo: "/images/experience/juzzt-logo.png"
       image:
-        "https://images.unsplash.com/photo-1606107557195-0e29a4b5b4aa?ixlib=rb-4.0.3&auto=format&fit=crop&w=687&h=386", // Background only
+        "/images/experience/juzzt.png", // 📝 EDIT: Replace with your Juzzt app screenshot or mockup
     },
     {
       year: "2024", // 📝 EDIT: Time period
@@ -143,7 +174,7 @@ export default function Experience() {
         "Product & Strategy Lead for EV bike booking app. Launched at Nehru Zoological Park in Hyderabad.", // 📝 EDIT: Description
       logo: "", // 📝 EDIT: Add event logo: "/images/experience/mjollnir-logo.png"
       image:
-        "https://images.unsplash.com/photo-1475721027785-f74eccf877e2?ixlib=rb-4.0.3&auto=format&fit=crop&w=687&h=386", // Background only
+        "/images/experience/mjollnir.png", // 📝 EDIT: Replace with your Mjollnir EV app image
     },
     {
       year: "2023", // 📝 EDIT: Time period
@@ -152,7 +183,7 @@ export default function Experience() {
         "Participated in 15-day entrepreneurial journey across India, connecting with grassroots innovators solving real problems.", // 📝 EDIT: Description
       logo: "", // 📝 EDIT: Add institution logo: "/images/experience/jagriti-logo.png"
       image:
-        "https://images.unsplash.com/photo-1576091160399-112ba8d25d1f?ixlib=rb-4.0.3&auto=format&fit=crop&w=687&h=386", // Background only
+        "/images/experience/jagriti-yatra.png", // 📝 EDIT: Replace with your Jagriti Yatra journey image
     },
     {
       year: "2023", // 📝 EDIT: Time period
@@ -161,7 +192,7 @@ export default function Experience() {
         "Co-founded AI learning platform to combat 'tutorial hell.' Pitched at Shark Tank India auditions.", // 📝 EDIT: Description
       logo: "", // 📝 EDIT: Add accelerator logo: "/images/experience/avidia-logo.png"
       image:
-        "https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-4.0.3&auto=format&fit=crop&w=687&h=386", // Background only
+        "/images/experience/avidia.png", // 📝 EDIT: Replace with your Avidia platform image
     },
     {
       year: "2023", // 📝 EDIT: Time period
@@ -170,7 +201,7 @@ export default function Experience() {
         "Founded tech consultancy building MVPs for founders. Served 12+ clients bridging ideas to market-ready products.", // 📝 EDIT: Description
       logo: "", // 📝 EDIT: Add accelerator logo: "/images/experience/coffeecodes-logo.png"
       image:
-        "https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-4.0.3&auto=format&fit=crop&w=687&h=386", // Background only
+        "/images/experience/coffeecodes.png", // 📝 EDIT: Replace with your Coffeecodes consultancy image
     },
     {
       year: "2022", // 📝 EDIT: Time period
@@ -179,7 +210,7 @@ export default function Experience() {
         "Founded and grew 5,000+ member student community. Organized 15+ workshops and hackathons fostering builder culture.", // 📝 EDIT: Description
       logo: "", // 📝 EDIT: Add accelerator logo: "/images/experience/noobs-logo.png"
       image:
-        "https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-4.0.3&auto=format&fit=crop&w=687&h=386", // Background only
+        "/images/experience/noobslearning.png", // 📝 EDIT: Replace with your Noobslearning community image
     },
   ];
 
