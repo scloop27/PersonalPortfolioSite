@@ -180,7 +180,7 @@ export default function Experience() {
       year: "2023", // 📝 EDIT: Time period
       title: "Jagriti Yatra", // 📝 EDIT: Achievement name
       description:
-        "Participated in 15-day entrepreneurial journey across India, connecting with grassroots innovators solving real problems.", // 📝 EDIT: Description
+        "Alumnus of Jagriti Yatra and one of 500+ founders in JY '24. 15-day entrepreneurial journey across India connecting with grassroots innovators.", // 📝 EDIT: Description
       logo: "", // 📝 EDIT: Add institution logo: "/images/experience/jagriti-logo.png"
       image:
         "/images/experience/jagriti-yatra.png", // 📝 EDIT: Replace with your Jagriti Yatra journey image
