@@ -153,7 +153,7 @@ export default function Experience() {
       year: "Present", // 📝 EDIT: Time period
       title: "Certified Scrum Master", // 📝 EDIT: Company/project name
       description:
-        "Earned CSM certification to master agile methodologies and team dynamics for efficient product execution.", // 📝 EDIT: Description
+        "Certified Scrum Master with expertise in agile methodologies and team dynamics for efficient product execution.", // 📝 EDIT: Description
       logo: "", // 📝 EDIT: Add company logo: "/images/experience/csm-logo.png"
       image:
         "/images/experience/scrum-master.png", // 📝 EDIT: Replace with your Scrum Master certificate image
