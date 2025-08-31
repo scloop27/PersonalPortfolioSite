@@ -134,12 +134,12 @@ export default function About() {
           <div key={index} className="flex flex-col items-center w-full">
             {/* Divider line */}
             <div className="w-full h-px border-t border-[#333333]"></div>
-            <div className="flex flex-col items-center px-4 sm:px-6 md:px-8 lg:px-10 w-full max-w-[1440px]">
+            <div className="flex flex-col items-center px-3 sm:px-4 md:px-6 lg:px-10 w-full max-w-[1440px]">
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
-                className="flex flex-col lg:flex-row justify-between items-start w-full py-12 sm:py-16 md:py-20 gap-6 sm:gap-8 lg:gap-48"
+                className="flex flex-col lg:flex-row justify-between items-start w-full py-8 sm:py-12 md:py-16 lg:py-20 gap-4 sm:gap-6 md:gap-8 lg:gap-48"
               >
                 {/* --- Text Column --- */}
                 <div className="flex flex-col items-start gap-3 sm:gap-4 w-full lg:w-auto lg:flex-1 order-2 lg:order-1">
@@ -223,7 +223,7 @@ export default function About() {
                   className="flex flex-col items-start w-full lg:w-[687.06px] lg:h-[393.47px] order-1 lg:order-2"
                   style={{ paddingBottom: "7px" }}
                 >
-                  <div className="w-full h-full min-h-[250px] sm:min-h-[300px] lg:min-h-[393px] rounded-xl overflow-hidden shadow-lg bg-gray-800">
+                  <div className="w-full h-full min-h-[200px] sm:min-h-[280px] md:min-h-[320px] lg:min-h-[393px] rounded-xl overflow-hidden shadow-lg bg-gray-800">
                     {/* 
                       📝 IMAGE DISPLAY LOGIC:
                       - Shows actual project image from /images/projects/ folder
@@ -234,7 +234,7 @@ export default function About() {
                     <img
                       src={project.image}
                       alt={`${project.title} project screenshot`}
-                      className="w-full h-full object-cover"
+                      className="w-full h-full object-cover object-center"
                       onError={(e) => {
                         // Fallback styling if image fails to load
                         e.currentTarget.style.display = 'none';

@@ -230,7 +230,7 @@ export default function Experience() {
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
-                className="flex flex-col lg:flex-row justify-between items-start w-full py-8 sm:py-12 md:py-16 lg:py-20 gap-4 sm:gap-6 lg:gap-48"
+                className="flex flex-col lg:flex-row justify-between items-start w-full py-6 sm:py-8 md:py-12 lg:py-16 gap-4 sm:gap-6 md:gap-8 lg:gap-48"
               >
                 {/* Text Content */}
                 <div className="flex flex-col items-start gap-3 sm:gap-4 w-full lg:w-auto lg:flex-1 order-2 lg:order-1">
@@ -361,16 +361,17 @@ export default function Experience() {
                   className="flex flex-col items-start w-full lg:w-[687.06px] lg:h-[393.47px]"
                   style={{ paddingBottom: "7px" }}
                 >
-                  <img
-                    src={experience.image}
-                    alt={experience.title}
-                    className="w-full h-full object-cover"
-                    style={{
-                      width: "100%",
-                      maxWidth: "687.06px",
-                      height: "clamp(250px, 25vw, 386.47px)",
-                    }}
-                  />
+                  <div className="w-full h-full min-h-[200px] sm:min-h-[280px] md:min-h-[320px] lg:min-h-[393px] rounded-xl overflow-hidden shadow-lg bg-gray-800">
+                    <img
+                      src={experience.image}
+                      alt={experience.title}
+                      className="w-full h-full object-cover object-center"
+                      style={{
+                        width: "100%",
+                        maxWidth: "687.06px"
+                      }}
+                    />
+                  </div>
                 </div>
               </motion.div>
             </div>

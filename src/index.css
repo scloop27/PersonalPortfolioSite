@@ -33,6 +33,14 @@
     transform: translateZ(0);
     will-change: transform, opacity;
   }
+  
+  /* Mobile image container optimization */
+  @media (max-width: 640px) {
+    img {
+      image-rendering: -webkit-optimize-contrast;
+      image-rendering: crisp-edges;
+    }
+  }
 }
 
 @layer utilities {
