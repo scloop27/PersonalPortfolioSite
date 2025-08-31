@@ -314,7 +314,7 @@ export default function Experience() {
                       href={
                         [
                           "https://lyzn.ai/beta", // 📝 EDIT: lyzn.ai beta link
-                          "#", // 📝 EDIT: Replace with your CSM certificate link
+                          "https://bcert.me/bc/html/show-badge.html?b=pygealnc", // 📝 EDIT: Replace with your CSM certificate link
                           "https://juzzt.com", // 📝 EDIT: Juzzt dating app link
                           "https://mjollnir.in", // 📝 EDIT: Mjollnir EV booking app link
                           "#", // 📝 EDIT: Replace with Jagriti Yatra experience link
@@ -326,7 +326,7 @@ export default function Experience() {
                       target={
                         [
                           "https://lyzn.ai/beta",
-                          "#",
+                          "https://bcert.me/bc/html/show-badge.html?b=pygealnc",
                           "https://juzzt.com",
                           "https://mjollnir.in",
                           "#",
