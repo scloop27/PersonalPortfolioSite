@@ -171,7 +171,7 @@ export default function Experience() {
       year: "2024", // 📝 EDIT: Time period
       title: "Mjollnir", // 📝 EDIT: Event/achievement name
       description:
-        "Product & Strategy Lead for EV bike booking app. Launched at Nehru Zoological Park in Hyderabad.", // 📝 EDIT: Description
+        "Product Builder for EV bike rental application. Building the complete application for Mjollnir's electric bike sharing platform.", // 📝 EDIT: Description
       logo: "", // 📝 EDIT: Add event logo: "/images/experience/mjollnir-logo.png"
       image:
         "/images/experience/mjollnir.png", // 📝 EDIT: Replace with your Mjollnir EV app image
