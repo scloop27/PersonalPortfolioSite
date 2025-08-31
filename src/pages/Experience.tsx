@@ -162,7 +162,7 @@ export default function Experience() {
       year: "2024", // 📝 EDIT: Time period
       title: "Juzzt", // 📝 EDIT: Company/project name
       description:
-        "Product Lead for dating app with rating-based compatibility. Onboarded 230+ users at IIT Bombay's Mood Indigo festival.", // 📝 EDIT: Description
+        "Product Strategy & Execution for dating app with rating-based compatibility. Building the application and defining product roadmap.", // 📝 EDIT: Description
       logo: "", // 📝 EDIT: Add company logo: "/images/experience/juzzt-logo.png"
       image:
         "/images/experience/juzzt.png", // 📝 EDIT: Replace with your Juzzt app screenshot or mockup
