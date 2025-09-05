@@ -234,21 +234,6 @@ export default function Experience() {
               >
                 {/* Text Content */}
                 <div className="flex flex-col items-start gap-3 sm:gap-4 w-full lg:w-auto lg:flex-1 order-2 lg:order-1">
-                  {/* Experience Year - Small gray text above title */}
-                  <div className="w-full flex items-center">
-                    <p
-                      className="text-[#888888] font-normal flex items-center"
-                      style={{
-                        fontFamily:
-                          "'SF Pro Display', -apple-system, system-ui, sans-serif",
-                        fontSize: "clamp(10px, 1vw, 12.25px)", // Responsive sizing
-                        lineHeight: "21px",
-                      }}
-                    >
-                      {experience.year}{" "}
-                      {/* 📝 This pulls from the experiences array */}
-                    </p>
-                  </div>
 
                   {/* Experience Title - Main heading with optional logo */}
                   <div className="w-full flex items-center gap-3">
