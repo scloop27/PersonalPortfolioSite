@@ -108,7 +108,12 @@ export default function About() {
     <div className="flex flex-col items-center w-full bg-[#0A0A0A] overflow-y-scroll min-h-screen">
       <main className="flex flex-col items-center w-full">
         {/* HERO SECTION */}
-        <section className="min-h-screen flex flex-col justify-center items-start w-full px-6 sm:px-8 md:px-10 lg:px-12">
+        <section 
+          className="min-h-screen flex flex-col justify-center items-start w-full px-6 sm:px-8 md:px-10 lg:px-12"
+          itemScope 
+          itemType="https://schema.org/Person"
+          data-section="hero"
+        >
           <div className="flex flex-col items-start text-left w-full max-w-[1440px] mt-8 sm:mt-12 md:mt-16">
             <motion.h1
               initial={{ opacity: 0, y: 20 }}
@@ -123,15 +128,18 @@ export default function About() {
                 letterSpacing: "clamp(-0.3px, -0.1vw, -1.28px)",
                 maxWidth: "100%",
               }}
+              itemProp="description"
+              data-content="personal-summary"
             >
-              Shiva. Entrepreneur at 21. I build products that turn challenges into solutions—leading tech, teams, and ideas that move people forward.
+              <span itemProp="name">Shiva</span>. <span itemProp="jobTitle">Entrepreneur</span> at <span itemProp="age">21</span>. I build products that turn challenges into solutions—leading tech, teams, and ideas that move people forward.
             </motion.h1>
           </div>
         </section>
 
         {/* PROJECT SHOWCASE SECTION */}
+        <section data-section="projects" itemScope itemType="https://schema.org/ItemList">
         {projects.map((project, index) => (
-          <div key={index} className="flex flex-col items-center w-full">
+          <div key={index} className="flex flex-col items-center w-full" itemScope itemType="https://schema.org/CreativeWork" data-project={project.title.toLowerCase()}>
             {/* Divider line */}
             <div className="w-full h-px border-t border-[#333333]"></div>
             <div className="flex flex-col items-center px-3 sm:px-4 md:px-6 lg:px-10 w-full max-w-[1440px]">
@@ -150,6 +158,8 @@ export default function About() {
                       fontSize: "clamp(20px, 3vw, 26.6016px)",
                       lineHeight: "1.2",
                     }}
+                    itemProp="name"
+                    data-content="project-title"
                   >
                     {project.title}
                   </h2>
@@ -160,6 +170,8 @@ export default function About() {
                       fontSize: "clamp(14px, 2vw, 17.3438px)",
                       lineHeight: "1.6",
                     }}
+                    itemProp="description"
+                    data-content="project-description"
                   >
                     {project.description}
                   </p>
@@ -246,6 +258,7 @@ export default function About() {
             </div>
           </div>
         ))}
+        </section>
 
         {/* FOOTER SECTION */}
         <footer className="py-16 border-t border-[#333333] w-full">
