@@ -1,0 +1,57 @@
+Objective
+Audit this website/repo for LLM readability and discoverability, then propose and implement safe fixes behind a branch + PR with a “LLM Readiness Report”.
+
+Scope
+- Content surfaces, structured data, feeds, sitemaps, robots controls, no-JS crawlability, metadata, and AI-crawler access.
+- Do not degrade UX/perf; coordinate SSR/SSG or static render where appropriate.
+
+Tasks
+1) Crawlability & discovery
+   - Verify root robots.txt exists, returns 200, references the sitemap, and does not over-block public pages.
+   - Confirm sitemap.xml covers all key pages with correct canonical URLs, lastmod, and stable slugs.
+
+2) AI crawler access
+   - Check robots rules for GPTBot, ClaudeBot/Claude-Web, Google-Extended, and CCBot; allow public content, disallow /admin and /private.
+   - Ensure a single source of truth for robots at root.
+
+3) Machine-readable endpoints
+   - Look for /for-llms (or equivalent) with site purpose, entities, key facts, FAQs, licensing/attribution, and last_updated.
+   - Validate /rss.xml and /feed.json (JSON Feed) exist and include titles, summaries, canonical links; create if missing.
+   - Provide /api/index.json and /api/projects.json for structured summaries of primary pages/entities.
+
+4) No-JS readability
+   - Fetch representative pages without JS; ensure primary copy is visible in raw HTML with semantic headings (H1-H3), short paragraphs, and scannable sections.
+   - Flag any client-only rendering that hides core text; propose SSR/SSG or build-time prerender fallback.
+
+5) Structured data
+   - Validate JSON-LD for Organization, Person (author), WebSite (SearchAction), BreadcrumbList, and Article/FAQPage where relevant.
+   - Ensure canonical URLs, dates, sameAs, logo, contact points are correct; lint with a structured-data validator.
+
+6) Metadata
+   - Check per-page Open Graph and Twitter meta, language, and canonical tags; standardize where missing.
+
+7) Performance & reliability
+   - Confirm 200 responses for key pages, canonical consistency, and appropriate 301/410 for moved/removed URLs.
+   - Minimize JS for content surfaces; ensure compression is on for HTML/feeds/JSON.
+
+8) Optional manifest
+   - If policy clarity is desired, add a simple /llms.txt or /ai.txt with permissions guidance and preferred pages (convention, not a standard).
+
+Output & Fixes
+- Produce a “LLM Readiness Report” (markdown) including:
+  * Findings table: issue, severity, evidence URL/snippet, fix recommendation, estimated impact.
+  * Checklist results: robots, sitemap, no-JS content, JSON-LD types, feeds, machine endpoints, metadata.
+  * Before/after HTML snippets for any readability or schema changes.
+- Implement safe changes in a feature branch; open a PR with diffs for:
+  * Robots.txt updates and sitemap references.
+  * Missing /for-llms, /rss.xml, /feed.json, /api/*.json endpoints.
+  * JSON-LD additions/corrections and metadata fixes.
+  * SSR/SSG or prerender setup for pages that currently require client JS for primary content.
+- Include scripts to run local checks: curl (no-JS fetch), user-agent spoof tests (GPTBot, Claude-Web), schema lint, and link integrity.
+
+Acceptance Criteria
+- Robots allows reputable AI agents for public content and references the sitemap; sensitive routes remain blocked.
+- JSON-LD validates for required types and matches visible content.
+- /for-llms, feeds, and /api indices are reachable with 200 and correct content.
+- No-JS fetch shows core copy and headings on representative pages.
+- Report + PR provided with clear diffs, tests, and roll-back plan.
