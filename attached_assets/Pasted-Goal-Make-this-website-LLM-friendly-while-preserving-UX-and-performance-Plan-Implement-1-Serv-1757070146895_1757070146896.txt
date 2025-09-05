@@ -1,0 +1,46 @@
+Goal: Make this website LLM-friendly while preserving UX and performance.
+
+Plan + Implement:
+1) Server-side rendering & crawlability
+   - Ensure all key pages render primary content on the server (SSR/SSG), with <noscript> fallbacks. Avoid client-only hydration for core text.
+   - Use clean, semantic HTML with predictable H1–H3 hierarchy, IDs on headings, and scannable sections for long pages.
+
+2) Structured data (JSON-LD)
+   - Add JSON-LD for: Organization, Person (author), WebSite (with SearchAction), BreadcrumbList, Article/BlogPosting (for posts), and FAQPage where relevant.
+   - Include canonical URLs, logo, sameAs profiles, contact points, and dates. Validate output.
+
+3) Machine-friendly surfaces
+   - Create /for-llms: concise overview of site purpose, services/projects, key facts, FAQs, attribution/licensing note, and last_updated timestamp.
+   - Publish feeds: /rss.xml and /feed.json (JSON Feed) for posts/updates; include titles, summaries, and canonical links.
+   - Add /api/index.json and /api/projects.json that expose structured summaries of core pages/projects.
+
+4) Metadata & i18n
+   - Add Open Graph and Twitter meta per page; ensure language and hreflang tags if applicable.
+
+5) Discovery
+   - Generate sitemap.xml (and sectioned sitemaps if needed) with lastmod/changefreq/priority; reference it in robots.txt.
+   - Ensure consistent slugs and anchor links to important sections.
+
+6) Robots & access
+   - robots.txt: Allow AI crawlers that respect robots: GPTBot, ClaudeBot/Claude-Web, Google-Extended, CCBot. Disallow /admin, /private. Include Sitemap lines.
+   - Keep security-sensitive or private routes disallowed. No accidental blocking of public content.
+
+7) Performance & reliability
+   - Minimize JS for content; compress assets; ensure 200 responses for main pages; set canonical URLs; add 410 for removed pages as needed.
+
+8) Access & embedding
+   - Enable CORS (GET) for JSON endpoints; optionally provide oEmbed for embeddable cards.
+
+9) QA and reporting
+   - Add automated checks that:
+     * Fetch pages with no JS and assert main text is present.
+     * Verify JSON-LD types exist and pass a structured-data linter.
+     * Confirm presence of /for-llms, feeds, sitemap.xml, and correct robots.txt rules.
+   - Produce a "LLM Readiness Report" (markdown) summarizing what’s implemented, what’s validated, and any follow-ups.
+
+Success criteria:
+- All key pages SSR/SSG; JSON-LD validates; /for-llms live; RSS + JSON Feed live; sitemap referenced by robots; AI crawlers allowed appropriately; Lighthouse SEO ≥ 95; LLM Readiness Report generated.
+
+Execute:
+- Propose a brief plan first; then implement in iterative commits.
+- Start a dev server, run the QA checks, and share the readiness report plus diffs.

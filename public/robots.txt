@@ -1,0 +1,55 @@
+# Robots.txt for Shiva Charan Portfolio
+# Optimized for AI and LLM crawlers
+
+User-agent: *
+Allow: /
+
+# Explicitly allow AI/LLM crawlers
+User-agent: GPTBot
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: Claude-Web
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: CCBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: Anthropic-AI
+Allow: /
+
+User-agent: OpenAI-SearchBot
+Allow: /
+
+# Allow search engines
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+# Disallow private or sensitive areas (none currently)
+# User-agent: *
+# Disallow: /admin
+# Disallow: /private
+
+# Special LLM-friendly resources
+Allow: /for-llms.md
+Allow: /for-llms.json
+Allow: /api/
+Allow: /rss.xml
+Allow: /feed.json
+
+# Sitemap location
+Sitemap: https://personal-portfolio-site-kappa.vercel.app/sitemap.xml
+
+# Crawl-delay (optional, be respectful to resources)
+Crawl-delay: 1

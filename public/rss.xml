@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Shiva Charan - Founder's Playbook</title>
+    <description>Insights and learnings from a 21-year-old entrepreneur building AI companions, dating apps, and EV rental platforms</description>
+    <link>https://personal-portfolio-site-kappa.vercel.app</link>
+    <atom:link href="https://personal-portfolio-site-kappa.vercel.app/rss.xml" rel="self" type="application/rss+xml"/>
+    <language>en-us</language>
+    <managingEditor>shivacharanmandhapuram@gmail.com (Shiva Charan Mandhapuram)</managingEditor>
+    <webMaster>shivacharanmandhapuram@gmail.com (Shiva Charan Mandhapuram)</webMaster>
+    <lastBuildDate>Sun, 19 Jan 2025 10:56:00 GMT</lastBuildDate>
+    <category>Entrepreneurship</category>
+    <category>Technology</category>
+    <category>Startups</category>
+    <category>Product Development</category>
+    
+    <item>
+      <title>Building AI Companions: Lessons from lyzn.ai</title>
+      <description>Insights into building personal AI superintelligence and creating an AI companion that thinks, plans, and acts for users.</description>
+      <link>https://personal-portfolio-site-kappa.vercel.app/playbook#lyzn-ai</link>
+      <guid>https://personal-portfolio-site-kappa.vercel.app/playbook#lyzn-ai</guid>
+      <pubDate>Sun, 19 Jan 2025 00:00:00 GMT</pubDate>
+      <category>AI Technology</category>
+      <category>Product Development</category>
+    </item>
+    
+    <item>
+      <title>Product Strategy in Dating Apps: The Juzzt Journey</title>
+      <description>Building a dating app with rating-based compatibility and defining product roadmap in a competitive market.</description>
+      <link>https://personal-portfolio-site-kappa.vercel.app/playbook#juzzt</link>
+      <guid>https://personal-portfolio-site-kappa.vercel.app/playbook#juzzt</guid>
+      <pubDate>Sat, 18 Jan 2025 00:00:00 GMT</pubDate>
+      <category>Product Strategy</category>
+      <category>Mobile Apps</category>
+    </item>
+    
+    <item>
+      <title>EV Tech Revolution: Building Mjollnir Bike Rental</title>
+      <description>Creating an electric vehicle rental application and navigating the EV technology landscape.</description>
+      <link>https://personal-portfolio-site-kappa.vercel.app/playbook#mjollnir</link>
+      <guid>https://personal-portfolio-site-kappa.vercel.app/playbook#mjollnir</guid>
+      <pubDate>Fri, 17 Jan 2025 00:00:00 GMT</pubDate>
+      <category>EV Technology</category>
+      <category>Transportation</category>
+    </item>
+    
+    <item>
+      <title>From Tutorial Hell to Shark Tank: The Avidia Story</title>
+      <description>Co-founding an AI learning platform to combat tutorial hell and the journey to Shark Tank India auditions.</description>
+      <link>https://personal-portfolio-site-kappa.vercel.app/playbook#avidia</link>
+      <guid>https://personal-portfolio-site-kappa.vercel.app/playbook#avidia</guid>
+      <pubDate>Thu, 16 Jan 2025 00:00:00 GMT</pubDate>
+      <category>EdTech</category>
+      <category>AI Technology</category>
+    </item>
+    
+    <item>
+      <title>Building MVPs for Founders: Coffeecodes Insights</title>
+      <description>Lessons from founding a tech consultancy and serving 12+ clients, bridging ideas to market-ready products.</description>
+      <link>https://personal-portfolio-site-kappa.vercel.app/playbook#coffeecodes</link>
+      <guid>https://personal-portfolio-site-kappa.vercel.app/playbook#coffeecodes</guid>
+      <pubDate>Wed, 15 Jan 2025 00:00:00 GMT</pubDate>
+      <category>Consulting</category>
+      <category>MVP Development</category>
+    </item>
+    
+    <item>
+      <title>Jagriti Yatra: Lessons from 500+ Founders</title>
+      <description>Insights from a 15-day entrepreneurial journey across India, connecting with grassroots innovators and fellow founders.</description>
+      <link>https://personal-portfolio-site-kappa.vercel.app/playbook#jagriti-yatra</link>
+      <guid>https://personal-portfolio-site-kappa.vercel.app/playbook#jagriti-yatra</guid>
+      <pubDate>Tue, 14 Jan 2025 00:00:00 GMT</pubDate>
+      <category>Entrepreneurship</category>
+      <category>Leadership</category>
+    </item>
+  </channel>
+</rss>

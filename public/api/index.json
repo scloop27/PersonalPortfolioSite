@@ -1,0 +1,68 @@
+{
+  "site": {
+    "name": "Shiva Charan Portfolio",
+    "description": "Portfolio of Shiva Charan Mandhapuram - 21-year-old founder and product builder",
+    "url": "https://personal-portfolio-site-kappa.vercel.app",
+    "type": "portfolio",
+    "last_updated": "2025-01-19T10:56:00Z"
+  },
+  "person": {
+    "name": "Shiva Charan Mandhapuram",
+    "age": 21,
+    "role": "Founder & Product Builder",
+    "bio": "Entrepreneur at 21. I build products that turn challenges into solutions—leading tech, teams, and ideas that move people forward.",
+    "location": "India",
+    "skills": [
+      "Product Strategy",
+      "Product Execution", 
+      "AI Technology",
+      "Mobile App Development",
+      "Agile Methodologies",
+      "Startup Building",
+      "Dating Applications",
+      "EV Technology"
+    ],
+    "certifications": ["Certified Scrum Master"]
+  },
+  "pages": [
+    {
+      "path": "/",
+      "title": "About - Project Showcase",
+      "description": "Main landing page with hero introduction and featured projects",
+      "type": "homepage"
+    },
+    {
+      "path": "/experience",
+      "title": "Professional Experience", 
+      "description": "Timeline of work experience, certifications, and achievements",
+      "type": "experience"
+    },
+    {
+      "path": "/interests",
+      "title": "Interests & Passions",
+      "description": "Personal interests and areas of focus",
+      "type": "interests"
+    },
+    {
+      "path": "/playbook",
+      "title": "Founder's Playbook",
+      "description": "Blog posts and insights from entrepreneurial journey",
+      "type": "blog"
+    }
+  ],
+  "social_links": {
+    "twitter": "https://x.com/shivacharanm7",
+    "linkedin": "https://www.linkedin.com/in/shiva-charan-mandhapuram/",
+    "instagram": "https://www.instagram.com/shivacharanmandhapuram/",
+    "substack": "https://shivacharanmandhapuram.substack.com"
+  },
+  "feeds": {
+    "rss": "/rss.xml",
+    "json": "/feed.json"
+  },
+  "api_endpoints": {
+    "projects": "/api/projects.json",
+    "experience": "/api/experience.json",
+    "llm_info": "/for-llms.json"
+  }
+}

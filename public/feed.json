@@ -1,0 +1,68 @@
+{
+  "version": "https://jsonfeed.org/version/1.1",
+  "title": "Shiva Charan - Founder's Playbook",
+  "description": "Insights and learnings from a 21-year-old entrepreneur building AI companions, dating apps, and EV rental platforms",
+  "home_page_url": "https://personal-portfolio-site-kappa.vercel.app",
+  "feed_url": "https://personal-portfolio-site-kappa.vercel.app/feed.json",
+  "language": "en",
+  "author": {
+    "name": "Shiva Charan Mandhapuram",
+    "url": "https://personal-portfolio-site-kappa.vercel.app"
+  },
+  "items": [
+    {
+      "id": "lyzn-ai-insights",
+      "title": "Building AI Companions: Lessons from lyzn.ai",
+      "summary": "Insights into building personal AI superintelligence and creating an AI companion that thinks, plans, and acts for users.",
+      "content_text": "Deep dive into the challenges and opportunities of building AI companions, lessons learned from developing lyzn.ai, and the future of personal AI superintelligence.",
+      "url": "https://personal-portfolio-site-kappa.vercel.app/playbook#lyzn-ai",
+      "date_published": "2025-01-19T00:00:00Z",
+      "tags": ["AI Technology", "Product Development", "Startups"]
+    },
+    {
+      "id": "juzzt-product-strategy",
+      "title": "Product Strategy in Dating Apps: The Juzzt Journey",
+      "summary": "Building a dating app with rating-based compatibility and defining product roadmap in a competitive market.",
+      "content_text": "Exploring the unique challenges of dating app development, implementing rating-based compatibility systems, and strategic product decisions in the competitive dating app market.",
+      "url": "https://personal-portfolio-site-kappa.vercel.app/playbook#juzzt",
+      "date_published": "2025-01-18T00:00:00Z",
+      "tags": ["Product Strategy", "Mobile Apps", "Dating Technology"]
+    },
+    {
+      "id": "mjollnir-ev-tech",
+      "title": "EV Tech Revolution: Building Mjollnir Bike Rental",
+      "summary": "Creating an electric vehicle rental application and navigating the EV technology landscape.",
+      "content_text": "Insights into building EV rental platforms, understanding the electric vehicle market, and the technical challenges of creating bike sharing applications.",
+      "url": "https://personal-portfolio-site-kappa.vercel.app/playbook#mjollnir",
+      "date_published": "2025-01-17T00:00:00Z",
+      "tags": ["EV Technology", "Transportation", "Sustainability"]
+    },
+    {
+      "id": "avidia-shark-tank",
+      "title": "From Tutorial Hell to Shark Tank: The Avidia Story",
+      "summary": "Co-founding an AI learning platform to combat tutorial hell and the journey to Shark Tank India auditions.",
+      "content_text": "The complete journey of building Avidia, from identifying the tutorial hell problem to developing an AI learning platform and pitching at Shark Tank India auditions.",
+      "url": "https://personal-portfolio-site-kappa.vercel.app/playbook#avidia",
+      "date_published": "2025-01-16T00:00:00Z",
+      "tags": ["EdTech", "AI Technology", "Shark Tank"]
+    },
+    {
+      "id": "coffeecodes-mvp-insights",
+      "title": "Building MVPs for Founders: Coffeecodes Insights",
+      "summary": "Lessons from founding a tech consultancy and serving 12+ clients, bridging ideas to market-ready products.",
+      "content_text": "Key learnings from running a tech consultancy, helping founders build MVPs, and the process of turning ideas into market-ready products.",
+      "url": "https://personal-portfolio-site-kappa.vercel.app/playbook#coffeecodes",
+      "date_published": "2025-01-15T00:00:00Z",
+      "tags": ["Consulting", "MVP Development", "Client Management"]
+    },
+    {
+      "id": "jagriti-yatra-journey",
+      "title": "Jagriti Yatra: Lessons from 500+ Founders",
+      "summary": "Insights from a 15-day entrepreneurial journey across India, connecting with grassroots innovators and fellow founders.",
+      "content_text": "Reflections on the transformative Jagriti Yatra experience, learnings from fellow founders, and insights from grassroots innovation across India.",
+      "url": "https://personal-portfolio-site-kappa.vercel.app/playbook#jagriti-yatra",
+      "date_published": "2025-01-14T00:00:00Z",
+      "tags": ["Entrepreneurship", "Leadership", "Innovation"]
+    }
+  ]
+}

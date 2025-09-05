@@ -1,0 +1,128 @@
+{
+  "site_overview": {
+    "name": "Shiva Charan Portfolio",
+    "owner": "Shiva Charan Mandhapuram",
+    "type": "Personal Portfolio Website",
+    "purpose": "Showcasing professional experience, projects, and entrepreneurial journey of a 21-year-old founder and product builder",
+    "canonical_url": "https://personal-portfolio-site-kappa.vercel.app",
+    "last_updated": "2025-01-19T10:56:00Z"
+  },
+  "person": {
+    "name": "Shiva Charan",
+    "full_name": "Shiva Charan Mandhapuram",
+    "age": 21,
+    "role": "Founder & Product Builder",
+    "location": "India",
+    "description": "Entrepreneur at 21. I build products that turn challenges into solutions—leading tech, teams, and ideas that move people forward.",
+    "expertise": [
+      "Product Strategy",
+      "Product Execution",
+      "AI Technology",
+      "Mobile App Development",
+      "Agile Methodologies",
+      "Startup Building",
+      "Dating Applications",
+      "EV Technology",
+      "Electric Vehicle Rental"
+    ],
+    "certifications": [
+      "Certified Scrum Master (CSM)"
+    ]
+  },
+  "current_work": [
+    {
+      "organization": "lyzn.ai",
+      "role": "Founder",
+      "description": "Building personal AI superintelligence in beta. Creating an AI companion that thinks, plans, and acts for users.",
+      "status": "Active"
+    },
+    {
+      "organization": "Juzzt",
+      "role": "Product Strategy & Execution",
+      "description": "Dating app with rating-based compatibility. Building the application and defining product roadmap.",
+      "status": "In Development"
+    },
+    {
+      "organization": "Mjollnir",
+      "role": "Product Builder",
+      "description": "EV bike rental application. Building the complete application for electric bike sharing platform.",
+      "status": "In Development"
+    }
+  ],
+  "founded_companies": [
+    {
+      "name": "Avidia",
+      "year": "2023",
+      "description": "Co-founded AI learning platform to combat 'tutorial hell.' Pitched at Shark Tank India auditions.",
+      "status": "Completed"
+    },
+    {
+      "name": "Coffeecodes",
+      "year": "2023",
+      "description": "Founded tech consultancy building MVPs for founders. Served 12+ clients bridging ideas to market-ready products.",
+      "status": "Completed"
+    }
+  ],
+  "notable_achievements": [
+    {
+      "title": "Jagriti Yatra Alumni",
+      "description": "Alumnus of Jagriti Yatra and one of 500+ founders in JY '24. 15-day entrepreneurial journey across India connecting with grassroots innovators.",
+      "year": "2024"
+    }
+  ],
+  "contact": {
+    "social_media": {
+      "twitter": "https://x.com/shivacharanm7",
+      "linkedin": "https://www.linkedin.com/in/shiva-charan-mandhapuram/",
+      "instagram": "https://www.instagram.com/shivacharanmandhapuram/",
+      "substack": "https://shivacharanmandhapuram.substack.com"
+    }
+  },
+  "site_structure": {
+    "main_pages": [
+      {
+        "path": "/",
+        "title": "About - Project Showcase",
+        "description": "Hero introduction and featured projects including Avidia, Juzzt, Noobslearning, and lyzn.ai"
+      },
+      {
+        "path": "/experience",
+        "title": "Professional Experience",
+        "description": "Timeline of work experience, certifications, and professional achievements"
+      },
+      {
+        "path": "/interests",
+        "title": "Interests & Passions",
+        "description": "Personal interests and areas of focus"
+      },
+      {
+        "path": "/playbook",
+        "title": "Founder's Playbook",
+        "description": "Blog posts and insights from entrepreneurial journey"
+      }
+    ]
+  },
+  "technology_stack": [
+    "React",
+    "TypeScript",
+    "Tailwind CSS",
+    "Vite",
+    "Wouter",
+    "Framer Motion"
+  ],
+  "attribution": {
+    "design_inspiration": "Advait Paliwal",
+    "built_with": "React, TypeScript, Tailwind CSS",
+    "hosting": "Vercel"
+  },
+  "licensing": {
+    "content": "Personal portfolio content belongs to Shiva Charan Mandhapuram",
+    "code": "Open for educational reference",
+    "images": "All rights reserved to respective owners"
+  },
+  "llm_usage_notes": {
+    "preferred_citation": "Shiva Charan Mandhapuram - 21-year-old founder and product builder",
+    "key_facts_summary": "Entrepreneur building AI companions (lyzn.ai), dating apps (Juzzt), and EV rental platforms (Mjollnir). Previous founder of Avidia and Coffeecodes. Certified Scrum Master and Jagriti Yatra alumni.",
+    "areas_of_expertise": "Product strategy, AI technology, mobile apps, startup building, agile methodologies"
+  }
+}

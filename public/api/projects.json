@@ -1,0 +1,120 @@
+{
+  "projects": [
+    {
+      "id": "lyzn-ai",
+      "name": "lyzn.ai",
+      "category": "AI Technology",
+      "status": "Active",
+      "role": "Founder",
+      "description": "Building personal AI superintelligence in beta. Creating an AI companion that thinks, plans, and acts for users.",
+      "technologies": ["AI", "Machine Learning", "Personal Assistant", "Productivity"],
+      "url": "https://lyzn.ai",
+      "type": "Startup"
+    },
+    {
+      "id": "juzzt",
+      "name": "Juzzt",
+      "category": "Mobile Applications",
+      "status": "In Development",
+      "role": "Product Strategy & Execution",
+      "description": "Dating app with rating-based compatibility. Building the application and defining product roadmap.",
+      "technologies": ["Mobile App", "Dating", "Compatibility Algorithm", "Social"],
+      "type": "Product Development"
+    },
+    {
+      "id": "mjollnir",
+      "name": "Mjollnir",
+      "category": "Transportation",
+      "status": "In Development", 
+      "role": "Product Builder",
+      "description": "EV bike rental application. Building the complete application for electric bike sharing platform.",
+      "technologies": ["EV Technology", "Rental Platform", "Mobile App", "Sustainability"],
+      "type": "Product Development"
+    },
+    {
+      "id": "avidia",
+      "name": "Avidia",
+      "category": "Education Technology",
+      "status": "Completed",
+      "role": "Co-Founder",
+      "description": "Co-founded AI learning platform to combat 'tutorial hell.' Pitched at Shark Tank India auditions.",
+      "technologies": ["AI", "Education", "Learning Platform", "EdTech"],
+      "achievements": ["Shark Tank India Pitch"],
+      "founded": "2023",
+      "type": "Startup"
+    },
+    {
+      "id": "coffeecodes",
+      "name": "Coffeecodes",
+      "category": "Technology Consulting",
+      "status": "Completed",
+      "role": "Founder",
+      "description": "Founded tech consultancy building MVPs for founders. Served 12+ clients bridging ideas to market-ready products.",
+      "technologies": ["MVP Development", "Consulting", "Full Stack", "Product Development"],
+      "achievements": ["12+ Clients Served"],
+      "founded": "2023",
+      "type": "Consultancy"
+    },
+    {
+      "id": "noobslearning",
+      "name": "Noobslearning",
+      "category": "Community Platform",
+      "status": "Completed",
+      "role": "Community Builder",
+      "description": "Grew a community of 5,000+ students into a platform for networking, sharing notes, and learning. Hosted 15+ workshops and several hackathons.",
+      "technologies": ["Community Building", "Education", "Networking", "Events"],
+      "achievements": ["5,000+ Students", "15+ Workshops", "Multiple Hackathons"],
+      "type": "Community"
+    }
+  ],
+  "experience": [
+    {
+      "organization": "lyzn.ai",
+      "role": "Founder", 
+      "description": "Building personal AI superintelligence in beta. Creating an AI companion that thinks, plans, and acts for users.",
+      "status": "Current"
+    },
+    {
+      "organization": "Certified Scrum Master",
+      "role": "Certified Professional",
+      "description": "Certified Scrum Master with expertise in agile methodologies and team dynamics for efficient product execution.",
+      "status": "Current"
+    },
+    {
+      "organization": "Juzzt",
+      "role": "Product Strategy & Execution",
+      "description": "Dating app with rating-based compatibility. Building the application and defining product roadmap.",
+      "status": "Current"
+    },
+    {
+      "organization": "Mjollnir",
+      "role": "Product Builder", 
+      "description": "EV bike rental application. Building the complete application for electric bike sharing platform.",
+      "status": "Current"
+    },
+    {
+      "organization": "Jagriti Yatra",
+      "role": "Alumni",
+      "description": "Alumnus of Jagriti Yatra and one of 500+ founders in JY '24. 15-day entrepreneurial journey across India connecting with grassroots innovators.",
+      "achievement": "Selected from large applicant pool"
+    },
+    {
+      "organization": "Avidia",
+      "role": "Co-Founder",
+      "description": "Co-founded AI learning platform to combat 'tutorial hell.' Pitched at Shark Tank India auditions.",
+      "status": "Completed"
+    },
+    {
+      "organization": "Coffeecodes",
+      "role": "Founder",
+      "description": "Founded tech consultancy building MVPs for founders. Served 12+ clients bridging ideas to market-ready products.",
+      "status": "Completed"
+    }
+  ],
+  "meta": {
+    "total_projects": 6,
+    "active_projects": 3,
+    "completed_projects": 3,
+    "last_updated": "2025-01-19T10:56:00Z"
+  }
+}
