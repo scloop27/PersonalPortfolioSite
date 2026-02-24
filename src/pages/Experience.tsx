@@ -233,7 +233,7 @@ export default function Experience() {
                 className="flex flex-col lg:flex-row justify-between items-start w-full py-6 sm:py-8 md:py-12 lg:py-16 gap-4 sm:gap-6 md:gap-8 lg:gap-48"
               >
                 {/* Text Content */}
-                <div className="flex flex-col items-start gap-3 sm:gap-4 w-full lg:w-auto lg:flex-1 order-2 lg:order-1">
+                <div className={`flex flex-col items-start gap-3 sm:gap-4 w-full lg:w-auto lg:flex-1 order-2 ${index % 2 === 1 ? 'lg:order-2' : 'lg:order-1'}`}>
 
                   {/* Experience Title - Main heading with optional logo */}
                   <div className="w-full flex items-center gap-3">
@@ -323,7 +323,7 @@ export default function Experience() {
                           : "_self"
                       }
                       rel="noopener noreferrer"
-                      className="flex flex-row items-center justify-center rounded-full bg-white w-[85px] h-[47px] hover:bg-gray-200 transition-colors"
+                      className="flex flex-row items-center justify-center rounded-full bg-white w-[85px] h-[47px] hover:bg-gray-200 hover:scale-[1.03] active:scale-[0.97] transition-all duration-300 shadow"
                       style={{ padding: "10px 24px" }}
                     >
                       <span
@@ -343,14 +343,14 @@ export default function Experience() {
 
                 {/* Image Container */}
                 <div
-                  className="flex flex-col items-start w-full lg:w-[687.06px] lg:h-[393.47px]"
+                  className={`flex flex-col items-start w-full lg:w-[687.06px] lg:h-[393.47px] order-1 ${index % 2 === 1 ? 'lg:order-1' : 'lg:order-2'}`}
                   style={{ paddingBottom: "7px" }}
                 >
-                  <div className="w-full h-full min-h-[200px] sm:min-h-[280px] md:min-h-[320px] lg:min-h-[393px] rounded-xl overflow-hidden shadow-lg bg-gray-800">
+                  <div className="w-full h-full min-h-[200px] sm:min-h-[280px] md:min-h-[320px] lg:min-h-[393px] rounded-xl overflow-hidden shadow-lg bg-gray-800 group border border-[#333333] hover:border-gray-500 transition-colors duration-500">
                     <img
                       src={experience.image}
                       alt={experience.title}
-                      className="w-full h-full object-cover object-center"
+                      className="w-full h-full object-cover object-center group-hover:scale-[1.05] transition-transform duration-700 ease-in-out"
                       style={{
                         width: "100%",
                         maxWidth: "687.06px"

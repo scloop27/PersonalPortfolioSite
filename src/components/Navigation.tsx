@@ -98,9 +98,8 @@ export default function Navbar() {
             {/* Homepage Link */}
             <Link
               href="/" // 📝 EDIT: Page URL (keep as "/" for homepage)
-              className={`text-xs sm:text-sm font-normal text-[#EAEAEA] hover:text-white transition-all duration-300 whitespace-nowrap ${
-                isActive("/") ? "underline decoration-white" : ""
-              }`}
+              className={`text-xs sm:text-sm font-normal text-[#EAEAEA] hover:text-white transition-all duration-300 whitespace-nowrap ${isActive("/") ? "underline decoration-white" : ""
+                }`}
             >
               About {/* 📝 EDIT: Display text for this navigation item */}
             </Link>
@@ -108,19 +107,26 @@ export default function Navbar() {
             {/* Experience Page Link */}
             <Link
               href="/experience" // 📝 EDIT: Page URL
-              className={`text-xs sm:text-sm font-normal text-[#EAEAEA] hover:text-white transition-all duration-300 whitespace-nowrap ${
-                isActive("/experience") ? "underline decoration-white" : ""
-              }`}
+              className={`text-xs sm:text-sm font-normal text-[#EAEAEA] hover:text-white transition-all duration-300 whitespace-nowrap ${isActive("/experience") ? "underline decoration-white" : ""
+                }`}
             >
               Experience {/* 📝 EDIT: Display text */}
+            </Link>
+
+            {/* Work/Ventures Page Link */}
+            <Link
+              href="/work" // 📝 EDIT: Page URL
+              className={`text-xs sm:text-sm font-normal text-[#EAEAEA] hover:text-white transition-all duration-300 whitespace-nowrap ${isActive("/work") ? "underline decoration-white" : ""
+                }`}
+            >
+              The Work {/* 📝 EDIT: Display text */}
             </Link>
 
             {/* Blog/Playbook Page Link */}
             <Link
               href="/playbook" // 📝 EDIT: Page URL
-              className={`text-xs sm:text-sm font-normal text-[#EAEAEA] hover:text-white transition-all duration-300 whitespace-nowrap ${
-                isActive("/playbook") ? "underline decoration-white" : ""
-              }`}
+              className={`text-xs sm:text-sm font-normal text-[#EAEAEA] hover:text-white transition-all duration-300 whitespace-nowrap ${isActive("/playbook") ? "underline decoration-white" : ""
+                }`}
             >
               Playbook⚡️ {/* 📝 EDIT: Display text */}
             </Link>

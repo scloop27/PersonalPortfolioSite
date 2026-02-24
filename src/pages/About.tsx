@@ -131,7 +131,7 @@ export default function About() {
               itemProp="description"
               data-content="personal-summary"
             >
-              <span itemProp="name">Shiva</span>. <span itemProp="jobTitle">Entrepreneur</span> at <span itemProp="age">21</span>. I build products that turn challenges into solutions—leading tech, teams, and ideas that move people forward.
+              <span itemProp="name" className="text-transparent bg-clip-text bg-gradient-to-r from-gray-100 to-gray-500 font-medium">Shiva</span>. <span itemProp="jobTitle" className="text-transparent bg-clip-text bg-gradient-to-r from-gray-300 to-gray-600 font-medium">Entrepreneur</span> at <span itemProp="age">21</span>. I build products that turn challenges into solutions—leading tech, teams, and ideas that move people forward.
             </motion.h1>
           </div>
         </section>
@@ -150,7 +150,7 @@ export default function About() {
                 className="flex flex-col lg:flex-row justify-between items-start w-full py-8 sm:py-12 md:py-16 lg:py-20 gap-4 sm:gap-6 md:gap-8 lg:gap-48"
               >
                 {/* --- Text Column --- */}
-                <div className="flex flex-col items-start gap-3 sm:gap-4 w-full lg:w-auto lg:flex-1 order-2 lg:order-1">
+                <div className={`flex flex-col items-start gap-3 sm:gap-4 w-full lg:w-auto lg:flex-1 order-2 ${index % 2 === 1 ? 'lg:order-2' : 'lg:order-1'}`}>
                   <h2
                     className="text-[#EAEAEA] font-normal"
                     style={{
@@ -180,7 +180,7 @@ export default function About() {
                     {project.button.url.startsWith("/") ? (
                       <a
                         href={project.button.url}
-                        className="flex flex-row items-center justify-center rounded-full bg-white hover:bg-gray-200 transition-colors px-6 py-3 min-w-[120px] h-[47px] shadow"
+                        className="flex flex-row items-center justify-center rounded-full bg-white hover:bg-gray-200 hover:scale-[1.03] active:scale-[0.97] transition-all duration-300 px-6 py-3 min-w-[120px] h-[47px] shadow"
                       >
                         <span
                           className="text-[#0A0A0A] font-normal flex items-center justify-center"
@@ -198,7 +198,7 @@ export default function About() {
                         href={project.button.url}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="flex flex-row items-center justify-center rounded-full bg-white hover:bg-gray-200 transition-colors px-6 py-3 min-w-[120px] h-[47px] shadow"
+                        className="flex flex-row items-center justify-center rounded-full bg-white hover:bg-gray-200 hover:scale-[1.03] active:scale-[0.97] transition-all duration-300 px-6 py-3 min-w-[120px] h-[47px] shadow"
                       >
                         <span
                           className="text-[#0A0A0A] font-normal flex items-center justify-center"
@@ -232,10 +232,10 @@ export default function About() {
                   🎨 FALLBACK: Gray background shows if image fails to load
                 */}
                 <div
-                  className="flex flex-col items-start w-full lg:w-[687.06px] lg:h-[393.47px] order-1 lg:order-2"
+                  className={`flex flex-col items-start w-full lg:w-[687.06px] lg:h-[393.47px] order-1 ${index % 2 === 1 ? 'lg:order-1' : 'lg:order-2'}`}
                   style={{ paddingBottom: "7px" }}
                 >
-                  <div className="w-full h-full min-h-[200px] sm:min-h-[280px] md:min-h-[320px] lg:min-h-[393px] rounded-xl overflow-hidden shadow-lg bg-gray-800">
+                  <div className="w-full h-full min-h-[200px] sm:min-h-[280px] md:min-h-[320px] lg:min-h-[393px] rounded-xl overflow-hidden shadow-lg bg-gray-800 group border border-[#333333] hover:border-gray-500 transition-colors duration-500">
                     {/* 
                       📝 IMAGE DISPLAY LOGIC:
                       - Shows actual project image from /images/projects/ folder
@@ -246,7 +246,7 @@ export default function About() {
                     <img
                       src={project.image}
                       alt={`${project.title} project screenshot`}
-                      className="w-full h-full object-cover object-center"
+                      className="w-full h-full object-cover object-center group-hover:scale-[1.05] transition-transform duration-700 ease-in-out"
                       onError={(e) => {
                         // Fallback styling if image fails to load
                         e.currentTarget.style.display = 'none';

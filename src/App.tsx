@@ -5,6 +5,7 @@ import About from "./pages/About";
 import Experience from "./pages/Experience";
 import Interests from "./pages/Interests";
 import Playbook from "./pages/Playbook";
+import Work from "./pages/Work";
 
 function Router() {
   return (
@@ -13,6 +14,7 @@ function Router() {
       <Switch>
         <Route path="/" component={About} />
         <Route path="/experience" component={Experience} />
+        <Route path="/work" component={Work} />
         <Route path="/interests" component={Interests} />
         <Route path="/playbook" component={Playbook} />
       </Switch>
