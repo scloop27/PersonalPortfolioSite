@@ -12,7 +12,7 @@ export default function Work() {
     const stats = [
         { label: "Partners", value: "15+" },
         { label: "Countries Reached", value: "6+" },
-        { label: "Value Created", value: "$1M+" },
+        { label: "Value Created", value: "$500K+" },
     ];
 
     const projects = [
@@ -29,7 +29,7 @@ export default function Work() {
             description: "Product Strategy & Execution for a modern dating app focused on meaningful connections.",
             tags: ["Dating App", "Mobile"],
             image: "/images/experience/juzzt.png",
-            url: "https://juzzt.com/",
+            url: "https://www.juzzt.com",
         },
         {
             title: "Blessings Health Care",
@@ -39,11 +39,18 @@ export default function Work() {
             url: "https://www.blessingshealth.org",
         },
         {
-            title: "lyzn.ai & flow.lyzn.ai",
-            description: "Building personal AI superintelligence. An AI companion that thinks, plans, and acts for users across various workflows.",
-            tags: ["AI Agents", "Platform"],
+            title: "lyzn.ai",
+            description: "Building personal AI superintelligence. An AI companion that learns, adapts, and acts on behalf of users.",
+            tags: ["AI", "Platform"],
             image: "/images/experience/lyzn-ai.png",
             url: "https://lyzn.ai",
+        },
+        {
+            title: "flow.lyzn.ai",
+            description: "Visual workflow builder for AI agents. Design, test, and deploy intelligent automations across various workflows.",
+            tags: ["AI Agents", "Workflows"],
+            image: "/images/projects/flow-lyzn.png",
+            url: "https://flow.lyzn.ai",
         },
         {
             title: "Mjollnir",
@@ -51,7 +58,28 @@ export default function Work() {
             tags: ["EV", "Rental", "Mobile"],
             image: "/images/experience/mjollnir.png",
             url: "https://mjollnir.in",
-        }
+        },
+        {
+            title: "Boost Education",
+            description: "Full-stack digital platform for a London-based tuition centre. Personalised learning portal serving multiple centres across the UK.",
+            tags: ["Education", "UK"],
+            image: "/images/projects/boosteducation.png",
+            url: "https://boosteducation.co.uk",
+        },
+        {
+            title: "Begin Café",
+            description: "Sleek, modern website for a specialty coffee & eatery in Uptown Westerville, Ohio. Showcasing menus, events, and community vibes.",
+            tags: ["Café", "USA"],
+            image: "/images/projects/begincafe.png",
+            url: "https://www.begin-cafe.com",
+        },
+        {
+            title: "Salon Vinlie",
+            description: "Elegant web presence for a premium hair salon, featuring service showcases, booking integration, and a curated Instagram feed.",
+            tags: ["Salon", "Beauty"],
+            image: "/images/projects/salonvinlie.png",
+            url: "https://www.salonvinlie.com",
+        },
     ];
 
     return (
