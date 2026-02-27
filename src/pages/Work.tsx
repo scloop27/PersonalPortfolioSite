@@ -124,6 +124,8 @@ export default function Work() {
                     <img
                         src={project.image}
                         alt={project.title}
+                        loading="lazy"
+                        decoding="async"
                         className="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-[1200ms] ease-out opacity-90 group-hover:opacity-100"
                         onError={(e) => {
                             e.currentTarget.style.display = "none";
@@ -195,7 +197,7 @@ export default function Work() {
                         </div>
                         <a
                             href="#contact"
-                            className="text-xs sm:text-[13px] text-black bg-white hover:bg-gray-100 px-6 py-2.5 sm:px-7 sm:py-3 rounded-full font-semibold transition-all duration-300 shadow-[0_0_20px_rgba(255,255,255,0.15)] hover:shadow-[0_0_30px_rgba(255,255,255,0.3)] transform hover:-translate-y-0.5 active:translate-y-0 active:scale-95"
+                            className="whitespace-nowrap text-xs sm:text-[13px] text-black bg-white hover:bg-gray-100 px-6 py-2.5 sm:px-7 sm:py-3 rounded-full font-semibold transition-all duration-300 shadow-[0_0_20px_rgba(255,255,255,0.15)] hover:shadow-[0_0_30px_rgba(255,255,255,0.3)] transform hover:-translate-y-0.5 active:translate-y-0 active:scale-95"
                         >
                             Let's Talk →
                         </a>

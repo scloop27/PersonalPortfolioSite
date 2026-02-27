@@ -199,6 +199,8 @@ export default function About() {
                   <img
                     src="/images/personal/speaking.png"
                     alt="Shiva speaking on stage"
+                    loading="lazy"
+                    decoding="async"
                     className="w-full h-full object-cover object-center hover:scale-105 transition-transform duration-700"
                   />
                 </div>
@@ -206,6 +208,8 @@ export default function About() {
                   <img
                     src="/images/personal/jagriti-yatra.png"
                     alt="Shiva at Jagriti Yatra"
+                    loading="lazy"
+                    decoding="async"
                     className="w-full h-full object-cover object-center hover:scale-105 transition-transform duration-700"
                   />
                 </div>
@@ -261,6 +265,8 @@ export default function About() {
                       <img
                         src="/images/projects/lyzn.png"
                         alt="lyzn.ai"
+                        loading="lazy"
+                        decoding="async"
                         className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
                         onError={(e) => { e.currentTarget.style.display = 'none'; }}
                       />

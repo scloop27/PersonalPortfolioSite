@@ -208,6 +208,8 @@ export default function Experience() {
                               <img
                                 src={entry.image}
                                 alt={entry.title}
+                                loading="lazy"
+                                decoding="async"
                                 className="w-full h-full object-cover hover:scale-105 transition-transform duration-700"
                                 onError={(e) => { e.currentTarget.style.display = 'none'; }}
                               />
