@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import { SiX, SiLinkedin, SiInstagram, SiSubstack } from "react-icons/si";
 
 export default function Work() {
     const stats = [
@@ -16,10 +17,10 @@ export default function Work() {
     ];
 
     const socials = [
-        { label: "X", url: "https://x.com/shivacharanm7" },
-        { label: "LinkedIn", url: "https://www.linkedin.com/in/shiva-charan-mandhapuram/" },
-        { label: "Instagram", url: "https://www.instagram.com/shivacharanmandhapuram/" },
-        { label: "Substack", url: "https://shivacharanmandhapuram.substack.com" },
+        { label: "X", icon: <SiX className="w-4 h-4 sm:w-5 sm:h-5" />, url: "https://x.com/shivacharanm7" },
+        { label: "LinkedIn", icon: <SiLinkedin className="w-4 h-4 sm:w-5 sm:h-5" />, url: "https://www.linkedin.com/in/shiva-charan-mandhapuram/" },
+        { label: "Instagram", icon: <SiInstagram className="w-4 h-4 sm:w-5 sm:h-5" />, url: "https://www.instagram.com/shivacharanmandhapuram/" },
+        { label: "Substack", icon: <SiSubstack className="w-4 h-4 sm:w-5 sm:h-5" />, url: "https://shivacharanmandhapuram.substack.com" },
     ];
 
     const myVentures = [
@@ -182,16 +183,17 @@ export default function Work() {
                 ═══════════════════════════════════════ */}
                 <div className="fixed top-[52px] sm:top-[60px] left-0 right-0 z-40 pt-4 pb-6 transition-all duration-500 before:absolute before:inset-0 before:bg-gradient-to-b before:from-[#0A0A0A]/90 before:to-transparent before:backdrop-blur-xl before:-z-10">
                     <div className="max-w-[1200px] mx-auto px-5 sm:px-8 flex items-center justify-between">
-                        <div className="flex items-center gap-6 sm:gap-10">
+                        <div className="flex items-center gap-5 sm:gap-8">
                             {socials.map((s) => (
                                 <a
                                     key={s.label}
                                     href={s.url}
                                     target="_blank"
                                     rel="noopener noreferrer"
-                                    className="text-[#A3A3A3] tracking-wide font-medium hover:text-white text-xs sm:text-sm transition-all duration-300"
+                                    aria-label={s.label}
+                                    className="text-[#A3A3A3] hover:text-white transition-all duration-300 transform hover:scale-110"
                                 >
-                                    {s.label}
+                                    {s.icon}
                                 </a>
                             ))}
                         </div>
@@ -425,9 +427,10 @@ export default function Work() {
                                         href={s.url}
                                         target="_blank"
                                         rel="noopener noreferrer"
-                                        className="text-[#666] hover:text-white text-sm transition-colors duration-300"
+                                        aria-label={s.label}
+                                        className="text-[#666] hover:text-white transition-colors duration-300 transform hover:scale-110"
                                     >
-                                        {s.label}
+                                        <div className="w-5 h-5 sm:w-6 sm:h-6 [&>svg]:w-full [&>svg]:h-full">{s.icon}</div>
                                     </a>
                                 ))}
                             </div>
