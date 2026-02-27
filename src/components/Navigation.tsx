@@ -119,7 +119,7 @@ export default function Navbar() {
               className={`text-xs sm:text-sm font-normal text-[#EAEAEA] hover:text-white transition-all duration-300 whitespace-nowrap ${isActive("/work") ? "underline decoration-white" : ""
                 }`}
             >
-              The Work {/* 📝 EDIT: Display text */}
+              Work {/* 📝 EDIT: Display text */}
             </Link>
 
             {/* Blog/Playbook Page Link */}

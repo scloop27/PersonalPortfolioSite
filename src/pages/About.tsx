@@ -1,318 +1,365 @@
 import { motion } from "framer-motion";
 
-/**
- * ========================================
- * 🏠 ABOUT PAGE — HOMEPAGE & PROJECT SHOWCASE
- * ========================================
- *
- * This is the main landing page that visitors see first.
- * Contains: Hero intro + 4 project showcases + footer.
- *
- * HOW TO EDIT:
- * ----------------------------------------
- * To update intro text:
- *   - Scroll to <motion.h1> (line ~56).
- *   - Change the text inside the tag.
- *
- * To add/modify projects:
- *   - See the 'projects' array (below).
- *   - Each project has: title, description, image path, and button (label+url).
- *   - See inline comments for details.
- *
- * To add a new project:
- *   1. Copy the template object below:
- *        {
- *          title: "Project Name",
- *          description: "What it is, what makes it special.",
- *          image: "/images/projects/yourimage.png",
- *          button: {
- *            label: "Button Text",
- *            url: "/playbook#anchor" // or full URL
- *          },
- *        }
- *   2. Paste as the last element in the 'projects' array.
- *   3. Upload your project image to public/images/projects/ folder.
- *   4. For project images, put the file in /public/images/projects/.
- *      Use format: /images/projects/yourimage.png
- *      Recommended size: 687x393px (16:9 aspect ratio)
- *
- * To change the visual design per project:
- *   - See inside {projects.map(...)} and the index-based mocks (lines ~107+).
- *   - Each project's visual section can be customized.
- *
- * To add social links or credits:
- *   - Scroll to the <footer> at the end of the file.
- *   - Update name, add or remove links as needed.
- *
- * TECHNICAL NOTES:
- * ----------------------------------------
- * - Responsive: uses Tailwind classes and clamp() for scalable typography.
- * - Project frame: Desktop card is ~687x393px.
- * - Images are cache-busted with ?v=Date.now() to force updates.
- * - The footer credit uses extra-small (10px), subtle text and no outgoing link.
- *
- * Any questions? Comment your intent above the section you edit.
- */
-
 export default function About() {
-  /**
-   * PROJECTS ARRAY
-   * ------------------------------------
-   * Edit or add projects here. The 'image' field is a path to /public/images/projects/.
-   * For live links, use full URLs; for internal anchors, use hash routes.
-   */
-  const projects = [
-    {
-      title: "Avidia",
-      description:
-        'Co-Founder (Jan 2023 - Dec 2024). AI-powered learning platform tackling "tutorial hell". Pitched in Shark Tank India Audition. Built to learn programming by building, not watching tutorials.',
-      image: "/images/projects/avidia.png",
-      button: {
-        label: "Read Story",
-        url: "/playbook#avidia", // Link to your Playbook story or section
-      },
-    },
-    {
-      title: "Coffeecodes",
-      description:
-        "Co-Founder & Business Head (Dec 2023 - Apr 2025). A tech consultancy building MVPs and trust for fellow founders. Served 12+ founders, bridging technical execution and business strategy.",
-      image: "/images/projects/coffeecodes.png",
-      button: {
-        label: "Read Story",
-        url: "/playbook#coffeecodes", // Link to Playbook story for Coffeecodes
-      },
-    },
-    {
-      title: "Noobslearning",
-      description:
-        "Grew a community of 5,000+ students into a platform for networking, sharing notes, and learning. We hosted 15+ workshops and several hackathons, fostering a hands-on builder culture.",
-      image: "/images/projects/noobslearning-placeholder.png",
-      button: {
-        label: "Read Story",
-        url: "/playbook#noobslearning", // Link to Playbook story for Noobslearning
-      },
-    },
-    {
-      title: "lyzn.ai",
-      description:
-        "The First AI Companion That Thinks, Plans, and Acts For You. Building a next-gen AI co-presence infrastructure, starting with our Lyzn pendant and agentic flows.",
-      image: "/images/projects/lyzn-placeholder.png",
-      button: {
-        label: "Visit lyzn.ai",
-        url: "https://lyzn.ai"
-      },
-    },
+  const milestones = [
+    { number: "19", label: "Founded First Company" },
+    { number: "S4", label: "Shark Tank India Finalist" },
+    { number: "12+", label: "Clients Globally" },
+    { number: "5K+", label: "Community Members" },
+    { number: "JY'24", label: "Jagriti Yatra Alumnus" },
   ];
 
   return (
-    <div className="flex flex-col items-center w-full bg-[#0A0A0A] overflow-y-scroll min-h-screen">
+    <div className="flex flex-col items-center w-full bg-[#0A0A0A] min-h-screen">
       <main className="flex flex-col items-center w-full">
-        {/* HERO SECTION */}
-        <section 
-          className="min-h-screen flex flex-col justify-center items-start w-full px-6 sm:px-8 md:px-10 lg:px-12"
-          itemScope 
-          itemType="https://schema.org/Person"
-          data-section="hero"
-        >
-          <div className="flex flex-col items-start text-left w-full max-w-[1440px] mt-8 sm:mt-12 md:mt-16">
-            <motion.h1
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
+        {/* ═══════════════════════════════════════
+            HERO SECTION — Photo + Identity
+        ═══════════════════════════════════════ */}
+        <section className="min-h-[calc(100vh-80px)] flex flex-col justify-center items-center w-full px-5 sm:px-8 md:px-12 lg:px-20 pt-16 sm:pt-20 pb-10 sm:pb-16">
+          <div className="max-w-[1100px] w-full flex flex-col items-center lg:flex-row lg:items-center gap-8 lg:gap-16">
+            {/* Photo */}
+            <motion.div
+              initial={{ opacity: 0, scale: 0.9 }}
+              animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.8 }}
-              className="text-[#EAEAEA] font-normal leading-tight tracking-tight w-full"
-              style={{
-                fontFamily:
-                  "'SF Pro Display', -apple-system, system-ui, sans-serif",
-                fontSize: "clamp(1.6rem, 5.5vw, 60px)",
-                lineHeight: "clamp(2rem, 6.5vw, 80px)",
-                letterSpacing: "clamp(-0.3px, -0.1vw, -1.28px)",
-                maxWidth: "100%",
-              }}
-              itemProp="description"
-              data-content="personal-summary"
+              className="flex-shrink-0"
             >
-              <span itemProp="name" className="text-transparent bg-clip-text bg-gradient-to-r from-gray-100 to-gray-500 font-medium">Shiva</span>. <span itemProp="jobTitle" className="text-transparent bg-clip-text bg-gradient-to-r from-gray-300 to-gray-600 font-medium">Entrepreneur</span> at <span itemProp="age">21</span>. I build products that turn challenges into solutions—leading tech, teams, and ideas that move people forward.
-            </motion.h1>
+              <div className="w-[160px] h-[160px] sm:w-[220px] sm:h-[220px] md:w-[260px] md:h-[260px] lg:w-[300px] lg:h-[300px] rounded-2xl overflow-hidden border-2 border-[#333] shadow-2xl shadow-white/5 relative group">
+                <img
+                  src="/images/personal/headshot.jpg"
+                  alt="Shiva Charan Mandhapuram"
+                  className="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-700"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-[#0A0A0A]/40 to-transparent" />
+              </div>
+            </motion.div>
+
+            {/* Text */}
+            <motion.div
+              initial={{ opacity: 0, y: 15 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.2 }}
+              className="flex flex-col items-center text-center lg:items-start lg:text-left"
+            >
+              <h1
+                className="text-[#EAEAEA] font-semibold tracking-tight"
+                style={{
+                  fontFamily: "'SF Pro Display', -apple-system, system-ui, sans-serif",
+                  fontSize: "clamp(2rem, 5vw, 3.5rem)",
+                  lineHeight: 1.1,
+                }}
+              >
+                Shiva Charan
+              </h1>
+              <p
+                className="text-[#888] mt-3 leading-relaxed"
+                style={{
+                  fontFamily: "'SF Pro Display', -apple-system, system-ui, sans-serif",
+                  fontSize: "clamp(1rem, 2vw, 1.25rem)",
+                  lineHeight: 1.6,
+                  maxWidth: "540px",
+                }}
+              >
+                I build tech ventures and ship products for founders — from AI platforms to full-stack builds. Currently working with clients across 5 countries.
+              </p>
+              <p
+                className="text-[#555] mt-2 text-sm tracking-wide"
+                style={{ fontFamily: "'SF Pro Display', -apple-system, system-ui, sans-serif" }}
+              >
+                India → Working globally
+              </p>
+              <div className="flex gap-3 mt-5 sm:mt-6 flex-wrap justify-center lg:justify-start">
+                <a
+                  href="/work"
+                  className="px-6 py-3 bg-white text-[#0A0A0A] rounded-full text-sm font-medium hover:bg-gray-200 hover:scale-[1.03] active:scale-[0.97] transition-all duration-300 shadow"
+                >
+                  View My Work
+                </a>
+                <a
+                  href="https://shivacharanmandhapuram.substack.com/p/built-burnt-and-building-againmy"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="px-6 py-3 border border-[#444] text-[#EAEAEA] rounded-full text-sm font-medium hover:border-white hover:scale-[1.03] active:scale-[0.97] transition-all duration-300"
+                >
+                  Read My Story →
+                </a>
+              </div>
+            </motion.div>
           </div>
         </section>
 
-        {/* PROJECT SHOWCASE SECTION */}
-        <section data-section="projects" itemScope itemType="https://schema.org/ItemList">
-        {projects.map((project, index) => (
-          <div key={index} className="flex flex-col items-center w-full" itemScope itemType="https://schema.org/CreativeWork" data-project={project.title.toLowerCase()}>
-            {/* Divider line */}
-            <div className="w-full h-px border-t border-[#333333]"></div>
-            <div className="flex flex-col items-center px-3 sm:px-4 md:px-6 lg:px-10 w-full max-w-[1440px]">
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                className="flex flex-col lg:flex-row justify-between items-start w-full py-8 sm:py-12 md:py-16 lg:py-20 gap-4 sm:gap-6 md:gap-8 lg:gap-48"
-              >
-                {/* --- Text Column --- */}
-                <div className={`flex flex-col items-start gap-3 sm:gap-4 w-full lg:w-auto lg:flex-1 order-2 ${index % 2 === 1 ? 'lg:order-2' : 'lg:order-1'}`}>
-                  <h2
-                    className="text-[#EAEAEA] font-normal"
-                    style={{
-                      fontFamily: "'SF Pro Display', -apple-system, system-ui, sans-serif",
-                      fontSize: "clamp(20px, 3vw, 26.6016px)",
-                      lineHeight: "1.2",
-                    }}
-                    itemProp="name"
-                    data-content="project-title"
-                  >
-                    {project.title}
-                  </h2>
-                  <p
-                    className="text-[#888888] font-normal leading-relaxed"
-                    style={{
-                      fontFamily: "'SF Pro Display', -apple-system, system-ui, sans-serif",
-                      fontSize: "clamp(14px, 2vw, 17.3438px)",
-                      lineHeight: "1.6",
-                    }}
-                    itemProp="description"
-                    data-content="project-description"
-                  >
-                    {project.description}
-                  </p>
-                  <div className="flex flex-col items-start pt-4 sm:pt-6 md:pt-8">
-                    {/* BUTTON: External if URL starts with "http", else internal */}
-                    {project.button.url.startsWith("/") ? (
-                      <a
-                        href={project.button.url}
-                        className="flex flex-row items-center justify-center rounded-full bg-white hover:bg-gray-200 hover:scale-[1.03] active:scale-[0.97] transition-all duration-300 px-6 py-3 min-w-[120px] h-[47px] shadow"
-                      >
-                        <span
-                          className="text-[#0A0A0A] font-normal flex items-center justify-center"
-                          style={{
-                            fontFamily: "'SF Pro Display', -apple-system, system-ui, sans-serif",
-                            fontSize: "clamp(14px, 1vw, 16.0312px)",
-                            lineHeight: "27px",
-                          }}
-                        >
-                          {project.button.label}
-                        </span>
-                      </a>
-                    ) : (
-                      <a
-                        href={project.button.url}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="flex flex-row items-center justify-center rounded-full bg-white hover:bg-gray-200 hover:scale-[1.03] active:scale-[0.97] transition-all duration-300 px-6 py-3 min-w-[120px] h-[47px] shadow"
-                      >
-                        <span
-                          className="text-[#0A0A0A] font-normal flex items-center justify-center"
-                          style={{
-                            fontFamily: "'SF Pro Display', -apple-system, system-ui, sans-serif",
-                            fontSize: "clamp(14px, 1vw, 16.0312px)",
-                            lineHeight: "27px",
-                          }}
-                        >
-                          {project.button.label}
-                        </span>
-                      </a>
-                    )}
-                  </div>
-                </div>
-                {/* --- Visual/Mockup Column --- */}
-                {/* 
-                  🖼️ PROJECT IMAGES GUIDE:
-                  ========================
-                  This section displays project images for each project in the array.
-                  All projects now use actual images instead of hardcoded CSS mockups.
-                  
-                  📁 TO UPDATE PROJECT IMAGES:
-                  1. Upload your project image to: public/images/projects/
-                  2. Update the project.image field in the projects array above
-                  3. Use format: "/images/projects/your-image-name.png"
-                  4. Recommended size: 687x393px (16:9 aspect ratio)
-                  
-                  📋 SUPPORTED FORMATS: PNG, JPG, JPEG, WebP
-                  📏 RESPONSIVE BEHAVIOR: Images automatically scale on mobile
-                  🎨 FALLBACK: Gray background shows if image fails to load
-                */}
-                <div
-                  className={`flex flex-col items-start w-full lg:w-[687.06px] lg:h-[393.47px] order-1 ${index % 2 === 1 ? 'lg:order-1' : 'lg:order-2'}`}
-                  style={{ paddingBottom: "7px" }}
+        {/* ═══════════════════════════════════════
+            PROOF STRIP — Milestones
+        ═══════════════════════════════════════ */}
+        <section className="w-full border-t border-b border-[#222] py-8 bg-[#0D0D0D]">
+          <div className="max-w-[1100px] mx-auto px-6 sm:px-8">
+            <div className="flex flex-wrap justify-center gap-6 sm:gap-8 md:gap-12">
+              {milestones.map((m, i) => (
+                <motion.div
+                  key={i}
+                  initial={{ opacity: 0, y: 10 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.5, delay: i * 0.1 }}
+                  viewport={{ once: true }}
+                  className="text-center min-w-[100px]"
                 >
-                  <div className="w-full h-full min-h-[200px] sm:min-h-[280px] md:min-h-[320px] lg:min-h-[393px] rounded-xl overflow-hidden shadow-lg bg-gray-800 group border border-[#333333] hover:border-gray-500 transition-colors duration-500">
-                    {/* 
-                      📝 IMAGE DISPLAY LOGIC:
-                      - Shows actual project image from /images/projects/ folder
-                      - Uses object-cover to maintain aspect ratio
-                      - Includes alt text for accessibility
-                      - Gray background appears if image is missing
-                    */}
-                    <img
-                      src={project.image}
-                      alt={`${project.title} project screenshot`}
-                      className="w-full h-full object-cover object-center group-hover:scale-[1.05] transition-transform duration-700 ease-in-out"
-                      onError={(e) => {
-                        // Fallback styling if image fails to load
-                        e.currentTarget.style.display = 'none';
-                      }}
-                    />
+                  <div
+                    className="text-white font-bold"
+                    style={{
+                      fontFamily: "'SF Pro Display', -apple-system, system-ui, sans-serif",
+                      fontSize: "clamp(1.5rem, 3vw, 2rem)",
+                    }}
+                  >
+                    {m.number}
                   </div>
+                  <div className="text-[#666] text-xs mt-1 tracking-wide uppercase">
+                    {m.label}
+                  </div>
+                </motion.div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* ═══════════════════════════════════════
+            STORY SECTION — From the Substack
+        ═══════════════════════════════════════ */}
+        <section className="w-full py-16 sm:py-20 md:py-24">
+          <div className="max-w-[900px] mx-auto px-6 sm:px-8">
+            <motion.h2
+              initial={{ opacity: 0, y: 15 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+              className="text-[#EAEAEA] font-semibold mb-10"
+              style={{
+                fontFamily: "'SF Pro Display', -apple-system, system-ui, sans-serif",
+                fontSize: "clamp(1.4rem, 3vw, 2rem)",
+              }}
+            >
+              The Story So Far
+            </motion.h2>
+
+            <div className="space-y-12">
+              {/* Chapter 1 — The Restless Start */}
+              <motion.div
+                initial={{ opacity: 0, y: 15 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6 }}
+                viewport={{ once: true }}
+                className="flex flex-col md:flex-row gap-8 items-start"
+              >
+                <div className="flex-1">
+                  <div className="text-[#555] text-xs uppercase tracking-widest mb-2">The Spark</div>
+                  <p
+                    className="text-[#AAAAAA] leading-relaxed"
+                    style={{
+                      fontFamily: "'SF Pro Display', -apple-system, system-ui, sans-serif",
+                      fontSize: "clamp(0.95rem, 1.5vw, 1.05rem)",
+                      lineHeight: 1.75,
+                    }}
+                  >
+                    At 19, I took a drop year yearning to do something different and big. Destiny landed me in engineering college anyway — but that became my launchpad. I quickly discovered that while writing code was interesting, my real kick was <em>building real stuff</em>. That restless energy led me to my partners, and together we launched <strong>NoobsLearning</strong> — a community I grew from zero to 5,000+ students by personally organizing events, hosting sessions, and engaging with every member.
+                  </p>
+                </div>
+              </motion.div>
+
+              {/* Chapter 2 — From Community to Company */}
+              <motion.div
+                initial={{ opacity: 0, y: 15 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 0.1 }}
+                viewport={{ once: true }}
+                className="flex flex-col md:flex-row gap-8 items-start"
+              >
+                <div className="flex-1">
+                  <div className="text-[#555] text-xs uppercase tracking-widest mb-2">The Hustle</div>
+                  <p
+                    className="text-[#AAAAAA] leading-relaxed"
+                    style={{
+                      fontFamily: "'SF Pro Display', -apple-system, system-ui, sans-serif",
+                      fontSize: "clamp(0.95rem, 1.5vw, 1.05rem)",
+                      lineHeight: 1.75,
+                    }}
+                  >
+                    From the community, we launched <strong>Noobsverse Pvt. Ltd.</strong> and built <strong>Avidia</strong>, an AI-powered SaaS to help beginners learn code by building, not watching tutorials. I became "the sales guy" — running cohorts, pitching users, and bringing in early revenue. That momentum landed us at the <strong>Shark Tank India Season 4</strong> finals in Mumbai. The pitch went on for nearly an hour, standing in front of legends like Ritesh Agarwal and Aman Gupta. We didn't make the TV round, but the experience was a crash course no book could teach.
+                  </p>
+                </div>
+              </motion.div>
+
+              {/* Chapter 3 — Photo Row: Speaking + Jagriti */}
+              <motion.div
+                initial={{ opacity: 0, y: 15 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 0.15 }}
+                viewport={{ once: true }}
+                className="grid grid-cols-1 md:grid-cols-2 gap-4"
+              >
+                <div className="rounded-xl overflow-hidden border border-[#333] h-[250px] sm:h-[300px]">
+                  <img
+                    src="/images/personal/speaking.png"
+                    alt="Shiva speaking on stage"
+                    className="w-full h-full object-cover object-center hover:scale-105 transition-transform duration-700"
+                  />
+                </div>
+                <div className="rounded-xl overflow-hidden border border-[#333] h-[250px] sm:h-[300px]">
+                  <img
+                    src="/images/personal/jagriti-yatra.png"
+                    alt="Shiva at Jagriti Yatra"
+                    className="w-full h-full object-cover object-center hover:scale-105 transition-transform duration-700"
+                  />
+                </div>
+              </motion.div>
+
+              {/* Chapter 4 — The Pivot & What's Next */}
+              <motion.div
+                initial={{ opacity: 0, y: 15 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 0.2 }}
+                viewport={{ once: true }}
+                className="flex flex-col md:flex-row gap-8 items-start"
+              >
+                <div className="flex-1">
+                  <div className="text-[#555] text-xs uppercase tracking-widest mb-2">The Pivot & Now</div>
+                  <p
+                    className="text-[#AAAAAA] leading-relaxed"
+                    style={{
+                      fontFamily: "'SF Pro Display', -apple-system, system-ui, sans-serif",
+                      fontSize: "clamp(0.95rem, 1.5vw, 1.05rem)",
+                      lineHeight: 1.75,
+                    }}
+                  >
+                    As an alumnus of <strong>Jagriti Yatra '24</strong>, I travelled 8,000 kilometers across India — meeting founders, industry leaders like Aravind Sanka (co-founder of Rapido), and grassroots innovators. The journey crystallized my path. I left Noobsverse and started shipping independently — building products for founders across the US, UK, France, and India. From dating apps to AI products, EV platforms to healthcare portals. Now I'm deep in building <strong>lyzn.ai</strong> — a personal AI companion that thinks, plans, and acts for you — while continuing to ship products for clients who value execution over talk.
+                  </p>
                 </div>
               </motion.div>
             </div>
           </div>
-        ))}
         </section>
 
-        {/* FOOTER SECTION */}
-        <footer className="py-16 border-t border-[#333333] w-full">
-          <div className="max-w-[1440px] mx-auto px-10">
-            <div className="grid md:grid-cols-2 gap-8 items-start">
+        {/* ═══════════════════════════════════════
+            CURRENTLY BUILDING — lyzn.ai spotlight
+        ═══════════════════════════════════════ */}
+        <section className="w-full py-12 sm:py-16 border-t border-[#222]">
+          <div className="max-w-[900px] mx-auto px-6 sm:px-8">
+            <motion.div
+              initial={{ opacity: 0, y: 15 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+            >
+              <div className="text-[#555] text-xs uppercase tracking-widest mb-6">Currently Building</div>
+              <a
+                href="https://lyzn.ai"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="block group"
+              >
+                <div className="border border-[#333] rounded-xl p-6 sm:p-8 hover:border-[#555] transition-all duration-500 bg-[#0D0D0D]">
+                  <div className="flex flex-col sm:flex-row items-start gap-6">
+                    <div className="w-full sm:w-[280px] h-[160px] rounded-lg overflow-hidden border border-[#333] flex-shrink-0">
+                      <img
+                        src="/images/projects/lyzn.png"
+                        alt="lyzn.ai"
+                        className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+                        onError={(e) => { e.currentTarget.style.display = 'none'; }}
+                      />
+                    </div>
+                    <div className="flex flex-col">
+                      <div className="flex items-center gap-3 mb-2">
+                        <h3 className="text-white text-xl font-semibold" style={{ fontFamily: "'SF Pro Display', -apple-system, system-ui, sans-serif" }}>
+                          lyzn.ai
+                        </h3>
+                        <span className="text-[10px] uppercase tracking-widest text-emerald-400 bg-emerald-400/10 px-2 py-0.5 rounded-full">Active</span>
+                      </div>
+                      <p className="text-[#888] text-sm leading-relaxed" style={{ fontFamily: "'SF Pro Display', -apple-system, system-ui, sans-serif" }}>
+                        Building personal AI superintelligence. An AI companion that thinks, plans, and acts for you — starting with the Lyzn pendant and agentic flows.
+                      </p>
+                      <span className="text-white text-sm mt-4 group-hover:underline">Visit lyzn.ai →</span>
+                    </div>
+                  </div>
+                </div>
+              </a>
+            </motion.div>
+          </div>
+        </section>
+
+        {/* ═══════════════════════════════════════
+            PAST VENTURES — Closed
+        ═══════════════════════════════════════ */}
+        <section className="w-full py-12 sm:py-16 border-t border-[#222]">
+          <div className="max-w-[900px] mx-auto px-6 sm:px-8">
+            <div className="text-[#555] text-xs uppercase tracking-widest mb-6">Past Ventures</div>
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
+              {[
+                {
+                  name: "Avidia",
+                  desc: "AI learning platform. Pitched at Shark Tank India S4.",
+                  period: "2023–2024",
+                },
+                {
+                  name: "CoffeeCodes",
+                  desc: "Tech consultancy that crossed 1M+ INR in revenue.",
+                  period: "2023–2025",
+                },
+                {
+                  name: "NoobsLearning",
+                  desc: "5,000+ member student community. 15+ workshops & hackathons.",
+                  period: "2022–2024",
+                },
+              ].map((v, i) => (
+                <motion.div
+                  key={i}
+                  initial={{ opacity: 0, y: 10 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.5, delay: i * 0.1 }}
+                  viewport={{ once: true }}
+                  className="border border-[#2a2a2a] rounded-lg p-5 bg-[#0D0D0D] group hover:border-[#444] transition-colors duration-300"
+                >
+                  <div className="flex items-center gap-2 mb-2">
+                    <h4 className="text-[#EAEAEA] text-sm font-medium">{v.name}</h4>
+                    <span className="text-[9px] uppercase tracking-widest text-[#666] bg-[#1a1a1a] px-2 py-0.5 rounded-full">Closed</span>
+                  </div>
+                  <p className="text-[#666] text-xs leading-relaxed mb-2">{v.desc}</p>
+                  <p className="text-[#444] text-[10px] tracking-wide">{v.period}</p>
+                </motion.div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* ═══════════════════════════════════════
+            FOOTER
+        ═══════════════════════════════════════ */}
+        <footer className="py-16 border-t border-[#222] w-full">
+          <div className="max-w-[1100px] mx-auto px-6 sm:px-8">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-8 items-start">
               <div>
-                <h2 className="text-4xl md:text-5xl font-bold mb-4 text-[#EAEAEA]">
+                <h2 className="text-3xl md:text-4xl font-bold text-[#EAEAEA]" style={{ fontFamily: "'SF Pro Display', -apple-system, system-ui, sans-serif" }}>
                   Shiva Charan
                   <br />
                   Mandhapuram
                 </h2>
+                <p className="text-[#666] text-sm mt-3">Have a project? <a href="/work" className="text-white hover:underline transition-all">Let's talk →</a></p>
               </div>
+
               <div className="grid grid-cols-2 gap-8 text-sm">
-                <div className="space-y-3">
-                  <a
-                    href="https://x.com/shivacharanm7"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="block hover:text-white transition-colors text-[#888888]"
-                  >
-                    X
-                  </a>
-                  <a
-                    href="https://www.linkedin.com/in/shiva-charan-mandhapuram/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="block hover:text-white transition-colors text-[#888888]"
-                  >
-                    LinkedIn
-                  </a>
-                  <a
-                    href="https://www.instagram.com/shivacharanmandhapuram/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="block hover:text-white transition-colors text-[#888888]"
-                  >
-                    Instagram
-                  </a>
+                <div className="space-y-4">
+                  <div className="text-[#EAEAEA] font-medium mb-1">Socials</div>
+                  <a href="https://x.com/shivacharanm7" target="_blank" rel="noopener noreferrer" className="block hover:text-white transition-colors text-[#888]">X</a>
+                  <a href="https://www.linkedin.com/in/shiva-charan-mandhapuram/" target="_blank" rel="noopener noreferrer" className="block hover:text-white transition-colors text-[#888]">LinkedIn</a>
+                  <a href="https://www.instagram.com/shivacharanmandhapuram/" target="_blank" rel="noopener noreferrer" className="block hover:text-white transition-colors text-[#888]">Instagram</a>
+                  <a href="https://shivacharanmandhapuram.substack.com" target="_blank" rel="noopener noreferrer" className="block hover:text-white transition-colors text-[#888]">Substack</a>
                 </div>
-                <div className="space-y-3">
-                  <a
-                    href="https://shivacharanmandhapuram.substack.com"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="block hover:text-white transition-colors text-[#888888]"
-                  >
-                    Substack
-                  </a>
+                <div className="space-y-4">
+                  <div className="text-[#EAEAEA] font-medium mb-1">Contact</div>
+                  <a href="https://forms.gle/Ncn648Sux1Tr9oJ16" target="_blank" rel="noopener noreferrer" className="block hover:text-white transition-colors text-[#888]">Inquiry Form ↗</a>
+                  <a href="tel:+917013154979" className="block hover:text-white transition-colors text-[#888]">+91 7013154979</a>
                 </div>
               </div>
             </div>
-            {/* Subtle, extra-small, credit for build and design inspiration */}
-            <div className="text-[10px] text-gray-600 text-center mt-6 tracking-tight opacity-80">
-              Built with ⚡️ | Design inspired by Advait Paliwal
+            <div className="text-[10px] text-gray-600 text-center mt-12 tracking-tight opacity-80">
+              Built with ⚡️
             </div>
           </div>
         </footer>

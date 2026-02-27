@@ -29,7 +29,7 @@ export default function Interests() {
       <div className="max-w-6xl mx-auto px-3 sm:px-4 md:px-6">
         <section className="pt-16 sm:pt-20 md:pt-24 pb-12 sm:pb-16 md:pb-20">
           <div className="max-w-4xl mx-auto">
-            <h1 
+            <h1
               className="text-[#EAEAEA] font-normal leading-tight mb-8 sm:mb-12 md:mb-16"
               style={{
                 fontFamily: "'SF Pro Display', -apple-system, system-ui, sans-serif",
@@ -40,7 +40,7 @@ export default function Interests() {
               Interests
             </h1>
             <div className="flex items-center justify-center min-h-[200px] sm:min-h-[300px] md:min-h-[400px]">
-              <p 
+              <p
                 className="text-[#888888] font-normal text-center"
                 style={{
                   fontFamily: "'SF Pro Display', -apple-system, system-ui, sans-serif",
@@ -53,60 +53,37 @@ export default function Interests() {
             </div>
           </div>
         </section>
-        
+
         {/* Footer Section - Social Links */}
         <footer className="py-16 border-t border-[#333333] w-full">
           <div className="max-w-[1440px] mx-auto px-10">
-            <div className="grid md:grid-cols-2 gap-8 items-start">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-8 items-start">
               <div>
                 <h2 className="text-4xl md:text-5xl font-bold mb-4 text-[#EAEAEA]">
                   Shiva Charan
                   <br />
                   Mandhapuram
                 </h2>
+                <p className="text-[#666] text-sm mt-3">Have a project? <a href="/work" className="text-white hover:underline transition-all">Let's talk →</a></p>
               </div>
               <div className="grid grid-cols-2 gap-8 text-sm">
-                <div className="space-y-3">
-                  <a
-                    href="https://x.com/shivacharanm7"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="block hover:text-white transition-colors text-[#888888]"
-                  >
-                    X
-                  </a>
-                  <a
-                    href="https://www.linkedin.com/in/shiva-charan-mandhapuram/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="block hover:text-white transition-colors text-[#888888]"
-                  >
-                    LinkedIn
-                  </a>
-                  <a
-                    href="https://www.instagram.com/shivacharanmandhapuram/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="block hover:text-white transition-colors text-[#888888]"
-                  >
-                    Instagram
-                  </a>
+                <div className="space-y-4">
+                  <div className="text-[#EAEAEA] font-medium mb-1">Socials</div>
+                  <a href="https://x.com/shivacharanm7" target="_blank" rel="noopener noreferrer" className="block hover:text-white transition-colors text-[#888888]">X</a>
+                  <a href="https://www.linkedin.com/in/shiva-charan-mandhapuram/" target="_blank" rel="noopener noreferrer" className="block hover:text-white transition-colors text-[#888888]">LinkedIn</a>
+                  <a href="https://www.instagram.com/shivacharanmandhapuram/" target="_blank" rel="noopener noreferrer" className="block hover:text-white transition-colors text-[#888888]">Instagram</a>
+                  <a href="https://shivacharanmandhapuram.substack.com" target="_blank" rel="noopener noreferrer" className="block hover:text-white transition-colors text-[#888888]">Substack</a>
                 </div>
-                <div className="space-y-3">
-                  <a
-                    href="https://shivacharanmandhapuram.substack.com"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="block hover:text-white transition-colors text-[#888888]"
-                  >
-                    Substack
-                  </a>
+                <div className="space-y-4">
+                  <div className="text-[#EAEAEA] font-medium mb-1">Contact</div>
+                  <a href="https://forms.gle/Ncn648Sux1Tr9oJ16" target="_blank" rel="noopener noreferrer" className="block hover:text-white transition-colors text-[#888]">Inquiry Form ↗</a>
+                  <a href="tel:+917013154979" className="block hover:text-white transition-colors text-[#888]">+91 7013154979</a>
                 </div>
               </div>
             </div>
-            {/* Subtle, extra-small, credit for build and design inspiration */}
-            <div className="text-[10px] text-gray-600 text-center mt-6 tracking-tight opacity-80">
-              Built with ⚡️ | Design inspired by Advait Paliwal
+            {/* Subtle, extra-small, credit for build */}
+            <div className="text-[10px] text-gray-600 text-center mt-12 tracking-tight opacity-80">
+              Built with ⚡️
             </div>
           </div>
         </footer>
