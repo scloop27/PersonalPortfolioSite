@@ -113,55 +113,55 @@ export default function Work() {
             href={project.url}
             target="_blank"
             rel="noopener noreferrer"
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.7, delay: index * 0.1, ease: [0.21, 0.47, 0.32, 0.98] }}
+            initial={{ opacity: 0, scale: 0.95, y: 30 }}
+            whileInView={{ opacity: 1, scale: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: index * 0.1, ease: [0.16, 1, 0.3, 1] }}
             viewport={{ once: true, margin: "-50px" }}
             className="group block h-full focus:outline-none"
         >
-            <div className="flex flex-col h-full border border-[#1A1A1A] rounded-2xl overflow-hidden hover:border-[#333] transition-all duration-500 bg-gradient-to-b from-[#0A0A0A] to-[#0D0D0D] hover:shadow-[0_8px_30px_rgb(0,0,0,0.5)]">
-                <div className="h-[220px] sm:h-[240px] overflow-hidden relative bg-[#111]">
+            <div className="flex flex-col h-full border border-[#222] rounded-3xl overflow-hidden hover:border-[#444] transition-all duration-700 bg-gradient-to-b from-[#0F0F0F] to-[#050505] hover:shadow-[0_0_40px_rgba(255,255,255,0.06)] relative z-10 hover:z-20">
+                <div className="h-[240px] sm:h-[260px] overflow-hidden relative bg-[#111]">
                     <img
                         src={project.image}
                         alt={project.title}
-                        className="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-1000 ease-out"
+                        className="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-[1200ms] ease-out opacity-90 group-hover:opacity-100"
                         onError={(e) => {
                             e.currentTarget.style.display = "none";
                         }}
                     />
-                    <div className="absolute inset-0 bg-gradient-to-t from-[#0D0D0D] via-transparent to-transparent opacity-80" />
+                    <div className="absolute inset-0 bg-gradient-to-t from-[#0A0A0A] via-transparent to-transparent opacity-90" />
                 </div>
-                <div className="p-6 sm:p-8 flex flex-col flex-grow relative">
-                    <div className="flex items-start justify-between mb-4">
+                <div className="p-7 sm:p-9 flex flex-col flex-grow relative bg-transparent">
+                    <div className="flex items-start justify-between mb-5">
                         <div className="flex flex-col gap-2">
                             <div className="flex items-center gap-3">
                                 <h3
-                                    className="text-[#EAEAEA] font-medium text-lg lg:text-xl group-hover:text-white transition-colors duration-300"
+                                    className="text-[#F5F5F5] font-semibold tracking-tight text-xl lg:text-2xl group-hover:text-white transition-colors duration-300"
                                     style={{ fontFamily: "'SF Pro Display', -apple-system, system-ui, sans-serif" }}
                                 >
                                     {project.title}
                                 </h3>
                                 {project.active && (
-                                    <span className="text-[9px] uppercase tracking-widest text-[#FFF] bg-white/10 px-2 py-0.5 rounded-full backdrop-blur-md">
+                                    <span className="text-[10px] sm:text-xs uppercase tracking-widest text-[#FFF] bg-white/10 px-2.5 py-0.5 rounded-full backdrop-blur-md font-medium">
                                         Live
                                     </span>
                                 )}
                             </div>
                         </div>
-                        <div className="text-[#444] group-hover:text-white transition-all duration-500 transform group-hover:translate-x-1 group-hover:-translate-y-1">
-                            <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <div className="text-[#555] group-hover:text-white transition-all duration-500 transform group-hover:translate-x-1 group-hover:-translate-y-1">
+                            <svg className="w-5 h-5 sm:w-6 sm:h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M17 8l4 4m0 0l-4 4m4-4H3" />
                             </svg>
                         </div>
                     </div>
-                    <p className="text-[#888] text-sm sm:text-base leading-relaxed mb-8 flex-grow group-hover:text-[#AAA] transition-colors duration-300" style={{ fontFamily: "'SF Pro Display', -apple-system, system-ui, sans-serif" }}>
+                    <p className="text-[#A3A3A3] text-sm sm:text-[15px] leading-relaxed mb-8 flex-grow group-hover:text-[#CCCCCC] transition-colors duration-300" style={{ fontFamily: "'SF Pro Display', -apple-system, system-ui, sans-serif" }}>
                         {project.description}
                     </p>
-                    <div className="flex flex-wrap gap-2 mt-auto">
+                    <div className="flex flex-wrap gap-2.5 mt-auto">
                         {project.tags.map((tag) => (
                             <span
                                 key={tag}
-                                className="text-[10px] tracking-wider text-[#999] bg-[#1A1A1A] px-3 py-1.5 rounded-full border border-[#222]"
+                                className="text-[10px] sm:text-[11px] tracking-widest text-[#888] font-medium bg-[#111] px-3.5 py-1.5 rounded-full border border-[#2A2A2A]"
                             >
                                 {tag}
                             </span>
@@ -178,16 +178,16 @@ export default function Work() {
                 {/* ═══════════════════════════════════════
                     STICKY SOCIAL BAR
                 ═══════════════════════════════════════ */}
-                <div className="fixed top-[52px] sm:top-[60px] left-0 right-0 z-40 bg-gradient-to-b from-[#0A0A0A]/95 to-transparent backdrop-blur-md pt-4 pb-6 transition-all duration-300">
+                <div className="fixed top-[52px] sm:top-[60px] left-0 right-0 z-40 pt-4 pb-6 transition-all duration-500 before:absolute before:inset-0 before:bg-gradient-to-b before:from-[#0A0A0A]/90 before:to-transparent before:backdrop-blur-xl before:-z-10">
                     <div className="max-w-[1200px] mx-auto px-5 sm:px-8 flex items-center justify-between">
-                        <div className="flex items-center gap-5 sm:gap-8">
+                        <div className="flex items-center gap-6 sm:gap-10">
                             {socials.map((s) => (
                                 <a
                                     key={s.label}
                                     href={s.url}
                                     target="_blank"
                                     rel="noopener noreferrer"
-                                    className="text-[#888] font-medium hover:text-white text-xs sm:text-sm transition-colors duration-300"
+                                    className="text-[#A3A3A3] tracking-wide font-medium hover:text-white text-xs sm:text-sm transition-all duration-300"
                                 >
                                     {s.label}
                                 </a>
@@ -195,7 +195,7 @@ export default function Work() {
                         </div>
                         <a
                             href="#contact"
-                            className="text-xs sm:text-sm text-black bg-white hover:bg-gray-200 px-5 py-2 sm:px-6 sm:py-2.5 rounded-full font-medium transition-all duration-300 shadow-[0_0_15px_rgba(255,255,255,0.1)] hover:shadow-[0_0_20px_rgba(255,255,255,0.2)] hover:scale-105 active:scale-95"
+                            className="text-xs sm:text-[13px] text-black bg-white hover:bg-gray-100 px-6 py-2.5 sm:px-7 sm:py-3 rounded-full font-semibold transition-all duration-300 shadow-[0_0_20px_rgba(255,255,255,0.15)] hover:shadow-[0_0_30px_rgba(255,255,255,0.3)] transform hover:-translate-y-0.5 active:translate-y-0 active:scale-95"
                         >
                             Let's Talk →
                         </a>
@@ -205,26 +205,29 @@ export default function Work() {
                 {/* ═══════════════════════════════════════
                     HERO SECTION
                 ═══════════════════════════════════════ */}
-                <section className="pt-32 sm:pt-36 pb-12 sm:pb-16 w-full">
+                <section className="pt-36 sm:pt-44 pb-16 sm:pb-20 w-full">
                     <div className="max-w-[1200px] mx-auto px-6 sm:px-8">
                         <motion.div
-                            initial={{ opacity: 0, y: 20 }}
+                            initial={{ opacity: 0, y: 30 }}
                             animate={{ opacity: 1, y: 0 }}
-                            transition={{ duration: 0.8 }}
+                            transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
                         >
                             <h1
-                                className="text-[#EAEAEA] font-semibold tracking-tight"
+                                className="font-bold tracking-tight text-transparent bg-clip-text bg-gradient-to-b from-[#FFFFFF] to-[#A3A3A3]"
                                 style={{
                                     fontFamily: "'SF Pro Display', -apple-system, system-ui, sans-serif",
-                                    fontSize: "clamp(1.8rem, 4.5vw, 3rem)",
-                                    lineHeight: 1.15,
+                                    fontSize: "clamp(2.5rem, 6vw, 4.5rem)",
+                                    lineHeight: 1.1,
+                                    letterSpacing: "-0.02em"
                                 }}
                             >
-                                From AI Products to Full-Stack Builds
+                                From AI Products
                                 <br />
-                                <span className="text-[#555]">— I Ship It.</span>
+                                To Full-Stack Builds
+                                <br />
+                                <span className="text-[#666] font-medium">— I Ship It.</span>
                             </h1>
-                            <p className="text-[#888] mt-4 text-sm sm:text-base max-w-[600px] leading-relaxed" style={{ fontFamily: "'SF Pro Display', -apple-system, system-ui, sans-serif" }}>
+                            <p className="text-[#A3A3A3] mt-6 text-base sm:text-lg max-w-[650px] leading-relaxed" style={{ fontFamily: "'SF Pro Display', -apple-system, system-ui, sans-serif" }}>
                                 Working with founders and companies across India, USA, UK, France, and more.
                                 Here's everything I've built — my own ventures and client projects.
                             </p>
@@ -232,17 +235,17 @@ export default function Work() {
 
                         {/* Stats */}
                         <motion.div
-                            initial={{ opacity: 0, y: 10 }}
+                            initial={{ opacity: 0, y: 20 }}
                             animate={{ opacity: 1, y: 0 }}
-                            transition={{ duration: 0.6, delay: 0.2 }}
-                            className="flex flex-wrap gap-8 sm:gap-12 mt-8"
+                            transition={{ duration: 0.8, delay: 0.2, ease: [0.16, 1, 0.3, 1] }}
+                            className="flex flex-wrap gap-10 sm:gap-16 mt-12"
                         >
                             {stats.map((s) => (
-                                <div key={s.label}>
-                                    <div className="text-white font-bold text-2xl sm:text-3xl" style={{ fontFamily: "'SF Pro Display', -apple-system, system-ui, sans-serif" }}>
+                                <div key={s.label} className="group cursor-default">
+                                    <div className="text-white font-bold text-3xl sm:text-4xl tracking-tight group-hover:scale-105 transition-transform origin-left duration-300" style={{ fontFamily: "'SF Pro Display', -apple-system, system-ui, sans-serif" }}>
                                         {s.value}
                                     </div>
-                                    <div className="text-[#666] text-xs mt-1 uppercase tracking-wide">{s.label}</div>
+                                    <div className="text-[#666] text-xs mt-2 uppercase tracking-[0.2em] font-medium transition-colors duration-300 group-hover:text-[#888]">{s.label}</div>
                                 </div>
                             ))}
                         </motion.div>
@@ -365,14 +368,14 @@ export default function Work() {
                                         name="entry.561086832"
                                         placeholder="Your Full Name *"
                                         required
-                                        className="w-full px-5 py-3.5 bg-[#111] border border-[#333] rounded-xl text-[#EAEAEA] placeholder-[#666] focus:outline-none focus:border-[#666] transition-colors text-sm"
+                                        className="w-full px-6 py-4 bg-[#0A0A0A] border border-[#222] rounded-2xl text-[#EAEAEA] placeholder-[#555] focus:outline-none focus:border-[#555] focus:bg-[#111] focus:ring-1 focus:ring-[#555] transition-all duration-300 text-sm sm:text-base"
                                         style={{ fontFamily: "'SF Pro Display', -apple-system, system-ui, sans-serif" }}
                                     />
                                     <input
                                         type="text"
                                         name="entry.1170177458"
                                         placeholder="Company Name"
-                                        className="w-full px-5 py-3.5 bg-[#111] border border-[#333] rounded-xl text-[#EAEAEA] placeholder-[#666] focus:outline-none focus:border-[#666] transition-colors text-sm"
+                                        className="w-full px-6 py-4 bg-[#0A0A0A] border border-[#222] rounded-2xl text-[#EAEAEA] placeholder-[#555] focus:outline-none focus:border-[#555] focus:bg-[#111] focus:ring-1 focus:ring-[#555] transition-all duration-300 text-sm sm:text-base"
                                         style={{ fontFamily: "'SF Pro Display', -apple-system, system-ui, sans-serif" }}
                                     />
                                     <input
@@ -380,7 +383,7 @@ export default function Work() {
                                         name="entry.342121589"
                                         placeholder="Business Email Address *"
                                         required
-                                        className="w-full px-5 py-3.5 bg-[#111] border border-[#333] rounded-xl text-[#EAEAEA] placeholder-[#666] focus:outline-none focus:border-[#666] transition-colors text-sm"
+                                        className="w-full px-6 py-4 bg-[#0A0A0A] border border-[#222] rounded-2xl text-[#EAEAEA] placeholder-[#555] focus:outline-none focus:border-[#555] focus:bg-[#111] focus:ring-1 focus:ring-[#555] transition-all duration-300 text-sm sm:text-base"
                                         style={{ fontFamily: "'SF Pro Display', -apple-system, system-ui, sans-serif" }}
                                     />
                                     <input
@@ -388,15 +391,15 @@ export default function Work() {
                                         name="entry.978577989"
                                         placeholder="Phone Number *"
                                         required
-                                        className="w-full px-5 py-3.5 bg-[#111] border border-[#333] rounded-xl text-[#EAEAEA] placeholder-[#666] focus:outline-none focus:border-[#666] transition-colors text-sm"
+                                        className="w-full px-6 py-4 bg-[#0A0A0A] border border-[#222] rounded-2xl text-[#EAEAEA] placeholder-[#555] focus:outline-none focus:border-[#555] focus:bg-[#111] focus:ring-1 focus:ring-[#555] transition-all duration-300 text-sm sm:text-base"
                                         style={{ fontFamily: "'SF Pro Display', -apple-system, system-ui, sans-serif" }}
                                     />
 
-                                    <div className="flex flex-col sm:flex-row items-center gap-4 pt-4">
+                                    <div className="flex flex-col sm:flex-row items-center gap-4 pt-6">
                                         <button
                                             type="submit"
                                             id="submit-btn"
-                                            className="w-full sm:w-auto px-8 py-3.5 bg-white text-[#0A0A0A] rounded-full text-sm font-medium hover:bg-gray-200 transition-all duration-300 shadow-lg"
+                                            className="w-full sm:w-auto px-10 py-4 bg-white text-[#0A0A0A] rounded-full text-base font-semibold hover:bg-gray-200 transition-all duration-300 shadow-[0_0_20px_rgba(255,255,255,0.15)] hover:shadow-[0_0_30px_rgba(255,255,255,0.3)] transform hover:-translate-y-0.5"
                                         >
                                             Submit Inquiry →
                                         </button>
