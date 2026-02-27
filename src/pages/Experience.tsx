@@ -74,7 +74,7 @@ export default function Experience() {
       title: "Shark Tank India S4",
       description: "Pitched Avidia at the final round in Mumbai. Nearly an hour in the hot seat with Ritesh Agarwal, Aman Gupta, and Anupam Mittal.",
       category: "MILESTONE",
-      image: "/images/personal/newsharktank.jpg",
+      image: "/images/personal/newsharktank.png",
       url: "https://shivacharanmandhapuram.substack.com/p/built-burnt-and-building-againmy",
     },
     {
@@ -105,7 +105,7 @@ export default function Experience() {
     {
       year: "2023",
       title: "Avidia",
-      description: "Co-founded AI learning platform to combat 'tutorial hell.' Launched Noobsverse Pvt. Ltd., ran cohorts, brought in early revenue, and pitched at Shark Tank India.",
+      description: "Co-founded AI learning platform to combat 'tutorial hell'. Ran cohorts, brought in early revenue, and pitched at Shark Tank India.",
       category: "FOUNDED",
       image: "/images/projects/avidia.png",
       url: "#",

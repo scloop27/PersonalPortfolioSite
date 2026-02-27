@@ -113,46 +113,55 @@ export default function Work() {
             href={project.url}
             target="_blank"
             rel="noopener noreferrer"
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: index * 0.08 }}
-            viewport={{ once: true }}
-            className="group block"
+            transition={{ duration: 0.7, delay: index * 0.1, ease: [0.21, 0.47, 0.32, 0.98] }}
+            viewport={{ once: true, margin: "-50px" }}
+            className="group block h-full focus:outline-none"
         >
-            <div className="border border-[#2a2a2a] rounded-xl overflow-hidden hover:border-[#555] transition-all duration-500 bg-[#0D0D0D]">
-                <div className="h-[200px] sm:h-[220px] overflow-hidden relative">
+            <div className="flex flex-col h-full border border-[#1A1A1A] rounded-2xl overflow-hidden hover:border-[#333] transition-all duration-500 bg-gradient-to-b from-[#0A0A0A] to-[#0D0D0D] hover:shadow-[0_8px_30px_rgb(0,0,0,0.5)]">
+                <div className="h-[220px] sm:h-[240px] overflow-hidden relative bg-[#111]">
                     <img
                         src={project.image}
                         alt={project.title}
-                        className="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-700"
+                        className="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-1000 ease-out"
                         onError={(e) => {
                             e.currentTarget.style.display = "none";
                         }}
                     />
-                    <div className="absolute inset-0 bg-gradient-to-t from-[#0D0D0D] via-transparent to-transparent opacity-60" />
+                    <div className="absolute inset-0 bg-gradient-to-t from-[#0D0D0D] via-transparent to-transparent opacity-80" />
                 </div>
-                <div className="p-5">
-                    <div className="flex items-center gap-2 mb-2">
-                        <h3
-                            className="text-[#EAEAEA] font-medium text-base"
-                            style={{ fontFamily: "'SF Pro Display', -apple-system, system-ui, sans-serif" }}
-                        >
-                            {project.title}
-                        </h3>
-                        {project.active && (
-                            <span className="text-[9px] uppercase tracking-widest text-emerald-400 bg-emerald-400/10 px-2 py-0.5 rounded-full">
-                                Active
-                            </span>
-                        )}
+                <div className="p-6 sm:p-8 flex flex-col flex-grow relative">
+                    <div className="flex items-start justify-between mb-4">
+                        <div className="flex flex-col gap-2">
+                            <div className="flex items-center gap-3">
+                                <h3
+                                    className="text-[#EAEAEA] font-medium text-lg lg:text-xl group-hover:text-white transition-colors duration-300"
+                                    style={{ fontFamily: "'SF Pro Display', -apple-system, system-ui, sans-serif" }}
+                                >
+                                    {project.title}
+                                </h3>
+                                {project.active && (
+                                    <span className="text-[9px] uppercase tracking-widest text-[#FFF] bg-white/10 px-2 py-0.5 rounded-full backdrop-blur-md">
+                                        Live
+                                    </span>
+                                )}
+                            </div>
+                        </div>
+                        <div className="text-[#444] group-hover:text-white transition-all duration-500 transform group-hover:translate-x-1 group-hover:-translate-y-1">
+                            <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                            </svg>
+                        </div>
                     </div>
-                    <p className="text-[#888] text-sm leading-relaxed mb-3 line-clamp-2" style={{ fontFamily: "'SF Pro Display', -apple-system, system-ui, sans-serif" }}>
+                    <p className="text-[#888] text-sm sm:text-base leading-relaxed mb-8 flex-grow group-hover:text-[#AAA] transition-colors duration-300" style={{ fontFamily: "'SF Pro Display', -apple-system, system-ui, sans-serif" }}>
                         {project.description}
                     </p>
-                    <div className="flex flex-wrap gap-1.5">
+                    <div className="flex flex-wrap gap-2 mt-auto">
                         {project.tags.map((tag) => (
                             <span
                                 key={tag}
-                                className="text-[10px] uppercase tracking-wider text-[#666] bg-[#1a1a1a] px-2 py-0.5 rounded-full border border-[#2a2a2a]"
+                                className="text-[10px] tracking-wider text-[#999] bg-[#1A1A1A] px-3 py-1.5 rounded-full border border-[#222]"
                             >
                                 {tag}
                             </span>
@@ -169,16 +178,16 @@ export default function Work() {
                 {/* ═══════════════════════════════════════
                     STICKY SOCIAL BAR
                 ═══════════════════════════════════════ */}
-                <div className="fixed top-[56px] left-0 right-0 z-40 bg-[#0A0A0A]/90 backdrop-blur-sm border-b border-[#222]">
-                    <div className="max-w-[1200px] mx-auto px-4 sm:px-6 py-2 flex items-center justify-between">
-                        <div className="flex items-center gap-4 sm:gap-6">
+                <div className="fixed top-[52px] sm:top-[60px] left-0 right-0 z-40 bg-gradient-to-b from-[#0A0A0A]/95 to-transparent backdrop-blur-md pt-4 pb-6 transition-all duration-300">
+                    <div className="max-w-[1200px] mx-auto px-5 sm:px-8 flex items-center justify-between">
+                        <div className="flex items-center gap-5 sm:gap-8">
                             {socials.map((s) => (
                                 <a
                                     key={s.label}
                                     href={s.url}
                                     target="_blank"
                                     rel="noopener noreferrer"
-                                    className="text-[#666] hover:text-white text-xs transition-colors duration-300"
+                                    className="text-[#888] font-medium hover:text-white text-xs sm:text-sm transition-colors duration-300"
                                 >
                                     {s.label}
                                 </a>
@@ -186,7 +195,7 @@ export default function Work() {
                         </div>
                         <a
                             href="#contact"
-                            className="text-xs text-white bg-white/10 hover:bg-white/20 px-4 py-1.5 rounded-full transition-all duration-300"
+                            className="text-xs sm:text-sm text-black bg-white hover:bg-gray-200 px-5 py-2 sm:px-6 sm:py-2.5 rounded-full font-medium transition-all duration-300 shadow-[0_0_15px_rgba(255,255,255,0.1)] hover:shadow-[0_0_20px_rgba(255,255,255,0.2)] hover:scale-105 active:scale-95"
                         >
                             Let's Talk →
                         </a>
