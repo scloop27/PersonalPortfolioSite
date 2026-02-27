@@ -182,7 +182,7 @@ export default function About() {
                       lineHeight: 1.75,
                     }}
                   >
-                    From the community, we launched <strong>Noobsverse Pvt. Ltd.</strong> and built <strong>Avidia</strong>, an AI-powered SaaS to help beginners learn code by building, not watching tutorials. I became "the sales guy" — running cohorts, pitching users, and bringing in early revenue. That momentum landed us at the <strong>Shark Tank India Season 4</strong> finals in Mumbai. The pitch went on for nearly an hour, standing in front of legends like Ritesh Agarwal and Aman Gupta. We didn't make the TV round, but the experience was a crash course no book could teach.
+                    From the community, we launched <strong>our first startup</strong> and built <strong>Avidia</strong>, an AI-powered SaaS to help beginners learn code by building, not watching tutorials. I became "the sales guy" — running cohorts, pitching users, and bringing in early revenue. That momentum landed us at the <strong>Shark Tank India Season 4</strong> finals in Mumbai. The pitch went on for nearly an hour, standing in front of legends like Ritesh Agarwal and Aman Gupta. We didn't make the TV round, but the experience was a crash course no book could teach.
                   </p>
                 </div>
               </motion.div>
@@ -229,18 +229,18 @@ export default function About() {
                       lineHeight: 1.75,
                     }}
                   >
-                    As an alumnus of <strong>Jagriti Yatra '24</strong>, I travelled 8,000 kilometers across India — meeting founders, industry leaders like Aravind Sanka (co-founder of Rapido), and grassroots innovators. The journey crystallized my path. I left Noobsverse and started shipping independently — building products for founders across the US, UK, France, and India. From dating apps to AI products, EV platforms to healthcare portals. Now I'm deep in building <strong>lyzn.ai</strong> — a personal AI companion that thinks, plans, and acts for you — while continuing to ship products for clients who value execution over talk.
+                    As an alumnus of <strong>Jagriti Yatra '24</strong>, I travelled 8,000 kilometers across India — meeting founders, industry leaders like Aravind Sanka (co-founder of Rapido), and grassroots innovators. The journey crystallized my path. I left the startup and started shipping independently — building products for founders across the US, UK, France, and India. From dating apps to AI products, EV platforms to healthcare portals. Now I'm deep in building <strong>lyzn.ai</strong> — a personal AI companion that thinks, plans, and acts for you — while continuing to ship products for clients who value execution over talk.
                   </p>
                 </div>
               </motion.div>
             </div>
           </div>
-        </section>
+        </section >
 
         {/* ═══════════════════════════════════════
             CURRENTLY BUILDING — lyzn.ai spotlight
         ═══════════════════════════════════════ */}
-        <section className="w-full py-12 sm:py-16 border-t border-[#222]">
+        < section className="w-full py-12 sm:py-16 border-t border-[#222]" >
           <div className="max-w-[900px] mx-auto px-6 sm:px-8">
             <motion.div
               initial={{ opacity: 0, y: 15 }}
@@ -282,12 +282,12 @@ export default function About() {
               </a>
             </motion.div>
           </div>
-        </section>
+        </section >
 
         {/* ═══════════════════════════════════════
             PAST VENTURES — Closed
         ═══════════════════════════════════════ */}
-        <section className="w-full py-12 sm:py-16 border-t border-[#222]">
+        < section className="w-full py-12 sm:py-16 border-t border-[#222]" >
           <div className="max-w-[900px] mx-auto px-6 sm:px-8">
             <div className="text-[#555] text-xs uppercase tracking-widest mb-6">Past Ventures</div>
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
@@ -326,12 +326,12 @@ export default function About() {
               ))}
             </div>
           </div>
-        </section>
+        </section >
 
         {/* ═══════════════════════════════════════
             FOOTER
         ═══════════════════════════════════════ */}
-        <footer className="py-16 border-t border-[#222] w-full">
+        < footer className="py-16 border-t border-[#222] w-full" >
           <div className="max-w-[1100px] mx-auto px-6 sm:px-8">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-8 items-start">
               <div>
@@ -362,8 +362,8 @@ export default function About() {
               Built with ⚡️
             </div>
           </div>
-        </footer>
-      </main>
-    </div>
+        </footer >
+      </main >
+    </div >
   );
 }
