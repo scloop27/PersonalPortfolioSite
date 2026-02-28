@@ -68,10 +68,10 @@ export default function About() {
               >
                 India → Working globally
               </p>
-              <div className="flex gap-3 mt-5 sm:mt-6 flex-wrap justify-center lg:justify-start">
+              <div className="flex flex-col sm:flex-row gap-4 mt-8 sm:mt-10 w-full sm:w-auto justify-center lg:justify-start">
                 <a
                   href="/work"
-                  className="px-6 py-3 bg-white text-[#0A0A0A] rounded-full text-sm font-medium hover:bg-gray-200 hover:scale-[1.03] active:scale-[0.97] transition-all duration-300 shadow"
+                  className="w-full sm:w-auto px-8 py-4 bg-white text-[#0A0A0A] rounded-full text-[15px] font-semibold hover:bg-gray-200 hover:scale-[1.02] active:scale-[0.98] transition-all duration-300 shadow-[0_0_20px_rgba(255,255,255,0.15)] hover:shadow-[0_0_30px_rgba(255,255,255,0.3)] text-center"
                 >
                   View My Work
                 </a>
@@ -79,7 +79,7 @@ export default function About() {
                   href="https://shivacharanmandhapuram.substack.com/p/built-burnt-and-building-againmy"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="px-6 py-3 border border-[#444] text-[#EAEAEA] rounded-full text-sm font-medium hover:border-white hover:scale-[1.03] active:scale-[0.97] transition-all duration-300"
+                  className="w-full sm:w-auto px-8 py-4 border border-[#444] text-[#EAEAEA] rounded-full text-[15px] font-medium hover:border-white hover:bg-white/5 hover:scale-[1.02] active:scale-[0.98] transition-all duration-300 text-center"
                 >
                   Read My Story →
                 </a>
@@ -91,28 +91,29 @@ export default function About() {
         {/* ═══════════════════════════════════════
             PROOF STRIP — Milestones
         ═══════════════════════════════════════ */}
-        <section className="w-full border-t border-b border-[#222] py-8 bg-[#0D0D0D]">
+        <section className="w-full border-y border-[#1A1A1A] py-10 sm:py-14 bg-gradient-to-r from-[#050505] via-[#111] to-[#050505]">
           <div className="max-w-[1100px] mx-auto px-6 sm:px-8">
-            <div className="flex flex-wrap justify-center gap-6 sm:gap-8 md:gap-12">
+            <div className="grid grid-cols-2 md:grid-cols-5 gap-y-12 gap-x-6 sm:gap-8 justify-items-center">
               {milestones.map((m, i) => (
                 <motion.div
                   key={i}
-                  initial={{ opacity: 0, y: 10 }}
+                  initial={{ opacity: 0, y: 15 }}
                   whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.5, delay: i * 0.1 }}
+                  transition={{ duration: 0.6, delay: i * 0.1, ease: [0.16, 1, 0.3, 1] }}
                   viewport={{ once: true }}
-                  className="text-center min-w-[100px]"
+                  className="text-center group flex flex-col items-center justify-center w-full"
                 >
                   <div
-                    className="text-white font-bold"
+                    className="text-white font-bold tracking-tight group-hover:scale-110 transition-transform origin-bottom duration-500"
                     style={{
                       fontFamily: "'SF Pro Display', -apple-system, system-ui, sans-serif",
-                      fontSize: "clamp(1.5rem, 3vw, 2rem)",
+                      fontSize: "clamp(2rem, 4vw, 2.75rem)",
+                      lineHeight: 1,
                     }}
                   >
                     {m.number}
                   </div>
-                  <div className="text-[#666] text-xs mt-1 tracking-wide uppercase">
+                  <div className="text-[#666] text-[10px] sm:text-xs mt-3 tracking-[0.15em] uppercase font-medium group-hover:text-[#AAA] transition-colors duration-500">
                     {m.label}
                   </div>
                 </motion.div>
@@ -182,7 +183,7 @@ export default function About() {
                       lineHeight: 1.75,
                     }}
                   >
-                    From the community, we launched <strong>our first startup</strong> and built <strong>Avidia</strong>, an AI-powered SaaS to help beginners learn code by building, not watching tutorials. I became "the sales guy" — running cohorts, pitching users, and bringing in early revenue. That momentum landed us at the <strong>Shark Tank India Season 4</strong> finals in Mumbai. The pitch went on for nearly an hour, standing in front of legends like Ritesh Agarwal and Aman Gupta. We didn't make the TV round, but the experience was a crash course no book could teach.
+                    From the community, we launched <strong>our first startup</strong> and built <strong>Avidia</strong>, an AI-powered SaaS to help beginners learn code by building, not watching tutorials. I became "the sales guy" — running cohorts, pitching users, and bringing in early revenue. That momentum landed us at the <strong>Shark Tank India Season 4</strong> finals in Mumbai. We pitched for nearly an hour, presenting our vision for tech education in front of the show's senior producers. We didn't make the TV round, but the experience was a crash course no book could teach.
                   </p>
                 </div>
               </motion.div>
@@ -259,7 +260,7 @@ export default function About() {
                 rel="noopener noreferrer"
                 className="block group"
               >
-                <div className="border border-[#333] rounded-xl p-6 sm:p-8 hover:border-[#555] transition-all duration-500 bg-[#0D0D0D]">
+                <div className="border border-[#222] rounded-3xl p-6 sm:p-8 hover:border-[#444] transition-all duration-700 bg-gradient-to-b from-[#0F0F0F] to-[#050505] hover:shadow-[0_0_40px_rgba(255,255,255,0.06)] group-hover:scale-[1.01]">
                   <div className="flex flex-col sm:flex-row items-start gap-6">
                     <div className="w-full sm:w-[280px] h-[160px] rounded-lg overflow-hidden border border-[#333] flex-shrink-0">
                       <img
@@ -316,11 +317,11 @@ export default function About() {
               ].map((v, i) => (
                 <motion.div
                   key={i}
-                  initial={{ opacity: 0, y: 10 }}
+                  initial={{ opacity: 0, y: 15 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.5, delay: i * 0.1 }}
                   viewport={{ once: true }}
-                  className="border border-[#2a2a2a] rounded-lg p-5 bg-[#0D0D0D] group hover:border-[#444] transition-colors duration-300"
+                  className="border border-[#222] rounded-2xl p-6 bg-gradient-to-b from-[#0F0F0F] to-[#050505] hover:border-[#444] transition-all duration-500 hover:shadow-[0_0_30px_rgba(255,255,255,0.04)] group hover:-translate-y-1"
                 >
                   <div className="flex items-center gap-2 mb-2">
                     <h4 className="text-[#EAEAEA] text-sm font-medium">{v.name}</h4>
