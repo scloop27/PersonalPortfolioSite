@@ -104,15 +104,6 @@ export default function Navbar() {
               About {/* 📝 EDIT: Display text for this navigation item */}
             </Link>
 
-            {/* Experience Page Link */}
-            <Link
-              href="/experience" // 📝 EDIT: Page URL
-              className={`text-xs sm:text-sm font-normal text-[#EAEAEA] hover:text-white transition-all duration-300 whitespace-nowrap ${isActive("/experience") ? "underline decoration-white" : ""
-                }`}
-            >
-              Experience {/* 📝 EDIT: Display text */}
-            </Link>
-
             {/* Work/Ventures Page Link */}
             <Link
               href="/work" // 📝 EDIT: Page URL
@@ -120,6 +111,15 @@ export default function Navbar() {
                 }`}
             >
               Work {/* 📝 EDIT: Display text */}
+            </Link>
+
+            {/* Experience Page Link */}
+            <Link
+              href="/experience" // 📝 EDIT: Page URL
+              className={`text-xs sm:text-sm font-normal text-[#EAEAEA] hover:text-white transition-all duration-300 whitespace-nowrap ${isActive("/experience") ? "underline decoration-white" : ""
+                }`}
+            >
+              Experience {/* 📝 EDIT: Display text */}
             </Link>
 
             {/* Blog/Playbook Page Link */}
