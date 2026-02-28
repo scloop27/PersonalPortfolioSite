@@ -403,17 +403,10 @@ export default function Work() {
                                         <button
                                             type="submit"
                                             id="submit-btn"
-                                            className="w-full sm:w-auto px-10 py-4 bg-white text-[#0A0A0A] rounded-full text-base font-semibold hover:bg-gray-200 transition-all duration-300 shadow-[0_0_20px_rgba(255,255,255,0.15)] hover:shadow-[0_0_30px_rgba(255,255,255,0.3)] transform hover:-translate-y-0.5"
+                                            className="w-full px-10 py-4 bg-white text-[#0A0A0A] rounded-full text-base font-semibold hover:bg-gray-200 transition-all duration-300 shadow-[0_0_20px_rgba(255,255,255,0.15)] hover:shadow-[0_0_30px_rgba(255,255,255,0.3)] transform hover:-translate-y-0.5"
                                         >
                                             Submit Inquiry →
                                         </button>
-                                        <span className="text-[#555] text-xs">or</span>
-                                        <a
-                                            href="tel:+917013154979"
-                                            className="w-full sm:w-auto px-8 py-3.5 border border-[#444] text-[#EAEAEA] rounded-full text-sm font-medium hover:border-white transition-all duration-300 text-center"
-                                        >
-                                            📞 Call Directly
-                                        </a>
                                     </div>
                                 </form>
                                 <iframe name="hidden_iframe" id="hidden_iframe" style={{ display: 'none' }}></iframe>

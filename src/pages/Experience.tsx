@@ -280,7 +280,6 @@ export default function Experience() {
                 <div className="space-y-4">
                   <div className="text-[#EAEAEA] font-medium mb-1">Contact</div>
                   <a href="https://forms.gle/Ncn648Sux1Tr9oJ16" target="_blank" rel="noopener noreferrer" className="block hover:text-white transition-colors text-[#888]">Inquiry Form ↗</a>
-                  <a href="tel:+917013154979" className="block hover:text-white transition-colors text-[#888]">+91 7013154979</a>
                 </div>
               </div>
             </div>
