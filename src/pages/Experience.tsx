@@ -267,7 +267,7 @@ export default function Experience() {
                   <br />
                   Mandhapuram
                 </h2>
-                <p className="text-[#666] text-sm mt-3">Have a project? <a href="/work" className="text-white hover:underline transition-all">Let's talk →</a></p>
+                <p className="text-[#666] text-sm mt-3">Ready to build something extraordinary? <a href="/work" className="text-white hover:underline transition-all">Let's talk →</a></p>
               </div>
               <div className="grid grid-cols-2 gap-8 text-sm">
                 <div className="space-y-4">

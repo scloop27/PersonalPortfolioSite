@@ -347,10 +347,10 @@ export default function Work() {
                                     fontSize: "clamp(1.5rem, 3vw, 2rem)",
                                 }}
                             >
-                                Have a project in mind?
+                                We Build Your Products. Let's Talk.
                             </h2>
                             <p className="text-[#888] text-sm mb-8 max-w-[500px] mx-auto leading-relaxed" style={{ fontFamily: "'SF Pro Display', -apple-system, system-ui, sans-serif" }}>
-                                I work with founders and companies who value execution over talk. Let's discuss what you need built.
+                                We partner with visionary founders to build and scale elite digital products. Let's turn your idea into a shipped reality.
                             </p>
 
                             <div className="mt-8 text-left">
