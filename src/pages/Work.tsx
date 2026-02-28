@@ -40,6 +40,9 @@ export default function Work() {
             url: "https://flow.lyzn.ai",
             active: true,
         },
+    ];
+
+    const clientWork = [
         {
             title: "DOX",
             description: "AI co-pilot for administrative tasks — perceive, reason, execute. 3-agent architecture for robust document processing.",
@@ -48,9 +51,6 @@ export default function Work() {
             url: "https://doxpage.vercel.app/en",
             active: true,
         },
-    ];
-
-    const clientWork = [
         {
             title: "GHMEV",
             description: "Shark Tank-backed EV company. Built digital presence and product strategy for innovative e-bikes and wheelchairs.",

@@ -33,7 +33,7 @@ export default function Experience() {
       year: "2024",
       title: "DOX",
       description: "AI co-pilot for administrative tasks. Built with a 3-agent architecture for robust document processing — perceive, reason, execute.",
-      category: "FOUNDED",
+      category: "BUILT_FOR",
       image: "/images/projects/dox.png",
       url: "https://doxpage.vercel.app/en",
     },
