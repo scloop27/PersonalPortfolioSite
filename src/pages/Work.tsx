@@ -9,11 +9,11 @@ export default function Work() {
     ];
 
     const services = [
-        "AI Products",
-        "Full-Stack Development",
-        "MVP Building",
-        "Product Strategy",
-        "Digital Presence",
+        "ai products",
+        "full-stack dev",
+        "mvp building",
+        "product strategy",
+        "digital presence",
     ];
 
     const socials = [
@@ -66,18 +66,18 @@ export default function Work() {
             url: "https://alphacen.fr/",
         },
         {
-            title: "Juzzt",
-            description: "Product strategy & execution for a dating app with rating-based compatibility.",
-            tags: ["Dating App", "Mobile"],
+            title: "juzzt",
+            description: "product strategy & execution for a dating app with rating-based compatibility.",
+            tags: ["dating app", "mobile"],
             image: "/images/projects/juzzt.png",
-            url: "https://juzzt.com",
+            url: "https://www.juzzt.com",
         },
         {
             title: "Blessings Health Care",
             description: "USA-based healthcare portal providing accessible medical services and streamlined patient experience.",
             tags: ["Healthcare", "USA"],
             image: "/images/projects/blessings.png",
-            url: "https://blessingshealthcarellc.com",
+            url: "https://www.blessingshealth.org",
         },
         {
             title: "Salon Vinlie",
@@ -217,7 +217,7 @@ export default function Work() {
                             transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
                         >
                             <h1
-                                className="font-bold tracking-tight text-transparent bg-clip-text bg-gradient-to-b from-[#FFFFFF] to-[#A3A3A3]"
+                                className="font-bold tracking-tight text-transparent bg-clip-text bg-gradient-to-b from-[#FFFFFF] to-[#A3A3A3] lowercase"
                                 style={{
                                     fontFamily: "'SF Pro Display', -apple-system, system-ui, sans-serif",
                                     fontSize: "clamp(2.5rem, 6vw, 4.5rem)",
@@ -225,15 +225,17 @@ export default function Work() {
                                     letterSpacing: "-0.02em"
                                 }}
                             >
-                                From AI Products
+                                from ai products
                                 <br />
-                                To Full-Stack Builds
+                                to full-stack builds
                                 <br />
-                                <span className="text-[#666] font-medium">— I Ship It.</span>
+                                <span className="text-[#666] font-medium">— i ship it.</span>
                             </h1>
-                            <p className="text-[#A3A3A3] mt-6 text-base sm:text-lg max-w-[650px] leading-relaxed" style={{ fontFamily: "'SF Pro Display', -apple-system, system-ui, sans-serif" }}>
-                                Working with founders and companies across India, USA, UK, France, and more.
-                                Here's everything I've built — my own ventures and client projects.
+                            <p className="text-[#A3A3A3] mt-6 text-base sm:text-lg max-w-[650px] leading-relaxed lowercase" style={{ fontFamily: "'SF Pro Display', -apple-system, system-ui, sans-serif" }}>
+                                working with founders and companies across india, usa, uk, france, and more.
+                                here's everything i've built — my own ventures and client projects. driven by passion, fueled by impact.
+                                <br /><br />
+                                <span className="text-[#888]">design partner: <a href="https://coolestdesigner.com" target="_blank" rel="noopener noreferrer" className="text-white hover:underline transition-all">coolestdesigner.com</a></span>
                             </p>
                         </motion.div>
 
@@ -261,7 +263,7 @@ export default function Work() {
                     <div className="max-w-[1200px] mx-auto px-6 sm:px-8">
                         <div className="flex flex-wrap items-center gap-3 sm:gap-4">
                             {services.map((s, i) => (
-                                <span key={i} className="text-[#666] text-xs uppercase tracking-wider">
+                                <span key={i} className="text-[#666] text-xs uppercase tracking-wider font-bold">
                                     {s}
                                     {i < services.length - 1 && <span className="ml-3 sm:ml-4 text-[#333]">·</span>}
                                 </span>
@@ -283,10 +285,10 @@ export default function Work() {
                             className="flex items-center gap-4 mb-8"
                         >
                             <h2
-                                className="text-white font-semibold text-lg sm:text-xl"
+                                className="text-white font-semibold text-lg sm:text-xl lowercase"
                                 style={{ fontFamily: "'SF Pro Display', -apple-system, system-ui, sans-serif" }}
                             >
-                                ⚡ My Ventures
+                                ⚡ my ventures
                             </h2>
                             <div className="flex-1 h-px bg-[#222]" />
                         </motion.div>
@@ -312,10 +314,10 @@ export default function Work() {
                             className="flex items-center gap-4 mb-8"
                         >
                             <h2
-                                className="text-white font-semibold text-lg sm:text-xl"
+                                className="text-white font-semibold text-lg sm:text-xl lowercase"
                                 style={{ fontFamily: "'SF Pro Display', -apple-system, system-ui, sans-serif" }}
                             >
-                                🤝 Client Work
+                                🤝 client work
                             </h2>
                             <div className="flex-1 h-px bg-[#222]" />
                             <span className="text-[#555] text-xs tracking-wide">India · USA · UK · France</span>
@@ -341,16 +343,16 @@ export default function Work() {
                             viewport={{ once: true }}
                         >
                             <h2
-                                className="text-[#EAEAEA] font-semibold mb-4"
+                                className="text-[#EAEAEA] font-semibold mb-4 lowercase"
                                 style={{
                                     fontFamily: "'SF Pro Display', -apple-system, system-ui, sans-serif",
                                     fontSize: "clamp(1.5rem, 3vw, 2rem)",
                                 }}
                             >
-                                We Build Your Products. Let's Talk.
+                                make your competitors cry. let's talk.
                             </h2>
-                            <p className="text-[#888] text-sm mb-8 max-w-[500px] mx-auto leading-relaxed" style={{ fontFamily: "'SF Pro Display', -apple-system, system-ui, sans-serif" }}>
-                                We partner with visionary founders to build and scale elite digital products. Let's turn your idea into a shipped reality.
+                            <p className="text-[#888] text-sm mb-8 max-w-[500px] mx-auto leading-relaxed lowercase" style={{ fontFamily: "'SF Pro Display', -apple-system, system-ui, sans-serif" }}>
+                                we partner with visionary founders to build and scale elite digital products. turning ideas into shipped realities. let's get real and build your next product.
                             </p>
 
                             <div className="mt-8 text-left">
